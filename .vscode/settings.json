@@ -1,0 +1,13 @@
+{
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.completeJSDocs": true,
+  "javascript.suggest.paths": true,
+  "javascript.suggest.enabled": true,
+  "path-intellisense.absolutePathToWorkspace": true,
+  "path-intellisense.mappings": {
+    "~": "./",
+    "@utils": "./utils",
+    "@style": "./styles",
+    "@comps": "./components"
+  }
+}

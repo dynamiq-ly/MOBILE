@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "extensions": [".ios.js", ".android.js", ".js", ".json"],
+        "alias": {
+          "~": "./",
+          "@utils": "./utils",
+          "@style": "./styles",
+          "@comps": "./components",
+          "@store": "./store",
+          "@theme": "./themes",
+          "@route": "./routes",
+          "@screen": "./screens"
+        }
+      }
+    ]
+  ]
+}
