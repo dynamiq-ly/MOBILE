@@ -21,10 +21,10 @@ const menuArray = [
     color: '#ee4444',
   },
   {
-    icon: 'ri-bookmark-line',
+    icon: 'ri-stethoscope-line',
     name: 'safety',
-    path: 'reception-screen',
-    color: '#1f2937',
+    path: 'menu-tab-stack-safety',
+    color: '#10b981',
   },
   {
     icon: 'ri-Settings-line',

@@ -14,7 +14,8 @@
           "@theme": "./themes",
           "@route": "./routes",
           "@screen": "./screens",
-          "@markdown": "./markdown"
+          "@markdown": "./markdown",
+          "@mock": "./mock"
         }
       }
     ]
