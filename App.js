@@ -1,6 +1,7 @@
 import { palette } from 'themes/palette'
 import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import CustomFontProvider from 'store/CustomFontProvider'
 
 // routing
 import 'react-native-gesture-handler'
@@ -12,7 +13,9 @@ export default function App() {
     <ThemeProvider theme={palette}>
       <SafeAreaProvider>
         <NavigationContainer>
-          <StackNavigation />
+          <CustomFontProvider>
+            <StackNavigation />
+          </CustomFontProvider>
         </NavigationContainer>
       </SafeAreaProvider>
     </ThemeProvider>

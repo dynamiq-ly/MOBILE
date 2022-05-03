@@ -10,7 +10,9 @@ import {
 
 export default function InitialScreen({ navigation }) {
   return (
-    <InitialScreenWrapper source={require('assets/background/welcome.png')}>
+    <InitialScreenWrapper
+      resizeMode='cover'
+      source={require('assets/background/welcome.png')}>
       <StatusBar style={'dark'} />
       <SafeAreaView style={{ flex: 1 }}>
         <InitialScreenView>
