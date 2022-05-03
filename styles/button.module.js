@@ -3,7 +3,7 @@ import { widthPixel, heightPixel, pixelSizeVertical } from 'utils/normalization'
 
 export const StyledButton = styled.TouchableOpacity`
   width: 100%;
-  border-radius: 18px;
+  border-radius: 10px;
   align-items: center;
   flex-direction: row;
   justify-content: center;

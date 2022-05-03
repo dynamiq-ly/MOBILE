@@ -18,6 +18,7 @@ module.exports = function (api) {
             '@theme': './themes',
             '@route': './routes',
             '@screen': './screens',
+            '@markdown': './markdown',
           },
         },
       ],

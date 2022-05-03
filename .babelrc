@@ -13,7 +13,8 @@
           "@store": "./store",
           "@theme": "./themes",
           "@route": "./routes",
-          "@screen": "./screens"
+          "@screen": "./screens",
+          "@markdown": "./markdown"
         }
       }
     ]
