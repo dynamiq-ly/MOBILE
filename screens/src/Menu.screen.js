@@ -137,6 +137,12 @@ const menuArray5 = [
 
 const menuArray6 = [
   {
+    icon: 'ri-message-line',
+    name: 'help and Contact',
+    path: 'menu-tab-stack-safety',
+    color: '#6b21a8',
+  },
+  {
     icon: 'ri-stethoscope-line',
     name: 'safety',
     path: 'menu-tab-stack-safety',
