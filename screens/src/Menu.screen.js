@@ -39,7 +39,7 @@ const menuArray1 = [
   {
     icon: 'ri-global-line',
     name: 'Web Check In',
-    path: '',
+    path: 'menu-tab-stack-check-in',
     color: '#e11d48',
   },
 ]

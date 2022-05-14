@@ -10,8 +10,10 @@ import {
   BarDetail,
   HowCanWeHelp,
   CheckInOut,
+  CheckIn,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import CheckOut from '~/components/checkinout/CheckOut'
 
 const Stack = createNativeStackNavigator()
 
@@ -86,5 +88,15 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-check-in-out',
     component: CheckInOut,
     header: () => <StackHeader name={'Check In & Out'} />,
+  },
+  {
+    path: 'menu-tab-stack-check-in',
+    component: CheckIn,
+    header: () => <StackHeader name={'Check In'} />,
+  },
+  {
+    path: 'menu-tab-stack-check-out',
+    component: CheckOut,
+    header: () => <StackHeader name={'Check out'} />,
   },
 ]
