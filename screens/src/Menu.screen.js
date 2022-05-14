@@ -21,7 +21,7 @@ const menuArray1 = [
   {
     icon: 'ri-shield-user-line',
     name: 'Login',
-    path: '',
+    path: 'login-initial-stack',
     color: '#424AB4',
   },
   {
