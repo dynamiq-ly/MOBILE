@@ -13,7 +13,7 @@ export { default as TextHeader } from './header/TextHeader'
 export { default as StackHeader } from './header/StackHeader'
 
 /**
- * @description screens
+ * @description menu screens
  */
 // safety screen
 export { default as SafetyScreen } from './safety-screen/SafetyScreen'
@@ -24,3 +24,5 @@ export { default as RestoDetail } from './restaurant/Detail.screen'
 // bars screen
 export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'
+// how can we help screen
+export { default as HowCanWeHelp } from './reception/Reception.screen'

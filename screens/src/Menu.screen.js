@@ -70,7 +70,7 @@ const menuArray3 = [
   {
     icon: 'ri-question-line',
     name: 'How Can We Help',
-    path: '',
+    path: 'menu-tab-stack-how-can-we-help',
     color: '#ee4444',
   },
   {

@@ -8,6 +8,7 @@ import {
   RestoDetail,
   BarsList,
   BarDetail,
+  HowCanWeHelp,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -73,6 +74,11 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-bar-detail',
     component: BarDetail,
+    header: () => false,
+  },
+  {
+    path: 'menu-tab-stack-how-can-we-help',
+    component: HowCanWeHelp,
     header: () => false,
   },
 ]
