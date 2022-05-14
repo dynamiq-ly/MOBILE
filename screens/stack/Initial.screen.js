@@ -19,7 +19,7 @@ export default function InitialScreen({ navigation }) {
           <WelcomeView>
             <Text
               content={'smarhotel'}
-              size={58}
+              size={52}
               weight={700}
               align={'center'}
               up={'up'}
