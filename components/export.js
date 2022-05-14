@@ -26,3 +26,4 @@ export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'
 // how can we help screen
 export { default as HowCanWeHelp } from './reception/Reception.screen'
+export { default as CheckInOut } from './checkinout/CheckInOut'

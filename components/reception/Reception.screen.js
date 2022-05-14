@@ -33,6 +33,12 @@ export default function ReceptionScreen({ navigation }) {
 
 const array = [
   {
+    icon: 'ri-folder-keyhole-line',
+    name: 'Check in & out',
+    path: 'menu-tab-stack-check-in-out',
+    color: '#118181',
+  },
+  {
     icon: 'ri-wifi-line',
     name: 'Connectivity',
     path: '',
