@@ -41,19 +41,19 @@ const array2 = [
   {
     icon: 'ri-arrow-left-circle-line',
     name: 'express Check out',
-    path: 'menu-tab-stack-check-out',
+    path: 'menu-tab-stack-express-check-out',
     color: '#17A398',
   },
   {
     icon: 'ri-history-line',
     name: 'late Check out',
-    path: 'menu-tab-stack-check-out',
+    path: 'menu-tab-stack-late-check-out',
     color: '#17A398',
   },
   {
     icon: 'ri-file-line',
     name: 'get hotel reciept',
-    path: 'menu-tab-stack-check-out',
+    path: 'menu-tab-stack-hotel-reciept',
     color: '#17A398',
   },
 ]

@@ -4,7 +4,7 @@ import Button from 'components/button/Button'
 
 import { Image } from 'styles/checkinout.module'
 
-export default function CheckOut() {
+export default function HotelReciept() {
   return (
     <AreaView>
       <Image
@@ -19,25 +19,16 @@ export default function CheckOut() {
         up={'cap'}
       />
 
-      <Text content={'check out max 12:00'} size={16} weight={500} up={'cap'} />
-
-      <Text
-        content={'you can store you luggage with us when checking out.'}
-        color={'gray'}
-        weight={400}
-        size={16}
-      />
-
       <Text
         content={
-          'your online checkout shoudl be 24h before your departure time.'
+          'you can get your hotel reciept before your departure time. just request it with the button below.'
         }
         color={'gray'}
         weight={400}
         size={16}
       />
 
-      <Button title={'hotel check out'} />
+      <Button title={'hotel reciept'} />
     </AreaView>
   )
 }

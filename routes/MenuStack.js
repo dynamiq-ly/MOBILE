@@ -11,9 +11,12 @@ import {
   HowCanWeHelp,
   CheckInOut,
   CheckIn,
+  HotelReciept,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import CheckOut from '~/components/checkinout/CheckOut'
+import ExpressCheckout from '~/components/checkinout/ExpressCheckout'
+import LateCheckout from '~/components/checkinout/LateCheckout'
 
 const Stack = createNativeStackNavigator()
 
@@ -98,5 +101,20 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-check-out',
     component: CheckOut,
     header: () => <StackHeader name={'Check out'} />,
+  },
+  {
+    path: 'menu-tab-stack-express-check-out',
+    component: ExpressCheckout,
+    header: () => <StackHeader name={'Express Check out'} />,
+  },
+  {
+    path: 'menu-tab-stack-late-check-out',
+    component: LateCheckout,
+    header: () => <StackHeader name={'late Check out'} />,
+  },
+  {
+    path: 'menu-tab-stack-hotel-reciept',
+    component: HotelReciept,
+    header: () => <StackHeader name={'hotel reciept'} />,
   },
 ]
