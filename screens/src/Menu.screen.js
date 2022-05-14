@@ -38,13 +38,13 @@ const menuArray2 = [
   {
     icon: 'ri-restaurant-line',
     name: 'restaurants',
-    path: 'reception-screen',
+    path: 'menu-tab-stack-restaurant-list',
     color: '#57534e',
   },
   {
     icon: 'ri-goblet-line',
     name: 'bars',
-    path: 'reception-screen',
+    path: 'menu-tab-stack-bar-list',
     color: '#475569',
   },
   {

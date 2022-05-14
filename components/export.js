@@ -18,3 +18,9 @@ export { default as StackHeader } from './header/StackHeader'
 // safety screen
 export { default as SafetyScreen } from './safety-screen/SafetyScreen'
 export { default as SafetyDetail } from './safety-screen/SafetyDetail'
+// restaurant screen
+export { default as RestoList } from './restaurant/List.screen'
+export { default as RestoDetail } from './restaurant/Detail.screen'
+// bars screen
+export { default as BarsList } from './bars/List.screen'
+export { default as BarDetail } from './bars/Detail.screen'

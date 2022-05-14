@@ -4,6 +4,9 @@ import {
   StackHeader,
   SafetyScreen,
   SafetyDetail,
+  RestoList,
+  RestoDetail,
+  BarsList,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -49,6 +52,26 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-safety-detail',
     component: SafetyDetail,
+    header: ({ route }) => <StackHeader name={route.params._data.name} />,
+  },
+  {
+    path: 'menu-tab-stack-restaurant-list',
+    component: RestoList,
+    header: () => <StackHeader name={'restaurants'} />,
+  },
+  {
+    path: 'menu-tab-stack-restaurant-detail',
+    component: RestoDetail,
+    header: ({ route }) => <StackHeader name={route.params._data.name} />,
+  },
+  {
+    path: 'menu-tab-stack-bar-list',
+    component: BarsList,
+    header: () => <StackHeader name={'bars'} />,
+  },
+  {
+    path: 'menu-tab-stack-bar-detail',
+    component: RestoDetail,
     header: ({ route }) => <StackHeader name={route.params._data.name} />,
   },
 ]
