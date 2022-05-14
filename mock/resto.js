@@ -17,7 +17,7 @@ export const restaurants = [
     image:
       'https://i.guim.co.uk/img/media/984cfa91beff5b74a018c46711c650dcd239c11e/0_232_3500_2101/master/3500.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=d6b9b67000c1f63f3412a27eb4cfe130',
     content:
-      'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.',
+      'Quisque porta volutpat erat. Quisque erat eros, viverra eget, porttitor lorem id ligula. congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.porttitor lorem id ligula.',
   },
   {
     id: 3,

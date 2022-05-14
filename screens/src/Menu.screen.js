@@ -61,7 +61,7 @@ const menuArray2 = [
   },
   {
     icon: 'ri-caravan-line',
-    name: 'renting',
+    name: 'Transportation',
     path: 'setting-screen',
     color: '',
   },

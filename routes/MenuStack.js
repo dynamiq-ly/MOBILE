@@ -7,6 +7,7 @@ import {
   RestoList,
   RestoDetail,
   BarsList,
+  BarDetail,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -60,18 +61,18 @@ const safety_Stack_Array = [
     header: () => <StackHeader name={'restaurants'} />,
   },
   {
-    path: 'menu-tab-stack-restaurant-detail',
-    component: RestoDetail,
-    header: ({ route }) => <StackHeader name={route.params._data.name} />,
-  },
-  {
     path: 'menu-tab-stack-bar-list',
     component: BarsList,
     header: () => <StackHeader name={'bars'} />,
   },
   {
-    path: 'menu-tab-stack-bar-detail',
+    path: 'menu-tab-stack-restaurant-detail',
     component: RestoDetail,
-    header: ({ route }) => <StackHeader name={route.params._data.name} />,
+    header: () => false,
+  },
+  {
+    path: 'menu-tab-stack-bar-detail',
+    component: BarDetail,
+    header: () => false,
   },
 ]
