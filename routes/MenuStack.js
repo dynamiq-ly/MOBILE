@@ -14,6 +14,7 @@ import {
   HotelReciept,
   RentingScreen,
   OthersScreen,
+  RoomService,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import CheckOut from '~/components/checkinout/CheckOut'
@@ -128,5 +129,10 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-renting',
     component: RentingScreen,
     header: () => <StackHeader name={'Rentings'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service',
+    component: RoomService,
+    header: () => <StackHeader name={'room service'} />,
   },
 ]

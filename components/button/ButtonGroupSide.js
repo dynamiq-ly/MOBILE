@@ -11,11 +11,12 @@ import {
 } from 'styles/button.module'
 
 /**
- * @param0 {[{icon, name, color, path}]} array
+ * button group but where icons are static and iversed
+ * @param0 {[{ name, path}]} array
  * @param1 {number} index
  */
 
-export default function GroupButton({ array = [], index, callback }) {
+export default function GroupButtonSide({ array = [], index, callback }) {
   if (array.length === 0) return null
   else
     return (
@@ -26,14 +27,18 @@ export default function GroupButton({ array = [], index, callback }) {
               <ButtonItem
                 activeOpacity={0.9}
                 onPress={() => callback.navigate(el.path)}>
-                <IconBox color={el.color}>
-                  <Icon name={el.icon} size={fontPixel(24)} color={'#fffffe'} />
+                <IconBox color={'#1A2952'}>
+                  <Icon
+                    name={'ri-list-settings-line'}
+                    size={fontPixel(24)}
+                    color={'#fffffe'}
+                  />
                 </IconBox>
                 <TextBox>
                   <Text content={el.name} weight={500} size={18} up={'cap'} />
                 </TextBox>
                 <Icon
-                  name={'ri-arrow-right-s-line'}
+                  name={'ri-logout-circle-r-line'}
                   size={fontPixel(24)}
                   color={'#9ca3af'}
                 />

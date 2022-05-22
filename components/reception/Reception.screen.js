@@ -75,8 +75,8 @@ const array = [
     color: '#118181',
   },
   {
-    icon: 'ri-safe-2-line',
-    name: 'Vault',
+    icon: 'ri-shirt-line',
+    name: 'laguage Vault',
     path: '',
     color: '#118181',
   },

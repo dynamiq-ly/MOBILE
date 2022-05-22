@@ -35,3 +35,5 @@ export { default as HotelReciept } from './checkinout/HotelReciept'
 export { default as OthersScreen } from './other-request/OtherRequest.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
+// room service screen
+export { default as RoomService } from './room-service/Service.screen'
