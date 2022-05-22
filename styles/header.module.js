@@ -11,7 +11,7 @@ import {
 export const SafeAreaHeader = styled.View`
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) => theme.primary.accent_200};
+  background: ${({ theme }) => theme.primary.accent_100};
   padding-top: ${Platform.OS === 'ios'
     ? pixelSizeVertical(42)
     : StatusBar.currentHeight}px;

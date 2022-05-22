@@ -8,6 +8,12 @@
     "~": "./",
     "@utils": "./utils",
     "@style": "./styles",
-    "@comps": "./components"
+    "@comps": "./components",
+    "@store": "./store",
+    "@theme": "./themes",
+    "@route": "./routes",
+    "@screen": "./screens",
+    "@markdown": "./markdown",
+    "@mock": "./mock"
   }
 }

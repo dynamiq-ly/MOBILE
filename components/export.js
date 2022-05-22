@@ -32,3 +32,5 @@ export { default as CheckOut } from './checkinout/CheckInOut'
 export { default as ExpressCheckOut } from './checkinout/ExpressCheckout'
 export { default as LateCheckOut } from './checkinout/LateCheckout'
 export { default as HotelReciept } from './checkinout/HotelReciept'
+// renting screen
+export { default as RentingScreen } from './renting/Renting.screen'

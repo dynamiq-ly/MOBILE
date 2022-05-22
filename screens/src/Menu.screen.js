@@ -112,7 +112,7 @@ const menuArray5 = [
   {
     icon: 'ri-caravan-line',
     name: 'Renting',
-    path: '',
+    path: 'menu-tab-stack-renting',
     color: '',
   },
   {

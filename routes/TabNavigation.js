@@ -80,7 +80,7 @@ const TabNavigation = () => {
           paddingLeft: pixelSizeHorizontal(24),
           paddingRight: pixelSizeHorizontal(24),
           borderTopColor: 'transparent',
-          backgroundColor: palette.primary.accent_200,
+          backgroundColor: palette.primary.accent_100,
         },
         tabBarInactiveTintColor: palette.primary.accent_400,
         tabBarActiveTintColor: palette.primary.accent_900,
