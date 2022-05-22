@@ -11,15 +11,19 @@ import {
   HowCanWeHelp,
   CheckInOut,
   CheckIn,
+  LateCheckOut,
+  ExpressCheckOut,
+  CheckOut,
   HotelReciept,
   RentingScreen,
   OthersScreen,
   RoomService,
+  MiniBarScreen,
+  OptionHeader,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import CheckOut from '~/components/checkinout/CheckOut'
-import ExpressCheckout from '~/components/checkinout/ExpressCheckout'
-import LateCheckout from '~/components/checkinout/LateCheckout'
+
+import Cart from 'cart/Cart'
 
 const Stack = createNativeStackNavigator()
 
@@ -107,12 +111,12 @@ const safety_Stack_Array = [
   },
   {
     path: 'menu-tab-stack-express-check-out',
-    component: ExpressCheckout,
+    component: ExpressCheckOut,
     header: () => <StackHeader name={'Express Check out'} />,
   },
   {
     path: 'menu-tab-stack-late-check-out',
-    component: LateCheckout,
+    component: LateCheckOut,
     header: () => <StackHeader name={'late Check out'} />,
   },
   {
@@ -134,5 +138,10 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service',
     component: RoomService,
     header: () => <StackHeader name={'room service'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-mini-bar',
+    component: MiniBarScreen,
+    header: () => <OptionHeader name={'mini bar'} components={<Cart />} />,
   },
 ]

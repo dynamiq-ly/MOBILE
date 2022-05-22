@@ -38,7 +38,7 @@ const menus = [
     name: 'minibar service',
     color: '#A91079',
     icon: 'ri-goblet-line',
-    path: '',
+    path: 'menu-tab-stack-room-service-mini-bar',
   },
 ]
 

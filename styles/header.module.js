@@ -63,3 +63,19 @@ export const StackViewHeader = styled.View`
   height: ${heightPixel(62)}px;
   padding: 0px ${pixelSizeHorizontal(14)}px;
 `
+
+/**
+ * @description stack option header
+ */
+
+export const TextWrapper = styled.View`
+  flex: 1;
+`
+
+export const OptionStackViewHeader = styled.View`
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: ${widthPixel(35)}px;
+  height: ${heightPixel(35)}px;
+`

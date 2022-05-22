@@ -13,6 +13,8 @@ export const StyledText = styled.Text`
       ? theme.primary.accent_0
       : color === 'gray'
       ? theme.primary.accent_500
+      : color === 'dominant'
+      ? theme.secondary.accent_500
       : // default color
         theme.primary.accent_900};
 

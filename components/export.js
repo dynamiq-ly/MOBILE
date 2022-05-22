@@ -11,6 +11,7 @@ export { default as Input } from './input/Input'
  */
 export { default as TextHeader } from './header/TextHeader'
 export { default as StackHeader } from './header/StackHeader'
+export { default as OptionHeader } from './header/StackOptionHeader'
 
 /**
  * @description menu screens
@@ -28,7 +29,7 @@ export { default as BarDetail } from './bars/Detail.screen'
 export { default as HowCanWeHelp } from './reception/Reception.screen'
 export { default as CheckInOut } from './checkinout/CheckInOut'
 export { default as CheckIn } from './checkinout/CheckIn'
-export { default as CheckOut } from './checkinout/CheckInOut'
+export { default as CheckOut } from './checkinout/CheckOut'
 export { default as ExpressCheckOut } from './checkinout/ExpressCheckout'
 export { default as LateCheckOut } from './checkinout/LateCheckout'
 export { default as HotelReciept } from './checkinout/HotelReciept'
@@ -37,3 +38,4 @@ export { default as OthersScreen } from './other-request/OtherRequest.screen'
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
 export { default as RoomService } from './room-service/Service.screen'
+export { default as MiniBarScreen } from './room-service/Minibar.screen'

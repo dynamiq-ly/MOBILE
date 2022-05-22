@@ -10,7 +10,7 @@ import {
 export const View = styled.View`
   flex: 1;
   justify-content: space-between;
-  background: ${({ theme }) => theme.primary.accent_200};
+  background: ${({ theme }) => theme.primary.accent_100};
 `
 
 export const Image = styled.Image`

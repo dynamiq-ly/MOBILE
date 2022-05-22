@@ -50,3 +50,30 @@ export const AbsoluteViewRendtedCard = styled.View`
   position: absolute;
   padding: ${pixelSizeHorizontal(5)}px 0px;
 `
+/**
+ * for bars and food in room service
+ * a card with a lesser height for showing mini bar item
+ */
+
+export const MiniCard = styled.TouchableOpacity`
+  flex: 1;
+  overflow: hidden;
+  border-width: 2px;
+  border-radius: 10px;
+  flex-direction: row;
+  align-items: center;
+  height: ${heightPixel(64)}px;
+  margin-bottom: ${pixelSizeVertical(24)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+  border-color: ${({ pressed, theme }) =>
+    pressed ? theme.secondary.accent_500 : theme.primary.accent_0};
+`
+
+export const ContentViewMinCard = styled.View`
+  flex: 1;
+  padding: 0px ${pixelSizeHorizontal(10)}px;
+`
+
+export const CheckBoxView = styled.View`
+  padding: 0px ${pixelSizeHorizontal(10)}px;
+`
