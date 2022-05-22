@@ -119,7 +119,7 @@ const array = [
   {
     icon: 'ri-chat-settings-line',
     name: 'other request',
-    path: '',
+    path: 'menu-tab-stack-other-request',
     color: '#118181',
   },
 ]

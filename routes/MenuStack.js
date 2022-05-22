@@ -13,6 +13,7 @@ import {
   CheckIn,
   HotelReciept,
   RentingScreen,
+  OthersScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import CheckOut from '~/components/checkinout/CheckOut'
@@ -117,6 +118,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-hotel-reciept',
     component: HotelReciept,
     header: () => <StackHeader name={'hotel reciept'} />,
+  },
+  {
+    path: 'menu-tab-stack-other-request',
+    component: OthersScreen,
+    header: () => <StackHeader name={'other request'} />,
   },
   {
     path: 'menu-tab-stack-renting',
