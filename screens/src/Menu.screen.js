@@ -47,7 +47,7 @@ export default function MenuScreen({ navigation }) {
   }
 
   useEffect(() => {
-    filterText()
+    return filterText()
   }, [text])
 
   return (
