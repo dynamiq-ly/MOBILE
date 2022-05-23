@@ -1,11 +1,11 @@
 ## SMARHOTEL
 
-
 <br/>
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/nyuuke/SMARHOTEL?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nyuuke/SMARHOTEL?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/nyuuke/smarhotel?color=purple&style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/nyuuke/smarhotel?style=flat-square)
 
 <br/>
 <img style="width:100%" src='markdown/image/image1.png'>
