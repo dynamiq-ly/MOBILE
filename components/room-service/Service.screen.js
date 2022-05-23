@@ -57,7 +57,7 @@ const array = [
   { name: 'laundry', path: '' },
   { name: 'towels', path: '' },
   { name: 'television', path: '' },
-  { name: 'safe deposit box', path: '' },
+  { name: 'safe deposit box', path: 'menu-tab-stack-safe-box' },
   { name: 'electricity and cables', path: '' },
   { name: 'air conditioner', path: '' },
   { name: 'hair dryer', path: '' },

@@ -23,6 +23,7 @@ import {
   CartScreenRoomService,
   PhoneDirectoryScreen,
   ReportIncidenceScreen,
+  SafeBoxScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -126,6 +127,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-hotel-reciept',
     component: HotelReciept,
     header: () => <StackHeader name={'hotel reciept'} />,
+  },
+  {
+    path: 'menu-tab-stack-safe-box',
+    component: SafeBoxScreen,
+    header: () => <StackHeader name={'safe box'} />,
   },
   {
     path: 'menu-tab-stack-other-request',

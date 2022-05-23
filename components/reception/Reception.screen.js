@@ -71,7 +71,7 @@ const array = [
   {
     icon: 'ri-safe-2-line',
     name: 'Safe Deposit',
-    path: '',
+    path: 'menu-tab-stack-safe-box',
     color: '#118181',
   },
   {

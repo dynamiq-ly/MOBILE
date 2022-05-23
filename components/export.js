@@ -28,14 +28,15 @@ export { default as RestoDetail } from './restaurant/Detail.screen'
 export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'
 // how can we help screen
-export { default as HowCanWeHelp } from './reception/Reception.screen'
-export { default as CheckInOut } from './checkinout/CheckInOut'
 export { default as CheckIn } from './checkinout/CheckIn'
 export { default as CheckOut } from './checkinout/CheckOut'
-export { default as ExpressCheckOut } from './checkinout/ExpressCheckout'
+export { default as CheckInOut } from './checkinout/CheckInOut'
 export { default as LateCheckOut } from './checkinout/LateCheckout'
 export { default as HotelReciept } from './checkinout/HotelReciept'
+export { default as HowCanWeHelp } from './reception/Reception.screen'
+export { default as ExpressCheckOut } from './checkinout/ExpressCheckout'
 export { default as OthersScreen } from './other-request/OtherRequest.screen'
+export { default as SafeBoxScreen } from './vault/SafeDeposit.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
