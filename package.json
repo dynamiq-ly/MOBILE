@@ -24,6 +24,7 @@
     "@react-navigation/native-stack": "^6.6.2",
     "@react-spring/native": "^9.4.4",
     "babel-plugin-module-resolver": "^4.1.0",
+    "react-native-dropdown-picker": "^5.4.2",
     "react-native-gesture-handler": "~2.1.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-remix-icon": "^0.3.0",

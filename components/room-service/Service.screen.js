@@ -47,7 +47,10 @@ const array = [
     name: 'phone directory',
     path: 'menu-tab-stack-room-service-phone-directory',
   },
-  { name: 'incidence report', path: '' },
+  {
+    name: 'incidence report',
+    path: 'menu-tab-stack-room-service-incidence-report',
+  },
   { name: 'room requests', path: '' },
   { name: 'room upgrade', path: '' },
   { name: 'housekeeping', path: '' },

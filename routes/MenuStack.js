@@ -22,6 +22,7 @@ import {
   OptionHeader,
   CartScreenRoomService,
   PhoneDirectoryScreen,
+  ReportIncidenceScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -165,5 +166,10 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service-phone-directory',
     component: PhoneDirectoryScreen,
     header: () => <StackHeader name={'phone directory'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-incidence-report',
+    component: ReportIncidenceScreen,
+    header: () => <StackHeader name={'report incidence'} />,
   },
 ]
