@@ -2,9 +2,10 @@
  * @description moudlar components
  */
 export { default as Text } from './text/Text'
-export { default as Button } from './button/Button'
-export { default as GroupButton } from './button/ButtonGroup'
 export { default as Input } from './input/Input'
+export { default as Button } from './button/Button'
+export { default as SearchInput } from './input/SearchInput'
+export { default as GroupButton } from './button/ButtonGroup'
 
 /**
  * @description custom header

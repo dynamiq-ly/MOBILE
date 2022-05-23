@@ -1,15 +1,64 @@
+import { useEffect, useState } from 'react'
 import AreaView from 'utils/TabAreaView'
-import { GroupButton } from 'components/export'
+import { GroupButton, SearchInput } from 'components/export'
+import { Text } from 'react-native'
 
 export default function MenuScreen({ navigation }) {
+  const [text, setText] = useState('')
+
+  const [arr1, setArr1] = useState(menuArray1)
+  const [arr2, setArr2] = useState(menuArray2)
+  const [arr3, setArr3] = useState(menuArray3)
+  const [arr4, setArr4] = useState(menuArray4)
+  const [arr5, setArr5] = useState(menuArray5)
+  const [arr6, setArr6] = useState(menuArray6)
+
+  filterText = () => {
+    setArr1(
+      menuArray1.filter((item) =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      )
+    )
+    setArr2(
+      menuArray2.filter((item) =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      )
+    )
+    setArr3(
+      menuArray3.filter((item) =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      )
+    )
+    setArr4(
+      menuArray4.filter((item) =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      )
+    )
+    setArr5(
+      menuArray5.filter((item) =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      )
+    )
+    setArr6(
+      menuArray6.filter((item) =>
+        item.name.toLowerCase().includes(text.toLowerCase())
+      )
+    )
+  }
+
+  useEffect(() => {
+    filterText()
+  }, [text])
+
   return (
-    <AreaView mode={'dark'}>
-      <GroupButton array={menuArray1} index={1} callback={navigation} />
-      <GroupButton array={menuArray2} index={2} callback={navigation} />
-      <GroupButton array={menuArray3} index={3} callback={navigation} />
-      <GroupButton array={menuArray4} index={4} callback={navigation} />
-      <GroupButton array={menuArray5} index={5} callback={navigation} />
-      <GroupButton array={menuArray6} index={6} callback={navigation} />
+    <AreaView>
+      <SearchInput value={text} onChange={setText} />
+      <GroupButton array={arr1} index={1} callback={navigation} />
+      <GroupButton array={arr2} index={2} callback={navigation} />
+      <GroupButton array={arr3} index={3} callback={navigation} />
+      <GroupButton array={arr4} index={4} callback={navigation} />
+      <GroupButton array={arr5} index={5} callback={navigation} />
+      <GroupButton array={arr6} index={6} callback={navigation} />
     </AreaView>
   )
 }

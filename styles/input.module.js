@@ -44,6 +44,24 @@ export const StyledTextAreaInput = styled.TextInput`
  * @description search input
  */
 
+export const SearchField = styled.View`
+  width: 100%;
+  border-radius: 10px;
+  flex-direction: row;
+  align-items: center;
+  height: ${fontPixel(40)}px;
+  margin-bottom: ${pixelSizeVertical(12)}px;
+  padding: 0px ${pixelSizeHorizontal(10)}px;
+  background: ${({ bg, theme }) =>
+    bg ? theme.primary.accent_200 : theme.primary.accent_0};
+`
+
+export const StyledSearchInput = styled.TextInput`
+  flex: 1;
+  height: ${fontPixel(40)}px;
+  font-size: ${fontPixel(16)}px;
+`
+
 export const DismissKeyboardButton = styled.Pressable`
   margin-left: 10px;
   border-radius: 50px;
