@@ -54,7 +54,7 @@ const array = [
   { name: 'room requests', path: '' },
   { name: 'room upgrade', path: '' },
   { name: 'housekeeping', path: '' },
-  { name: 'laundry', path: '' },
+  { name: 'laundry', path: 'menu-tab-stack-laundry' },
   { name: 'towels', path: '' },
   { name: 'television', path: '' },
   { name: 'safe deposit box', path: 'menu-tab-stack-safe-box' },

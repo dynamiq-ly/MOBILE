@@ -1,0 +1,51 @@
+export const laundry = [
+  {
+    id: 1,
+    clothe_type: 'Trousers',
+    laundry: 2.05,
+    dry_clean: 1.11,
+    pressing: 8.23,
+  },
+  {
+    id: 2,
+    clothe_type: 'Handkerchief',
+    laundry: 14.88,
+    dry_clean: 11.77,
+    pressing: null,
+  },
+  {
+    id: 3,
+    clothe_type: 'Pajamas',
+    laundry: 8.12,
+    dry_clean: 1.94,
+    pressing: 4.18,
+  },
+  {
+    id: 4,
+    clothe_type: 'Socks',
+    laundry: 13.12,
+    dry_clean: null,
+    pressing: null,
+  },
+  {
+    id: 5,
+    clothe_type: 'Dress Shirt',
+    laundry: 17.82,
+    dry_clean: 19.7,
+    pressing: 6.47,
+  },
+  {
+    id: 6,
+    clothe_type: 'Under Shirt',
+    laundry: null,
+    dry_clean: 12.84,
+    pressing: 13.87,
+  },
+  {
+    id: 7,
+    clothe_type: 'Jeans',
+    laundry: null,
+    dry_clean: 17.98,
+    pressing: 5.71,
+  },
+]
