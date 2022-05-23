@@ -1,7 +1,7 @@
 import { palette } from 'themes/palette'
 import Icon from 'react-native-remix-icon'
 import MenuStackNavigation from './MenuStack'
-import { TextHeader } from 'components/export'
+import { SearchHeader, TextHeader } from 'components/export'
 import { fontPixel, pixelSizeHorizontal } from 'utils/normalization'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
@@ -54,7 +54,7 @@ const tabComponents = [
     path: 'search-tab',
     name: 'Search',
     component: SearchTab,
-    header: false,
+    header: <SearchHeader />,
   },
   {
     path: 'notification-tab',

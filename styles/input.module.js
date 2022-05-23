@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   fontPixel,
+  widthPixel,
   pixelSizeHorizontal,
   pixelSizeVertical,
 } from 'utils/normalization'
@@ -37,4 +38,18 @@ export const TextAreaField = styled.View`
 export const StyledTextAreaInput = styled.TextInput`
   flex: 1;
   font-size: ${fontPixel(16)}px;
+`
+
+/**
+ * @description search input
+ */
+
+export const DismissKeyboardButton = styled.Pressable`
+  margin-left: 10px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  width: ${widthPixel(20)}px;
+  height: ${fontPixel(20)}px;
+  background: ${({ theme }) => theme.primary.accent_300};
 `

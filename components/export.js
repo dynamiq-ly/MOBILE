@@ -11,6 +11,7 @@ export { default as Input } from './input/Input'
  */
 export { default as TextHeader } from './header/TextHeader'
 export { default as StackHeader } from './header/StackHeader'
+export { default as SearchHeader } from './header/SearchHeader'
 export { default as OptionHeader } from './header/StackOptionHeader'
 
 /**
