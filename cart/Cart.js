@@ -1,17 +1,21 @@
+import { useState } from 'react'
 import { Text } from 'react-native'
 import Icon from 'react-native-remix-icon'
 import { fontPixel } from 'utils/normalization'
+import { _retriveValueByKey, _removeValueByKey } from 'utils/asyncStorage'
 import { BadgeView, CartBadge, CartView } from 'styles/cart.module'
 
-export default function Cart({ number = 0 }) {
+export default function Cart({ name, path }) {
+  const [count, setCount] = useState(0)
+
   return (
-    <CartView>
+    <CartView onPress={path}>
       <Icon name='ri-shopping-basket-line' size={fontPixel(32)} />
       <BadgeView>
-        {number > 0 && (
+        {count > 0 && (
           <CartBadge>
             <Text style={{ color: '#fff', fontSize: fontPixel(14) }}>
-              {number}
+              {count}
             </Text>
           </CartBadge>
         )}

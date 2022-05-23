@@ -20,6 +20,8 @@ import {
   RoomService,
   MiniBarScreen,
   OptionHeader,
+  CartScreenRoomService,
+  PhoneDirectoryScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -142,6 +144,26 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-room-service-mini-bar',
     component: MiniBarScreen,
-    header: () => <OptionHeader name={'mini bar'} components={<Cart />} />,
+    header: ({ navigation }) => (
+      <OptionHeader
+        name={'mini bar'}
+        components={
+          <Cart
+            name={'mini_bar'}
+            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
+          />
+        }
+      />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-room-service-cart',
+    component: CartScreenRoomService,
+    header: () => <StackHeader name={'cart'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-phone-directory',
+    component: PhoneDirectoryScreen,
+    header: () => <StackHeader name={'phone directory'} />,
   },
 ]

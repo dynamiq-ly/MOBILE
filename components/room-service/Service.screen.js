@@ -43,7 +43,10 @@ const menus = [
 ]
 
 const array = [
-  { name: 'phone directory', path: '' },
+  {
+    name: 'phone directory',
+    path: 'menu-tab-stack-room-service-phone-directory',
+  },
   { name: 'incidence report', path: '' },
   { name: 'room requests', path: '' },
   { name: 'room upgrade', path: '' },

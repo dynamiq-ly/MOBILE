@@ -39,3 +39,5 @@ export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
 export { default as RoomService } from './room-service/Service.screen'
 export { default as MiniBarScreen } from './room-service/Minibar.screen'
+export { default as CartScreenRoomService } from './room-service/CartRoomService.screen'
+export { default as PhoneDirectoryScreen } from './room-service/PhoneDirectory.screen'
