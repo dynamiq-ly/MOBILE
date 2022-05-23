@@ -23,7 +23,6 @@
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
     "@react-spring/native": "^9.4.4",
-    "@supabase/supabase-js": "^1.35.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "react-native-gesture-handler": "~2.1.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
