@@ -10,18 +10,7 @@ export default function IncidenceReport() {
   const [text, setText] = useState('')
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState(null)
-  const [items, setItems] = useState([
-    { label: 'Room Key', value: 'Room Key' },
-    { label: 'Wi-Fi', value: 'Wi-Fi' },
-    { label: 'Tv Remote Control', value: 'TV remote Control' },
-    { label: 'Safe Box', value: 'Safe Box' },
-    { label: 'Air Conditioning', value: 'Air Conditioning' },
-    { label: 'Fridge', value: 'Fridge' },
-    { label: 'Microwave', value: 'Microwave' },
-    { label: 'Hair Drayer', value: 'Hair Drayer' },
-    { label: 'No Electricity', value: 'No Electricity' },
-    { label: 'Lamps', value: 'Lamps' },
-  ])
+  const [items, setItems] = useState(array_incidence)
 
   return (
     <AreaView nestedScrollEnabled={true}>
@@ -60,3 +49,27 @@ export default function IncidenceReport() {
     </AreaView>
   )
 }
+
+const array_incidence = [
+  { label: 'Room Key', value: 'Room Key' },
+  { label: 'Wi-Fi', value: 'Wi-Fi' },
+  { label: 'Tv Remote Control', value: 'Tv Remote Control' },
+  { label: 'Safe Box', value: 'Safe Box' },
+  { label: 'Air Conditioning', value: 'Air Conditioning' },
+  { label: 'Fridge', value: 'Fridge' },
+  { label: 'Microwave', value: 'Microwave' },
+  { label: 'Hair dryer', value: 'Hair dryer' },
+  { label: 'No Electricity', value: 'No Electricity' },
+  { label: 'Lamps', value: 'Lamps' },
+  { label: 'Light Bulb', value: 'Light Bulb' },
+  { label: 'Light Switch', value: 'Light Switch' },
+  { label: 'Plug', value: 'Plug' },
+  { label: 'Water', value: 'Water' },
+  { label: 'Bath', value: 'Bath' },
+  { label: 'Shower', value: 'Shower' },
+  { label: 'Sink', value: 'Sink' },
+  { label: 'Toilet', value: 'Toilet' },
+  { label: 'Curtains', value: 'Curtains' },
+  { label: 'Balconey Door', value: 'Balconey Door' },
+  { label: 'Chair and Table', value: 'Chair and Table' },
+]
