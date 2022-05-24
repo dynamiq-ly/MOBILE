@@ -6,7 +6,7 @@ import { _retriveValueByKey, _removeValueByKey } from 'utils/asyncStorage'
 import { BadgeView, CartBadge, CartView } from 'styles/cart.module'
 
 export default function Cart({ name, path }) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(3)
 
   return (
     <CartView onPress={path}>

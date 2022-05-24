@@ -41,7 +41,7 @@ const array = [
   {
     icon: 'ri-wifi-line',
     name: 'Connectivity',
-    path: '',
+    path: 'menu-tab-stack-connectivity',
     color: '#118181',
   },
   {

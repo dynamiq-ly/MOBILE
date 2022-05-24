@@ -26,6 +26,7 @@ import {
   SafeBoxScreen,
   LaundryScreen,
   MedicalAssistanceScreen,
+  ConnectivityScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -144,6 +145,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-medical-assistance',
     component: MedicalAssistanceScreen,
     header: () => <StackHeader name={'medical assistance'} />,
+  },
+  {
+    path: 'menu-tab-stack-connectivity',
+    component: ConnectivityScreen,
+    header: () => <StackHeader name={'Connectivity'} />,
   },
   {
     path: 'menu-tab-stack-other-request',

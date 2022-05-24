@@ -6,7 +6,7 @@ export default function CartRommServiceScreen() {
   return (
     <View>
       <AreaView>
-        <Text content={JSON.stringify(cartService)} />
+        <Text content={'JSON.stringify(cartService)'} />
       </AreaView>
     </View>
   )
