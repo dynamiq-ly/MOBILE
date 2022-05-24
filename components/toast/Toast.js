@@ -2,10 +2,12 @@ import Text from 'components/text/Text'
 import { StyledToast } from 'styles/toast.module'
 import { useSpring } from '@react-spring/native'
 
-export default function Toast({ contet = '' }) {
+export default function Toast({ contet = '', state = false }) {
   const styles = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
+    opacity: state ? 1 : 0,
+    config: {
+      duration: 500,
+    },
   })
 
   return (

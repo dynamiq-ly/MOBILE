@@ -10,10 +10,6 @@ import { View } from 'styles/detail.module'
 export default function Connectivity() {
   const [wifiList, setWifiList] = useState(false)
 
-  useEffect(() => {
-    setWifiList(false)
-  }, []) // eslint-lint-disable
-
   return (
     <View>
       <AreaView>
@@ -31,14 +27,14 @@ export default function Connectivity() {
                   : (clipboard.setString(item.wifi_password), setWifiList(true))
                 setTimeout(() => {
                   setWifiList(false)
-                }, 1500)
+                }, 1000)
               }}
             />
           )
         })}
         <VV style={{ marginBottom: 24 }} />
       </AreaView>
-      {wifiList && <Toast contet={'copied'} />}
+      <Toast contet={'copied'} state={wifiList} />
     </View>
   )
 }
