@@ -38,6 +38,7 @@ export { default as ExpressCheckOut } from './checkinout/ExpressCheckout'
 export { default as OthersScreen } from './other-request/OtherRequest.screen'
 export { default as SafeBoxScreen } from './vault/SafeDeposit.screen'
 export { default as LaundryScreen } from './laundry/Laundry.screen'
+export { default as MedicalAssistanceScreen } from './medical-assis/MedicalAssis.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen

@@ -95,7 +95,7 @@ const array = [
   {
     icon: 'ri-hospital-line',
     name: 'medical assistance',
-    path: '',
+    path: 'menu-tab-stack-medical-assistance',
     color: '#118181',
   },
   {
