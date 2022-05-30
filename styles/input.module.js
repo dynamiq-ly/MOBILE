@@ -37,6 +37,8 @@ export const TextAreaField = styled.View`
 
 export const StyledTextAreaInput = styled.TextInput`
   flex: 1;
+  height: 100%;
+  height: ${fontPixel(200)}px;
   font-size: ${fontPixel(16)}px;
 `
 

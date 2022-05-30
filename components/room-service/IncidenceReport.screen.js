@@ -29,9 +29,6 @@ export default function IncidenceReport() {
         setValue={setValue}
         setItems={setItems}
         listMode={'SCROLLVIEW'}
-        style={{
-          borderWidth: '0px',
-        }}
       />
       <View style={{ marginBottom: 15 }} />
       <Text

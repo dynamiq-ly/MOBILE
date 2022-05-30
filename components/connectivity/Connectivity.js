@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react'
+import Toast from 'components/toast/Toast'
 import AreaView from 'utils/TabAreaView'
-import { wifi_list } from 'mock/wifi_list'
 import * as clipboard from 'expo-clipboard'
 import ClipBoardButton from './Clibboardbutton'
-import Toast from 'components/toast/Toast'
-import { Alert, View as VV } from 'react-native'
+
+import { useState } from 'react'
 import { View } from 'styles/detail.module'
+import { Image } from 'styles/image.module'
+import { wifi_list } from 'mock/wifi_list'
+import { Alert, View as VV } from 'react-native'
 
 export default function Connectivity() {
   const [wifiList, setWifiList] = useState(false)
@@ -13,6 +15,12 @@ export default function Connectivity() {
   return (
     <View>
       <AreaView>
+        <Image
+          source={{
+            uri: 'https://cdn.dribbble.com/users/1022481/screenshots/16115078/media/6dce72ec032f05fec93ac038f2eeb36a.png?compress=1&resize=1200x900&vertical=top',
+          }}
+        />
+        <VV style={{ marginBottom: 24 }} />
         {wifi_list.map((item, index) => {
           return (
             <ClipBoardButton
