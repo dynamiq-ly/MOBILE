@@ -40,6 +40,7 @@ export { default as ExpressCheckOut } from './checkinout/ExpressCheckout'
 export { default as ConnectivityScreen } from './connectivity/Connectivity'
 export { default as OthersScreen } from './other-request/OtherRequest.screen'
 export { default as MedicalAssistanceScreen } from './medical-assis/MedicalAssis.screen'
+export { default as ParkingLotScreen } from './parking/Parking.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen

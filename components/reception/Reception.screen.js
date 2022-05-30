@@ -89,7 +89,7 @@ const array = [
   {
     icon: 'ri-parking-line',
     name: 'parking lot',
-    path: '',
+    path: 'menu-tab-stack-parking',
     color: '#118181',
   },
   {
