@@ -19,6 +19,13 @@ export default function ParkingScreen() {
           'We have the pleasure to offer our guests a parking place located 100 meters from our Hotel.'
         }
       />
+      <Text
+        size={16}
+        color={'gray'}
+        content={
+          'Do you have an electric car? Do not worry. In the area around the hotel there are several good options for charging your electric car or plug-in hybrid.'
+        }
+      />
     </AreaView>
   )
 }
