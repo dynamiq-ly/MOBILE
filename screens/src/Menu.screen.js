@@ -172,8 +172,8 @@ const menuArray5 = [
   },
   {
     icon: 'ri-map-2-line',
-    name: 'Point of interest',
-    path: '',
+    name: 'Points of interest',
+    path: 'menu-tab-stack-point-of-interest',
     color: '#B4E197',
   },
   {

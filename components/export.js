@@ -49,3 +49,5 @@ export { default as MiniBarScreen } from './room-service/Minibar.screen'
 export { default as CartScreenRoomService } from './room-service/CartRoomService.screen'
 export { default as PhoneDirectoryScreen } from './room-service/PhoneDirectory.screen'
 export { default as ReportIncidenceScreen } from './room-service/IncidenceReport.screen'
+// point of interest
+export { default as PointOfInterestScreen } from './point-interest/PointOfInterest.screen'

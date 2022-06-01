@@ -3,6 +3,7 @@ import {
   heightPixel,
   pixelSizeHorizontal,
   pixelSizeVertical,
+  widthPixel,
 } from 'utils/normalization'
 
 /**
@@ -76,4 +77,38 @@ export const ContentViewMinCard = styled.View`
 
 export const CheckBoxView = styled.View`
   padding: 0px ${pixelSizeHorizontal(10)}px;
+`
+
+/**
+ * square card for favorite and grid display
+ * a card with a equal height and width
+ */
+
+export const StyledSquareCard = styled.TouchableOpacity`
+  border-radius: 10px;
+  width: ${widthPixel(165)}px;
+  height: ${heightPixel(200)}px;
+  margin-bottom: ${pixelSizeVertical(18)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
+`
+
+export const ImageSquareCard = styled.ImageBackground`
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  height: ${heightPixel(132)}px;
+`
+
+export const OverlaySquareCard = styled.View`
+  flex: 1;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.3);
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
+`
+
+export const ViewBetween = styled.View`
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 `
