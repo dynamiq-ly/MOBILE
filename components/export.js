@@ -52,3 +52,5 @@ export { default as PhoneDirectoryScreen } from './room-service/PhoneDirectory.s
 export { default as ReportIncidenceScreen } from './room-service/IncidenceReport.screen'
 // point of interest
 export { default as PointOfInterestScreen } from './point-interest/PointOfInterest.screen'
+// gym screen
+export { default as GymScreen } from './gym/Gym.screen'

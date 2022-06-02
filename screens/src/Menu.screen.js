@@ -152,7 +152,7 @@ const menuArray4 = [
   {
     icon: 'ri-football-line',
     name: 'Gym',
-    path: '',
+    path: 'menu-tab-stack-gym',
     color: '#446A46',
   },
 ]
