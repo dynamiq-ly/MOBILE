@@ -120,3 +120,31 @@ export const TextLoactationView = styled.View`
   flex-direction: row;
   align-items: flex-start;
 `
+
+/**
+ * for displaying a card with no action taken
+ * minimal look and feel
+ * takes half the screen
+ */
+
+export const StyledSimpleCard = styled.TouchableOpacity`
+  overflow: hidden;
+  border-radius: 5px;
+  width: ${widthPixel(170)}px;
+  height: ${heightPixel(210)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
+`
+
+export const ImageSimpleCard = styled.Image`
+  border-radius: 5px;
+  width: ${widthPixel(150)}px;
+  height: ${heightPixel(150)}px;
+`
+
+export const TextSimpleCard = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`
