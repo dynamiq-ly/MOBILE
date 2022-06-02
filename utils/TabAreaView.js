@@ -11,9 +11,10 @@ export default function AreaView({
   children,
   mode = 'dark',
   statusBar = false,
+  ...rest
 }) {
   return (
-    <Container>
+    <Container {...rest}>
       <StatusBar style={mode} hidden={statusBar} />
       {children}
     </Container>
