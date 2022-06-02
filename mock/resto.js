@@ -50,3 +50,36 @@ export const restaurants = [
       'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
   },
 ]
+
+export const array_menu_restaurant = [
+  {
+    name: 'Appetizers',
+    image:
+      'https://hips.hearstapps.com/vidthumb/images/shot-6-456-1-copy-1520215634.jpg?crop=0.758xw:1.00xh;0.122xw,0&resize=640:*',
+  },
+  {
+    name: 'Paella',
+    image:
+      'https://simple-veganista.com/wp-content/uploads/2016/01/best-vegetable-vegan-paella-recipe-7.jpg',
+  },
+  {
+    name: 'Pizza',
+    image:
+      'https://www.recipetineats.com/wp-content/uploads/2020/05/Pizza-Crust-without-yeast_5-SQ.jpg',
+  },
+  {
+    name: 'Salad',
+    image:
+      'https://www.wholesomeyum.com/wp-content/uploads/2020/03/wholesomeyum-chef-salad-recipe-4.jpg',
+  },
+  {
+    name: 'Stakes',
+    image:
+      'https://vegconom.de/vegconomistcom/wp-content/uploads/sites/3/Ohayo-Valley-741x555.jpg',
+  },
+  {
+    name: 'Kids Meal',
+    image:
+      'https://www.petakids.com/wp-content/uploads/2019/07/features-image_Bareburger.jpg',
+  },
+]
