@@ -58,7 +58,7 @@ const gym_array = [
   },
   {
     name: 'Gym Booking system',
-    path: '',
+    path: 'menu-tab-stack-gym-booking',
     icon: 'ri-bookmark-2-line',
     color: '#4B8673',
   },

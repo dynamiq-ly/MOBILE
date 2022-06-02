@@ -32,6 +32,7 @@ import {
   RestoMenuFoodScreen,
   GymScreen,
   GymEquipementScreen,
+  GymBookingScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -225,5 +226,10 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-gym-equipement',
     component: GymEquipementScreen,
     header: () => <StackHeader name={'gym equipement'} />,
+  },
+  {
+    path: 'menu-tab-stack-gym-booking',
+    component: GymBookingScreen,
+    header: () => <StackHeader name={'gym booking'} />,
   },
 ]

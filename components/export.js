@@ -55,3 +55,4 @@ export { default as PointOfInterestScreen } from './point-interest/PointOfIntere
 // gym screen
 export { default as GymScreen } from './gym/Gym.screen'
 export { default as GymEquipementScreen } from './gym/GymEquipement.screen'
+export { default as GymBookingScreen } from './gym/GymBooking.screen'
