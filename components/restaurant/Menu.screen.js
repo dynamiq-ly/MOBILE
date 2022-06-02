@@ -13,7 +13,12 @@ export default function MenuRestaurantScreen({ navigation }) {
               key={key}
               title={el.name}
               image={el.image}
-              onPress={() => navigation.navigate('')}
+              onPress={() =>
+                navigation.navigate(
+                  'menu-tab-stack-restaurant-detail-menu-food-list',
+                  { _name: el.name }
+                )
+              }
             />
           )
         })}
