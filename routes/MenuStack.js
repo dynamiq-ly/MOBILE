@@ -29,6 +29,7 @@ import {
   ConnectivityScreen,
   ParkingLotScreen,
   PointOfInterestScreen,
+  RestoMenuFoodScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -92,6 +93,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-restaurant-detail',
     component: RestoDetail,
     header: () => false,
+  },
+  {
+    path: 'menu-tab-stack-restaurant-detail-menu-food',
+    component: RestoMenuFoodScreen,
+    header: () => <StackHeader name={'menu'} />,
   },
   {
     path: 'menu-tab-stack-bar-detail',

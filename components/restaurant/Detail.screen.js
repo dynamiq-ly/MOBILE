@@ -15,7 +15,7 @@ import {
   SafeAreaRowWrapperDetail,
 } from 'styles/detail.module'
 
-export default function DetailScreen({ route }) {
+export default function DetailScreen({ navigation, route }) {
   const { _data } = route.params
   return (
     <View>
@@ -30,6 +30,9 @@ export default function DetailScreen({ route }) {
               'https://www.heinonwine.com/wp-content/uploads/2019/04/Malaysia.jpg-lr.jpg'
             }
             name={'foods menu'}
+            func={() =>
+              navigation.navigate('menu-tab-stack-restaurant-detail-menu-food')
+            }
           />
           <Gap style={{ width: widthPixel(10) }} />
           <ButtonsRouting
@@ -53,9 +56,9 @@ export default function DetailScreen({ route }) {
  * @param2 {string} path
  * @param3 {string} color
  */
-function ButtonsRouting({ image, name, path }) {
+function ButtonsRouting({ image, name, func }) {
   return (
-    <ButtonRoute activeOpacity={0.7} onPress={() => navigation.navigate(path)}>
+    <ButtonRoute activeOpacity={0.7} onPress={func}>
       <IconBox>
         <RnImage
           source={{ uri: image }}

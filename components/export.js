@@ -24,6 +24,7 @@ export { default as SafetyDetail } from './safety-screen/SafetyDetail'
 // restaurant screen
 export { default as RestoList } from './restaurant/List.screen'
 export { default as RestoDetail } from './restaurant/Detail.screen'
+export { default as RestoMenuFoodScreen } from './restaurant/Menu.screen'
 // bars screen
 export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'
