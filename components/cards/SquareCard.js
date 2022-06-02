@@ -1,11 +1,14 @@
 import { View } from 'react-native'
 import Text from 'components/text/Text'
 import Icon from 'react-native-remix-icon'
+import { fontPixel } from 'utils/normalization'
+
 import {
   ImageSquareCard,
   OverlaySquareCard,
   StyledSquareCard,
   ViewBetween,
+  TextLoactationView,
 } from 'styles/cards.module'
 
 /**
@@ -21,39 +24,25 @@ export default function SquareCard({ title, image, location, rating }) {
     <StyledSquareCard activeOpacity={0.8}>
       <ImageSquareCard source={{ uri: image }}>
         <OverlaySquareCard>
-          <ViewBetween>
-            <Icon
-              size={18}
-              color={'#fffffe'}
-              name='ri-heart-line'
-              style={{ alignSelf: 'flex-end' }}
-            />
-            <View
-              style={{
-                flexDirection: 'row-reverse',
-                alignItems: 'center',
-              }}>
-              {[...Array(rating)].map((_, index) => (
-                <Icon
-                  size={14}
-                  key={index}
-                  color={'yellow'}
-                  name='ri-star-fill'
-                  style={{ alignSelf: 'flex-end' }}
-                />
-              ))}
-            </View>
-          </ViewBetween>
-          <Text
-            content={title}
-            size={18}
-            up={'cap'}
-            weight={600}
-            color={'white'}
-          />
+          <Icon size={fontPixel(24)} color={'#fffffe'} name='ri-heart-line' />
+          <View
+            style={{
+              flexDirection: 'row-reverse',
+              alignItems: 'center',
+            }}>
+            {[...Array(rating)].map((_, index) => (
+              <Icon
+                size={14}
+                key={index}
+                color={'yellow'}
+                name='ri-star-fill'
+                style={{ alignSelf: 'flex-end' }}
+              />
+            ))}
+          </View>
         </OverlaySquareCard>
       </ImageSquareCard>
-      <Text content={location} size={14} up={'cap'} weight={400} />
+      <Text content={title} size={18} up={'cap'} weight={600} />
     </StyledSquareCard>
   )
 }

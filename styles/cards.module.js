@@ -85,10 +85,11 @@ export const CheckBoxView = styled.View`
  */
 
 export const StyledSquareCard = styled.TouchableOpacity`
+  overflow: hidden;
   border-radius: 10px;
   width: ${widthPixel(165)}px;
-  height: ${heightPixel(200)}px;
-  margin-bottom: ${pixelSizeVertical(18)}px;
+  min-height: ${heightPixel(200)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
   background: ${({ theme }) => theme.primary.accent_0};
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
 `
@@ -111,4 +112,11 @@ export const ViewBetween = styled.View`
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+`
+
+export const TextLoactationView = styled.View`
+  flex: 1;
+  width: 80%;
+  flex-direction: row;
+  align-items: flex-start;
 `

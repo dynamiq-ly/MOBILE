@@ -11,9 +11,8 @@ export default function PointInterestScreen() {
           return (
             <SquareCard
               key={element.id}
-              title={`${element.name.slice(-10)}...`}
+              title={element.name}
               image={element.image}
-              location={`${element.location.slice(-35)}...`}
               rating={element.rating}
             />
           )
