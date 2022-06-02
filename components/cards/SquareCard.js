@@ -8,6 +8,14 @@ import {
   ViewBetween,
 } from 'styles/cards.module'
 
+/**
+ *
+ * @param0 {string} title
+ * @param1 {string} image
+ * @param2 {string} location
+ * @param3 {rating} rating
+ * @returns
+ */
 export default function SquareCard({ title, image, location, rating }) {
   return (
     <StyledSquareCard activeOpacity={0.8}>

@@ -3,6 +3,13 @@ import Text from 'components/text/Text'
 import CheckBox from 'components/checkbox/Checkbox'
 import { CheckBoxView, ContentViewMinCard, MiniCard } from 'styles/cards.module'
 
+/**
+ *
+ * @param0 {object} element
+ * @param1 {element[]} array
+ * @param2 {()=>void} onChange
+ * @returns JSX.element
+ */
 export default function MiniBarCard({ element, array = [], onChange }) {
   const [checked, setChecked] = useState(false)
 

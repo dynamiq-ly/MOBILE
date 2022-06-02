@@ -5,6 +5,10 @@ import {
   RentingWideCard,
 } from 'styles/cards.module'
 
+/**
+ * @param0 {string} name
+ * @param1 {string} image
+ */
 export default function RentingCard({ name, image, ...rest }) {
   return (
     <RentingWideCard activeOpacity={0.8} {...rest}>
