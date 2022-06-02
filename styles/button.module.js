@@ -17,8 +17,8 @@ export const StyledButton = styled.TouchableOpacity`
 
 export const GroupsBtn = styled.View`
   overflow: hidden;
-  border-radius: 18px;
-  padding: 0px ${pixelSizeVertical(18)}px;
+  border-radius: 10px;
+  padding: 0px ${pixelSizeVertical(10)}px;
   margin-bottom: ${pixelSizeVertical(24)}px;
   background: ${({ theme }) => theme.primary.accent_0};
 `
