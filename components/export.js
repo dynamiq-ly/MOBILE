@@ -54,3 +54,4 @@ export { default as ReportIncidenceScreen } from './room-service/IncidenceReport
 export { default as PointOfInterestScreen } from './point-interest/PointOfInterest.screen'
 // gym screen
 export { default as GymScreen } from './gym/Gym.screen'
+export { default as GymEquipementScreen } from './gym/GymEquipement.screen'

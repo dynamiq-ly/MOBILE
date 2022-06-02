@@ -52,7 +52,7 @@ export default function GymScreen({ navigation }) {
 const gym_array = [
   {
     name: 'Gym Equipment',
-    path: '',
+    path: 'menu-tab-stack-gym-equipement',
     icon: 'ri-bell-line',
     color: '#4B8673',
   },
