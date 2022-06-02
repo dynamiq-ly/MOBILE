@@ -7,8 +7,6 @@ import {
   ImageSquareCard,
   OverlaySquareCard,
   StyledSquareCard,
-  ViewBetween,
-  TextLoactationView,
 } from 'styles/cards.module'
 
 /**
