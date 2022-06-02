@@ -64,7 +64,7 @@ const gym_array = [
   },
   {
     name: 'gym use of terms',
-    path: '',
+    path: 'menu-tab-stack-gym-use-terms',
     icon: 'ri-file-line',
     color: '#4B8673',
   },
