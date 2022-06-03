@@ -6,7 +6,7 @@ import { View } from 'react-native'
 import { GridLayout } from 'styles/grid.module'
 import { array_swimming_pool } from 'mock/swimmingpool'
 
-export default function SwimmingPoolScreen() {
+export default function SwimmingPoolScreen({ navigation }) {
   return (
     <AreaView>
       <Text up={'cap'} size={24} weight={600} content={'our pool types'} />
@@ -27,6 +27,12 @@ export default function SwimmingPoolScreen() {
               title={el.name}
               image={el.image}
               position={key % 2 === 1 && 'end'}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-swimming-pool-list', {
+                  _name: el.name,
+                  _data: el,
+                })
+              }
             />
           )
         })}
