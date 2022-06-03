@@ -21,7 +21,14 @@ export default function SwimmingPoolScreen() {
       <View style={{ marginBottom: 24 }} />
       <GridLayout>
         {array_swimming_pool.map((el, key) => {
-          return <FullImageCard key={key} title={el.name} image={el.image} />
+          return (
+            <FullImageCard
+              key={key}
+              title={el.name}
+              image={el.image}
+              position={key % 2 === 1 && 'end'}
+            />
+          )
         })}
       </GridLayout>
     </AreaView>

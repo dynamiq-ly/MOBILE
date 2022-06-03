@@ -186,6 +186,12 @@ export const TitleDetailedCardContent = styled.View`
  * full image and text on top an overlay
  */
 
+export const StyledCardWrapper = styled.View`
+  height: ${heightPixel(232)}px;
+  justify-content: ${({ position }) =>
+    position === 'end' ? 'flex-end' : 'flex-start'};
+`
+
 export const StyledFullImageCard = styled.ImageBackground`
   overflow: hidden;
   border-radius: 10px;
