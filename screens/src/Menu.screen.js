@@ -140,7 +140,7 @@ const menuArray4 = [
   {
     icon: 'ri-drop-line',
     name: 'Swimming pools',
-    path: '',
+    path: 'menu-tab-stack-swimming-pool',
     color: '#6FDFDF',
   },
   {

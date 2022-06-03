@@ -61,3 +61,5 @@ export { default as GymScreen } from './gym/Gym.screen'
 export { default as GymBookingScreen } from './gym/GymBooking.screen'
 export { default as GymUseTermsScreen } from './gym/GymUseTerms.screen'
 export { default as GymEquipementScreen } from './gym/GymEquipement.screen'
+// swimming pool
+export { default as SwimmingPoolScreen } from './swimming-pool/SwimmingPool.screen'
