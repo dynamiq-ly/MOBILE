@@ -13,8 +13,12 @@ export default function MenuFoodListScreen() {
             image={
               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTcNy1Prx33_8N0lgoeo-1XpFjW7bjwZPKA&usqp=CAU'
             }
-            price={`${el.price}$`}
-            description={el.description}
+            price={el.price}
+            description={
+              el.description.length > 50
+                ? `${el.description.slice(0, 50)}...`
+                : el.description
+            }
           />
         )
       })}

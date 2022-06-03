@@ -158,21 +158,21 @@ export const TextSimpleCard = styled.View`
 
 export const StyledDetailedCardView = styled.View`
   width: 100%;
-  height: ${heightPixel(132)}px;
-  background-color: ${({ theme }) => theme.primary.accent_0};
+  overflow: hidden;
   border-radius: 10px;
   flex-direction: row;
-  margin-top: 30px;
-  overflow: hidden;
+  height: ${heightPixel(100)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
+  background-color: ${({ theme }) => theme.primary.accent_0};
 `
 export const DetailedCardImage = styled.Image`
-  width: ${widthPixel(132)}px;
-  height: ${heightPixel(132)}px;
+  width: ${widthPixel(100)}px;
+  height: ${heightPixel(100)}px;
 `
 export const RowDetailedCardContent = styled.View`
   flex: 1;
   flex-direction: column;
-  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
 `
 
 export const TitleDetailedCardContent = styled.View`
