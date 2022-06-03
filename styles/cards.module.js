@@ -180,3 +180,25 @@ export const TitleDetailedCardContent = styled.View`
   justify-content: space-between;
   width: 100%;
 `
+
+/**
+ * a card for half the size of screen
+ * full image and text on top an overlay
+ */
+
+export const StyledFullImageCard = styled.ImageBackground`
+  overflow: hidden;
+  border-radius: 10px;
+  width: ${widthPixel(165)}px;
+  height: ${heightPixel(200)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+`
+
+export const StyledFullImageClickable = styled.TouchableOpacity`
+  flex: 1;
+  background: red;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: flex-end;
+  padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(10)}px;
+`
