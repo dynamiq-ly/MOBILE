@@ -208,3 +208,30 @@ export const StyledFullImageClickable = styled.TouchableOpacity`
   justify-content: flex-end;
   padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(10)}px;
 `
+
+/**
+ * full detailed card with flex as column
+ * images in top and detilas down
+ * mainly to show bigger shows
+ */
+
+export const StyledFullDetailedCard = styled.TouchableOpacity`
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  height: ${heightPixel(182)}px;
+  margin-bottom: ${pixelSizeVertical(24)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+`
+
+export const StyledFullDetailedCardImage = styled.Image`
+  width: 100%;
+  height: ${heightPixel(142)}px;
+`
+
+export const StyledFullDetailedCardContent = styled.View`
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px ${pixelSizeHorizontal(10)}px;
+`

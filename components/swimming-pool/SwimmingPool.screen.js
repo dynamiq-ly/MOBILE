@@ -30,7 +30,7 @@ export default function SwimmingPoolScreen({ navigation }) {
               onPress={() =>
                 navigation.navigate('menu-tab-stack-swimming-pool-list', {
                   _name: el.name,
-                  _data: el,
+                  _data: el.pools,
                 })
               }
             />
