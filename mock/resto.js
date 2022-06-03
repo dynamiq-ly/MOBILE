@@ -83,3 +83,69 @@ export const array_menu_restaurant = [
       'https://www.petakids.com/wp-content/uploads/2019/07/features-image_Bareburger.jpg',
   },
 ]
+
+export const detailed_card_menu_list = [
+  {
+    id: 1,
+    title: 'Kirbie',
+    description:
+      'In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
+    price: 9.02,
+  },
+  {
+    id: 2,
+    title: 'Annabella',
+    description: 'Donec ut dolor.',
+    price: 13.97,
+  },
+  {
+    id: 3,
+    title: 'Isabel',
+    description:
+      'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.',
+    price: 6.8,
+  },
+  {
+    id: 4,
+    title: 'Charmain',
+    description: 'Morbi quis tortor id nulla ultrices aliquet.',
+    price: 2.42,
+  },
+  {
+    id: 5,
+    title: 'Elmira',
+    description: 'Nunc rhoncus dui vel sem.',
+    price: 15.3,
+  },
+  {
+    id: 6,
+    title: 'Sharia',
+    description:
+      'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.',
+    price: 7.33,
+  },
+  {
+    id: 7,
+    title: 'Conway',
+    description: 'Aliquam non mauris.',
+    price: 18.69,
+  },
+  {
+    id: 8,
+    title: 'Zorah',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    price: 3.67,
+  },
+  {
+    id: 9,
+    title: 'Raymund',
+    description: 'Donec ut mauris eget massa tempor convallis.',
+    price: 18.85,
+  },
+  {
+    id: 10,
+    title: 'Eolande',
+    description: 'Nullam sit amet turpis elementum ligula vehicula consequat.',
+    price: 1.28,
+  },
+]

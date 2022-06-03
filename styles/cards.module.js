@@ -148,3 +148,33 @@ export const TextSimpleCard = styled.View`
   align-items: center;
   justify-content: center;
 `
+
+/**
+ * This card will be used mostley to describe list and items of the list
+ * rectangle shape , with picture to the left, title , icons and some descriptions
+ */
+
+export const StyledDetailedCardView = styled.View`
+  width: 100%;
+  height: ${heightPixel(132)}px;
+  background-color: ${({ theme }) => theme.primary.accent_0};
+  border-radius: 10px;
+  flex-direction: row;
+  margin-top: 30px;
+  overflow: hidden;
+`
+export const DetailedCardImage = styled.Image`
+  width: ${widthPixel(132)}px;
+  height: ${heightPixel(132)}px;
+`
+export const RowDetailedCardContent = styled.View`
+  flex: 1;
+  flex-direction: column;
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
+`
+
+export const TitleDetailedCardContent = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+`
