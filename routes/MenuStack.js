@@ -29,6 +29,7 @@ import {
   ConnectivityScreen,
   ParkingLotScreen,
   PointOfInterestScreen,
+  PointInterestScreenOptions,
   RestoMenuFoodScreen,
   GymScreen,
   GymEquipementScreen,
@@ -122,7 +123,14 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-point-of-interest',
     component: PointOfInterestScreen,
-    header: () => <StackHeader name={'points of interest'} />,
+    header: ({ navigation }) => (
+      <OptionHeader
+        name={'points of interest'}
+        components={
+          <PointInterestScreenOptions func={() => navigation.navigate('')} />
+        }
+      />
+    ),
   },
   {
     path: 'menu-tab-stack-check-in-out',

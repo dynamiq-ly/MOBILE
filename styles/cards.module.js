@@ -129,24 +129,26 @@ export const TextLoactationView = styled.View`
 
 export const StyledSimpleCard = styled.TouchableOpacity`
   overflow: hidden;
-  border-radius: 5px;
-  width: ${widthPixel(170)}px;
-  height: ${heightPixel(210)}px;
+  border-radius: 10px;
+  align-items: center;
+  width: ${widthPixel(165)}px;
   margin-bottom: ${pixelSizeVertical(14)}px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
+  padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(10)}px;
 `
 
 export const ImageSimpleCard = styled.Image`
-  border-radius: 5px;
-  width: ${widthPixel(150)}px;
-  height: ${heightPixel(150)}px;
+  border-radius: 10px;
+  width: ${widthPixel(132)}px;
+  height: ${heightPixel(132)}px;
 `
 
 export const TextSimpleCard = styled.View`
   flex: 1;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  height: ${heightPixel(32)}px;
 `
 
 /**

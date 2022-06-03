@@ -52,7 +52,10 @@ export { default as CartScreenRoomService } from './room-service/CartRoomService
 export { default as PhoneDirectoryScreen } from './room-service/PhoneDirectory.screen'
 export { default as ReportIncidenceScreen } from './room-service/IncidenceReport.screen'
 // point of interest
-export { default as PointOfInterestScreen } from './point-interest/PointOfInterest.screen'
+export {
+  default as PointOfInterestScreen,
+  PointInterestScreenOptions,
+} from './point-interest/PointOfInterest.screen'
 // gym screen
 export { default as GymScreen } from './gym/Gym.screen'
 export { default as GymBookingScreen } from './gym/GymBooking.screen'

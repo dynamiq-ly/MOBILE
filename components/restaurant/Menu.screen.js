@@ -1,7 +1,7 @@
 import AreaView from 'utils/TabAreaView'
-import SimpleCard from '../cards/SimpleCard'
 import { GridLayout } from 'styles/grid.module'
 import { array_menu_restaurant } from 'mock/resto'
+import SimpleCard from 'components/cards/SimpleCard'
 
 export default function MenuRestaurantScreen({ navigation }) {
   return (
