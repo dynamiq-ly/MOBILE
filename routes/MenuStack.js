@@ -46,6 +46,15 @@ import Cart from 'cart/Cart'
 
 const Stack = createNativeStackNavigator()
 
+const presentationModal = function (name) {
+  switch (name) {
+    case 'menu-tab-stack-restaurant-detail-menu-food-list-detail':
+      return 'modal'
+    default:
+      return 'fullScreen'
+  }
+}
+
 const MenuStackNavigation = () => {
   return (
     <Stack.Navigator initialRouteName='menu-tab-stack'>
@@ -66,6 +75,7 @@ const MenuStackNavigation = () => {
               component={el.component}
               options={{
                 header: el.header,
+                presentation: presentationModal(el.path),
               }}
             />
           )
