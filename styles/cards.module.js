@@ -156,7 +156,7 @@ export const TextSimpleCard = styled.View`
  * rectangle shape , with picture to the left, title , icons and some descriptions
  */
 
-export const StyledDetailedCardView = styled.View`
+export const StyledDetailedCardView = styled.TouchableOpacity`
   width: 100%;
   overflow: hidden;
   border-radius: 10px;

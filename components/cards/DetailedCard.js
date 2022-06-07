@@ -14,9 +14,15 @@ import Text from 'components/text/Text'
  * @param3 {string} price
  * @returns JSX.element
  */
-export default function DetailedCard({ image, title, description, price }) {
+export default function DetailedCard({
+  image,
+  title,
+  description,
+  price,
+  ...rest
+}) {
   return (
-    <StyledDetailedCardView>
+    <StyledDetailedCardView activeOpacity={1} {...rest}>
       <DetailedCardImage
         source={{
           uri: image,
