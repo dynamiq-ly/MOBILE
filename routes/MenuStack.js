@@ -1,4 +1,7 @@
+import { Platform } from 'react-native'
 import { MenuTab } from 'screens/export'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
 import {
   TextHeader,
   StackHeader,
@@ -41,7 +44,6 @@ import {
   SwimmingPoolListScreen,
   RestoMenuDetailScreen,
 } from 'components/export'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Cart from 'cart/Cart'
 
@@ -50,9 +52,9 @@ const Stack = createNativeStackNavigator()
 const presentationModal = function (name) {
   switch (name) {
     case 'menu-tab-stack-restaurant-detail-menu-food-list-detail':
-      return 'modal'
+      return Platform.OS === 'android' ? 'transparentModal' : 'modal'
     case 'menu-tab-stack-laundry-menu':
-      return 'modal'
+      return Platform.OS === 'android' ? 'transparentModal' : 'modal'
     default:
       return 'fullScreen'
   }

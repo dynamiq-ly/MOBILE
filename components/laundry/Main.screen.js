@@ -55,6 +55,7 @@ export default function MainLaundryScreen({ navigation }) {
       <ButtonWrapperDetail>
         <Button
           title={'view menu'}
+          icon={'ri-arrow-right-line'}
           onPress={() => navigation.navigate('menu-tab-stack-laundry-menu')}
         />
       </ButtonWrapperDetail>
