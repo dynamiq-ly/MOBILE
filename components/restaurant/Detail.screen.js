@@ -40,6 +40,11 @@ export default function DetailScreen({ navigation, route }) {
               'https://cdn.shopify.com/s/files/1/0021/4355/1535/files/Taylors-Very-Very-Old-Tawny-Port-1_500x500.png?v=1650901488'
             }
             name={'drinks menu'}
+            func={() =>
+              navigation.navigate(
+                'menu-tab-stack-restaurant-detail-menu-drinks'
+              )
+            }
           />
         </SafeAreaRowWrapperDetail>
       </AreaView>

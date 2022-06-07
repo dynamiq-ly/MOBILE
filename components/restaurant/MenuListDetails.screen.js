@@ -1,5 +1,5 @@
 import Text from 'components/text/Text'
-import AreaView from '~/utils/TabAreaView'
+import AreaView from 'utils/TabAreaView'
 
 import { View } from 'react-native'
 import { Image } from 'styles/image.module'

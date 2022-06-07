@@ -43,6 +43,7 @@ import {
   SwimmingPoolScreen,
   SwimmingPoolListScreen,
   RestoMenuDetailScreen,
+  RestoMenuDrinksScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -121,7 +122,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-restaurant-detail-menu-food',
     component: RestoMenuFoodScreen,
-    header: () => <StackHeader name={'menu'} />,
+    header: () => <StackHeader name={'food menu'} />,
   },
   {
     path: 'menu-tab-stack-restaurant-detail-menu-food-list',
@@ -132,6 +133,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-restaurant-detail-menu-food-list-detail',
     component: RestoMenuDetailScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-restaurant-detail-menu-drinks',
+    component: RestoMenuDrinksScreen,
+    header: () => <StackHeader name={'drinks menu'} />,
   },
   {
     path: 'menu-tab-stack-bar-detail',
