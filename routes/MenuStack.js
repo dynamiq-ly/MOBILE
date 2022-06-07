@@ -38,6 +38,7 @@ import {
   RestoMenuFoodListScreen,
   SwimmingPoolScreen,
   SwimmingPoolListScreen,
+  RestoMenuDetailScreen,
 } from 'components/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -110,6 +111,11 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-restaurant-detail-menu-food-list',
     component: RestoMenuFoodListScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-restaurant-detail-menu-food-list-detail',
+    component: RestoMenuDetailScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {

@@ -19,6 +19,12 @@ export default function MenuFoodListScreen() {
                 ? `${el.description.slice(0, 50)}...`
                 : el.description
             }
+            onPress={() =>
+              navigation.navigate(
+                'menu-tab-stack-restaurant-detail-menu-food-list-detail',
+                { _name: el.title, _data: el }
+              )
+            }
           />
         )
       })}
