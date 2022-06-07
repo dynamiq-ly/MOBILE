@@ -2,7 +2,7 @@ import AreaView from 'utils/TabAreaView'
 import DetailedCard from 'components/cards/DetailedCard'
 import { detailed_card_menu_list } from 'mock/resto'
 
-export default function MenuFoodListScreen() {
+export default function MenuFoodListScreen({ navigation }) {
   return (
     <AreaView>
       {detailed_card_menu_list.map((el, key) => {
