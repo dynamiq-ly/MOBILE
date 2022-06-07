@@ -25,6 +25,7 @@ import {
   ReportIncidenceScreen,
   SafeBoxScreen,
   LaundryScreen,
+  LaundryMainScreen,
   MedicalAssistanceScreen,
   ConnectivityScreen,
   ParkingLotScreen,
@@ -49,6 +50,8 @@ const Stack = createNativeStackNavigator()
 const presentationModal = function (name) {
   switch (name) {
     case 'menu-tab-stack-restaurant-detail-menu-food-list-detail':
+      return 'modal'
+    case 'menu-tab-stack-laundry-menu':
       return 'modal'
     default:
       return 'fullScreen'
@@ -187,8 +190,13 @@ const safety_Stack_Array = [
   },
   {
     path: 'menu-tab-stack-laundry',
-    component: LaundryScreen,
+    component: LaundryMainScreen,
     header: () => <StackHeader name={'laundry'} />,
+  },
+  {
+    path: 'menu-tab-stack-laundry-menu',
+    component: LaundryScreen,
+    header: () => <StackHeader name={'laundry menu'} />,
   },
   {
     path: 'menu-tab-stack-medical-assistance',
