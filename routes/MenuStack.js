@@ -78,7 +78,7 @@ const MenuStackNavigation = () => {
               component={el.component}
               options={{
                 header: el.header,
-                presentation: presentationModal(el.path),
+                // presentation: presentationModal(el.path),
               }}
             />
           )
