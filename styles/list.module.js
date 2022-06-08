@@ -48,3 +48,26 @@ export const Line = styled.View`
   height: 1px;
   background: ${({ theme }) => theme.primary.accent_300};
 `
+
+/**
+ * vertical simple list
+ */
+
+export const VerticalList = styled.View`
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: ${pixelSizeVertical(15)}px;
+`
+
+export const VerticalListItem = styled.TouchableOpacity`
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+`
+
+export const VerticalListLine = styled.View`
+  width: 1px;
+  height: 32px;
+  background: ${({ theme }) => theme.primary.accent_300};
+  margin: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(10)}px;
+`

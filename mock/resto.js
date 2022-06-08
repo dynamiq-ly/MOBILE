@@ -153,32 +153,50 @@ export const detailed_card_menu_list = [
 export const array_drinks_restaurant = [
   {
     name: 'Tea',
+    type: 'soft',
     image:
       'https://www.comunicaffe.com/wp-content/uploads/2019/12/close-up-of-a-cup-of-tea.jpg',
   },
   {
     name: 'Coffee',
+    type: 'soft',
     image:
       'https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg',
   },
   {
     name: 'Energy drinks',
+    type: 'soft',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFVKeWL4FTvrELh5qBxecymAZ-O1YWjOhaFg&usqp=CAU',
   },
   {
     name: 'Sodas',
+    type: 'soft',
     image:
       'https://www.fodors.com/wp-content/uploads/2019/03/HERO_Worlds_Best_Soda_Bundaberg_shutterstock_679079920.jpg',
   },
   {
     name: 'Juices',
+    type: 'soft',
     image:
       'https://media.istockphoto.com/photos/fruit-juice-picture-id155376375?k=20&m=155376375&s=612x612&w=0&h=xvxdLKu8FQHp0zxAyxD26Nq8MLLsWee7oN7cqJy9KT0=',
   },
   {
     name: 'Smoothies',
+    type: 'soft',
     image:
       'https://healthyfitnessmeals.com/wp-content/uploads/2018/05/strawberries-and-cream-protein-shake-2.jpg',
+  },
+  {
+    name: 'wines',
+    type: 'alcohol',
+    image:
+      'https://www.utracks.com/croppedImages/Europe/France/Wine-cave-1015071-500px.jpg',
+  },
+  {
+    name: 'beers',
+    type: 'alcohol',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRpN3IJInQKQKmpejqNRv0USYQEDsi5FnEyw&usqp=CAU',
   },
 ]
