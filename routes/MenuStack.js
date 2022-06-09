@@ -1,5 +1,5 @@
-import { Platform } from 'react-native'
 import { MenuTab } from 'screens/export'
+import { Linking, Platform } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import {
@@ -45,9 +45,11 @@ import {
   RestoMenuDetailScreen,
   RestoMenuDrinksScreen,
   RestoMenuDrinksDetailScreen,
+  SpaScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
+import OpenLinkButton from 'components/button/OpenLinkButton'
 
 const Stack = createNativeStackNavigator()
 
@@ -301,5 +303,20 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-swimming-pool-list',
     component: SwimmingPoolListScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-span-wellness',
+    component: SpaScreen,
+    header: () => (
+      <OptionHeader
+        name={'span and wellness'}
+        components={
+          <OpenLinkButton
+            icon={'ri-global-line'}
+            func={() => Linking.openURL('https://google.com')}
+          />
+        }
+      />
+    ),
   },
 ]

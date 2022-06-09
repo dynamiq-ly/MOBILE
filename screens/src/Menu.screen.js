@@ -146,7 +146,7 @@ const menuArray4 = [
   {
     icon: 'ri-heart-pulse-line',
     name: 'Spa and Wellness',
-    path: '',
+    path: 'menu-tab-stack-span-wellness',
     color: '#ee0000',
   },
   {

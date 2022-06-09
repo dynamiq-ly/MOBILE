@@ -6,6 +6,7 @@ export { default as Input } from './input/Input'
 export { default as Button } from './button/Button'
 export { default as SearchInput } from './input/SearchInput'
 export { default as GroupButton } from './button/ButtonGroup'
+export { default as OpenLinkButtonIcon } from './button/OpenLinkButton'
 
 /**
  * @description custom header
@@ -68,3 +69,5 @@ export { default as GymEquipementScreen } from './gym/GymEquipement.screen'
 // swimming pool
 export { default as SwimmingPoolScreen } from './swimming-pool/SwimmingPool.screen'
 export { default as SwimmingPoolListScreen } from './swimming-pool/SwimmingPoolLists.screen'
+// span and wellness
+export { default as SpaScreen } from './spa/SpanWellness.screen'
