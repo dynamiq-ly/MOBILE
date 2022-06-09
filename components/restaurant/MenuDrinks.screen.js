@@ -48,7 +48,19 @@ export default function MenuDrinksScreen({ navigation }) {
         {array_drinks_restaurant
           .filter((el) => el.type === isCategory)
           .map((el, key) => {
-            return <SimpleCard key={key} title={el.name} image={el.image} />
+            return (
+              <SimpleCard
+                key={key}
+                title={el.name}
+                image={el.image}
+                onPress={() =>
+                  navigation.navigate(
+                    'menu-tab-stack-restaurant-detail-menu-drinks-details',
+                    { _name: el.name }
+                  )
+                }
+              />
+            )
           })}
       </GridLayout>
     </AreaView>
