@@ -8,15 +8,20 @@ export const StyledText = styled.Text`
     up === 'cap' ? 'capitalize' : up === 'up' ? 'uppercase' : 'lowercase'};
   font-size: ${({ scale }) => (scale ? fontPixel(scale) : 14)}px;
   font-family: ${({ font }) => (font ? `inter-${font}` : 'inter-400')};
-  color: ${({ theme, color }) =>
-    color === 'white'
-      ? theme.primary.accent_0
-      : color === 'gray'
-      ? theme.primary.accent_500
-      : color === 'dominant'
-      ? theme.secondary.accent_500
-      : // default color
-        theme.primary.accent_900};
+  color: ${({ theme, color }) => {
+    switch (color) {
+      case 'white':
+        return theme.primary.accent_0
+      case 'gray':
+        return theme.primary.accent_500
+      case 'dominant':
+        return theme.secondary.accent_500
+      case 'red':
+        return theme.error.accent_500
+      default:
+        return theme.primary.accent_900
+    }
+  }};
 
   text-align: ${({ align }) =>
     align === 'center' ? 'center' : align === 'end' ? 'right' : 'left'};
