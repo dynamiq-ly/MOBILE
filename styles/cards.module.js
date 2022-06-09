@@ -21,9 +21,22 @@ export const WideListCard = styled.ImageBackground`
 
 export const WideListCardButton = styled.TouchableOpacity`
   flex: 1;
-  justify-content: flex-end;
   background-color: #00000050;
+  justify-content: space-between;
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(14)}px;
+`
+
+export const WideCardSectionHeader = styled.View`
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+export const WideCardTag = styled.View`
+  border-radius: 5px;
+  align-self: flex-end;
+  background: ${({ theme }) => theme.primary.accent_700};
+  padding: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(10)}px;
 `
 
 /**
