@@ -248,3 +248,29 @@ export const StyledFullDetailedCardContent = styled.View`
   justify-content: space-between;
   padding: 0px ${pixelSizeHorizontal(10)}px;
 `
+
+/**
+ * ship card
+ */
+
+export const StyledShipCard = styled.View`
+  flex: 1;
+  width: 100%;
+  border-radius: 5px;
+  align-items: center;
+  flex-direction: row;
+  height: ${heightPixel(62)}px;
+  margin-top: ${pixelSizeVertical(14)}px;
+  padding: 0px ${pixelSizeHorizontal(5)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+`
+
+export const StyledShipCardImage = styled.Image`
+  border-radius: 100px;
+  width: ${widthPixel(48)}px;
+  height: ${heightPixel(48)}px;
+`
+
+export const StyledTextCardShip = styled.View`
+  padding: 0px ${pixelSizeHorizontal(7)}px;
+`

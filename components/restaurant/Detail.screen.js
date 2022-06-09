@@ -18,6 +18,7 @@ import {
   HdRow,
   TextWrapper,
 } from 'styles/detail.module'
+import ShipCard from '../cards/ShipCard'
 
 export default function DetailScreen({ navigation, route }) {
   const { _data } = route.params
@@ -69,6 +70,23 @@ export default function DetailScreen({ navigation, route }) {
             />
           </TextWrapper>
         </HdRow>
+        <HFLine />
+        <Text content={'cocks'} weight={500} size={18} up={'cap'} />
+        <ShipCard
+          name='wale eddine sebii'
+          underName='E.CHEF'
+          image={
+            'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
+          }
+        />
+        <ShipCard
+          name='grodon laury ramsey'
+          underName='S.CHEF'
+          image={
+            'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
+          }
+        />
+        <Gap style={{ marginBottom: 32 }} />
       </AreaView>
       <ButtonWrapperDetail>
         <Button title={'book table'} icon={'ri-bookmark-3-line'} />
