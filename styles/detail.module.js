@@ -55,3 +55,20 @@ export const TextBox = styled.View`
   justify-content: center;
   padding: 0px ${pixelSizeVertical(12)}px;
 `
+
+export const HdRow = styled.View`
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+`
+
+export const HFLine = styled.View`
+  height: 1px;
+  width: 100%;
+  margin-top: ${pixelSizeVertical(24)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
+  background: ${({ theme }) => theme.primary.accent_300};
+`
+export const TextWrapper = styled.View`
+  flex: 1;
+`

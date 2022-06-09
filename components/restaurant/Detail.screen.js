@@ -1,10 +1,11 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
+import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
 import CloseHeader from 'components/header/CloseHeader'
 
 import { View as Gap, Image as RnImage } from 'react-native'
-import { widthPixel } from 'utils/normalization'
+import { fontPixel, widthPixel } from 'utils/normalization'
 import {
   ButtonWrapperDetail,
   Image,
@@ -13,6 +14,9 @@ import {
   IconBox,
   TextBox,
   SafeAreaRowWrapperDetail,
+  HFLine,
+  HdRow,
+  TextWrapper,
 } from 'styles/detail.module'
 
 export default function DetailScreen({ navigation, route }) {
@@ -47,6 +51,24 @@ export default function DetailScreen({ navigation, route }) {
             }
           />
         </SafeAreaRowWrapperDetail>
+        <HFLine />
+        <Text content={'Dress code'} weight={500} size={18} up={'cap'} />
+        <HdRow>
+          <Icon
+            color={'#191919'}
+            name='ri-shirt-line'
+            style={{ margin: 5 }}
+            size={fontPixel(28)}
+          />
+          <TextWrapper>
+            <Text
+              content={_data.dress_code}
+              color={'gray'}
+              weight={400}
+              size={16}
+            />
+          </TextWrapper>
+        </HdRow>
       </AreaView>
       <ButtonWrapperDetail>
         <Button title={'book table'} icon={'ri-bookmark-3-line'} />
