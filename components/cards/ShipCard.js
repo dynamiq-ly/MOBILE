@@ -21,10 +21,15 @@ const ShipCard = ({ name = 'NAME', underName = 'N/A', image }) => {
         }}
       />
       <StyledTextCardShip>
-        <Text content={name} up={'cap'} weight={600} size={20} />
+        <Text
+          content={name.length > 12 ? `${name.slice(0, 12)}...` : name}
+          up={'cap'}
+          weight={600}
+          size={16}
+        />
         <Text
           up={'up'}
-          size={16}
+          size={14}
           weight={600}
           content={underName}
           color={underName === 'N/A' ? 'gray' : 'dominant'}

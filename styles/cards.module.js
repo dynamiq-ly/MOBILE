@@ -254,15 +254,14 @@ export const StyledFullDetailedCardContent = styled.View`
  */
 
 export const StyledShipCard = styled.View`
-  flex: 1;
-  width: 100%;
+  width: 165px;
+  overflow: hidden;
   border-radius: 5px;
   align-items: center;
   flex-direction: row;
-  height: ${heightPixel(62)}px;
+  height: ${heightPixel(68)}px;
   margin-top: ${pixelSizeVertical(14)}px;
   padding: 0px ${pixelSizeHorizontal(5)}px;
-  background: ${({ theme }) => theme.primary.accent_0};
 `
 
 export const StyledShipCardImage = styled.Image`
@@ -272,5 +271,7 @@ export const StyledShipCardImage = styled.Image`
 `
 
 export const StyledTextCardShip = styled.View`
+  flex: 1;
+  justify-content: space-between;
   padding: 0px ${pixelSizeHorizontal(7)}px;
 `

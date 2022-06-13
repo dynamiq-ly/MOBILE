@@ -29,29 +29,47 @@ export default function DetailScreen({ navigation, route }) {
       <AreaView>
         <Text content={_data.name} weight={700} up={'cap'} size={28} />
         <Text content={_data.content} color={'gray'} weight={400} size={16} />
+
+        <HFLine />
+        <Text content={'chefs'} weight={500} size={18} up={'cap'} />
         <SafeAreaRowWrapperDetail>
-          <ButtonsRouting
+          <ShipCard
+            name='wale e.sebii'
+            underName='E.CHEF'
             image={
-              'https://www.heinonwine.com/wp-content/uploads/2019/04/Malaysia.jpg-lr.jpg'
-            }
-            name={'foods menu'}
-            func={() =>
-              navigation.navigate('menu-tab-stack-restaurant-detail-menu-food')
+              'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
             }
           />
-          <Gap style={{ width: widthPixel(10) }} />
-          <ButtonsRouting
+          <ShipCard
+            name='grodon l.ramsey'
+            underName='S.CHEF'
             image={
-              'https://cdn.shopify.com/s/files/1/0021/4355/1535/files/Taylors-Very-Very-Old-Tawny-Port-1_500x500.png?v=1650901488'
-            }
-            name={'drinks menu'}
-            func={() =>
-              navigation.navigate(
-                'menu-tab-stack-restaurant-detail-menu-drinks'
-              )
+              'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
             }
           />
         </SafeAreaRowWrapperDetail>
+        <HFLine />
+        <Text content={'Menus'} weight={500} size={18} up={'cap'} />
+        <ButtonsRouting
+          image={
+            'https://www.heinonwine.com/wp-content/uploads/2019/04/Malaysia.jpg-lr.jpg'
+          }
+          name={'foods menu'}
+          func={() =>
+            navigation.navigate('menu-tab-stack-restaurant-detail-menu-food')
+          }
+        />
+        <Gap style={{ width: widthPixel(10) }} />
+        <ButtonsRouting
+          image={
+            'https://cdn.shopify.com/s/files/1/0021/4355/1535/files/Taylors-Very-Very-Old-Tawny-Port-1_500x500.png?v=1650901488'
+          }
+          name={'drinks menu'}
+          func={() =>
+            navigation.navigate('menu-tab-stack-restaurant-detail-menu-drinks')
+          }
+        />
+
         <HFLine />
         <Text content={'Dress code'} weight={500} size={18} up={'cap'} />
         <HdRow>
@@ -70,22 +88,6 @@ export default function DetailScreen({ navigation, route }) {
             />
           </TextWrapper>
         </HdRow>
-        <HFLine />
-        <Text content={'cocks'} weight={500} size={18} up={'cap'} />
-        <ShipCard
-          name='wale eddine sebii'
-          underName='E.CHEF'
-          image={
-            'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
-          }
-        />
-        <ShipCard
-          name='grodon laury ramsey'
-          underName='S.CHEF'
-          image={
-            'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
-          }
-        />
         <Gap style={{ marginBottom: 32 }} />
       </AreaView>
       <ButtonWrapperDetail>
