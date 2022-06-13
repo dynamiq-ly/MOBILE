@@ -36,6 +36,7 @@ const MenuDrinksDetails = ({ route }) => {
               color={'gray'}
               content={el.description}
             />
+            <View style={{ marginBottom: 10 }} />
           </View>
         )
       })}
