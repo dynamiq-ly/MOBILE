@@ -6,15 +6,12 @@ import ShipCard from 'components/cards/ShipCard'
 import CloseHeader from 'components/header/CloseHeader'
 import TextOverImage from 'components/cards/TextOverImage'
 
-import { View as Gap, Image as RnImage } from 'react-native'
-import { fontPixel, widthPixel } from 'utils/normalization'
+import { View as Gap } from 'react-native'
+import { fontPixel } from 'utils/normalization'
 import {
   ButtonWrapperDetail,
   Image,
   View,
-  ButtonRoute,
-  IconBox,
-  TextBox,
   SafeAreaRowWrapperDetail,
   HFLine,
   HdRow,
@@ -99,27 +96,5 @@ export default function DetailScreen({ navigation, route }) {
         <Button title={'book table'} icon={'ri-bookmark-3-line'} />
       </ButtonWrapperDetail>
     </View>
-  )
-}
-
-/**
- * @param0 {string} icon
- * @param1 {string} name
- * @param2 {string} path
- * @param3 {string} color
- */
-function ButtonsRouting({ image, name, func }) {
-  return (
-    <ButtonRoute activeOpacity={0.7} onPress={func}>
-      <IconBox>
-        <RnImage
-          source={{ uri: image }}
-          style={{ width: '100%', height: '100%' }}
-        />
-      </IconBox>
-      <TextBox>
-        <Text content={name} weight={500} size={18} up={'cap'} />
-      </TextBox>
-    </ButtonRoute>
   )
 }
