@@ -1,5 +1,4 @@
 import AreaView from 'utils/TabAreaView'
-import RentingCard from 'components/cards/RentingCard'
 
 import { GridLayout } from 'styles/grid.module'
 import SimpleCard from 'components/cards/SimpleCard'

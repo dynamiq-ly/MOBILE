@@ -2,7 +2,9 @@ import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
+import ShipCard from 'components/cards/ShipCard'
 import CloseHeader from 'components/header/CloseHeader'
+import TextOverImage from 'components/cards/TextOverImage'
 
 import { View as Gap, Image as RnImage } from 'react-native'
 import { fontPixel, widthPixel } from 'utils/normalization'
@@ -18,7 +20,6 @@ import {
   HdRow,
   TextWrapper,
 } from 'styles/detail.module'
-import ShipCard from '../cards/ShipCard'
 
 export default function DetailScreen({ navigation, route }) {
   const { _data } = route.params
@@ -50,25 +51,29 @@ export default function DetailScreen({ navigation, route }) {
         </SafeAreaRowWrapperDetail>
         <HFLine />
         <Text content={'Menus'} weight={500} size={18} up={'cap'} />
-        <ButtonsRouting
-          image={
-            'https://www.heinonwine.com/wp-content/uploads/2019/04/Malaysia.jpg-lr.jpg'
-          }
-          name={'foods menu'}
-          func={() =>
-            navigation.navigate('menu-tab-stack-restaurant-detail-menu-food')
-          }
-        />
-        <Gap style={{ width: widthPixel(10) }} />
-        <ButtonsRouting
-          image={
-            'https://cdn.shopify.com/s/files/1/0021/4355/1535/files/Taylors-Very-Very-Old-Tawny-Port-1_500x500.png?v=1650901488'
-          }
-          name={'drinks menu'}
-          func={() =>
-            navigation.navigate('menu-tab-stack-restaurant-detail-menu-drinks')
-          }
-        />
+
+        <SafeAreaRowWrapperDetail>
+          <TextOverImage
+            image={
+              'https://www.heinonwine.com/wp-content/uploads/2019/04/Malaysia.jpg-lr.jpg'
+            }
+            name={'food'}
+            onPress={() =>
+              navigation.navigate('menu-tab-stack-restaurant-detail-menu-food')
+            }
+          />
+          <TextOverImage
+            image={
+              'https://cdn.shopify.com/s/files/1/0021/4355/1535/files/Taylors-Very-Very-Old-Tawny-Port-1_500x500.png?v=1650901488'
+            }
+            name={'drinks'}
+            onPress={() =>
+              navigation.navigate(
+                'menu-tab-stack-restaurant-detail-menu-drinks'
+              )
+            }
+          />
+        </SafeAreaRowWrapperDetail>
 
         <HFLine />
         <Text content={'Dress code'} weight={500} size={18} up={'cap'} />

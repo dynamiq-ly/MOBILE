@@ -47,21 +47,27 @@ export const WideCardTag = styled.View`
  */
 
 export const RentingWideCard = styled.TouchableOpacity`
-  flex: 1;
-  border-radius: 24px;
-  height: ${heightPixel(200)}px;
-  margin-bottom: ${pixelSizeVertical(24)}px;
-  background: ${({ theme }) => theme.primary.accent_0};
+  overflow: hidden;
+  border-radius: 10px;
+  width: ${widthPixel(165)}px;
+  height: ${heightPixel(165)}px;
+  margin-top: ${pixelSizeVertical(14)}px;
 `
 
 export const ImageRentedVehicule = styled.Image`
-  flex: 1;
+  position: absolute;
+  width: ${widthPixel(165)}px;
+  height: ${heightPixel(165)}px;
 `
 
 export const AbsoluteViewRendtedCard = styled.View`
   z-index: 1;
   width: 100%;
-  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: ${widthPixel(165)}px;
+  height: ${heightPixel(165)}px;
+  background: rgba(0, 0, 0, 0.4);
   padding: ${pixelSizeHorizontal(5)}px 0px;
 `
 /**

@@ -9,15 +9,16 @@ import {
  * @param0 {string} name
  * @param1 {string} image
  */
-export default function RentingCard({ name, image, ...rest }) {
+export default function TextOverImage({ name, image, ...rest }) {
   return (
     <RentingWideCard activeOpacity={0.8} {...rest}>
       <AbsoluteViewRendtedCard>
         <Text
+          align={'center'}
+          color={'white'}
           content={name}
           weight={600}
-          size={24}
-          align={'center'}
+          size={21}
           up={'up'}
         />
       </AbsoluteViewRendtedCard>
