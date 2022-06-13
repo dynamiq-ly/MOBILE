@@ -1,6 +1,6 @@
+import { restaurants } from 'mock/resto'
 import AreaView from 'utils/TabAreaView'
 import Widecard from 'components/cards/Widecard'
-import { restaurants } from 'mock/resto'
 
 let time = new Date().getHours() + ':' + new Date().getMinutes()
 

@@ -4,6 +4,7 @@ export const restaurants = [
     name: 'Carroll Sagg',
     open: '11:51',
     close: '23:55',
+    specialiy: 'italian',
     dress_code:
       'man are allowed to wear 3 pieace while women are welcomed with a dress to show beauty',
     image:
@@ -16,6 +17,7 @@ export const restaurants = [
     name: 'Kalinda Atkins',
     open: '8:17',
     close: '17:19',
+    specialiy: 'tunisian',
     dress_code:
       'man are allowed to wear 3 pieace while women are welcomed with a dress to show beauty',
     image:
@@ -28,6 +30,7 @@ export const restaurants = [
     name: 'Manya Dickon',
     open: '13:29',
     close: '19:53',
+    specialiy: 'mexican',
     dress_code:
       'man are allowed to wear 3 pieace while women are welcomed with a dress to show beauty',
     image:
@@ -40,6 +43,7 @@ export const restaurants = [
     name: 'Gian Cottam',
     open: '19:50',
     close: '16:14',
+    specialiy: 'frensh',
     dress_code:
       'man are allowed to wear 3 pieace while women are welcomed with a dress to show beauty',
     image:
@@ -52,6 +56,7 @@ export const restaurants = [
     name: 'Candida Biernat',
     open: '19:52',
     close: '17:18',
+    specialiy: 'indian',
     dress_code:
       'man are allowed to wear 3 pieace while women are welcomed with a dress to show beauty',
     image:
@@ -166,6 +171,7 @@ export const array_drinks_restaurant = [
     type: 'soft',
     image:
       'https://www.comunicaffe.com/wp-content/uploads/2019/12/close-up-of-a-cup-of-tea.jpg',
+    specialiy: '',
     dress_code:
       'man are allowed to wear 3 pieace while women are welcomed with a dress to show beauty',
   },

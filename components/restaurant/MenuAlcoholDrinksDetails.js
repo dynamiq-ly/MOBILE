@@ -1,4 +1,4 @@
-import AreaView from '~/utils/TabAreaView'
+import AreaView from 'utils/TabAreaView'
 
 const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
   return <AreaView></AreaView>
