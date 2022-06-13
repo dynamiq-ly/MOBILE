@@ -30,6 +30,7 @@ export { default as RestoMenuFoodListScreen } from './restaurant/MenuList.screen
 export { default as RestoMenuDetailScreen } from './restaurant/MenuListDetails.screen'
 export { default as RestoMenuDrinksScreen } from './restaurant/MenuDrinks.screen'
 export { default as RestoMenuDrinksDetailScreen } from './restaurant/MenuDrinksDetails.screen'
+export { default as RestoMenuAlcoholDrinksDetailsScreen } from './restaurant/MenuAlcoholDrinksDetails'
 // bars screen
 export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'

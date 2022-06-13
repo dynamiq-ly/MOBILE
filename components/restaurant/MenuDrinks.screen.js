@@ -55,7 +55,9 @@ export default function MenuDrinksScreen({ navigation }) {
                 image={el.image}
                 onPress={() =>
                   navigation.navigate(
-                    'menu-tab-stack-restaurant-detail-menu-drinks-details',
+                    el.type === 'alcohol'
+                      ? 'menu-tab-stack-restaurant-detail-menu-drinks-details-alcohol'
+                      : 'menu-tab-stack-restaurant-detail-menu-drinks-details',
                     { _name: el.name, _image: el.image }
                   )
                 }
