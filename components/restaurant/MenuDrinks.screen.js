@@ -56,7 +56,7 @@ export default function MenuDrinksScreen({ navigation }) {
                 onPress={() =>
                   navigation.navigate(
                     'menu-tab-stack-restaurant-detail-menu-drinks-details',
-                    { _name: el.name }
+                    { _name: el.name, _image: el.image }
                   )
                 }
               />
