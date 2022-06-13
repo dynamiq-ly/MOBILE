@@ -1,8 +1,9 @@
-import AreaView from '~/utils/TabAreaView'
 import Text from 'components/text/Text'
-import { array_drinks_details_restaurant } from 'mock/resto'
-import { Image } from 'styles/image.module'
+import AreaView from '~/utils/TabAreaView'
+
 import { View } from 'react-native'
+import { Image } from 'styles/image.module'
+import { array_drinks_details_restaurant } from 'mock/resto'
 import { SafeAreaRowWrapperDetail } from 'styles/detail.module'
 
 const MenuDrinksDetails = ({ route }) => {
@@ -15,24 +16,22 @@ const MenuDrinksDetails = ({ route }) => {
         }}
       />
       <View style={{ marginBottom: 20 }} />
-
       {array_drinks_details_restaurant.map((el, key) => {
         return (
-          <View>
+          <View key={key}>
             <SafeAreaRowWrapperDetail>
-              <Text size={18} up={'cap'} weight={600} content={el.name} />
+              <Text size={21} up={'cap'} weight={600} content={el.name} />
               <Text
-                size={16}
+                size={18}
                 weight={600}
                 color={'dominant'}
                 content={el.price}
               />
             </SafeAreaRowWrapperDetail>
-
             <Text
-              size={14}
+              size={16}
               up={'cap'}
-              weight={600}
+              weight={400}
               color={'gray'}
               content={el.description}
             />
