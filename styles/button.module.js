@@ -50,3 +50,8 @@ export const Divider = styled.View`
   height: 1px;
   background: ${({ theme }) => theme.primary.accent_200};
 `
+// FixedWidthButton
+
+export const StyledFixedButton = styled.View`
+  width: ${widthPixel(125)}px;
+`
