@@ -6,6 +6,7 @@ export { default as Input } from './input/Input'
 export { default as Button } from './button/Button'
 export { default as SearchInput } from './input/SearchInput'
 export { default as GroupButton } from './button/ButtonGroup'
+export { default as FixedButton } from './button/FixedWidthButton'
 export { default as OpenLinkButtonIcon } from './button/OpenLinkButton'
 
 /**
