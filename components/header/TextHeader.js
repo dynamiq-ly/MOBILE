@@ -9,7 +9,7 @@ export default function TextHeader({ name }) {
   return (
     <SafeAreaHeader>
       <ViewHeader>
-        <Text content={name} weight={700} up={'cap'} size={32} />
+        <Text content={name} weight={700} up={'cap'} size={28} />
       </ViewHeader>
     </SafeAreaHeader>
   )

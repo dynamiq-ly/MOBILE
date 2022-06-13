@@ -56,9 +56,9 @@ const Stack = createNativeStackNavigator()
 const presentationModal = function (name) {
   switch (name) {
     case 'menu-tab-stack-restaurant-detail-menu-food-list-detail':
-      return Platform.OS === 'android' ? 'transparentModal' : 'modal'
+      return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
     case 'menu-tab-stack-laundry-menu':
-      return Platform.OS === 'android' ? 'transparentModal' : 'modal'
+      return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
     default:
       return 'fullScreen'
   }
@@ -75,7 +75,7 @@ const MenuStackNavigation = () => {
         }}
       />
 
-      <Stack.Group key={'safety stack'}>
+      <Stack.Group key={'menu stack'}>
         {safety_Stack_Array.map((el, key) => {
           return (
             <Stack.Screen

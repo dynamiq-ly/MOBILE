@@ -19,8 +19,7 @@ const MenuListDetailsScreen = ({ route }) => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-        }}
-      >
+        }}>
         <Text content={_data.title} size={24} weight={700} up={'cap'} />
         <Text
           content={`${_data.price}$`}

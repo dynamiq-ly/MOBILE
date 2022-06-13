@@ -25,7 +25,7 @@ export default function StackHeader({ name, components }) {
           <Icon name={'ri-arrow-left-s-line'} color={'#18181b'} size={28} />
         </BackButton>
         <TextWrapper>
-          <Text content={name} weight={700} up={'cap'} size={32} />
+          <Text content={name} weight={700} up={'cap'} size={28} />
         </TextWrapper>
         <OptionStackViewHeader>{components}</OptionStackViewHeader>
       </StackViewHeader>

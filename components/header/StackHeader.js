@@ -21,7 +21,7 @@ export default function StackHeader({ name }) {
         <BackButton onPress={() => _nav.goBack()}>
           <Icon name={'ri-arrow-left-s-line'} color={'#18181b'} size={28} />
         </BackButton>
-        <Text content={name} weight={700} up={'cap'} size={32} />
+        <Text content={name} weight={700} up={'cap'} size={28} />
       </StackViewHeader>
     </SafeAreaHeader>
   )
