@@ -42,7 +42,7 @@ export default function HouseKeepingScreen({ navigation }) {
             <Icon name='ri-building-line' />
           </BoxIcon>
           <BoxText>
-            <Text content={'Rooms'} weight={600} up={'cap'} size={18} />
+            <Text content={'suites'} weight={600} up={'cap'} size={18} />
             <Text content={'25 USD'} color={'dominant'} size={14} />
           </BoxText>
         </PhoneDirectoryRow>

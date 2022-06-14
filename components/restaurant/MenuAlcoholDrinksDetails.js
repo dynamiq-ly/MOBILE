@@ -1,13 +1,14 @@
-import { View } from 'styles/detail.module'
-import FixedWidthButton from '../button/FixedWidthButton'
 import { useState } from 'react'
-import { array_drinks_alcohol_list } from 'mock/resto'
-import { HScrollView } from '~/styles/app.module'
-import { VerticalListLine } from '~/styles/list.module'
 import { View as Gap } from 'react-native'
-import AreaView from '~/utils/TabAreaView'
-import { GridLayout } from '~/styles/grid.module'
-import SimpleCard from '../cards/SimpleCard'
+import { View } from 'styles/detail.module'
+import { GridLayout } from 'styles/grid.module'
+import { HScrollView } from 'styles/app.module'
+import { VerticalListLine } from 'styles/list.module'
+import { array_drinks_alcohol_list } from 'mock/resto'
+
+import AreaView from 'utils/TabAreaView'
+import SimpleCard from 'components/cards/SimpleCard'
+import FixedWidthButton from 'components/button/FixedWidthButton'
 
 const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
   const [isCategory, setCategory] = useState('red wine')
@@ -19,14 +20,13 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}
-              >
+                key={key}>
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}
                   active={isCategory !== el ? true : false}
                 />
-                <VerticalListLine />
+                {Wine_category_Array.length !== key + 1 && <VerticalListLine />}
               </Gap>
             )
           })}
@@ -53,4 +53,4 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
 
 export default MenuAlcoholDrinksDetails
 
-const Wine_category_Array = ['red wine', 'white wine', 'rose wine']
+const Wine_category_Array = ['red wine', 'white wine', 'rose wine', 'whisky']
