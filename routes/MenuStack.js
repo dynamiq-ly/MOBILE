@@ -46,6 +46,7 @@ import {
   RestoMenuDrinksScreen,
   RestoMenuDrinksDetailScreen,
   SpaScreen,
+  HouseKeepingScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -324,5 +325,10 @@ const safety_Stack_Array = [
         }
       />
     ),
+  },
+  {
+    path: 'menu-tab-stack-housekeeping',
+    component: HouseKeepingScreen,
+    header: () => <StackHeader name={'house keeping'} />,
   },
 ]
