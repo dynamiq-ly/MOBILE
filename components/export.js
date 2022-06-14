@@ -59,6 +59,7 @@ export { default as CartScreenRoomService } from './room-service/CartRoomService
 export { default as PhoneDirectoryScreen } from './room-service/PhoneDirectory.screen'
 export { default as ReportIncidenceScreen } from './room-service/IncidenceReport.screen'
 export { default as HouseKeepingScreen } from './housekeeping/HouseKeeping.screen'
+export { default as HouseKeepingServiceScreen } from './housekeeping/HouseKeepingServices.screen'
 // point of interest
 export {
   default as PointOfInterestScreen,

@@ -8,7 +8,7 @@ import { View as Gap } from 'react-native'
 import { ButtonWrapperDetail, View } from 'styles/detail.module'
 import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 
-export default function HouseKeepingScreen() {
+export default function HouseKeepingScreen({ navigation }) {
   return (
     <View>
       <AreaView>
@@ -48,7 +48,12 @@ export default function HouseKeepingScreen() {
         </PhoneDirectoryRow>
       </AreaView>
       <ButtonWrapperDetail>
-        <Button title='see services' />
+        <Button
+          title='see services'
+          onPress={() =>
+            navigation.navigate('menu-tab-stack-housekeeping-service')
+          }
+        />
       </ButtonWrapperDetail>
     </View>
   )
