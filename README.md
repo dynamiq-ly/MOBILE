@@ -1,4 +1,4 @@
-## SMARHOTEL
+# SMARHOTEL
 
 <br/>
 
