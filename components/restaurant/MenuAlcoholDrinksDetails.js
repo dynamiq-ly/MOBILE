@@ -7,10 +7,10 @@ import { VerticalListLine } from 'styles/list.module'
 import { array_drinks_alcohol_list } from 'mock/resto'
 
 import AreaView from 'utils/TabAreaView'
-import SimpleCard from 'components/cards/SimpleCard'
+import WineCard from 'components/cards/WineCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
-const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
+const MenuAlcoholDrinksDetails = ({ navigation }) => {
   const [isCategory, setCategory] = useState('red wine')
   return (
     <View>
@@ -20,8 +20,7 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}
-              >
+                key={key}>
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}
@@ -36,13 +35,15 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
       <AreaView>
         <GridLayout>
           {array_drinks_alcohol_list
-            .filter((el) => el.bottle_category === isCategory)
-            .map((el, key) => {
+            .filter((elem) => elem.bottle_category === isCategory)
+            .map((el) => {
               return (
                 <WineCard
-                  key={key}
+                  key={el.id}
                   title={el.bottle_name}
                   image={el.bottle_image}
+                  price={`${el.bottle_price_bottle}$`}
+                  origin={`${el.bottle_region} ${el.bottle_date_made}`}
                 />
               )
             })}
