@@ -20,7 +20,8 @@ const MenuAlcoholDrinksDetails = ({ navigation }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
+                key={key}
+              >
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}
@@ -44,6 +45,12 @@ const MenuAlcoholDrinksDetails = ({ navigation }) => {
                   image={el.bottle_image}
                   price={`${el.bottle_price_bottle}$`}
                   origin={`${el.bottle_region} ${el.bottle_date_made}`}
+                  onPress={() =>
+                    navigation.navigate(
+                      'menu-tab-stack-restaurant-alcohol-details',
+                      { _name: el.bottle_name }
+                    )
+                  }
                 />
               )
             })}

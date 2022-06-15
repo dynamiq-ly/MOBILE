@@ -53,6 +53,7 @@ import {
 import Cart from 'cart/Cart'
 import OpenLinkButton from 'components/button/OpenLinkButton'
 import MenuAlcoholDrinksDetails from '~/components/restaurant/MenuAlcoholDrinksDetails'
+import AcloholDrinkDetails from '~/components/restaurant/AcloholDrinkDetails'
 
 const Stack = createNativeStackNavigator()
 
@@ -153,6 +154,11 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-restaurant-detail-menu-drinks-details-alcohol',
     component: MenuAlcoholDrinksDetails,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-restaurant-alcohol-details',
+    component: AcloholDrinkDetails,
     header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
