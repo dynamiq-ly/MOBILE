@@ -20,7 +20,8 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
+                key={key}
+              >
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}
@@ -38,7 +39,7 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
             .filter((el) => el.bottle_category === isCategory)
             .map((el, key) => {
               return (
-                <SimpleCard
+                <WineCard
                   key={key}
                   title={el.bottle_name}
                   image={el.bottle_image}
