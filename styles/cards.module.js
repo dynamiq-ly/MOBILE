@@ -281,3 +281,28 @@ export const StyledTextCardShip = styled.View`
   justify-content: space-between;
   padding: 0px ${pixelSizeHorizontal(7)}px;
 `
+
+/**
+ * weather card for showing weather details
+ * in pool screen and maybe other screens
+ */
+export const StyledWeatherCard = styled.View`
+  flex: 1;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  background: ${({ theme }) => theme.primary.accent_0};
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(18)}px;
+`
+
+export const StyledWeatherBox = styled.View`
+  align-items: ${({ space }) => (space === 'end' ? 'flex-end' : 'flex-start')};
+  justify-content: space-between;
+  margin-bottom: ${pixelSizeVertical(10)}px;
+`
+
+export const ImageWeatherIcon = styled.Image`
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: ${widthPixel(48)}px;
+  height: ${heightPixel(48)}px;
+`
