@@ -17,8 +17,9 @@ export default function FullDetailedCard({ capacity, title, image }) {
         <Text content={title} size={18} weight={600} up={'cap'} />
         <Text
           content={`${capacity} Capacity`}
-          size={18}
+          color={'dominant'}
           weight={600}
+          size={16}
           up={'cap'}
         />
       </StyledFullDetailedCardContent>
