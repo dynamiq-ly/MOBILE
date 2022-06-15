@@ -159,7 +159,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-restaurant-alcohol-details',
     component: AcloholDrinkDetails,
-    header: ({ route }) => <StackHeader name={route.params._name} />,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-bar-detail',
