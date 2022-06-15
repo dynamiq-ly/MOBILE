@@ -17,7 +17,7 @@ export default function Widecard({
   image = 'https://www.usbforwindows.com/storage/img/images_3/function_set_default_image_when_image_not_present.png',
   name,
   state,
-  specialiy,
+  specialiy = null,
   ...rest
 }) {
   return (
