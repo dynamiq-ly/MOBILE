@@ -1,0 +1,11 @@
+import axios, { AxiosInstance } from 'axios'
+
+/**
+ * @description create a default instance for axios so we can use it in our components
+ * where we won't need to specify the domain url or getting cross origin requests blocked
+ * @param {AxiosInstance} axios
+ */
+export const __query = axios.create({
+  withCredentials: true,
+  baseURL: '127.0.0.1:8000/api/',
+})
