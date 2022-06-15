@@ -1,6 +1,4 @@
 import Text from 'components/text/Text'
-
-import React from 'react'
 import { ImageSquareCard, StyledSquareCard } from 'styles/cards.module'
 
 /**
@@ -9,7 +7,6 @@ import { ImageSquareCard, StyledSquareCard } from 'styles/cards.module'
  * @param2 {string} price
  * @param3 {string} origin
  */
-
 const WineCard = ({ image, title, price, origin }) => {
   return (
     <StyledSquareCard activeOpacity={0.8}>
