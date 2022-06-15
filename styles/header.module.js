@@ -37,7 +37,7 @@ export const ViewHeader = styled.View`
 `
 
 export const BackButton = styled.TouchableOpacity`
-  border-radius: 14px;
+  border-radius: 10px;
   justify-content: center;
   background: transparent;
   width: ${widthPixel(35)}px;
@@ -46,10 +46,9 @@ export const BackButton = styled.TouchableOpacity`
 `
 
 export const CircleCloseButton = styled.TouchableOpacity`
-  border-radius: 100px;
+  border-radius: 10px;
   align-items: center;
   justify-content: center;
-  background: transparent;
   width: ${widthPixel(38)}px;
   height: ${heightPixel(38)}px;
   margin-right: ${pixelSizeHorizontal(10)}px;

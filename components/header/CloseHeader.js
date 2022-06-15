@@ -18,7 +18,7 @@ export default function CloseHeader() {
     <DangerAreaHeader>
       <StackViewHeader>
         <CircleCloseButton onPress={() => _nav.goBack()}>
-          <Icon name={'ri-arrow-left-s-line'} color={'#18181b'} size={28} />
+          <Icon name={'ri-arrow-left-s-line'} color={'#18181b'} size={24} />
         </CircleCloseButton>
       </StackViewHeader>
     </DangerAreaHeader>
