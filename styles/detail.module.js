@@ -15,7 +15,15 @@ export const View = styled.View`
 
 export const Image = styled.Image`
   width: 100%;
-  height: ${fontPixel(250)}px;
+  margin-bottom: -75px;
+  height: ${fontPixel(350)}px;
+`
+
+export const RadiusView = styled.View`
+  flex: 1;
+  overflow: hidden;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
 `
 
 export const ButtonWrapperDetail = styled.View`

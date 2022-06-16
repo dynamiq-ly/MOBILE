@@ -2,7 +2,8 @@ import Text from 'components/text/Text'
 import CloseHeader from 'components/header/CloseHeader'
 import GroupButton from 'components/button/ButtonGroup'
 
-import { Image, View, Container, HeadingWrapper } from 'styles/Reception.module'
+import { View, Container, HeadingWrapper } from 'styles/Reception.module'
+import { RadiusView, Image } from 'styles/detail.module'
 
 export default function ReceptionScreen({ navigation }) {
   return (
@@ -13,20 +14,27 @@ export default function ReceptionScreen({ navigation }) {
           uri: 'https://img.freepik.com/free-photo/one-two-young-hotel-receptionists-standing-by-counter-looking-touchpad-display-consulting-client-phone-against-colleague_274679-18500.jpg',
         }}
       />
-      <Container>
-        <HeadingWrapper>
-          <Text content={'how can we help'} size={28} weight={600} up={'cap'} />
-          <Text
-            content={
-              'From all inclusive to half boarding we trying to deliver all the possbile services.'
-            }
-            color={'gray'}
-            weight={400}
-            size={16}
-          />
-        </HeadingWrapper>
-        <GroupButton array={array} index={1} callback={navigation} />
-      </Container>
+      <RadiusView>
+        <Container>
+          <HeadingWrapper>
+            <Text
+              content={'how can we help'}
+              size={28}
+              weight={600}
+              up={'cap'}
+            />
+            <Text
+              content={
+                'From all inclusive to half boarding we trying to deliver all the possbile services.'
+              }
+              color={'gray'}
+              weight={400}
+              size={16}
+            />
+          </HeadingWrapper>
+          <GroupButton array={array} index={1} callback={navigation} />
+        </Container>
+      </RadiusView>
     </View>
   )
 }

@@ -1,6 +1,7 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
+import Button from 'components/button/Button'
 import CloseHeader from 'components/header/CloseHeader'
 
 import { Image as RnImage } from 'react-native'
@@ -12,6 +13,8 @@ import {
   IconBox,
   TextBox,
   SafeAreaRowWrapperDetail,
+  RadiusView,
+  ButtonWrapperDetail,
 } from 'styles/detail.module'
 
 export default function DetailScreen({ route }) {
@@ -20,18 +23,15 @@ export default function DetailScreen({ route }) {
     <View>
       <CloseHeader />
       <Image source={{ uri: _data.image }} />
-      <AreaView>
-        <Text content={_data.name} weight={700} up={'cap'} size={28} />
-        <Text content={_data.content} color={'gray'} weight={400} size={16} />
-        <SafeAreaRowWrapperDetail>
-          <ButtonsRouting
-            image={
-              'https://cdn.shopify.com/s/files/1/0021/4355/1535/files/Taylors-Very-Very-Old-Tawny-Port-1_500x500.png?v=1650901488'
-            }
-            name={'drinks menu'}
-          />
-        </SafeAreaRowWrapperDetail>
-      </AreaView>
+      <RadiusView>
+        <AreaView>
+          <Text content={_data.name} weight={700} up={'cap'} size={28} />
+          <Text content={_data.content} color={'gray'} weight={400} size={16} />
+        </AreaView>
+      </RadiusView>
+      <ButtonWrapperDetail>
+        <Button title={'Drinks'} />
+      </ButtonWrapperDetail>
     </View>
   )
 }
