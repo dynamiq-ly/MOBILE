@@ -24,10 +24,10 @@ export default function SwimmingPoolListsScreen({ route }) {
         <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
       }>
       <WeatherCard
-        temp_c={data?.current.temp_c}
-        feels_like={data?.current.feelslike_c}
-        weather_icon={data?.current.condition.icon}
-        weather_descriptions={data?.current.condition.text}
+        temp_c={data ? data.current.temp_c : '0'}
+        feels_like={data ? data.current.feelslike_c : '0'}
+        weather_icon={data ? data.current.condition.icon : ''}
+        weather_descriptions={data ? data.current.condition.text : 'N/A'}
       />
       {_data.map((item, index) => {
         return (
