@@ -9,11 +9,16 @@ import Text from 'components/text/Text'
  * full image card
  * @param0 {string} image
  * @param1 {string} title
- * @param2 {string} position
+ * @param2 {boolean} position
  */
-export default function FullImageCard({ image, title, position, ...rest }) {
+export default function FullImageCard({
+  image,
+  title,
+  position = 'start',
+  ...rest
+}) {
   return (
-    <StyledCardWrapper position={position}>
+    <StyledCardWrapper state={position}>
       <StyledFullImageCard
         source={{
           uri: image,

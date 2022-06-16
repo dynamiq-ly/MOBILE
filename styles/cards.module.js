@@ -207,8 +207,16 @@ export const TitleDetailedCardContent = styled.View`
 
 export const StyledCardWrapper = styled.View`
   height: ${heightPixel(232)}px;
-  justify-content: ${({ position }) =>
-    position === 'end' ? 'flex-end' : 'flex-start'};
+  justify-content: ${({ state }) => {
+    switch (state) {
+      case 'end':
+        return 'flex-end'
+      case 'center':
+        return 'center'
+      default:
+        return 'flex-start'
+    }
+  }};
 `
 
 export const StyledFullImageCard = styled.ImageBackground`
