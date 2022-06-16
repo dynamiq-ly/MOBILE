@@ -8,7 +8,9 @@ import { useCallback, useState } from 'react'
 
 export default function SwimmingPoolListsScreen({ route }) {
   const { _data } = route.params
-  const { data, refetch } = useQuery('@weather', fetchWeather)
+  const { data, refetch } = useQuery('@weather', fetchWeather, {
+    cacheTime: 1800,
+  })
   const [refresh, setRefresh] = useState(false)
 
   let onRefresh = useCallback(() => {
