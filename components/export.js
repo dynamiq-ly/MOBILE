@@ -76,3 +76,5 @@ export { default as SwimmingPoolScreen } from './swimming-pool/SwimmingPool.scre
 export { default as SwimmingPoolListScreen } from './swimming-pool/SwimmingPoolLists.screen'
 // span and wellness
 export { default as SpaScreen } from './spa/SpanWellness.screen'
+// roms screen
+export { default as RoomScreen } from './rooms/Room.screen'

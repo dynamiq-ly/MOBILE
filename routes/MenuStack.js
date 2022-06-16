@@ -48,6 +48,7 @@ import {
   SpaScreen,
   HouseKeepingScreen,
   HouseKeepingServiceScreen,
+  RoomScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -289,6 +290,16 @@ const safety_Stack_Array = [
     header: () => <StackHeader name={'report incidence'} />,
   },
   {
+    path: 'menu-tab-stack-housekeeping',
+    component: HouseKeepingScreen,
+    header: () => <StackHeader name={'house keeping'} />,
+  },
+  {
+    path: 'menu-tab-stack-housekeeping-service',
+    component: HouseKeepingServiceScreen,
+    header: () => <StackHeader name={'house keeping'} />,
+  },
+  {
     path: 'menu-tab-stack-gym',
     component: GymScreen,
     header: () => <StackHeader name={'gym'} />,
@@ -334,13 +345,8 @@ const safety_Stack_Array = [
     ),
   },
   {
-    path: 'menu-tab-stack-housekeeping',
-    component: HouseKeepingScreen,
-    header: () => <StackHeader name={'house keeping'} />,
-  },
-  {
-    path: 'menu-tab-stack-housekeeping-service',
-    component: HouseKeepingServiceScreen,
-    header: () => <StackHeader name={'house keeping'} />,
+    path: 'menu-tab-stack-rooms',
+    component: RoomScreen,
+    header: () => <StackHeader name={'rooms'} />,
   },
 ]

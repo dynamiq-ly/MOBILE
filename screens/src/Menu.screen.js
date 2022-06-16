@@ -131,7 +131,7 @@ const menuArray3 = [
   {
     icon: 'ri-hotel-bed-line',
     name: 'rooms',
-    path: '',
+    path: 'menu-tab-stack-rooms',
     color: '#85586F',
   },
 ]
