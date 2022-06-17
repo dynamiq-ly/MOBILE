@@ -6,6 +6,14 @@ import {
   StyledTextCardShip,
 } from 'styles/cards.module'
 
+/**
+ *
+ * @param0 {string} name
+ * @param1 {string} price
+ * @param2 {string} image
+ * @param3 {string} state
+ * @returns
+ */
 const RadioButtonCard = ({ name, price, image, state }) => {
   return (
     <RadioButtonCardStyle pressed={state}>

@@ -1,18 +1,18 @@
-import { View } from '~/styles/detail.module'
-import CloseHeader from 'components/header/CloseHeader'
+import AreaView from 'utils/TabAreaView'
 import Text from 'components/text/Text'
+import Button from 'components/button/Button'
+import Radio from 'components/checkbox/Radio'
+import CloseHeader from 'components/header/CloseHeader'
+import RadioButtonCard from 'components/cards/RadioButtonCard'
+
+import { useState } from 'react'
+import { View } from '~/styles/detail.module'
+import { View as Gap } from 'react-native'
 import {
   Image,
   ButtonWrapperDetail,
   SafeAreaRowWrapperDetail,
 } from 'styles/detail.module'
-import AreaView from 'utils/TabAreaView'
-
-import { View as Gap } from 'react-native'
-import Button from 'components/button/Button'
-import RadioButtonCard from '../cards/RadioButtonCard'
-import Radio from '../checkbox/Radio'
-import { useState } from 'react'
 
 const AcloholDrinkDetails = ({ route }) => {
   const { _data } = route.params
