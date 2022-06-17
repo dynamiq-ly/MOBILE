@@ -52,6 +52,13 @@ export const Divider = styled.View`
 `
 // FixedWidthButton
 
-export const StyledFixedButton = styled.View`
-  width: ${widthPixel(125)}px;
+export const StyledFixedButton = styled.TouchableOpacity`
+  border-radius: 8px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: ${widthPixel(100)}px;
+  height: ${heightPixel(38)}px;
+  background: ${({ theme, bg }) =>
+    !bg ? theme.primary.accent_900 : 'transparent'};
 `
