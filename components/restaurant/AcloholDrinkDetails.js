@@ -16,18 +16,21 @@ import { useState } from 'react'
 
 const AcloholDrinkDetails = ({ route }) => {
   const { _data } = route.params
-  const [checked, setChecked] = useState('Bottle')
+  const [type, setType] = useState('bottle')
   return (
     <View>
       <CloseHeader />
       <Image source={{ uri: _data.bottle_image }} />
       <AreaView>
-        <Text content={_data.bottle_name} weight={700} up={'cap'} size={28} />
-        <Text content={`${_data.bottle_region} ${_data.bottle_date_made}`} />
+        <Text content={_data.bottle_name} weight={700} up={'cap'} size={32} />
+        <Text
+          content={`${_data.bottle_region} ${_data.bottle_date_made}`}
+          up={'cap'}
+          size={21}
+        />
 
         <Gap style={{ marginBottom: 10 }} />
-        <Text content={_data.bottle_description} color={'gray'} />
-        <Gap style={{ marginBottom: 25 }} />
+        <Text content={_data.bottle_description} color={'gray'} size={16} />
         <SafeAreaRowWrapperDetail>
           <Radio
             children={
@@ -37,10 +40,10 @@ const AcloholDrinkDetails = ({ route }) => {
                 image={
                   'https://media.istockphoto.com/photos/red-wine-bottle-picture-id987571978?k=20&m=987571978&s=612x612&w=0&h=zGIYQaDvaDeuolW_AHecpQEhzEsPSDYC-7fBiJSak10='
                 }
-                state={checked === 'Bottle' && true}
+                state={type === 'bottle' && true}
               />
             }
-            onPress={() => setChecked('Bottle')}
+            onPress={() => setType('bottle')}
           />
           <Radio
             children={
@@ -50,15 +53,15 @@ const AcloholDrinkDetails = ({ route }) => {
                 image={
                   'https://media.istockphoto.com/photos/glass-of-red-wine-on-white-picture-id515707206?k=20&m=515707206&s=612x612&w=0&h=tii_cH6HuhU2SPSqsCDbX___6XMwRQmOd3d4hSRitPI='
                 }
-                state={checked === 'Glass' && true}
+                state={type === 'glass' && true}
               />
             }
-            onPress={() => setChecked('Glass')}
+            onPress={() => setType('glass')}
           />
         </SafeAreaRowWrapperDetail>
       </AreaView>
       <ButtonWrapperDetail>
-        <Button title={'order now'} />
+        <Button title={`order ${type}`} />
       </ButtonWrapperDetail>
     </View>
   )
