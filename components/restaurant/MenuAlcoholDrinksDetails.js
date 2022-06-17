@@ -5,7 +5,6 @@ import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { VerticalListLine } from 'styles/list.module'
 import { array_drinks_alcohol_list } from 'mock/resto'
-import { fontPixel } from 'utils/normalization'
 
 import AreaView from 'utils/TabAreaView'
 import WineCard from 'components/cards/WineCard'
@@ -21,7 +20,8 @@ const MenuAlcoholDrinksDetails = ({ navigation }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
+                key={key}
+              >
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}

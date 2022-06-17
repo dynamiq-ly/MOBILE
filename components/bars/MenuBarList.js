@@ -1,5 +1,5 @@
 import AreaView from 'utils/TabAreaView'
-import { array_menu_bar } from 'mock/resto'
+import { array_menu_bar } from 'mock/bars'
 import SimpleCard from 'components/cards/SimpleCard'
 import { GridLayout } from 'styles/grid.module'
 
