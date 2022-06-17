@@ -14,7 +14,7 @@ const MenuAlcoholDrinksDetails = ({ navigation }) => {
   const [isCategory, setCategory] = useState('red wine')
   return (
     <View>
-      <Gap style={{ height: 48, backgroundColor: 'red' }}>
+      <Gap style={{ height: 48 }}>
         <HScrollView horizontal showsHorizontalScrollIndicator={false}>
           {Wine_category_Array.map((el, key) => {
             return (
