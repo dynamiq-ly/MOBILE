@@ -8,7 +8,18 @@ export default function MenuBarScreen({ navigation }) {
     <AreaView>
       <GridLayout>
         {array_menu_bar.map((el, key) => {
-          return <SimpleCard key={key} title={el.name} image={el.image} />
+          return (
+            <SimpleCard
+              key={key}
+              title={el.name}
+              image={el.image}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-bar-menu-details', {
+                  _name: el.name,
+                })
+              }
+            />
+          )
         })}
       </GridLayout>
     </AreaView>

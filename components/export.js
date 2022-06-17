@@ -37,6 +37,7 @@ export { default as RestoMenuAlcoholDrinksDetailsScreen } from './restaurant/Men
 export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'
 export { default as BarMenuList } from './bars/MenuBarList'
+export { default as BarMenuDrinksDetails } from './bars/MenuBarDetails'
 // how can we help screen
 export { default as CheckIn } from './checkinout/CheckIn'
 export { default as CheckOut } from './checkinout/CheckOut'
