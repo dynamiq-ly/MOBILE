@@ -41,7 +41,7 @@ export default function FoodService({ navigation }) {
             return (
               <DetailedCard
                 key={key}
-                title={`${el.food_name} ${el.food_type}`}
+                title={el.food_name}
                 price={el.food_price}
                 image={el.food_image}
                 description={
@@ -50,7 +50,10 @@ export default function FoodService({ navigation }) {
                     : el.food_summary
                 }
                 onPress={() =>
-                  navigation.navigate('', { _name: el.food_name, _data: el })
+                  navigation.navigate(
+                    'menu-tab-stack-room-service-food-service-detail',
+                    { _name: el.food_name, _data: el }
+                  )
                 }
               />
             )

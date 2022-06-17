@@ -52,6 +52,7 @@ import {
   HouseKeepingServiceScreen,
   RoomScreen,
   FoodServiceScreen,
+  FoodServiceDetailScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -281,6 +282,21 @@ const safety_Stack_Array = [
     header: ({ navigation }) => (
       <OptionHeader
         name={'food services'}
+        components={
+          <Cart
+            name={'mini_bar'}
+            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
+          />
+        }
+      />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-room-service-food-service-detail',
+    component: FoodServiceDetailScreen,
+    header: ({ route, navigation }) => (
+      <OptionHeader
+        name={route.params._name}
         components={
           <Cart
             name={'mini_bar'}
