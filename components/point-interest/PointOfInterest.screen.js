@@ -13,7 +13,7 @@ import { fontPixel } from 'utils/normalization'
 import { VerticalListLine } from 'styles/list.module'
 import { Interesting_Point } from 'mock/interest_list'
 
-export default function PointInterestScreen() {
+export default function PointInterestScreen({ navigation }) {
   const [isCategory, setCategory] = useState('monuments')
   return (
     <View>
@@ -47,6 +47,14 @@ export default function PointInterestScreen() {
                 image={element.image}
                 rating={element.rating}
                 location={element.location}
+                onPress={() =>
+                  navigation.navigate(
+                    'menu-tab-stack-point-of-interest-detail',
+                    {
+                      _name: element.name,
+                    }
+                  )
+                }
               />
             )
           })}

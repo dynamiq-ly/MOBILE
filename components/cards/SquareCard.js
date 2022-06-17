@@ -19,7 +19,13 @@ import LottieView from 'lottie-react-native'
  * @param3 {rating} rating
  * @returns
  */
-export default function SquareCard({ title, image, location, rating }) {
+export default function SquareCard({
+  title,
+  image,
+  location,
+  rating,
+  ...rest
+}) {
   const isFirstRun = useRef(true)
   const animation = useRef(null)
   const [isLiked, setLiked] = useState(false)
@@ -40,7 +46,7 @@ export default function SquareCard({ title, image, location, rating }) {
   }, [isLiked])
 
   return (
-    <StyledSquareCard activeOpacity={0.8}>
+    <StyledSquareCard activeOpacity={0.8} {...rest}>
       <ImageSquareCard source={{ uri: image }}>
         <OverlaySquareCard>
           <TouchableOpacity onPress={() => setLiked(!isLiked)}>

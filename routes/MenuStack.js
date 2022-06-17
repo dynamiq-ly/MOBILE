@@ -55,6 +55,7 @@ import {
   FoodServiceDetailScreen,
   BarMenuList,
   BarMenuDrinksDetails,
+  PointOfInterestDetailScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -193,6 +194,18 @@ const safety_Stack_Array = [
     header: ({ navigation }) => (
       <OptionHeader
         name={'points of interest'}
+        components={
+          <PointInterestScreenOptions func={() => navigation.navigate('')} />
+        }
+      />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-point-of-interest-detail',
+    component: PointOfInterestDetailScreen,
+    header: ({ route, navigation }) => (
+      <OptionHeader
+        name={'interesting point'}
         components={
           <PointInterestScreenOptions func={() => navigation.navigate('')} />
         }
