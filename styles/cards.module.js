@@ -314,3 +314,21 @@ export const ImageWeatherIcon = styled.Image`
   width: ${widthPixel(48)}px;
   height: ${heightPixel(48)}px;
 `
+/**
+ * RadioButtonCard
+ */
+
+export const RadioButtonCardStyle = styled.View`
+  width: 165px;
+  overflow: hidden;
+  border-radius: 5px;
+  align-items: center;
+  flex-direction: row;
+  height: ${heightPixel(66)}px;
+  margin-top: ${pixelSizeVertical(14)}px;
+  padding: 0px ${pixelSizeHorizontal(5)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+  border-width: 2px;
+  border-color: ${({ pressed, theme }) =>
+    pressed ? theme.secondary.accent_500 : theme.primary.accent_0}; ;
+`
