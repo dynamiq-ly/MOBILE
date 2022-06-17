@@ -78,7 +78,7 @@ export default function SquareCard({ title, image, location, rating }) {
           <Icon
             size={14}
             key={index}
-            color={'#eab308'}
+            color={'#facc15'}
             name={`ri-star-${index <= rating ? 'fill' : 'line'}`}
             style={{ alignSelf: 'flex-end' }}
           />
