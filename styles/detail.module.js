@@ -77,6 +77,7 @@ export const HFLine = styled.View`
   margin-bottom: ${pixelSizeVertical(14)}px;
   background: ${({ theme }) => theme.primary.accent_300};
 `
+
 export const TextWrapper = styled.View`
   flex: 1;
 `

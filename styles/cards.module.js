@@ -314,3 +314,36 @@ export const ImageWeatherIcon = styled.Image`
   width: ${widthPixel(48)}px;
   height: ${heightPixel(48)}px;
 `
+
+/**
+ * plus minus card
+ */
+
+export const StyledWrapperPlusMinusStyleCard = styled.View`
+  margin-top: 15px;
+  border-radius: 10px;
+  width: ${widthPixel(165)}px;
+  justify-content: space-between;
+  background: ${({ theme }) => theme.primary.accent_0};
+  padding: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(10)}px;
+`
+
+export const StyledPlusMinusStyleCard = styled.View`
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  flex-direction: row;
+  align-items: center;
+  height: ${heightPixel(28)}px;
+  justify-content: space-between;
+  background: ${({ theme }) => theme.primary.accent_0};
+`
+
+export const StyledPlusMinusBoxIcon = styled.TouchableOpacity`
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: ${widthPixel(24)}px;
+  height: ${heightPixel(24)}px;
+  background: ${({ theme }) => theme.primary.accent_300};
+`
