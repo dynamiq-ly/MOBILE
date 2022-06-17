@@ -1,7 +1,7 @@
 export const food_servie_array = [
   {
     id: 1,
-    food_type: '',
+    food_type: 'breakfast',
     food_name: 'Main',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -35,7 +35,7 @@ export const food_servie_array = [
   },
   {
     id: 2,
-    food_type: '',
+    food_type: 'breakfast',
     food_name: 'Helena',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -69,7 +69,7 @@ export const food_servie_array = [
   },
   {
     id: 3,
-    food_type: '',
+    food_type: 'breakfast',
     food_name: 'Delaware',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -103,7 +103,7 @@ export const food_servie_array = [
   },
   {
     id: 4,
-    food_type: '',
+    food_type: 'dinner',
     food_name: 'Hauk',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -137,7 +137,7 @@ export const food_servie_array = [
   },
   {
     id: 5,
-    food_type: '',
+    food_type: 'lunch',
     food_name: 'Pearson',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -171,7 +171,7 @@ export const food_servie_array = [
   },
   {
     id: 6,
-    food_type: '',
+    food_type: 'lunch',
     food_name: 'Walton',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -205,7 +205,7 @@ export const food_servie_array = [
   },
   {
     id: 7,
-    food_type: '',
+    food_type: 'dinner',
     food_name: 'Stoughton',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -239,7 +239,7 @@ export const food_servie_array = [
   },
   {
     id: 8,
-    food_type: '',
+    food_type: 'lunch',
     food_name: 'Ryan',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -273,7 +273,7 @@ export const food_servie_array = [
   },
   {
     id: 9,
-    food_type: '',
+    food_type: 'dinner',
     food_name: 'Saint Paul',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -307,7 +307,7 @@ export const food_servie_array = [
   },
   {
     id: 10,
-    food_type: '',
+    food_type: 'breakfast',
     food_name: 'Northland',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -341,7 +341,7 @@ export const food_servie_array = [
   },
   {
     id: 11,
-    food_type: '',
+    food_type: 'fast food',
     food_name: 'Bayside',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -375,7 +375,7 @@ export const food_servie_array = [
   },
   {
     id: 12,
-    food_type: '',
+    food_type: 'snacks',
     food_name: 'Almo',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -409,7 +409,7 @@ export const food_servie_array = [
   },
   {
     id: 13,
-    food_type: '',
+    food_type: 'fast food',
     food_name: 'Kensington',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -443,7 +443,7 @@ export const food_servie_array = [
   },
   {
     id: 14,
-    food_type: '',
+    food_type: 'lunch',
     food_name: 'Jenna',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -477,7 +477,7 @@ export const food_servie_array = [
   },
   {
     id: 15,
-    food_type: '',
+    food_type: 'dinner',
     food_name: 'Onsgard',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -511,7 +511,7 @@ export const food_servie_array = [
   },
   {
     id: 16,
-    food_type: '',
+    food_type: 'breakfast',
     food_name: 'Mccormick',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -545,7 +545,7 @@ export const food_servie_array = [
   },
   {
     id: 17,
-    food_type: '',
+    food_type: 'dinner',
     food_name: 'Independence',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -579,7 +579,7 @@ export const food_servie_array = [
   },
   {
     id: 18,
-    food_type: '',
+    food_type: 'lunch',
     food_name: 'Cardinal',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -613,7 +613,7 @@ export const food_servie_array = [
   },
   {
     id: 19,
-    food_type: '',
+    food_type: 'fast food',
     food_name: 'Fairfield',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -647,7 +647,7 @@ export const food_servie_array = [
   },
   {
     id: 20,
-    food_type: '',
+    food_type: 'breakfast',
     food_name: 'Vernon',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
