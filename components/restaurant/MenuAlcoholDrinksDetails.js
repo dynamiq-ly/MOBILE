@@ -5,6 +5,7 @@ import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { VerticalListLine } from 'styles/list.module'
 import { array_drinks_alcohol_list } from 'mock/resto'
+import { fontPixel } from 'utils/normalization'
 
 import AreaView from 'utils/TabAreaView'
 import WineCard from 'components/cards/WineCard'
@@ -47,7 +48,7 @@ const MenuAlcoholDrinksDetails = ({ navigation }) => {
                   onPress={() =>
                     navigation.navigate(
                       'menu-tab-stack-restaurant-alcohol-details',
-                      { _name: el.bottle_name }
+                      { _name: el.bottle_name, _data: el }
                     )
                   }
                 />
