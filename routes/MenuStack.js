@@ -45,16 +45,17 @@ import {
   RestoMenuDetailScreen,
   RestoMenuDrinksScreen,
   RestoMenuDrinksDetailScreen,
+  RestoMenuAlocoholDetailsScreen,
+  RestoMenuAlcoholDrinksDetailsScreen,
   SpaScreen,
   HouseKeepingScreen,
   HouseKeepingServiceScreen,
   RoomScreen,
+  FoodServiceScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
 import OpenLinkButton from 'components/button/OpenLinkButton'
-import MenuAlcoholDrinksDetails from '~/components/restaurant/MenuAlcoholDrinksDetails'
-import AcloholDrinkDetails from '~/components/restaurant/AcloholDrinkDetails'
 
 const Stack = createNativeStackNavigator()
 
@@ -154,12 +155,12 @@ const safety_Stack_Array = [
   },
   {
     path: 'menu-tab-stack-restaurant-detail-menu-drinks-details-alcohol',
-    component: MenuAlcoholDrinksDetails,
+    component: RestoMenuAlcoholDrinksDetailsScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-restaurant-alcohol-details',
-    component: AcloholDrinkDetails,
+    component: RestoMenuAlocoholDetailsScreen,
     header: () => false,
   },
   {
@@ -265,6 +266,21 @@ const safety_Stack_Array = [
     header: ({ navigation }) => (
       <OptionHeader
         name={'mini bar'}
+        components={
+          <Cart
+            name={'mini_bar'}
+            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
+          />
+        }
+      />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-room-service-food-service',
+    component: FoodServiceScreen,
+    header: ({ navigation }) => (
+      <OptionHeader
+        name={'food services'}
         components={
           <Cart
             name={'mini_bar'}

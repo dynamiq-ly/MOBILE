@@ -31,8 +31,8 @@ export { default as RestoMenuFoodListScreen } from './restaurant/MenuList.screen
 export { default as RestoMenuDetailScreen } from './restaurant/MenuListDetails.screen'
 export { default as RestoMenuDrinksScreen } from './restaurant/MenuDrinks.screen'
 export { default as RestoMenuDrinksDetailScreen } from './restaurant/MenuDrinksDetails.screen'
-export { default as RestoMenuAlcoholDrinksDetailsScreen } from './restaurant/MenuAlcoholDrinksDetails'
 export { default as RestoMenuAlocoholDetailsScreen } from './restaurant/AcloholDrinkDetails'
+export { default as RestoMenuAlcoholDrinksDetailsScreen } from './restaurant/MenuAlcoholDrinksDetails'
 // bars screen
 export { default as BarsList } from './bars/List.screen'
 export { default as BarDetail } from './bars/Detail.screen'
@@ -56,6 +56,7 @@ export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
 export { default as RoomService } from './room-service/Service.screen'
 export { default as MiniBarScreen } from './room-service/Minibar.screen'
+export { default as FoodServiceScreen } from './room-service/FoodService.screen'
 export { default as CartScreenRoomService } from './room-service/CartRoomService.screen'
 export { default as PhoneDirectoryScreen } from './room-service/PhoneDirectory.screen'
 export { default as ReportIncidenceScreen } from './room-service/IncidenceReport.screen'
