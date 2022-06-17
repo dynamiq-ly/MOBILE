@@ -3,19 +3,20 @@ import CloseHeader from 'components/header/CloseHeader'
 import Text from 'components/text/Text'
 import {
   Image,
-  SafeAreaRowWrapperDetail,
-  HdRow,
   ButtonWrapperDetail,
+  SafeAreaRowWrapperDetail,
 } from 'styles/detail.module'
 import AreaView from 'utils/TabAreaView'
-import FixedWidthButton from '../button/FixedWidthButton'
-import Icon from 'react-native-remix-icon'
-import { fontPixel } from 'utils/normalization'
+
 import { View as Gap } from 'react-native'
 import Button from 'components/button/Button'
+import RadioButtonCard from '../cards/RadioButtonCard'
+import Radio from '../checkbox/Radio'
+import { useState } from 'react'
 
 const AcloholDrinkDetails = ({ route }) => {
   const { _data } = route.params
+  const [checked, setChecked] = useState('Bottle')
   return (
     <View>
       <CloseHeader />
@@ -23,46 +24,38 @@ const AcloholDrinkDetails = ({ route }) => {
       <AreaView>
         <Text content={_data.bottle_name} weight={700} up={'cap'} size={28} />
         <Text content={`${_data.bottle_region} ${_data.bottle_date_made}`} />
+
+        <Gap style={{ marginBottom: 10 }} />
+        <Text content={_data.bottle_description} color={'gray'} />
         <Gap style={{ marginBottom: 25 }} />
         <SafeAreaRowWrapperDetail>
-          <View>
-            <HdRow>
-              <Icon
-                color={'#191919'}
-                name='ri-medicine-bottle-fill'
-                style={{ margin: 5 }}
-                size={fontPixel(28)}
+          <Radio
+            children={
+              <RadioButtonCard
+                name={'Bottle'}
+                price={_data.bottle_price_bottle}
+                image={
+                  'https://media.istockphoto.com/photos/red-wine-bottle-picture-id987571978?k=20&m=987571978&s=612x612&w=0&h=zGIYQaDvaDeuolW_AHecpQEhzEsPSDYC-7fBiJSak10='
+                }
+                state={checked === 'Bottle' && true}
               />
-              <Text
-                content={_data.bottle_price_bottle}
-                color={'dominant'}
-                size={16}
-                weight={600}
+            }
+            onPress={() => setChecked('Bottle')}
+          />
+          <Radio
+            children={
+              <RadioButtonCard
+                name={'Glass'}
+                price={_data.bottle_price_glass}
+                image={
+                  'https://media.istockphoto.com/photos/glass-of-red-wine-on-white-picture-id515707206?k=20&m=515707206&s=612x612&w=0&h=tii_cH6HuhU2SPSqsCDbX___6XMwRQmOd3d4hSRitPI='
+                }
+                state={checked === 'Glass' && true}
               />
-            </HdRow>
-            <FixedWidthButton title={'order a bottle'} />
-          </View>
-          <View>
-            <HdRow>
-              <Icon
-                color={'#191919'}
-                name='ri-goblet-fill'
-                style={{ margin: 5 }}
-                size={fontPixel(28)}
-              />
-              <Text
-                content={_data.bottle_price_glass}
-                color={'dominant'}
-                size={16}
-                weight={600}
-              />
-            </HdRow>
-
-            <FixedWidthButton title={'order a glass'} />
-          </View>
+            }
+            onPress={() => setChecked('Glass')}
+          />
         </SafeAreaRowWrapperDetail>
-        <Gap style={{ marginBottom: 25 }} />
-        <Text content={_data.bottle_description} color={'gray'} />
       </AreaView>
       <ButtonWrapperDetail>
         <Button title={'order now'} />

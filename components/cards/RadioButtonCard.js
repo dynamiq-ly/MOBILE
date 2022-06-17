@@ -1,7 +1,7 @@
 import Text from 'components/text/Text'
 
 import {
-  StyledShipCard,
+  RadioButtonCardStyle,
   StyledShipCardImage,
   StyledTextCardShip,
 } from 'styles/cards.module'

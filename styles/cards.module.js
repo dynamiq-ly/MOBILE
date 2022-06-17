@@ -321,7 +321,7 @@ export const ImageWeatherIcon = styled.Image`
 export const RadioButtonCardStyle = styled.View`
   width: 165px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
   align-items: center;
   flex-direction: row;
   height: ${heightPixel(66)}px;

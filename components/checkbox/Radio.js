@@ -1,5 +1,5 @@
 import { Pressable } from 'react-native'
 
-export default function Radio({ checked = false, onChange, children }) {
-  return <Pressable onPress={() => onChange(!checked)}>{children}</Pressable>
+export default function Radio({ children, ...rest }) {
+  return <Pressable {...rest}>{children}</Pressable>
 }
