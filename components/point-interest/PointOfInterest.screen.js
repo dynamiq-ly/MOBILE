@@ -46,6 +46,7 @@ export default function PointInterestScreen() {
                 title={element.name}
                 image={element.image}
                 rating={element.rating}
+                location={element.location}
               />
             )
           })}
