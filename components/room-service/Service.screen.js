@@ -32,7 +32,7 @@ const menus = [
     name: 'food service',
     color: '#A91079',
     icon: 'ri-restaurant-line',
-    path: '',
+    path: 'menu-tab-stack-room-service-food-service',
   },
   {
     name: 'minibar service',
