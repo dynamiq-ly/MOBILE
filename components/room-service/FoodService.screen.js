@@ -6,7 +6,6 @@ import { useState } from 'react'
 import { View as Gap } from 'react-native'
 import { View } from 'styles/detail.module'
 import { HScrollView } from 'styles/app.module'
-import { GridLayout } from 'styles/grid.module'
 import { VerticalListLine } from 'styles/list.module'
 
 import { food_servie_array } from 'mock/food_service'
