@@ -27,12 +27,12 @@ export default function SquareCard({ title, image, rating }) {
               flexDirection: 'row-reverse',
               alignItems: 'center',
             }}>
-            {[...Array(rating)].map((_, index) => (
+            {[...Array(5)].map((_, index) => (
               <Icon
                 size={14}
                 key={index}
                 color={'yellow'}
-                name='ri-star-fill'
+                name={`ri-star-${index <= rating ? 'fill' : 'line'}`}
                 style={{ alignSelf: 'flex-end' }}
               />
             ))}
