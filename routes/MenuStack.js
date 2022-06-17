@@ -53,6 +53,8 @@ import {
   RoomScreen,
   FoodServiceScreen,
   FoodServiceDetailScreen,
+  BarMenuList,
+  BarMenuDrinksDetails,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -169,6 +171,17 @@ const safety_Stack_Array = [
     component: BarDetail,
     header: () => false,
   },
+  {
+    path: 'menu-tab-stack-bar-menu-list',
+    component: BarMenuList,
+    header: () => <StackHeader name={'Bar drinks'} />,
+  },
+  {
+    path: 'menu-tab-stack-bar-menu-details',
+    component: BarMenuDrinksDetails,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+
   {
     path: 'menu-tab-stack-how-can-we-help',
     component: HowCanWeHelp,
