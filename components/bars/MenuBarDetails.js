@@ -9,8 +9,9 @@ import { array_drinks_alcohol_list } from 'mock/resto'
 import AreaView from 'utils/TabAreaView'
 import WineCard from 'components/cards/WineCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
+
 const MenuBarDetails = ({ navigation }) => {
-  const [isCategory, setCategory] = useState('whiskies')
+  const [isCategory, setCategory] = useState('whisky')
   return (
     <View>
       <Gap style={{ height: 48 }}>
@@ -19,8 +20,7 @@ const MenuBarDetails = ({ navigation }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}
-              >
+                key={key}>
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}

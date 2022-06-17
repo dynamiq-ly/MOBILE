@@ -1,6 +1,7 @@
 import AreaView from 'utils/TabAreaView'
-import { array_menu_bar } from 'mock/bars'
 import SimpleCard from 'components/cards/SimpleCard'
+
+import { array_menu_bar } from 'mock/bars'
 import { GridLayout } from 'styles/grid.module'
 
 export default function MenuBarScreen({ navigation }) {
