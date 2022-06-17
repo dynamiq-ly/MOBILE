@@ -33,7 +33,7 @@ export default function SquareCard({ title, image, location, rating }) {
       }
       isFirstRun.current = false
     } else if (isLiked) {
-      animation.current.play(2, 20)
+      animation.current.play(1, 20)
     } else {
       animation.current.play(0, 1)
     }
