@@ -56,6 +56,7 @@ import {
   BarMenuList,
   BarMenuDrinksDetails,
   PointOfInterestDetailScreen,
+  BarMenuListDrinkDetails,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -180,6 +181,11 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-bar-menu-details',
     component: BarMenuDrinksDetails,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-bar-menu-drink-detail',
+    component: BarMenuListDrinkDetails,
     header: ({ route }) => <StackHeader name={route.params._name} />,
   },
 

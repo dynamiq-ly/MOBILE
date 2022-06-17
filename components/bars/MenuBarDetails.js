@@ -44,6 +44,12 @@ const MenuBarDetails = ({ navigation }) => {
                   image={el.bottle_image}
                   price={`${el.bottle_price_bottle}$`}
                   origin={`${el.bottle_region} ${el.bottle_date_made}`}
+                  onPress={() =>
+                    navigation.navigate('menu-tab-bar-menu-drink-detail', {
+                      _name: el.bottle_name,
+                      _data: el,
+                    })
+                  }
                 />
               )
             })}
