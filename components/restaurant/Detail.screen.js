@@ -3,6 +3,7 @@ import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
 import ShipCard from 'components/cards/ShipCard'
+import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 import TextOverImage from 'components/cards/TextOverImage'
 
@@ -10,7 +11,6 @@ import { View as Gap } from 'react-native'
 import { fontPixel } from 'utils/normalization'
 import {
   ButtonWrapperDetail,
-  Image,
   View,
   SafeAreaRowWrapperDetail,
   HFLine,
@@ -24,9 +24,21 @@ export default function DetailScreen({ navigation, route }) {
   return (
     <View>
       <CloseHeader />
-      <Image source={{ uri: _data.image }} />
+      <Carsouel
+        imageArray={[
+          { image: _data.image },
+          {
+            image:
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmvZEDCLiaOOIfx_vOLiJ5JDVF-PiFLGwvWg&usqp=CAU',
+          },
+          {
+            image:
+              'https://media-cdn.tripadvisor.com/media/photo-s/1b/a9/f2/ee/le-cafe-des-arts.jpg',
+          },
+        ]}
+      />
       <RadiusView>
-        <AreaView>
+        <AreaView mode={'light'}>
           <Text content={_data.name} weight={700} up={'cap'} size={28} />
           <Text content={_data.content} color={'gray'} weight={400} size={16} />
 
