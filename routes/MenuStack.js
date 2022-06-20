@@ -116,7 +116,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-safety-detail',
     component: SafetyDetail,
-    header: ({ route }) => <StackHeader name={route.params._data.name} />,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-restaurant-list',
