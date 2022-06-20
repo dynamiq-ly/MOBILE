@@ -61,7 +61,6 @@ import {
 } from 'components/export'
 
 import Cart from 'cart/Cart'
-import OpenLinkButton from 'components/button/OpenLinkButton'
 
 const Stack = createNativeStackNavigator()
 
