@@ -1,5 +1,5 @@
+import { Platform } from 'react-native'
 import { MenuTab } from 'screens/export'
-import { Linking, Platform } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import {
@@ -396,17 +396,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-span-wellness',
     component: SpaScreen,
-    header: () => (
-      <OptionHeader
-        name={'span and wellness'}
-        components={
-          <OpenLinkButton
-            icon={'ri-global-line'}
-            func={() => Linking.openURL('https://google.com')}
-          />
-        }
-      />
-    ),
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-rooms',
