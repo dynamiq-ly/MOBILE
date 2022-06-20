@@ -75,7 +75,15 @@ export default function SafetyScreen({ navigation }) {
 }
 
 let fetchSafetyMeasures = function () {
-  return __query.get('/api/measures').then((res) => {
-    return res.data
-  })
+  return __query
+    .get('/api/measures')
+    .then((res) => {
+      if (res.status === 200) return res.data
+      else throw new Error('something went wrong')
+    })
+    .catch(() => {
+      throw new Error('something went wrong')
+    })
 }
+
+console.disableYellowBox = true

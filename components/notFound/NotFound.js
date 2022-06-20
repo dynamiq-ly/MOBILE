@@ -22,7 +22,7 @@ export default function NotFound({ killProcess = false }) {
           <Text
             align={'center'}
             content={
-              'fetching your data is taking longer than expected, this may be due to server latency'
+              'fetching your data is taking longer than expected, this may be due to server latency or network issues'
             }
             color={'gray'}
           />
