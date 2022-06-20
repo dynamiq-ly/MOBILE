@@ -20,7 +20,8 @@ const MenuBarDetails = ({ navigation }) => {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
+                key={key}
+              >
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}

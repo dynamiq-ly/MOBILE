@@ -186,7 +186,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-bar-menu-drink-detail',
     component: BarMenuListDrinkDetails,
-    header: ({ route }) => <StackHeader name={route.params._name} />,
+    header: () => false,
   },
 
   {
