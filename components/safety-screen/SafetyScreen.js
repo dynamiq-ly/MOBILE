@@ -78,12 +78,9 @@ let fetchSafetyMeasures = function () {
   return __query
     .get('/api/measures')
     .then((res) => {
-      if (res.status === 200) return res.data
-      else throw new Error('something went wrong')
+      return res.data
     })
-    .catch(() => {
-      throw new Error('something went wrong')
+    .catch((err) => {
+      throw new Error(err.message)
     })
 }
-
-console.disableYellowBox = true
