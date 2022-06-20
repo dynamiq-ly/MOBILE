@@ -14,7 +14,7 @@ export default function AreaView({
   ...rest
 }) {
   return (
-    <Container {...rest}>
+    <Container {...rest} automaticallyAdjustKeyboardInsets>
       <StatusBar style={mode} hidden={statusBar} />
       {children}
     </Container>

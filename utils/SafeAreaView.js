@@ -14,7 +14,7 @@ export default function SafeAreaView({
   ...rest
 }) {
   return (
-    <SafeArewContainer {...rest}>
+    <SafeArewContainer {...rest} automaticallyAdjustKeyboardInsets>
       <StatusBar style={mode} hidden={statusBar} />
       <Container>{children}</Container>
     </SafeArewContainer>
