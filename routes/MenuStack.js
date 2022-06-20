@@ -58,6 +58,7 @@ import {
   PointOfInterestDetailScreen,
   BarMenuListDrinkDetails,
   TransportationsScreen,
+  SpaDetailScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -397,6 +398,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-span-wellness',
     component: SpaScreen,
     header: () => false,
+  },
+  {
+    path: 'menu-tab-stack-span-wellness-details',
+    component: SpaDetailScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-rooms',

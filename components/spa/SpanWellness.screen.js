@@ -1,16 +1,24 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
+import Icon from 'react-native-remix-icon'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
-import GroupButton from 'components/button/ButtonGroup'
 import OpenLinkButton from 'components/button/OpenLinkButton'
 
 import { View as Gap } from 'react-native'
+import { fontPixel } from 'utils/normalization'
 import {
-  RadiusView,
   View,
+  RadiusView,
   SafeAreaRowWrapperDetail,
 } from 'styles/detail.module'
+import {
+  GroupsBtn,
+  ButtonItem,
+  Divider,
+  IconBox,
+  TextBox,
+} from 'styles/button.module'
 
 export default function SpaAndWellnessScreen({ navigation }) {
   return (
@@ -60,7 +68,44 @@ export default function SpaAndWellnessScreen({ navigation }) {
             size={16}
           />
           <Gap style={{ marginBottom: 24 }} />
-          <GroupButton array={array} index={1} callback={navigation} />
+          <GroupsBtn>
+            {array.map((el, key) => {
+              return (
+                <Gap key={key}>
+                  <ButtonItem
+                    activeOpacity={0.9}
+                    onPress={() =>
+                      navigation.navigate(el.path, {
+                        _name: el.name,
+                        _data: el,
+                      })
+                    }>
+                    <IconBox color={'#1A2952'}>
+                      <Icon
+                        name={el.icon}
+                        size={fontPixel(24)}
+                        color={'#fffffe'}
+                      />
+                    </IconBox>
+                    <TextBox>
+                      <Text
+                        content={el.name}
+                        weight={500}
+                        size={18}
+                        up={'cap'}
+                      />
+                    </TextBox>
+                    <Icon
+                      name={'ri-arrow-right-circle-line'}
+                      size={fontPixel(24)}
+                      color={'#9ca3af'}
+                    />
+                  </ButtonItem>
+                  {key != array.length - 1 && <Divider />}
+                </Gap>
+              )
+            })}
+          </GroupsBtn>
           <Gap style={{ marginBottom: 32 }} />
         </AreaView>
       </RadiusView>
@@ -72,25 +117,25 @@ const array = [
   {
     icon: 'ri-mastodon-line',
     name: 'masage therapy',
-    path: 'menu-tab-stack-check-in-out',
+    path: 'menu-tab-stack-span-wellness-details',
     color: '#5F6C7B',
   },
   {
     icon: 'ri-red-packet-line',
     name: 'spa packages',
-    path: 'menu-tab-stack-connectivity',
+    path: 'menu-tab-stack-span-wellness-details',
     color: '#5F6C7B',
   },
   {
     icon: 'ri-space-ship-line',
     name: 'esthetic threatments',
-    path: '',
+    path: 'menu-tab-stack-span-wellness-details',
     color: '#5F6C7B',
   },
   {
     icon: 'ri-user-5-line',
     name: 'facial treatment rituals',
-    path: '',
+    path: 'menu-tab-stack-span-wellness-details',
     color: '#5F6C7B',
   },
 ]
