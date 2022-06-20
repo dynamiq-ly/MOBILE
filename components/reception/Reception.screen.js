@@ -73,7 +73,7 @@ const array = [
   {
     icon: 'ri-taxi-line',
     name: 'Transportations',
-    path: '',
+    path: 'menu-tab-stack-transportation',
     color: '#118181',
   },
   {
