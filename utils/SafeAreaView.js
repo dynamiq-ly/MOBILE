@@ -11,9 +11,10 @@ export default function SafeAreaView({
   children,
   mode = 'dark',
   statusBar = false,
+  ...rest
 }) {
   return (
-    <SafeArewContainer>
+    <SafeArewContainer {...rest}>
       <StatusBar style={mode} hidden={statusBar} />
       <Container>{children}</Container>
     </SafeArewContainer>
