@@ -1,5 +1,5 @@
-const transportation = () => {
+const Transportation = () => {
   return <></>
 }
 
-export default transportation
+export default Transportation
