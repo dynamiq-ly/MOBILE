@@ -6,5 +6,5 @@ import axios from 'axios'
  */
 export const __query = axios.create({
   withCredentials: true,
-  baseURL: '127.0.0.1:8000/api/',
+  baseURL: 'https://smarhotel.herokuapp.com',
 })
