@@ -59,6 +59,7 @@ import {
   BarMenuListDrinkDetails,
   TransportationsScreen,
   SpaDetailScreen,
+  MoneyConverter,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -278,6 +279,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-parking',
     component: ParkingLotScreen,
     header: () => <StackHeader name={'parking spot'} />,
+  },
+  {
+    path: 'menu-tab-stack-money-exchange',
+    component: MoneyConverter,
+    header: () => <StackHeader name={'money converter'} />,
   },
   {
     path: 'menu-tab-stack-other-request',

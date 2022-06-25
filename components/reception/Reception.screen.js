@@ -109,7 +109,7 @@ const array = [
   {
     icon: 'ri-swap-line',
     name: 'money exchange',
-    path: '',
+    path: 'menu-tab-stack-money-exchange',
     color: '#118181',
   },
   {
