@@ -322,10 +322,11 @@ export const ImageWeatherIcon = styled.Image`
 export const StyledWrapperPlusMinusStyleCard = styled.View`
   margin-top: 15px;
   border-radius: 10px;
+  flex-direction: row;
+  align-items: center;
   width: ${widthPixel(165)}px;
-  justify-content: space-between;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(10)}px;
+  padding: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(5)}px;
 `
 
 export const StyledPlusMinusStyleCard = styled.View`

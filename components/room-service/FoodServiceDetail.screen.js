@@ -43,9 +43,10 @@ export default function ({ route }) {
                 return (
                   <PlusMinusCard
                     key={key}
-                    title={el.suplement_name}
                     count={count}
                     onChange={setCount}
+                    title={el.suplement_name}
+                    uri={el.supplement_image}
                   />
                 )
               })}
@@ -78,6 +79,7 @@ export default function ({ route }) {
             </Gap>
           </>
         )}
+        <Gap style={{ marginBottom: 24 }} />
       </AreaView>
       <ButtonWrapperDetail>
         <Button title={'add to cart'} />
