@@ -366,3 +366,16 @@ export const RadioButtonCardStyle = styled.View`
   border-color: ${({ pressed, theme }) =>
     pressed ? theme.secondary.accent_500 : theme.primary.accent_0}; ;
 `
+
+/**
+ * card amount
+ */
+
+export const StyledAmountCard = styled.View`
+  border-radius: 10px;
+  justify-content: space-between;
+  min-height: ${heightPixel(125)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
+  background: ${({ theme }) => theme.secondary.accent_500};
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
+`
