@@ -60,6 +60,7 @@ import {
   TransportationsScreen,
   SpaDetailScreen,
   MoneyConverter,
+  TowelsScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -257,6 +258,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-laundry-menu',
     component: LaundryScreen,
     header: () => <StackHeader name={'laundry menu'} />,
+  },
+  {
+    path: 'menu-tab-stack-towels',
+    component: TowelsScreen,
+    header: () => <StackHeader name={'towels'} />,
   },
   {
     path: 'menu-tab-stack-medical-assistance',

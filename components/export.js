@@ -59,6 +59,7 @@ export { default as MoneyConverter } from './reception/MoneyExchange.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
+export { default as TowelsScreen } from './room-service/Towels.screen'
 export { default as RoomService } from './room-service/Service.screen'
 export { default as MiniBarScreen } from './room-service/Minibar.screen'
 export { default as FoodServiceScreen } from './room-service/FoodService.screen'
