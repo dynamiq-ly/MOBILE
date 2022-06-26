@@ -211,14 +211,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-point-of-interest-detail',
     component: PointOfInterestDetailScreen,
-    header: ({ route, navigation }) => (
-      <OptionHeader
-        name={'interesting point'}
-        components={
-          <PointInterestScreenOptions func={() => navigation.navigate('')} />
-        }
-      />
-    ),
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-check-in-out',

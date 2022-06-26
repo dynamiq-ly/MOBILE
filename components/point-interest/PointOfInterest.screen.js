@@ -44,14 +44,14 @@ export default function PointInterestScreen({ navigation }) {
               <SquareCard
                 key={element.id}
                 title={element.name}
-                image={element.image}
+                image={element.image[Math.floor(Math.random() * 3)].image}
                 rating={element.rating}
                 location={element.location}
                 onPress={() =>
                   navigation.navigate(
                     'menu-tab-stack-point-of-interest-detail',
                     {
-                      _name: element.name,
+                      _data: element,
                     }
                   )
                 }
