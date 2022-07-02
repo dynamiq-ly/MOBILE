@@ -56,7 +56,11 @@ export { default as MedicalAssistanceScreen } from './medical-assis/MedicalAssis
 export { default as ParkingLotScreen } from './parking/Parking.screen'
 export { default as TransportationsScreen } from './transportations/Transportation'
 export { default as MoneyConverter } from './reception/MoneyExchange.screen'
-export { default as AlarmScreen } from './reception/alarm/Alarm.screen'
+export {
+  default as AlarmScreen,
+  AddAlarmScreenOptions,
+} from './reception/alarm/Alarm.screen'
+export { default as AddAlarmScreen } from './reception/alarm/AddReminder.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen

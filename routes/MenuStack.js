@@ -62,6 +62,8 @@ import {
   MoneyConverter,
   TowelsScreen,
   AlarmScreen,
+  AddAlarmScreen,
+  AddAlarmScreenOptions,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -288,7 +290,21 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-alarm',
     component: AlarmScreen,
-    header: () => <StackHeader name={'reminders'} />,
+    header: ({ navigation }) => (
+      <OptionHeader
+        name={'reminders'}
+        components={
+          <AddAlarmScreenOptions
+            func={() => navigation.navigate('menu-tab-stack-alarm-addreminder')}
+          />
+        }
+      />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-alarm-addreminder',
+    component: AddAlarmScreen,
+    header: () => <StackHeader name={'add reminder'} />,
   },
   {
     path: 'menu-tab-stack-other-request',
