@@ -61,6 +61,7 @@ import {
   SpaDetailScreen,
   MoneyConverter,
   TowelsScreen,
+  AlarmScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -283,6 +284,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-money-exchange',
     component: MoneyConverter,
     header: () => <StackHeader name={'money converter'} />,
+  },
+  {
+    path: 'menu-tab-stack-alarm',
+    component: AlarmScreen,
+    header: () => <StackHeader name={'reminders'} />,
   },
   {
     path: 'menu-tab-stack-other-request',

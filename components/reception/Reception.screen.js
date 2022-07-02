@@ -67,7 +67,7 @@ const array = [
   {
     icon: 'ri-alarm-line',
     name: 'Alarm Clock',
-    path: '',
+    path: 'menu-tab-stack-alarm',
     color: '#118181',
   },
   {
