@@ -15,7 +15,7 @@ export default function FoodService({ navigation }) {
 
   return (
     <View>
-      <Gap style={{ height: 48 }}>
+      <Gap>
         <HScrollView horizontal showsHorizontalScrollIndicator={false}>
           {food_category_Array.map((el, key) => {
             return (

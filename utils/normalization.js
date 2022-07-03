@@ -18,8 +18,8 @@ const HEIGHT_BASE_SCALE = height / 812
  */
 
 export function normalize(size, base = 'width') {
-  const newSize =
-    base === 'height' ? size * HEIGHT_BASE_SCALE : size * WIDTH_BASE_SCALE
+  // const newSize = base === 'height' ? size * HEIGHT_BASE_SCALE : size * WIDTH_BASE_SCALE
+  const newSize = base === 'height' ? size : size * WIDTH_BASE_SCALE
   if (Platform.OS === 'ios') {
     return Math.round(PixelRatio.roundToNearestPixel(newSize))
   } else {
