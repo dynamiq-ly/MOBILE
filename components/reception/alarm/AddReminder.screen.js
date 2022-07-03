@@ -14,11 +14,14 @@ import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
 import DatePicker from 'react-native-neat-date-picker'
 
-export default function AddReminderAlarmScreen() {
+import { __query } from 'hooks/useApi'
+import { useMutation } from 'react-query'
+
+export default function AddReminderAlarmScreen({ navigation }) {
   const [isReminder, setReminder] = useState({
-    title: '',
-    date: '',
-    priority: '',
+    reminder_title: '',
+    reminder_date: '',
+    reminder_priority: '',
   })
   const [isDataNow, setCurrentDate] = useState('Set a Date...')
   const [isDatePickerOpen, setDatePickerOpen] = useState(false)
@@ -26,6 +29,8 @@ export default function AddReminderAlarmScreen() {
   const handleFormChange = (binding, event) => {
     setReminder({ ...isReminder, [binding]: event })
   }
+
+  const { mutate, isLoading, isSuccess } = useMutation(createReminder)
 
   return (
     <AreaView>
@@ -37,10 +42,10 @@ export default function AddReminderAlarmScreen() {
 
       <Gap style={{ marginBottom: 14 }} />
       <Input
-        value={isReminder.title}
+        value={isReminder.reminder_title}
         icon={'ri-chat-history-line'}
         placeholder={'reminder title...'}
-        onChangeText={(text) => handleFormChange('title', text)}
+        onChangeText={(text) => handleFormChange('reminder_title', text)}
       />
 
       <StyledCalenderbutton onPress={() => setDatePickerOpen(true)}>
@@ -58,7 +63,7 @@ export default function AddReminderAlarmScreen() {
           setDatePickerOpen(false)
           setCurrentDate(moment(date.getTime()).format('DD / MM / YYYY'))
           handleFormChange(
-            'date',
+            'reminder_date',
             moment(date.getTime()).format('DD / MM / YYYY')
           )
         }}
@@ -85,8 +90,8 @@ export default function AddReminderAlarmScreen() {
           {priority_array.map((el, key) => (
             <PrioritRadioButton
               key={key}
-              color={isReminder.priority === el.name && el.color}
-              onPress={() => handleFormChange('priority', el.name)}
+              color={isReminder.reminder_priority === el.name && el.color}
+              onPress={() => handleFormChange('reminder_priority', el.name)}
               activeOpacity={1}>
               <Text size={16} up={'cap'} content={el.name} />
               <Text size={16} up={'cap'} content={el.remindes} />
@@ -99,7 +104,21 @@ export default function AddReminderAlarmScreen() {
             'setting priority will determine the number of calls and tries so we can reach you.'
           }
         />
-        <Button title={'save reminder'} />
+        <Button
+          title={isLoading ? 'creating...' : 'save reminder'}
+          onPress={() => {
+            mutate(isReminder)
+            if (isSuccess) {
+              setReminder({
+                reminder_title: '',
+                reminder_date: '',
+                reminder_priority: '',
+              })
+              setCurrentDate('Set a Date...')
+              navigation.goBack()
+            }
+          }}
+        />
       </Gap>
     </AreaView>
   )
@@ -110,3 +129,7 @@ const priority_array = [
   { color: '#10b981', name: 'normal', remindes: 4 },
   { color: '#ef4444', name: 'urgent', remindes: 6 },
 ]
+
+const createReminder = function (data) {
+  return __query.post('/api/reception/reminder', data)
+}
