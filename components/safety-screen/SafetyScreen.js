@@ -5,9 +5,9 @@ import NotFound from 'components/notFound/NotFound'
 
 import { __query } from 'hooks/useApi'
 import { useQuery } from 'react-query'
-import { RefreshControl } from 'react-native'
 import { useCallback, useState } from 'react'
 import { fontPixel } from 'utils/normalization'
+import { RefreshControl, LogBox } from 'react-native'
 import { ButtonSafety, IconBox, TextBox } from 'styles/safety.module'
 
 export default function SafetyScreen({ navigation }) {
@@ -15,7 +15,6 @@ export default function SafetyScreen({ navigation }) {
     '@measures',
     fetchSafetyMeasures,
     {
-      casheTime: 1800,
       initialData: [],
     }
   )
@@ -84,3 +83,5 @@ let fetchSafetyMeasures = function () {
       throw new Error(err.message)
     })
 }
+
+LogBox.ignoreLogs(['Setting a timer'])

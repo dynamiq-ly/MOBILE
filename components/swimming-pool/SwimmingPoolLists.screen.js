@@ -3,14 +3,12 @@ import WeatherCard from 'components/cards/WeatherCard'
 import FullDetailedCard from 'components/cards/FullDetailedCard'
 
 import { useQuery } from 'react-query'
-import { RefreshControl } from 'react-native'
+import { RefreshControl, LogBox } from 'react-native'
 import { useCallback, useState } from 'react'
 
 export default function SwimmingPoolListsScreen({ route }) {
   const { _data } = route.params
-  const { data, refetch } = useQuery('@weather', fetchWeather, {
-    cacheTime: 1800,
-  })
+  const { data, refetch } = useQuery('@weather', fetchWeather)
   const [refresh, setRefresh] = useState(false)
 
   let onRefresh = useCallback(() => {
@@ -50,3 +48,5 @@ let fetchWeather = function () {
     return res.json()
   })
 }
+
+LogBox.ignoreLogs(['Setting a timer'])
