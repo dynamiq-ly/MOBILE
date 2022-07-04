@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { animated } from '@react-spring/native'
 import {
   heightPixel,
   pixelSizeHorizontal,
@@ -378,5 +379,18 @@ export const StyledAmountCard = styled.View`
   min-height: ${heightPixel(125)}px;
   margin-bottom: ${pixelSizeVertical(14)}px;
   background: ${({ theme }) => theme.secondary.accent_500};
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
+`
+
+/**
+ * reminder card
+ */
+
+export const StyledReminderCard = styled(animated.View)`
+  border-radius: 10px;
+  min-height: ${heightPixel(82)}px;
+  margin-bottom: ${pixelSizeVertical(14)}px;
+  background: ${({ color, theme }) =>
+    color ? `${color}20` : theme.primary.accent_0};
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
 `

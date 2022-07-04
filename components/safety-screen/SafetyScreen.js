@@ -76,9 +76,7 @@ export default function SafetyScreen({ navigation }) {
 let fetchSafetyMeasures = function () {
   return __query
     .get('/api/measures')
-    .then((res) => {
-      return res.data
-    })
+    .then((res) => res.data)
     .catch((err) => {
       throw new Error(err.message)
     })
