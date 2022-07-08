@@ -14,7 +14,13 @@ export const palette = {
   },
 
   secondary: {
-    accent_500: '#8b5cf6',
+    accent_200: '#bfdbfe',
+    accent_300: '#93c5fd',
+    accent_400: '#60a5fa',
+    accent_500: '#3b82f6',
+    accent_700: '#1d4ed8',
+    accent_800: '#1e40af',
+    accent_900: '#1e3a8a',
   },
 
   error: {
