@@ -394,3 +394,17 @@ export const StyledReminderCard = styled(animated.View)`
     color ? `${color}20` : theme.primary.accent_0};
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
 `
+
+/**
+ * card for showing details of a room
+ */
+
+export const StyledTagCards = styled.View`
+  border-radius: 10px;
+  align-items: center;
+  width: 23%;
+  height: ${heightPixel(82)}px;
+  justify-content: space-around;
+  background: ${({ theme }) => theme.primary.accent_0};
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
+`
