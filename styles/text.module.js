@@ -5,7 +5,13 @@ export const StyledText = styled.Text`
   letter-spacing: 0.25px;
   margin: ${pixelSizeVertical(5)}px 0px;
   text-transform: ${({ up }) =>
-    up === 'cap' ? 'capitalize' : up === 'up' ? 'uppercase' : 'lowercase'};
+    up === 'cap'
+      ? 'capitalize'
+      : up === 'up'
+      ? 'uppercase'
+      : up === 'low'
+      ? 'lowercase'
+      : 'none'};
   font-size: ${({ scale }) => (scale ? fontPixel(scale) : 14)}px;
   font-family: ${({ font }) => (font ? `inter-${font}` : 'inter-400')};
   color: ${({ theme, color }) => {
@@ -15,7 +21,7 @@ export const StyledText = styled.Text`
       case 'gray':
         return theme.primary.accent_500
       case 'dominant':
-        return theme.secondary.accent_500
+        return theme.secondary.accent_700
       case 'red':
         return theme.error.accent_500
       default:
