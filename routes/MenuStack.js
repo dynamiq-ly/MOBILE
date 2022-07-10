@@ -435,7 +435,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-rooms',
     component: RoomScreen,
-    header: () => <StackHeader name={'room and suites'} />,
+    header: () => <StackHeader name={'room and suits'} />,
   },
   {
     path: 'menu-tab-stack-rooms-detail',

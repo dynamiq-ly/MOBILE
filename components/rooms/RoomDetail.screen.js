@@ -16,18 +16,19 @@ import {
   View,
 } from 'styles/detail.module'
 
-export default function RoomDetailScreen() {
-  const [isRoom] = useState(rooms[0])
+export default function RoomDetailScreen({ route }) {
+  // const [_data] = useState(rooms[0])
+  const { _data } = route.params
   return (
     <View>
       <CloseHeader />
-      <Carsouel imageArray={isRoom.room_images} />
+      <Carsouel imageArray={_data.room_images} />
       <RadiusView>
         <AreaView mode={'light'}>
           <SafeAreaRowWrapperDetail style={{ alignItems: 'flex-start' }}>
             <Gap style={{ flex: 1 }}>
               <Text
-                content={isRoom.room_name}
+                content={_data.room_name}
                 weight={600}
                 up={'cap'}
                 size={21}
@@ -38,14 +39,14 @@ export default function RoomDetailScreen() {
                 flexDirection: 'row',
                 alignItems: 'flex-end',
               }}>
-              {isRoom.room_price_promotion > 1 ? (
+              {_data.room_price_promotion > 1 ? (
                 <Text
                   size={21}
                   up={'cap'}
                   weight={600}
                   color={'dominant'}
                   content={`${
-                    isRoom.room_price - (isRoom.room_price * 15) / 100
+                    _data.room_price - (_data.room_price * 15) / 100
                   }$`}
                 />
               ) : (
@@ -54,7 +55,7 @@ export default function RoomDetailScreen() {
                   up={'cap'}
                   weight={600}
                   color={'dominant'}
-                  content={`${isRoom.room_price}$`}
+                  content={`${_data.room_price}$`}
                 />
               )}
 
@@ -64,7 +65,7 @@ export default function RoomDetailScreen() {
             </Gap>
           </SafeAreaRowWrapperDetail>
           <Gap style={{ marginTop: 10 }} />
-          <Text size={16} color={'gray'} content={isRoom.room_description} />
+          <Text size={16} color={'gray'} content={_data.room_description} />
           <Gap style={{ marginTop: 10 }} />
           <Gap style={{ marginTop: 10 }} />
           <>
@@ -78,18 +79,18 @@ export default function RoomDetailScreen() {
                   size={14}
                   up={'up'}
                   weight={500}
-                  content={`${isRoom.room_location_floor} - ${isRoom.room_location_number}`}
+                  content={`${_data.room_location_floor} - ${_data.room_location_number}`}
                 />
               </StyledTagCards>
               <StyledTagCards>
                 <Icon
                   name={
-                    isRoom.room_quality_smoking
+                    _data.room_quality_smoking
                       ? 'ri-shield-check-line'
                       : 'ri-alarm-warning-line'
                   }
                   color={
-                    isRoom.room_quality_smoking
+                    _data.room_quality_smoking
                       ? palette.success.accent_500
                       : palette.error.accent_500
                   }
@@ -106,7 +107,7 @@ export default function RoomDetailScreen() {
                   size={14}
                   up={'up'}
                   weight={500}
-                  content={isRoom.room_quality_size}
+                  content={_data.room_quality_size}
                 />
               </StyledTagCards>
               <StyledTagCards>
@@ -114,7 +115,7 @@ export default function RoomDetailScreen() {
                   size={21}
                   up={'up'}
                   weight={500}
-                  content={isRoom.room_quality_area}
+                  content={_data.room_quality_area}
                 />
                 <Text size={14} up={'up'} weight={500} content={'Area'} />
               </StyledTagCards>
@@ -123,7 +124,7 @@ export default function RoomDetailScreen() {
           <>
             <HFLine />
             <Text content={'occupency'} weight={500} size={18} up={'cap'} />
-            {isRoom.room_occupency.max_occupency > 0 && (
+            {_data.room_occupency.max_occupency > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -132,7 +133,7 @@ export default function RoomDetailScreen() {
                   up={'cap'}
                 />
                 <Text
-                  content={isRoom.room_occupency.max_occupency}
+                  content={_data.room_occupency.max_occupency}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -141,7 +142,7 @@ export default function RoomDetailScreen() {
               </SafeAreaRowWrapperDetail>
             )}
 
-            {isRoom.room_occupency.max_adult > 0 && (
+            {_data.room_occupency.max_adult > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -150,7 +151,7 @@ export default function RoomDetailScreen() {
                   up={'cap'}
                 />
                 <Text
-                  content={isRoom.room_occupency.max_adult}
+                  content={_data.room_occupency.max_adult}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -159,7 +160,7 @@ export default function RoomDetailScreen() {
               </SafeAreaRowWrapperDetail>
             )}
 
-            {isRoom.room_occupency.max_children > 0 && (
+            {_data.room_occupency.max_children > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -168,7 +169,7 @@ export default function RoomDetailScreen() {
                   up={'cap'}
                 />
                 <Text
-                  content={isRoom.room_occupency.max_children}
+                  content={_data.room_occupency.max_children}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -176,7 +177,7 @@ export default function RoomDetailScreen() {
                 />
               </SafeAreaRowWrapperDetail>
             )}
-            {isRoom.room_occupency.max_guests > 0 && (
+            {_data.room_occupency.max_guests > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -185,7 +186,7 @@ export default function RoomDetailScreen() {
                   up={'cap'}
                 />
                 <Text
-                  content={isRoom.room_occupency.max_guests}
+                  content={_data.room_occupency.max_guests}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -194,7 +195,7 @@ export default function RoomDetailScreen() {
               </SafeAreaRowWrapperDetail>
             )}
           </>
-          {isRoom.room_features && (
+          {_data.room_features && (
             <>
               <HFLine />
               <Text content={'features'} weight={500} size={18} up={'cap'} />
@@ -204,7 +205,7 @@ export default function RoomDetailScreen() {
                   alignItems: 'center',
                   marginTop: 10,
                 }}>
-                {isRoom.room_features.split(',').map((el, key) => (
+                {_data.room_features.split(',').map((el, key) => (
                   <Gap
                     key={key}
                     style={{

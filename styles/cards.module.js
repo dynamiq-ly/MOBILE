@@ -109,15 +109,15 @@ export const StyledSquareCard = styled.TouchableOpacity`
   border-radius: 10px;
   width: ${widthPixel(165)}px;
   min-height: ${heightPixel(200)}px;
-  margin-bottom: ${pixelSizeVertical(14)}px;
+  margin-bottom: ${pixelSizeVertical(16)}px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
+  padding: ${pixelSizeVertical(15)}px ${pixelSizeHorizontal(10)}px;
 `
 
 export const ImageSquareCard = styled.ImageBackground`
   overflow: hidden;
-  border-radius: 10px;
   position: relative;
+  border-radius: 5px;
   height: ${heightPixel(132)}px;
 `
 

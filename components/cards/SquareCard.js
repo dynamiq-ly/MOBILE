@@ -41,7 +41,7 @@ export default function SquareCard({
     } else if (isLiked) {
       animation.current.play(1, 20)
     } else {
-      animation.current.play(0, 1)
+      animation.current.play(1, 0)
     }
   }, [isLiked])
 
@@ -93,6 +93,57 @@ export default function SquareCard({
       <Text
         content={location}
         size={11}
+        up={'cap'}
+        weight={400}
+        color={'gray'}
+      />
+    </StyledSquareCard>
+  )
+}
+
+/**
+ *
+ * @param0 {string} title
+ * @param1 {string} image
+ * @returns
+ */
+export function SquareCardSmall({ title, image, ...rest }) {
+  const isFirstRun = useRef(true)
+  const animation = useRef(null)
+  const [isLiked, setLiked] = useState(false)
+
+  useEffect(() => {
+    if (isFirstRun.current) {
+      if (isLiked) {
+        animation.current.play(240, 240)
+      } else {
+        animation.current.play(0, 0)
+      }
+      isFirstRun.current = false
+    } else if (isLiked) {
+      animation.current.play(0, 240)
+    } else {
+      animation.current.play(0, 0)
+    }
+  }, [isLiked])
+
+  return (
+    <StyledSquareCard activeOpacity={0.8} {...rest}>
+      <ImageSquareCard source={{ uri: image }}>
+        <OverlaySquareCard>
+          <TouchableOpacity onPress={() => setLiked(!isLiked)}>
+            <LottieView
+              loop={false}
+              autoPlay={false}
+              ref={animation}
+              style={{ width: 62, height: 62, marginLeft: -5, marginTop: -5 }}
+              source={require('assets/lottie/bookmark_animation.json')}
+            />
+          </TouchableOpacity>
+        </OverlaySquareCard>
+      </ImageSquareCard>
+      <Text
+        content={title.length > 24 ? `${title.slice(0, 24)}...` : title}
         up={'cap'}
         weight={400}
         color={'gray'}
