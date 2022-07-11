@@ -96,3 +96,4 @@ export { default as RoomScreen } from './rooms/Room.screen'
 export { default as RoomDetailScreen } from './rooms/RoomDetail.screen'
 // entertainement screen
 export { default as EntertainingScreen } from './entertainement/Entertainement.screen'
+export { default as EntertainingEventsScreen } from './entertainement/EntertainEvents.screen'

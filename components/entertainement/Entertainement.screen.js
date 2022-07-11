@@ -39,7 +39,11 @@ export default function EntertainementScreen({ navigation }) {
             key={key}
             name={el.name}
             image={el.image}
-            onPress={() => navigation.navigate('')}
+            onPress={() =>
+              navigation.navigate('menu-tab-stack-entertaining-events', {
+                _name: el.name,
+              })
+            }
           />
         ))}
       </GridLayout>
