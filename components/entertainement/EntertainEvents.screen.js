@@ -64,7 +64,7 @@ const CalendarItem = function ({ name, date, active = false, onClick }) {
           marginRight: 10,
           borderRadius: 10,
           alignItems: 'center',
-          width: widthPixel(52),
+          width: widthPixel(58),
           height: heightPixel(78),
           justifyContent: 'center',
           backgroundColor: palette.primary.accent_0,

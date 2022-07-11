@@ -447,7 +447,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-entertaining',
     component: EntertainingScreen,
-    header: () => <StackHeader name={'entertainements'} />,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-entertaining-events',

@@ -47,8 +47,8 @@ const user = {
   last_name: 'breaty',
   gender: 'female',
   stay_period: {
-    checkin: '',
-    checkout: '',
+    checkin: '05 / 07 / 2022',
+    checkout: '12 / 08 / 2022',
   },
   email: 'nadine@aol.du',
   password: 'nadineaol',
