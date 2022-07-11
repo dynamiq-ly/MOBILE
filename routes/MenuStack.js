@@ -65,6 +65,7 @@ import {
   AddAlarmScreen,
   AddAlarmScreenOptions,
   RoomDetailScreen,
+  EntertainingScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -441,6 +442,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-rooms-detail',
     component: RoomDetailScreen,
     header: () => false,
+  },
+  {
+    path: 'menu-tab-stack-entertaining',
+    component: EntertainingScreen,
+    header: () => <StackHeader name={'entertainements'} />,
   },
   {
     path: 'menu-tab-stack-transportation',

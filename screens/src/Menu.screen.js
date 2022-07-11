@@ -110,7 +110,7 @@ const menuArray2 = [
   {
     icon: 'ri-run-line',
     name: 'Entertainement',
-    path: '',
+    path: 'menu-tab-stack-entertaining',
     color: '#854d0e',
   },
 ]

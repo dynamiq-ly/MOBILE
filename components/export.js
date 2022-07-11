@@ -94,3 +94,5 @@ export { default as SpaDetailScreen } from './spa/SpaDetail.screen'
 // roms screen
 export { default as RoomScreen } from './rooms/Room.screen'
 export { default as RoomDetailScreen } from './rooms/RoomDetail.screen'
+// entertainement screen
+export { default as EntertainingScreen } from './entertainement/Entertainement.screen'
