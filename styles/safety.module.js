@@ -18,7 +18,7 @@ export const IconBox = styled.View`
   justify-content: center;
   width: ${widthPixel(35)}px;
   height: ${heightPixel(35)}px;
-  background: ${({ theme }) => theme.success.accent_500};
+  background: ${({ bg, theme }) => (bg ? bg : theme.success.accent_500)};
 `
 
 export const TextBox = styled.View`
