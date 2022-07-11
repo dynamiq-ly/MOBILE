@@ -1,6 +1,9 @@
 import { palette } from 'themes/palette'
 import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+
+// store
+import AuthProvider from 'store/AuthSusbcribeProvider'
 import CustomFontProvider from 'store/CustomFontProvider'
 
 // routing
@@ -18,14 +21,17 @@ export default function App() {
       <SafeAreaProvider>
         {/* query provider */}
         <QueryClientProvider client={queryClient}>
-          {/* navigation provider */}
-          <NavigationContainer>
-            {/* font provider */}
-            <CustomFontProvider>
-              {/* screen manager */}
-              <StackNavigation />
-            </CustomFontProvider>
-          </NavigationContainer>
+          {/* auth provider */}
+          <AuthProvider>
+            {/* navigation provider */}
+            <NavigationContainer>
+              {/* font provider */}
+              <CustomFontProvider>
+                {/* screen manager */}
+                <StackNavigation />
+              </CustomFontProvider>
+            </NavigationContainer>
+          </AuthProvider>
         </QueryClientProvider>
       </SafeAreaProvider>
     </ThemeProvider>
