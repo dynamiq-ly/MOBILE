@@ -1,9 +1,12 @@
 import TabNavigation from './TabNavigation'
 import { InitialScreen, LoginScreen } from 'screens/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+// import { createSharedElementStackNavigator } from 'react-navigation-shared-element'
+
 import { __auth } from 'store/AuthSusbcribeProvider'
 
 const Stack = createNativeStackNavigator()
+// const Stack = createSharedElementStackNavigator()
 
 const StackNavigation = () => {
   const { isLoggedIn } = __auth()

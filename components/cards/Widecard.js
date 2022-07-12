@@ -6,6 +6,8 @@ import {
   WideCardSectionHeader,
 } from 'styles/cards.module'
 
+import { SharedElement } from 'react-navigation-shared-element'
+
 /**
  * @param0 {string} image
  * @param1 {string} name
