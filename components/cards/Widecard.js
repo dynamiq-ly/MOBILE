@@ -1,12 +1,14 @@
+import { View } from 'react-native'
+import { palette } from 'themes/palette'
+
 import Text from 'components/text/Text'
+
 import {
   WideCardTag,
   WideListCard,
   WideListCardButton,
   WideCardSectionHeader,
 } from 'styles/cards.module'
-
-import { SharedElement } from 'react-navigation-shared-element'
 
 /**
  * @param0 {string} image
@@ -26,13 +28,26 @@ export default function Widecard({
     <WideListCard source={{ uri: image }}>
       <WideListCardButton activeOpacity={1} {...rest}>
         <WideCardSectionHeader>
-          <Text
-            up={'up'}
-            size={12}
-            weight={900}
-            color={state ? 'white' : 'red'}
-            content={state ? 'open' : 'close'}
-          />
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text
+              up={'up'}
+              size={12}
+              weight={700}
+              color={'white'}
+              content={state ? 'open' : 'close'}
+            />
+            <View
+              style={{
+                width: 10,
+                height: 10,
+                marginLeft: 5,
+                borderRadius: 50,
+                backgroundColor: state
+                  ? palette.success.accent_500
+                  : palette.error.accent_500,
+              }}
+            />
+          </View>
           {specialiy !== null && (
             <WideCardTag>
               <Text
