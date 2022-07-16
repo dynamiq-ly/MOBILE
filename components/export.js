@@ -8,6 +8,7 @@ export { default as SearchInput } from './input/SearchInput'
 export { default as GroupButton } from './button/ButtonGroup'
 export { default as FixedButton } from './button/FixedWidthButton'
 export { default as OpenLinkButtonIcon } from './button/OpenLinkButton'
+export { default as ProfileButtonCard } from './profile/ProfileCard'
 
 /**
  * @description custom header

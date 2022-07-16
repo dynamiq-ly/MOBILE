@@ -10,7 +10,7 @@ export const __auth = () => useContext(AuthContext)
  */
 
 export default function AuthProvider({ children }) {
-  const [isLoggedIn, setLoggedIn] = useState(false)
+  const [isLoggedIn, setLoggedIn] = useState(true)
   const [subscribedUser] = useState({ ...user })
 
   const login = ({ email, password }) => {
@@ -46,9 +46,14 @@ const user = {
   first_name: 'nadine',
   last_name: 'breaty',
   gender: 'female',
-  stay_period: {
-    checkin: '05 / 07 / 2022',
-    checkout: '12 / 08 / 2022',
+  profile_image:
+    'https://pbs.twimg.com/media/EIug-B3UwAAAwrz?format=jpg&name=large',
+  hotel_stay: {
+    room_floor: 'F2',
+    room_number: 250,
+    hotel_name: 'chiraton hotel group',
+    checkin: '05/07/2022',
+    checkout: '12/08/2022',
   },
   email: 'nadine@aol.du',
   password: 'nadineaol',

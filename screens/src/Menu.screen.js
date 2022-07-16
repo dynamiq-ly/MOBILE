@@ -2,7 +2,7 @@ import AreaView from 'utils/TabAreaView'
 
 import { useEffect, useState } from 'react'
 import { __auth } from 'store/AuthSusbcribeProvider'
-import { GroupButton, SearchInput } from 'components/export'
+import { GroupButton, SearchInput, ProfileButtonCard } from 'components/export'
 
 export default function MenuScreen({ navigation }) {
   const { isLoggedIn } = __auth()
@@ -22,6 +22,7 @@ export default function MenuScreen({ navigation }) {
       menuArray1
         .filter((el) => {
           if (isLoggedIn) return el.name !== 'Login'
+          else return el
         })
         .filter((item) => item.name.toLowerCase().includes(text.toLowerCase()))
     )
@@ -59,6 +60,7 @@ export default function MenuScreen({ navigation }) {
   return (
     <AreaView>
       <SearchInput value={text} onChange={setText} />
+      {isLoggedIn && text.length === 0 && <ProfileButtonCard />}
       <GroupButton array={arr1} index={1} callback={navigation} />
       <GroupButton array={arr2} index={2} callback={navigation} />
       <GroupButton array={arr3} index={3} callback={navigation} />
