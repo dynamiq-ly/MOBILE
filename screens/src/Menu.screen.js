@@ -1,23 +1,29 @@
-import { useEffect, useState } from 'react'
 import AreaView from 'utils/TabAreaView'
+
+import { useEffect, useState } from 'react'
+import { __auth } from 'store/AuthSusbcribeProvider'
 import { GroupButton, SearchInput } from 'components/export'
-import { Text } from 'react-native'
 
 export default function MenuScreen({ navigation }) {
+  const { isLoggedIn } = __auth()
   const [text, setText] = useState('')
 
-  const [arr1, setArr1] = useState(menuArray1)
+  const [arr1, setArr1] = useState(
+    isLoggedIn ? menuArray1.filter((el) => el.name !== 'Login') : menuArray1
+  )
   const [arr2, setArr2] = useState(menuArray2)
   const [arr3, setArr3] = useState(menuArray3)
   const [arr4, setArr4] = useState(menuArray4)
   const [arr5, setArr5] = useState(menuArray5)
   const [arr6, setArr6] = useState(menuArray6)
 
-  filterText = () => {
+  const filterText = () => {
     setArr1(
-      menuArray1.filter((item) =>
-        item.name.toLowerCase().includes(text.toLowerCase())
-      )
+      menuArray1
+        .filter((el) => {
+          if (isLoggedIn) return el.name !== 'Login'
+        })
+        .filter((item) => item.name.toLowerCase().includes(text.toLowerCase()))
     )
     setArr2(
       menuArray2.filter((item) =>
