@@ -1,6 +1,5 @@
 import moment from 'moment'
 
-import { WideListCard } from 'styles/cards.module'
 import { __auth } from 'store/AuthSusbcribeProvider'
 import { SafeAreaRowWrapperDetail } from '~/styles/detail.module'
 import { fontPixel, heightPixel, widthPixel } from 'utils/normalization'
@@ -9,12 +8,11 @@ import { animated, useSpring } from '@react-spring/native'
 
 const AnimatedTouchable = animated(TouchableOpacity)
 
-export default function ProfileCard({ navigation }) {
+export default function ProfileCard({ navigation, animate = '' }) {
   const { subscribedUser } = __auth()
 
   const springStyling = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
+    opacity: animate.length === 0 ? 1 : 0,
   })
 
   return (

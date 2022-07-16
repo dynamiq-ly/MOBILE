@@ -25,9 +25,7 @@ export default function AuthProvider({ children }) {
     }
   }
 
-  const logout = () => {
-    setLoggedIn(false)
-  }
+  const logout = () => setLoggedIn(false)
 
   const functions = {
     login,

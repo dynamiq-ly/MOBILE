@@ -21,17 +21,17 @@ export default function App() {
       <SafeAreaProvider>
         {/* query provider */}
         <QueryClientProvider client={queryClient}>
-          {/* auth provider */}
-          <AuthProvider>
-            {/* navigation provider */}
-            <NavigationContainer>
+          {/* navigation provider */}
+          <NavigationContainer>
+            {/* auth provider */}
+            <AuthProvider>
               {/* font provider */}
               <CustomFontProvider>
                 {/* screen manager */}
                 <StackNavigation />
               </CustomFontProvider>
-            </NavigationContainer>
-          </AuthProvider>
+            </AuthProvider>
+          </NavigationContainer>
         </QueryClientProvider>
       </SafeAreaProvider>
     </ThemeProvider>

@@ -8,6 +8,8 @@ export default function MenuScreen({ navigation }) {
   const { isLoggedIn } = __auth()
   const [text, setText] = useState('')
 
+  console.log('isLoggedIn', isLoggedIn)
+
   const [arr1, setArr1] = useState(
     isLoggedIn ? menuArray1.filter((el) => el.name !== 'Login') : menuArray1
   )
@@ -16,6 +18,12 @@ export default function MenuScreen({ navigation }) {
   const [arr4, setArr4] = useState(menuArray4)
   const [arr5, setArr5] = useState(menuArray5)
   const [arr6, setArr6] = useState(menuArray6)
+
+  useEffect(() => {
+    setArr1(
+      isLoggedIn ? menuArray1.filter((el) => el.name !== 'Login') : menuArray1
+    )
+  }, [menuArray1, isLoggedIn, setArr1]) //eslint-disable-line
 
   const filterText = () => {
     setArr1(
@@ -61,7 +69,7 @@ export default function MenuScreen({ navigation }) {
     <AreaView>
       <SearchInput value={text} onChange={setText} />
       {isLoggedIn && text.length === 0 && (
-        <ProfileButtonCard navigation={navigation} />
+        <ProfileButtonCard navigation={navigation} animate={text} />
       )}
       <GroupButton array={arr1} index={1} callback={navigation} />
       <GroupButton array={arr2} index={2} callback={navigation} />
