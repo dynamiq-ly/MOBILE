@@ -60,7 +60,9 @@ export default function MenuScreen({ navigation }) {
   return (
     <AreaView>
       <SearchInput value={text} onChange={setText} />
-      {isLoggedIn && text.length === 0 && <ProfileButtonCard />}
+      {isLoggedIn && text.length === 0 && (
+        <ProfileButtonCard navigation={navigation} />
+      )}
       <GroupButton array={arr1} index={1} callback={navigation} />
       <GroupButton array={arr2} index={2} callback={navigation} />
       <GroupButton array={arr3} index={3} callback={navigation} />

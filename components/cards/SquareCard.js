@@ -136,7 +136,7 @@ export function SquareCardSmall({ title, image, ...rest }) {
               loop={false}
               autoPlay={false}
               ref={animation}
-              style={{ width: 62, height: 62, marginLeft: -5, marginTop: -5 }}
+              style={{ width: 42, height: 42, marginLeft: 0, marginTop: 0 }}
               source={require('assets/lottie/bookmark_animation.json')}
             />
           </TouchableOpacity>

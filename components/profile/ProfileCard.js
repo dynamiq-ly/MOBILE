@@ -9,7 +9,7 @@ import { animated, useSpring } from '@react-spring/native'
 
 const AnimatedTouchable = animated(TouchableOpacity)
 
-export default function ProfileCard() {
+export default function ProfileCard({ navigation }) {
   const { subscribedUser } = __auth()
 
   const springStyling = useSpring({
@@ -29,6 +29,7 @@ export default function ProfileCard() {
         justifyContent: 'center',
         backgroundColor: '#fff',
       }}
+      onPress={() => navigation.navigate('menu-tab-stack-profile')}
       activeOpacity={0.8}>
       <SafeAreaRowWrapperDetail
         style={{ marginHorizontal: 10, alignItems: 'center' }}>

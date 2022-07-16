@@ -67,6 +67,7 @@ import {
   RoomDetailScreen,
   EntertainingScreen,
   EntertainingEventsScreen,
+  ProfileScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -117,6 +118,11 @@ const MenuStackNavigation = () => {
 export default MenuStackNavigation
 
 const safety_Stack_Array = [
+  {
+    path: 'menu-tab-stack-profile',
+    component: ProfileScreen,
+    header: () => <StackHeader name={'profile'} />,
+  },
   {
     path: 'menu-tab-stack-safety',
     component: SafetyScreen,
