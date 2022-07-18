@@ -8,8 +8,6 @@ export default function MenuScreen({ navigation }) {
   const { isLoggedIn } = __auth()
   const [text, setText] = useState('')
 
-  console.log('isLoggedIn', isLoggedIn)
-
   const [arr1, setArr1] = useState(
     isLoggedIn ? menuArray1.filter((el) => el.name !== 'Login') : menuArray1
   )
