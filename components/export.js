@@ -100,3 +100,5 @@ export { default as EntertainingScreen } from './entertainement/Entertainement.s
 export { default as EntertainingEventsScreen } from './entertainement/EntertainEvents.screen'
 // profile screen and settings
 export { default as ProfileScreen } from './profile/Profile.screen'
+// our hotels screens
+export { default as OurHotelScreen } from './our hotel/OurHotel.screen'

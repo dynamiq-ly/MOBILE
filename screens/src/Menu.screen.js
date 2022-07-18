@@ -98,7 +98,7 @@ const menuArray1 = [
   {
     icon: 'ri-hotel-line',
     name: 'Our Hotels',
-    path: '',
+    path: 'menu-tab-stack-our-hotels',
     color: '#2A2550',
   },
   {
