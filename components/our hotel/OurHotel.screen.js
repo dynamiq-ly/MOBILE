@@ -9,7 +9,7 @@ import { GridLayout } from 'styles/grid.module'
 import { View as Gap, ScrollView } from 'react-native'
 import { VerticalListLine } from 'styles/list.module'
 
-export default function OurHotelScreen() {
+export default function OurHotelScreen({ navigation }) {
   const [hotels, setHotels] = useState({
     category: 'all',
     data: our_hotels,
@@ -70,7 +70,11 @@ export default function OurHotelScreen() {
                 title={el.country_name}
                 image={el.coutnry_thumbnail}
                 position={key % 2 === 1 && 'end'}
-                onPress={() => console.log('press')}
+                onPress={() =>
+                  navigation.navigate('menu-tab-stack-our-hotels-list', {
+                    data: [...el.cities],
+                  })
+                }
               />
             )
           })
