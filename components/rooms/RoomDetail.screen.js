@@ -4,8 +4,6 @@ import Icon from 'react-native-remix-icon'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 
-import { useState } from 'react'
-import { rooms } from 'mock/rooms'
 import { palette } from 'themes/palette'
 import { View as Gap } from 'react-native'
 import { StyledTagCards } from 'styles/cards.module'
@@ -17,7 +15,6 @@ import {
 } from 'styles/detail.module'
 
 export default function RoomDetailScreen({ route }) {
-  // const [_data] = useState(rooms[0])
   const { _data } = route.params
   return (
     <View>
