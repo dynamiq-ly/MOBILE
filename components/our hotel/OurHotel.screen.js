@@ -72,7 +72,8 @@ export default function OurHotelScreen({ navigation }) {
                 position={key % 2 === 1 && 'end'}
                 onPress={() =>
                   navigation.navigate('menu-tab-stack-our-hotels-list', {
-                    data: [...el.cities],
+                    _name: el.country_name,
+                    _data: el.cities,
                   })
                 }
               />

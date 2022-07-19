@@ -103,3 +103,4 @@ export { default as ProfileScreen } from './profile/Profile.screen'
 // our hotels screens
 export { default as OurHotelScreen } from './our hotel/OurHotel.screen'
 export { default as OurHotelListScreen } from './our hotel/OurHotelList.screen'
+export { default as OurHotelScreenDetails } from './our hotel/OurHotelDetails.screen'

@@ -70,6 +70,7 @@ import {
   ProfileScreen,
   OurHotelScreen,
   OurHotelListScreen,
+  OurHotelScreenDetails,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -133,7 +134,14 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-our-hotels-list',
     component: OurHotelListScreen,
-    header: () => <StackHeader name={'hotels list'} />,
+    header: ({ route }) => (
+      <StackHeader name={`${route.params._name} hotels`} />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-our-hotels-list-detail',
+    component: OurHotelScreenDetails,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-safety',

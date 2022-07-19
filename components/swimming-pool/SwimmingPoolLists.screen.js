@@ -33,7 +33,7 @@ export default function SwimmingPoolListsScreen({ route }) {
             key={index}
             title={item.name}
             image={item.image}
-            capacity={item.capacity}
+            capacity={`${item.capacity} capacity`}
           />
         )
       })}
