@@ -4,6 +4,7 @@ import MenuStackNavigation from './MenuStack'
 import { SearchHeader, TextHeader } from 'components/export'
 import { fontPixel, pixelSizeHorizontal } from 'utils/normalization'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native'
 
 import {
   MainTab,
@@ -70,6 +71,15 @@ const tabComponents = [
   },
 ]
 
+const getScreensToHideTabTabOnActiveRoutes = (state) => {
+  switch (state) {
+    case 'menu-tab-stack-our-hotels-list-detail':
+      return true
+    default:
+      return false
+  }
+}
+
 const TabNavigation = () => {
   return (
     <Tab.Navigator
@@ -92,9 +102,15 @@ const TabNavigation = () => {
             name={el.path}
             key={el.path}
             component={el.component}
-            options={{
+            options={({ route }) => ({
               header: () => el.header,
-            }}
+              tabBarStyle: ((route) => {
+                const state = getFocusedRouteNameFromRoute(route)
+                if (getScreensToHideTabTabOnActiveRoutes(state)) {
+                  return { display: 'none' }
+                }
+              })(route),
+            })}
           />
         )
       })}
