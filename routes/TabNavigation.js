@@ -80,6 +80,13 @@ const getScreensToHideTabTabOnActiveRoutes = (state) => {
   }
 }
 
+const barStyle = {
+  paddingLeft: pixelSizeHorizontal(24),
+  paddingRight: pixelSizeHorizontal(24),
+  borderTopColor: 'transparent',
+  backgroundColor: palette.primary.accent_100,
+}
+
 const TabNavigation = () => {
   return (
     <Tab.Navigator
@@ -105,9 +112,11 @@ const TabNavigation = () => {
             options={({ route }) => ({
               header: () => el.header,
               tabBarStyle: ((route) => {
-                const state = getFocusedRouteNameFromRoute(route)
+                const state = getFocusedRouteNameFromRoute(route) ?? ''
                 if (getScreensToHideTabTabOnActiveRoutes(state)) {
                   return { display: 'none' }
+                } else {
+                  return { ...barStyle }
                 }
               })(route),
             })}
