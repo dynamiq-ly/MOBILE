@@ -3,7 +3,6 @@ import { fontPixel, heightPixel, pixelSizeVertical } from 'utils/normalization'
 
 export const StyledText = styled.Text`
   letter-spacing: 0.25px;
-  margin: ${pixelSizeVertical(5)}px 0px;
   text-transform: ${({ up }) =>
     up === 'cap'
       ? 'capitalize'

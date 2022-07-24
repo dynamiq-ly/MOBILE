@@ -107,7 +107,7 @@ export default function OurHotelScreenDetails({ route }) {
       </RadiusView>
 
       <ButtonWrapperDetail>
-        <Gap style={{ marginVertical: 10 }}>
+        <Gap style={{ marginTop: 10, marginBottom: 24 }}>
           <Text content={'starting from'} weight={600} up={'cap'} size={18} />
           <Text
             content={`${_data.hotel_price}`}
@@ -120,8 +120,9 @@ export default function OurHotelScreenDetails({ route }) {
         <Gap
           style={{
             width: '40%',
+            marginTop: 10,
             borderRadius: 10,
-            marginVertical: 10,
+            marginBottom: 24,
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: palette.primary.accent_900,

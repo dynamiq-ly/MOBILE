@@ -1,12 +1,18 @@
 import AreaView from 'utils/TabAreaView'
+import Text from 'components/text/Text'
 import FullDetailedCard from 'components/cards/FullDetailedCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
 import { useState } from 'react'
+import { palette } from 'themes/palette'
 import { View as Gap } from 'react-native'
 import { View } from 'styles/detail.module'
 import { HScrollView } from 'styles/app.module'
-import { VerticalListLine } from 'styles/list.module'
+import {
+  VerticalList,
+  VerticalListItem,
+  VerticalListLine,
+} from 'styles/list.module'
 
 export default function OurHotelList({ navigation, route }) {
   const { _data } = route.params
@@ -31,8 +37,8 @@ export default function OurHotelList({ navigation, route }) {
           {_data.map((el, key) => {
             return (
               <Gap
-                style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
+                key={key}
+                style={{ alignItems: 'center', flexDirection: 'row' }}>
                 <FixedWidthButton
                   title={el.city_name}
                   func={() =>
@@ -51,6 +57,23 @@ export default function OurHotelList({ navigation, route }) {
           })}
           <Gap style={{ marginRight: 24 }} />
         </HScrollView>
+
+        <Gap>
+          <HScrollView horizontal showsHorizontalScrollIndicator={false}>
+            {hotelList.data.map((el) =>
+              el.regions.map((elem, key) => {
+                return (
+                  <>
+                    <VerticalListItem key={key}>
+                      <Text content={elem.region_name} size={16} up={'cap'} />
+                    </VerticalListItem>
+                    <VerticalListLine />
+                  </>
+                )
+              })
+            )}
+          </HScrollView>
+        </Gap>
       </Gap>
 
       <AreaView>
