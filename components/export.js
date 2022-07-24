@@ -104,3 +104,5 @@ export { default as ProfileScreen } from './profile/Profile.screen'
 export { default as OurHotelScreen } from './our hotel/OurHotel.screen'
 export { default as OurHotelListScreen } from './our hotel/OurHotelList.screen'
 export { default as OurHotelScreenDetails } from './our hotel/OurHotelDetails.screen'
+// excursion ana activities
+export { default as ExcursionScreen } from './excursions/Excurison.screen'

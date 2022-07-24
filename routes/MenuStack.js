@@ -71,6 +71,7 @@ import {
   OurHotelScreen,
   OurHotelListScreen,
   OurHotelScreenDetails,
+  ExcursionScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -121,6 +122,11 @@ const MenuStackNavigation = () => {
 export default MenuStackNavigation
 
 const safety_Stack_Array = [
+  {
+    path: 'menu-tab-stack-excursions',
+    component: ExcursionScreen,
+    header: () => <StackHeader name={'excursions & activities'} />,
+  },
   {
     path: 'menu-tab-stack-profile',
     component: ProfileScreen,

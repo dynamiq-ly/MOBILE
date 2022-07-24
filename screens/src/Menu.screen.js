@@ -183,7 +183,7 @@ const menuArray5 = [
   {
     icon: 'ri-user-smile-line',
     name: 'Excursion and activities',
-    path: '',
+    path: 'menu-tab-stack-excursions',
     color: '#FD6B35',
   },
   {
