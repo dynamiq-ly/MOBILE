@@ -40,7 +40,7 @@ export default function ExcursionScreen({ navigation }) {
           renderItem={({ item }) => (
             <FullImageCard
               title={item.activity_name}
-              image={`${baseUrl}storage/excursions/thumbnails/${item.activity_image}`}
+              image={`${baseUrl}/storage/excursions/thumbnails/${item.activity_image}`}
               position={'end'}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-swimming-pool-list', {

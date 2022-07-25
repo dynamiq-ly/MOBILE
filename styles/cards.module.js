@@ -168,7 +168,7 @@ export const TextSimpleCard = styled.View`
   width: 100%;
   align-items: center;
   justify-content: flex-end;
-  height: ${heightPixel(32)}px;
+  min-height: ${heightPixel(32)}px;
 `
 
 /**
