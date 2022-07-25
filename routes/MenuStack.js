@@ -73,6 +73,7 @@ import {
   OurHotelScreenDetails,
   ExcursionScreen,
   ElecricityCablesScreen,
+  AirConditionerScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -431,6 +432,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service-electricity',
     component: ElecricityCablesScreen,
     header: () => <StackHeader name={'electricity and cables'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-airconditioner',
+    component: AirConditionerScreen,
+    header: () => <StackHeader name={'air conditioner'} />,
   },
   {
     path: 'menu-tab-stack-gym',

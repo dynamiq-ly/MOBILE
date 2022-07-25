@@ -76,6 +76,7 @@ export { default as HouseKeepingScreen } from './housekeeping/HouseKeeping.scree
 export { default as FoodServiceDetailScreen } from './room-service/FoodServiceDetail.screen'
 export { default as HouseKeepingServiceScreen } from './housekeeping/HouseKeepingServices.screen'
 export { default as ElecricityCablesScreen } from './room-service/ElectricityAndCables.screen'
+export { default as AirConditionerScreen } from './room-service/AirConditioner.screen'
 // point of interest
 export {
   default as PointOfInterestScreen,

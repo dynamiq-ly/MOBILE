@@ -62,6 +62,9 @@ const array = [
     name: 'electricity and cables',
     path: 'menu-tab-stack-room-service-electricity',
   },
-  { name: 'air conditioner', path: '' },
+  {
+    name: 'air conditioner',
+    path: 'menu-tab-stack-room-service-airconditioner',
+  },
   { name: 'hair dryer', path: '' },
 ]
