@@ -58,7 +58,10 @@ const array = [
   { name: 'towels', path: 'menu-tab-stack-towels' },
   { name: 'television', path: '' },
   { name: 'safe deposit box', path: 'menu-tab-stack-safe-box' },
-  { name: 'electricity and cables', path: '' },
+  {
+    name: 'electricity and cables',
+    path: 'menu-tab-stack-room-service-electricity',
+  },
   { name: 'air conditioner', path: '' },
   { name: 'hair dryer', path: '' },
 ]
