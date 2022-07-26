@@ -39,7 +39,7 @@ export default function ExcursionListScreen({ route, navigation }) {
               name={item.activity_list_name}
               image={`${baseUrl}/storage/excursions/thumbnails/${item.activity_list_thumbnail}`}
               onPress={() =>
-                navigation.navigate('menu-tab-stack-excursions-list', {
+                navigation.navigate('menu-tab-stack-excursions-list-details', {
                   _name: item.activity_list_name,
                   _data: item,
                 })
