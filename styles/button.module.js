@@ -75,6 +75,7 @@ export const StyledExpandable = styled.TouchableOpacity`
   overflow: hidden;
   border-radius: 10px;
   min-height: ${heightPixel(48)}px;
+  margin: ${pixelSizeVertical(10)}px 0px;
   padding: 0px ${pixelSizeVertical(10)}px;
   background: ${({ theme }) => theme.primary.accent_0};
 `
