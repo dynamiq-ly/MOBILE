@@ -30,7 +30,11 @@ export default function ExcusionDetailScreen({ route }) {
                   func={() => setCategory(el)}
                   active={isCategory !== el ? true : false}
                 />
-                {zone_category_Array.length !== key + 1 && <VerticalListLine />}
+                {zone_category_Array.length !== key + 1 ? (
+                  <VerticalListLine />
+                ) : (
+                  <Gap style={{ marginLeft: 24 }} />
+                )}
               </Gap>
             )
           })}

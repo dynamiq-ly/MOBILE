@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { View } from 'react-native'
 import { heightPixel } from 'utils/normalization'
 import { animated, useSpring } from '@react-spring/native'
 
@@ -14,10 +13,10 @@ import {
   StyledExpandableButton,
 } from 'styles/button.module'
 
-import { SafeAreaRowWrapperDetail } from 'styles/detail.module'
+import { TouchableOpacity } from 'react-native'
 
 export default function Expandable({
-  interactive = false,
+  interactive = true,
   title = 'button to epxand',
   price = '$0',
   buttoon = 'click',
@@ -27,20 +26,28 @@ export default function Expandable({
   const [isExpanded, setExpanded] = useState(false)
 
   const expandingStyle = useSpring({
-    height: isExpanded ? heightPixel(82) : heightPixel(0),
+    minHeight: isExpanded
+      ? heightPixel(content.length > 50 ? 82 : 32)
+      : heightPixel(0),
+    paddingBottom: isExpanded ? 10 : 0,
   })
 
   const expandDelay = useSpring({
     display: isExpanded ? 'flex' : 'none',
     opacity: isExpanded ? 1 : 0,
-    delay: isExpanded ? 200 : 0,
+    delay: isExpanded ? 300 : 0,
   })
 
   return (
-    <StyledExpandable
-      activeOpacity={0.9}
-      onPress={() => setExpanded(!isExpanded)}>
-      <SafeAreaRowWrapperDetail>
+    <StyledExpandable>
+      <TouchableOpacity
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+        activeOpacity={0.9}
+        onPress={() => setExpanded(!isExpanded)}>
         <StyledExpandableText>
           <Text size={18} up={'cap'} weight={600} content={title} />
         </StyledExpandableText>
@@ -61,7 +68,7 @@ export default function Expandable({
           )}
           <Icon name={`ri-arrow-${isExpanded ? 'up' : 'down'}-s-line`} />
         </StyledExpandableButton>
-      </SafeAreaRowWrapperDetail>
+      </TouchableOpacity>
 
       <StyledExpandableView style={{ ...expandingStyle }}>
         <animated.View style={{ ...expandDelay }}>
