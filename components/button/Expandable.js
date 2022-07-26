@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { useSpring } from '@react-spring/native'
+import { View } from 'react-native'
 import { heightPixel } from 'utils/normalization'
+import { animated, useSpring } from '@react-spring/native'
 
 import Text from 'components/text/Text'
 import Icon from 'react-native-remix-icon'
@@ -15,11 +16,24 @@ import {
 
 import { SafeAreaRowWrapperDetail } from 'styles/detail.module'
 
-export default function Expandable() {
+export default function Expandable({
+  interactive = false,
+  title = 'button to epxand',
+  price = '$0',
+  buttoon = 'click',
+  content = '',
+  ...rest
+}) {
   const [isExpanded, setExpanded] = useState(false)
 
   const expandingStyle = useSpring({
     height: isExpanded ? heightPixel(100) : heightPixel(0),
+  })
+
+  const expandDelay = useSpring({
+    display: isExpanded ? 'flex' : 'none',
+    opacity: isExpanded ? 1 : 0,
+    delay: isExpanded ? 200 : 0,
   })
 
   return (
@@ -28,38 +42,31 @@ export default function Expandable() {
       onPress={() => setExpanded(!isExpanded)}>
       <SafeAreaRowWrapperDetail>
         <StyledExpandableText>
-          <Text
-            size={18}
-            up={'cap'}
-            weight={600}
-            content={'button to expand'}
-          />
+          <Text size={18} up={'cap'} weight={600} content={title} />
         </StyledExpandableText>
         <StyledExpandableButton>
-          <Text size={18} weight={500} content={'50$'} color={'dominant'} />
-          <BookButton>
-            <Text
-              content={'book'}
-              color={'white'}
-              size={16}
-              up={'cap'}
-              align={'center'}
-            />
-          </BookButton>
+          {interactive && (
+            <>
+              <Text size={18} weight={500} content={price} color={'dominant'} />
+              <BookButton {...rest}>
+                <Text
+                  content={buttoon}
+                  color={'white'}
+                  size={16}
+                  up={'cap'}
+                  align={'center'}
+                />
+              </BookButton>
+            </>
+          )}
           <Icon name={`ri-arrow-${isExpanded ? 'up' : 'down'}-s-line`} />
         </StyledExpandableButton>
       </SafeAreaRowWrapperDetail>
 
       <StyledExpandableView style={{ ...expandingStyle }}>
-        {isExpanded && (
-          <Text
-            size={14}
-            color={'gray'}
-            content={
-              'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.'
-            }
-          />
-        )}
+        <animated.View style={{ ...expandDelay }}>
+          <Text size={14} color={'gray'} content={content} />
+        </animated.View>
       </StyledExpandableView>
     </StyledExpandable>
   )
