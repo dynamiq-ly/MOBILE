@@ -5,12 +5,12 @@ import Radio from 'components/checkbox/Radio'
 
 import { useState } from 'react'
 import { palette } from 'themes/palette'
-import { View as Gap } from 'react-native'
-import { ButtonWrapperDetail, View } from 'styles/detail.module'
 import { HScrollView } from 'styles/app.module'
+import { View as Gap, TouchableOpacity, Image } from 'react-native'
+import { ButtonWrapperDetail, View } from 'styles/detail.module'
 import { heightPixel, widthPixel } from 'utils/normalization'
 
-export default function EntertainDetailScreen() {
+export default function EntertainDetailScreen({ navigation }) {
   const [isActive, setActive] = useState({
     index: 0,
     time: moment().format('DD / MM / YYYY'),
@@ -51,9 +51,66 @@ export default function EntertainDetailScreen() {
         </HScrollView>
       </Gap>
 
-      <AreaView></AreaView>
+      <AreaView>
+        <TouchableOpacity
+          style={{ ...TouchableProps }}
+          onPress={() =>
+            navigation.navigate('menu-tab-stack-entertaining-events-detail', {
+              _name: 'pool party',
+            })
+          }>
+          <Text content={'pool party'} size={18} up={'cap'} weight={600} />
+          <Gap style={{ marginTop: 5 }} />
+          <Text
+            content={
+              'Enjoying your time at the pool, how about joining us for a little pool party.'
+            }
+            color={'gray'}
+            size={14}
+          />
+          <Gap style={{ marginTop: 10 }} />
+          <Image
+            style={{ width: 28, height: 28, borderRadius: 100 }}
+            source={{
+              uri: 'https://media.npr.org/assets/img/2021/07/28/gettyimages-1234277709-64e86b080430ca47fd867468bcb9dca4d010b427.jpg',
+            }}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{ ...TouchableProps }}
+          onPress={() =>
+            navigation.navigate('menu-tab-stack-entertaining-events-detail', {
+              _name: 'hiking',
+            })
+          }>
+          <Text content={'hiking'} size={18} up={'cap'} weight={600} />
+
+          <Gap style={{ marginTop: 5 }} />
+          <Text
+            content={
+              'Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century.'
+            }
+            color={'gray'}
+            size={14}
+          />
+          <Gap style={{ marginTop: 10 }} />
+          <Image
+            style={{ width: 28, height: 28, borderRadius: 100 }}
+            source={{
+              uri: 'https://www.france-voyage.com/visuals/pratique/hiking-with-pleasure-21-1_w600.webp',
+            }}
+          />
+        </TouchableOpacity>
+      </AreaView>
     </View>
   )
+}
+
+const TouchableProps = {
+  padding: 10,
+  marginBottom: 14,
+  borderRadius: 10,
+  backgroundColor: palette.primary.accent_0,
 }
 
 const CalendarItem = function ({ name, date, active = false, onClick }) {

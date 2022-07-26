@@ -76,6 +76,7 @@ import {
   AirConditionerScreen,
   ExcursionListScreen,
   ExcursionDetialsScreen,
+  EntertainingDetailScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -508,6 +509,11 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-entertaining-events',
     component: EntertainingEventsScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-entertaining-events-detail',
+    component: EntertainingDetailScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
