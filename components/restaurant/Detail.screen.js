@@ -99,11 +99,12 @@ export default function DetailScreen({ navigation, route }) {
 
           <HFLine />
           <Text content={'Dress code'} weight={500} size={18} up={'cap'} />
+          <Gap style={{ marginBottom: 10 }} />
           <HdRow>
             <Icon
               color={'#191919'}
               name='ri-shirt-line'
-              style={{ margin: 5 }}
+              style={{ marginRight: 10 }}
               size={fontPixel(28)}
             />
             <TextWrapper>

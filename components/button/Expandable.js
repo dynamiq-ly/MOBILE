@@ -16,7 +16,7 @@ import {
 import { TouchableOpacity } from 'react-native'
 
 export default function Expandable({
-  interactive = true,
+  interactive = false,
   title = 'button to epxand',
   price = '$0',
   buttoon = 'click',
