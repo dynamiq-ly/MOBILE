@@ -41,11 +41,10 @@ export default function ExcursionScreen({ navigation }) {
             <FullImageCard
               title={item.activity_name}
               image={`${baseUrl}/storage/excursions/thumbnails/${item.activity_image}`}
-              position={'end'}
               onPress={() =>
-                navigation.navigate('menu-tab-stack-swimming-pool-list', {
+                navigation.navigate('menu-tab-stack-excursions-list', {
                   _name: item.activity_name,
-                  _data: item,
+                  _data: item.id,
                 })
               }
             />
@@ -58,7 +57,7 @@ export default function ExcursionScreen({ navigation }) {
 
 const fetchExcursionsActivities = function () {
   return __query
-    .get('/api/activities')
+    .get('/api/excursion/activities')
     .then((res) => res.data)
     .catch((err) => {
       throw new Error(err.message)

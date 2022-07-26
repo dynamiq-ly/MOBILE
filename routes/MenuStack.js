@@ -74,6 +74,7 @@ import {
   ExcursionScreen,
   ElecricityCablesScreen,
   AirConditionerScreen,
+  ExcursionListScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -128,6 +129,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-excursions',
     component: ExcursionScreen,
     header: () => <StackHeader name={'excursions & activities'} />,
+  },
+  {
+    path: 'menu-tab-stack-excursions-list',
+    component: ExcursionListScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-profile',
