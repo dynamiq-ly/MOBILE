@@ -2,6 +2,7 @@ import NotFound from 'components/notFound/NotFound'
 import FullImageCard from 'components/cards/FullImageCard'
 
 import { useQuery } from 'react-query'
+import { View } from '~/styles/detail.module'
 import { useCallback, useState } from 'react'
 import { __query, baseUrl } from 'hooks/useApi'
 import { RefreshControl, LogBox, FlatList } from 'react-native'
@@ -23,7 +24,7 @@ export default function ExcursionScreen({ navigation }) {
   }, [])
 
   return (
-    <>
+    <View>
       {data.length === 0 ? (
         <NotFound killProcess={(isFetched && data.length === 0) || isError} />
       ) : (
@@ -32,7 +33,7 @@ export default function ExcursionScreen({ navigation }) {
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
           data={data}
-          style={{ margin: 16 }}
+          style={{ padding: 16 }}
           numColumns={2}
           horizontal={false}
           columnWrapperStyle={{ justifyContent: 'space-between' }}
@@ -51,7 +52,7 @@ export default function ExcursionScreen({ navigation }) {
           )}
         />
       )}
-    </>
+    </View>
   )
 }
 
