@@ -27,7 +27,7 @@ export default function Expandable({
   const [isExpanded, setExpanded] = useState(false)
 
   const expandingStyle = useSpring({
-    height: isExpanded ? heightPixel(100) : heightPixel(0),
+    height: isExpanded ? heightPixel(82) : heightPixel(0),
   })
 
   const expandDelay = useSpring({
