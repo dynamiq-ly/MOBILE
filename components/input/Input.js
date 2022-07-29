@@ -52,7 +52,7 @@ export function TextArea({
           size={18}
           name={icon}
           color={'#9ca3af'}
-          style={{ marginTop: 5, marginRight: 10 }}
+          style={{ marginTop: 2, marginRight: 10 }}
         />
       )}
       <StyledTextAreaInput
@@ -60,6 +60,7 @@ export function TextArea({
         numberOfLines={4}
         placeholder={placeholder}
         bg={background}
+        style={{ textAlignVertical: 'top' }}
         {...rest}
       />
     </TextAreaField>
