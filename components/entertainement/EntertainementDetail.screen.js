@@ -1,5 +1,6 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
+import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
 
 import { Image } from 'styles/image.module'
@@ -9,7 +10,7 @@ import { View as Gap, Image as Img, TouchableOpacity } from 'react-native'
 export default function EntertainementDetailScreen() {
   return (
     <AreaView>
-      <SafeAreaRowWrapperDetail
+      {/* <SafeAreaRowWrapperDetail
         style={{ alignItems: 'center', marginBottom: 16 }}>
         <Img
           style={{ width: 42, height: 42, borderRadius: 100 }}
@@ -24,7 +25,7 @@ export default function EntertainementDetailScreen() {
             }
           />
         </Gap>
-      </SafeAreaRowWrapperDetail>
+      </SafeAreaRowWrapperDetail> */}
 
       <Image
         source={{
@@ -33,8 +34,12 @@ export default function EntertainementDetailScreen() {
       />
       <Gap style={{ marginBottom: 10 }} />
       <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-        <Text content={'participant'} size={18} up={'cap'} weight={600} />
-        <Text content={'15'} size={21} color={'dominant'} weight={600} />
+        <Text content={'interested'} size={18} up={'cap'} weight={600} />
+        <Text content={'21'} size={21} color={'dominant'} weight={600} />
+      </SafeAreaRowWrapperDetail>
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text content={'confirmed'} size={18} up={'cap'} weight={600} />
+        <Text content={'11'} size={21} color={'dominant'} weight={600} />
       </SafeAreaRowWrapperDetail>
       <Gap style={{ marginBottom: 16 }} />
       <Text
@@ -47,20 +52,32 @@ export default function EntertainementDetailScreen() {
       <Button title='join for today' style={{ height: 36 }} />
       <>
         <HFLine />
-        <Text content={'join another time'} weight={500} size={18} up={'cap'} />
+        <Text content={'next schedule'} weight={500} size={18} up={'cap'} />
         <Gap style={{ marginBottom: 10 }} />
         <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-          <Text content={'13/07/2022 - 1pm'} color={'dominant'} weight={600} />
+          <Text
+            content={'wednesday 13/07/2022 - 1pm'}
+            color={'dominant'}
+            weight={600}
+          />
           <JoinButton />
         </SafeAreaRowWrapperDetail>
         <Gap style={{ marginBottom: 10 }} />
         <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-          <Text content={'14/07/2022 - 11am'} color={'dominant'} weight={600} />
+          <Text
+            content={'friday 14/07/2022 - 11am'}
+            color={'dominant'}
+            weight={600}
+          />
           <JoinButton />
         </SafeAreaRowWrapperDetail>
         <Gap style={{ marginBottom: 10 }} />
         <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-          <Text content={'15/07/2022 - 1pm'} color={'dominant'} weight={600} />
+          <Text
+            content={'sunday 15/07/2022 - 1pm'}
+            color={'dominant'}
+            weight={600}
+          />
           <JoinButton />
         </SafeAreaRowWrapperDetail>
       </>
@@ -72,7 +89,8 @@ export default function EntertainementDetailScreen() {
 const JoinButton = function () {
   return (
     <TouchableOpacity>
-      <Text content={'join'} up={'up'} />
+      <Icon name='ri-notification-line' size={21} />
     </TouchableOpacity>
   )
 }
+// to open pop uo that will confirm

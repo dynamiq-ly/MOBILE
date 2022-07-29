@@ -2,19 +2,22 @@ import moment from 'moment'
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Radio from 'components/checkbox/Radio'
+import FixedWidthButton from 'components/button/FixedWidthButton'
 
 import { useState } from 'react'
 import { palette } from 'themes/palette'
 import { HScrollView } from 'styles/app.module'
-import { View as Gap, TouchableOpacity, Image } from 'react-native'
-import { ButtonWrapperDetail, View } from 'styles/detail.module'
+import { VerticalListLine } from 'styles/list.module'
 import { heightPixel, widthPixel } from 'utils/normalization'
+import { ButtonWrapperDetail, View } from 'styles/detail.module'
+import { View as Gap, TouchableOpacity, Image } from 'react-native'
 
 export default function EntertainDetailScreen({ navigation }) {
   const [isActive, setActive] = useState({
     index: 0,
     time: moment().format('DD / MM / YYYY'),
   })
+  const [isCategory, setCategory] = useState('all')
 
   return (
     <View>
@@ -27,6 +30,7 @@ export default function EntertainDetailScreen({ navigation }) {
             content={moment().add(isActive.index, 'days').calendar()}
           />
         </ButtonWrapperDetail>
+        {/* calendar */}
         <HScrollView horizontal showsHorizontalScrollIndicator={false}>
           {[...Array(7)].map((_, key) => (
             <CalendarItem
@@ -50,7 +54,25 @@ export default function EntertainDetailScreen({ navigation }) {
           <Gap style={{ marginRight: 16 }} />
         </HScrollView>
       </Gap>
-
+      {/* category */}
+      <Gap>
+        <HScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {type_category_Array.map((el, key) => (
+            <Gap
+              style={{ alignItems: 'center', flexDirection: 'row' }}
+              key={key}>
+              <FixedWidthButton
+                title={el}
+                func={() => setCategory(el)}
+                active={el === isCategory ? false : true}
+              />
+              {type_category_Array.length !== key + 1 && <VerticalListLine />}
+            </Gap>
+          ))}
+          <Gap style={{ marginLeft: 24 }} />
+        </HScrollView>
+      </Gap>
+      {/* list */}
       <AreaView>
         <TouchableOpacity
           style={{ ...TouchableProps }}
@@ -142,3 +164,5 @@ const CalendarItem = function ({ name, date, active = false, onClick }) {
     </Radio>
   )
 }
+
+const type_category_Array = ['all', 'adults', 'teens', 'family']

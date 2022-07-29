@@ -258,6 +258,7 @@ export const StyledFullDetailedCardImage = styled.Image`
 `
 
 export const StyledFullDetailedCardContent = styled.View`
+  flex: 1;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;

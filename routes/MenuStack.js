@@ -89,6 +89,8 @@ const presentationModal = function (name) {
       return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
     case 'menu-tab-stack-laundry-menu':
       return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
+    case 'menu-tab-stack-entertaining-events-detail':
+      return Platform.OS === 'ios' ? 'modal' : 'formSheet'
     default:
       return 'fullScreen'
   }
