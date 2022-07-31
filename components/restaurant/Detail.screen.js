@@ -40,7 +40,13 @@ export default function DetailScreen({ navigation, route }) {
       <RadiusView>
         <AreaView mode={'light'}>
           <Text content={_data.name} weight={700} up={'cap'} size={28} />
-          <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Gap
+            style={{
+              marginTop: 5,
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginBottom: 10,
+            }}>
             <Icon name={'ri-time-line'} style={{ marginRight: 5 }} size={18} />
             <Text content={`${_data.open} to ${_data.close}`} />
           </Gap>
