@@ -66,16 +66,17 @@ export const StyledFixedButton = styled.TouchableOpacity`
 
 // expandable button
 
-export const StyledExpandableView = styled(animated.View)`
-  border-radius: 10px;
-  background: ${({ theme }) => theme.primary.accent_0};
-`
-
-export const StyledExpandable = styled.TouchableOpacity`
+export const StyledExpandable = styled.View`
   overflow: hidden;
   border-radius: 10px;
   min-height: ${heightPixel(48)}px;
+  margin: ${pixelSizeVertical(10)}px 0px;
   padding: 0px ${pixelSizeVertical(10)}px;
+  background: ${({ theme }) => theme.primary.accent_0};
+`
+
+export const StyledExpandableView = styled(animated.View)`
+  border-radius: 10px;
   background: ${({ theme }) => theme.primary.accent_0};
 `
 

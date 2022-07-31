@@ -74,7 +74,13 @@ import {
   ExcursionScreen,
   ElecricityCablesScreen,
   AirConditionerScreen,
+<<<<<<< HEAD
   HairDryerScreen,
+=======
+  ExcursionListScreen,
+  ExcursionDetialsScreen,
+  EntertainingDetailScreen,
+>>>>>>> 0103ea05504dc9bfafc57e55738edbec1af43bb5
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -87,6 +93,8 @@ const presentationModal = function (name) {
       return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
     case 'menu-tab-stack-laundry-menu':
       return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
+    case 'menu-tab-stack-entertaining-events-detail':
+      return Platform.OS === 'ios' ? 'modal' : 'formSheet'
     default:
       return 'fullScreen'
   }
@@ -129,6 +137,16 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-excursions',
     component: ExcursionScreen,
     header: () => <StackHeader name={'excursions & activities'} />,
+  },
+  {
+    path: 'menu-tab-stack-excursions-list',
+    component: ExcursionListScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-excursions-list-details',
+    component: ExcursionDetialsScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-profile',
@@ -502,6 +520,11 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-entertaining-events',
     component: EntertainingEventsScreen,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-entertaining-events-detail',
+    component: EntertainingDetailScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {

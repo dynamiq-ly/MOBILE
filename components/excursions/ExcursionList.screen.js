@@ -1,16 +1,17 @@
-import NotFound from 'components/notFound/NotFound'
-import FullImageCard from 'components/cards/FullImageCard'
+import Widecard from 'components/cards/Widecard'
 
 import { useQuery } from 'react-query'
-import { View } from '~/styles/detail.module'
+import { View } from 'styles/detail.module'
 import { useCallback, useState } from 'react'
 import { __query, baseUrl } from 'hooks/useApi'
 import { RefreshControl, LogBox, FlatList } from 'react-native'
 
-export default function ExcursionScreen({ navigation }) {
-  const { data, refetch, isError, isFetched } = useQuery(
-    '@activities',
-    fetchExcursionsActivities,
+export default function ExcursionListScreen({ route, navigation }) {
+  const { _data } = route.params
+
+  const { data, refetch, isFetched } = useQuery(
+    ['@activity', _data],
+    () => fetchExcursionsActivitiesList(_data),
     {
       initialData: [],
     }
@@ -25,27 +26,22 @@ export default function ExcursionScreen({ navigation }) {
 
   return (
     <View>
-      {data.length === 0 ? (
-        <NotFound killProcess={(isFetched && data.length === 0) || isError} />
-      ) : (
+      {isFetched && (
         <FlatList
           refreshControl={
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
           data={data}
           style={{ padding: 16 }}
-          numColumns={2}
-          horizontal={false}
-          columnWrapperStyle={{ justifyContent: 'space-between' }}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <FullImageCard
-              title={item.activity_name}
-              image={`${baseUrl}/storage/excursions/thumbnails/${item.activity_image}`}
+            <Widecard
+              name={item.activity_list_name}
+              image={`${baseUrl}/storage/excursions/thumbnails/${item.activity_list_thumbnail}`}
               onPress={() =>
-                navigation.navigate('menu-tab-stack-excursions-list', {
-                  _name: item.activity_name,
-                  _data: item.id,
+                navigation.navigate('menu-tab-stack-excursions-list-details', {
+                  _name: item.activity_list_name,
+                  _data: item,
                 })
               }
             />
@@ -56,9 +52,9 @@ export default function ExcursionScreen({ navigation }) {
   )
 }
 
-const fetchExcursionsActivities = function () {
+const fetchExcursionsActivitiesList = function (id) {
   return __query
-    .get('/api/excursion/activities')
+    .get(`/api/excursion/${id}/specific`)
     .then((res) => res.data)
     .catch((err) => {
       throw new Error(err.message)

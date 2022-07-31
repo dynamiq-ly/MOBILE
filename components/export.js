@@ -101,6 +101,7 @@ export { default as RoomDetailScreen } from './rooms/RoomDetail.screen'
 // entertainement screen
 export { default as EntertainingScreen } from './entertainement/Entertainement.screen'
 export { default as EntertainingEventsScreen } from './entertainement/EntertainEvents.screen'
+export { default as EntertainingDetailScreen } from './entertainement/EntertainementDetail.screen'
 // profile screen and settings
 export { default as ProfileScreen } from './profile/Profile.screen'
 // our hotels screens
@@ -109,3 +110,5 @@ export { default as OurHotelListScreen } from './our hotel/OurHotelList.screen'
 export { default as OurHotelScreenDetails } from './our hotel/OurHotelDetails.screen'
 // excursion ana activities
 export { default as ExcursionScreen } from './excursions/Excurison.screen'
+export { default as ExcursionListScreen } from './excursions/ExcursionList.screen'
+export { default as ExcursionDetialsScreen } from './excursions/ExcursionDetail.screen'

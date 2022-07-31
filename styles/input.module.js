@@ -30,14 +30,13 @@ export const TextAreaField = styled.View`
   flex-direction: row;
   height: ${fontPixel(200)}px;
   margin: ${pixelSizeVertical(12)}px 0px;
-  padding: 0px ${pixelSizeHorizontal(10)}px;
+  padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(10)}px;
   background: ${({ bg, theme }) =>
     bg ? theme.primary.accent_200 : theme.primary.accent_0};
 `
 
 export const StyledTextAreaInput = styled.TextInput`
   flex: 1;
-  height: 100%;
   height: ${fontPixel(200)}px;
   font-size: ${fontPixel(16)}px;
 `

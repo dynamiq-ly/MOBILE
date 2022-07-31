@@ -41,13 +41,8 @@ export default function DetailScreen({ navigation, route }) {
         <AreaView mode={'light'}>
           <Text content={_data.name} weight={700} up={'cap'} size={28} />
           <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <Icon name={'ri-time-line'} style={{ marginRight: 5 }} size={21} />
-            <Text
-              content={`from ${_data.open} to ${_data.close}`}
-              weight={500}
-              up={'up'}
-              size={16}
-            />
+            <Icon name={'ri-time-line'} style={{ marginRight: 5 }} size={18} />
+            <Text content={`${_data.open} to ${_data.close}`} />
           </Gap>
           <Text content={_data.content} color={'gray'} weight={400} size={16} />
 
@@ -99,11 +94,12 @@ export default function DetailScreen({ navigation, route }) {
 
           <HFLine />
           <Text content={'Dress code'} weight={500} size={18} up={'cap'} />
+          <Gap style={{ marginBottom: 10 }} />
           <HdRow>
             <Icon
               color={'#191919'}
               name='ri-shirt-line'
-              style={{ margin: 5 }}
+              style={{ marginRight: 10 }}
               size={fontPixel(28)}
             />
             <TextWrapper>
