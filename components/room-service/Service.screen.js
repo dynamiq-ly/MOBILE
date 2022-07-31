@@ -66,5 +66,5 @@ const array = [
     name: 'air conditioner',
     path: 'menu-tab-stack-room-service-airconditioner',
   },
-  { name: 'hair dryer', path: '' },
+  { name: 'hair dryer', path: 'menu-tab-stack-room-service-hairdryer' },
 ]
