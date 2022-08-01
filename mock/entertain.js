@@ -23,4 +23,33 @@ export const sport = [
     sport_ad_2_image:
       'https://en.psg.fr/img/DefaultOpenGraphImage.jpg?20220731',
   },
+  {
+    sport_type: 'tennis',
+    sport_timing: '6:00pm - 7:30pm',
+    sport_broadcast_location: 'main lobby',
+    sport_title: 'Ons Jabeur vs. Paula Badosa',
+    sport_ad_1_name: 'Ons Jabeur',
+    sport_ad_1_image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tunisia_logo.svg/1200px-Tunisia_logo.svg.png',
+    sport_ad_2_name: 'Paula Badosa',
+    sport_ad_2_image:
+      'https://cdn.countryflags.com/thumbs/spain/flag-3d-round-250.png',
+  },
+]
+
+export const night_shows = [
+  {
+    show_title: 'la haine',
+    show_image: 'https://movieposters2.com/images/1709736-b.jpg',
+  },
+  {
+    show_title: 'shakira concert',
+    show_image:
+      'https://c8.alamy.com/compfr/dgj08r/la-chanteuse-colombienne-shakira-live-at-the-energy-stars-for-free-event-a-l-hallenstadion-oerlikon-concert-hall-zurich-suisse-dgj08r.jpg',
+  },
+  {
+    show_title: 'magic show',
+    show_image:
+      'https://browsecat.net/sites/default/files/magic-show-pictures-wallpapers-113888-938329-7048389.png',
+  },
 ]
