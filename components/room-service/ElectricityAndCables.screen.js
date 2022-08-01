@@ -1,7 +1,10 @@
 import AreaView from '~/utils/TabAreaView'
-import { Image } from 'styles/image.module'
 import Text from 'components/text/Text'
+
+import { Image } from 'styles/image.module'
 import { PhoneDirectoryRow } from 'styles/list.module'
+import { View } from 'react-native'
+
 export default function ElectricityAndCablesScreen() {
   return (
     <AreaView>
@@ -45,6 +48,7 @@ export default function ElectricityAndCablesScreen() {
       <PhoneDirectoryRow>
         <Text size={16} content={'1 bathroom light '} />
       </PhoneDirectoryRow>
+      <View style={{ marginBottom: 24 }} />
     </AreaView>
   )
 }

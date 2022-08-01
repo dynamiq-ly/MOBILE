@@ -1,9 +1,9 @@
+import Icon from 'react-native-remix-icon'
 import { Image } from 'styles/image.module'
 import AreaView from '~/utils/TabAreaView'
 import { View as NewView } from 'react-native'
 import Text from 'components/text/Text'
 import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
-import Icon from 'react-native-remix-icon'
 import { fontPixel } from 'utils/normalization'
 
 export default function HairDryer() {
@@ -67,7 +67,7 @@ export default function HairDryer() {
 
       <PhoneDirectoryRow>
         <BoxIcon>
-          <Icon name={'ri-alert-fill'} size={fontPixel(21)} />
+          <Icon name={'ri-alert-fill'} size={fontPixel(21)} color={'orange'} />
         </BoxIcon>
         <BoxText>
           <Text
@@ -79,13 +79,14 @@ export default function HairDryer() {
           />
           <Text
             content={
-              'This device may be used by children over 8 years of age and persons with reduced physical, sensory or mental capabilities.                                       Never put the power cable, the plug or the whole device into the water.                                                                 Never use the product in humid conditions.'
+              'This device may be used by children over 8 years of age and persons with reduced physical, sensory or mental capabilities. Never put the power cable, the plug or the whole device into the water.                                                                 Never use the product in humid conditions.'
             }
             color={'gray'}
             size={14}
           />
         </BoxText>
       </PhoneDirectoryRow>
+      <NewView style={{ marginBottom: 24 }} />
     </AreaView>
   )
 }
