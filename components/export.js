@@ -104,6 +104,7 @@ export { default as EntertainingEventsScreen } from './entertainement/EntertainE
 export { default as EntertainingDetailScreen } from './entertainement/EntertainementDetail.screen'
 // profile screen and settings
 export { default as ProfileScreen } from './profile/Profile.screen'
+export { default as SettingScreen } from './profile/Setting.screen'
 // our hotels screens
 export { default as OurHotelScreen } from './our hotel/OurHotel.screen'
 export { default as OurHotelListScreen } from './our hotel/OurHotelList.screen'

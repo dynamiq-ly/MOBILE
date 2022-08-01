@@ -79,6 +79,7 @@ import {
   ExcursionDetialsScreen,
   EntertainingDetailScreen,
   ShopScreen,
+  SettingScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -155,6 +156,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-profile',
     component: ProfileScreen,
     header: () => <StackHeader name={'profile'} />,
+  },
+  {
+    path: 'menu-tab-stack-setting',
+    component: SettingScreen,
+    header: () => <StackHeader name={'settings'} />,
   },
   {
     path: 'menu-tab-stack-our-hotels',

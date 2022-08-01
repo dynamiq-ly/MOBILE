@@ -216,7 +216,7 @@ const menuArray6 = [
   {
     icon: 'ri-Settings-line',
     name: 'setting',
-    path: 'setting-screen',
+    path: 'menu-tab-stack-setting',
     color: '#0ea5e9',
   },
 ]
