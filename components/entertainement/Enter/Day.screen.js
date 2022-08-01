@@ -140,11 +140,11 @@ const CalendarItem = function ({ name, date, active = false, onClick }) {
     <Radio onPress={onClick}>
       <Gap
         style={{
-          marginRight: 10,
+          height: 62,
+          marginRight: 5,
           borderRadius: 10,
           alignItems: 'center',
-          width: widthPixel(58),
-          height: heightPixel(78),
+          width: widthPixel(52),
           justifyContent: 'center',
           backgroundColor: palette.primary.accent_0,
           borderWidth: 2,
