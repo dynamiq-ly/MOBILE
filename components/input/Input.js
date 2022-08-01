@@ -52,7 +52,7 @@ export function TextArea({
           size={18}
           name={icon}
           color={'#9ca3af'}
-          style={{ marginTop: 2, marginRight: 10 }}
+          style={{ marginTop: 3, marginRight: 10 }}
         />
       )}
       <StyledTextAreaInput
