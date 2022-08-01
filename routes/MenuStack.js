@@ -74,13 +74,10 @@ import {
   ExcursionScreen,
   ElecricityCablesScreen,
   AirConditionerScreen,
-<<<<<<< HEAD
   HairDryerScreen,
-=======
   ExcursionListScreen,
   ExcursionDetialsScreen,
   EntertainingDetailScreen,
->>>>>>> 0103ea05504dc9bfafc57e55738edbec1af43bb5
 } from 'components/export'
 
 import Cart from 'cart/Cart'
