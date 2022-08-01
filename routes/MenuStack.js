@@ -78,6 +78,7 @@ import {
   ExcursionListScreen,
   ExcursionDetialsScreen,
   EntertainingDetailScreen,
+  ShopScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -130,6 +131,11 @@ const MenuStackNavigation = () => {
 export default MenuStackNavigation
 
 const safety_Stack_Array = [
+  {
+    path: 'menu-tab-stack-shops',
+    component: ShopScreen,
+    header: () => <StackHeader name={'shops'} />,
+  },
   {
     path: 'menu-tab-stack-excursions',
     component: ExcursionScreen,

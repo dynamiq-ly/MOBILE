@@ -112,3 +112,5 @@ export { default as OurHotelScreenDetails } from './our hotel/OurHotelDetails.sc
 export { default as ExcursionScreen } from './excursions/Excurison.screen'
 export { default as ExcursionListScreen } from './excursions/ExcursionList.screen'
 export { default as ExcursionDetialsScreen } from './excursions/ExcursionDetail.screen'
+// shop screen
+export { default as ShopScreen } from './shops/Shops.screen'
