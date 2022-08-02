@@ -70,7 +70,7 @@ export default function ProfileScreen({ navigation }) {
       {/* image profil */}
       <View style={{ ...styling.profileView }}>
         <ImageBackground
-          imageStyle={{ borderRadius: 62 }}
+          imageStyle={{ borderRadius: 500 }}
           source={{ uri: profileImage }}
           style={{ ...styling.image }}>
           <TouchableOpacity
@@ -97,39 +97,21 @@ export default function ProfileScreen({ navigation }) {
           />
         </View>
       </View>
-      {/* room */}
-      <View
-        style={{
-          marginTop: 24,
-          borderRadius: 10,
-          backgroundColor: palette.primary.accent_0,
-        }}>
-        <View>
-          <View style={{ padding: 10 }}>
-            <Text
-              size={16}
-              up={'cap'}
-              color={'gray'}
-              content={`Room: ${subscribedUser.hotel_stay.room_floor}-${subscribedUser.hotel_stay.room_number}`}
-            />
-          </View>
-        </View>
-      </View>
 
       {/* checkin */}
       <View
         style={{
           padding: 10,
-          marginTop: 24,
+          marginTop: 10,
           borderRadius: 10,
           justifyContent: 'space-between',
-          backgroundColor: palette.secondary.accent_500,
+          backgroundColor: palette.primary.accent_0,
         }}>
         <View>
-          <Text color={'white'} content={'check in'} />
+          <Text content={'check in'} up={'cap'} weight={600} />
           <Text
             size={18}
-            color={'white'}
+            color={'gray'}
             content={moment(new Date(subscribedUser.hotel_stay.checkin)).format(
               'MMMM DD, YYYY'
             )}
@@ -138,15 +120,15 @@ export default function ProfileScreen({ navigation }) {
         <View
           style={{
             borderWidth: 0.5,
-            borderColor: '#fefefe',
+            borderColor: '#979797',
             marginVertical: 10,
           }}
         />
         <View>
-          <Text color={'white'} content={'check out'} />
+          <Text content={'check out'} up={'cap'} weight={600} />
           <Text
             size={18}
-            color={'white'}
+            color={'gray'}
             content={moment(new Date(subscribedUser.hotel_stay.checkin)).format(
               'MMMM DD, YYYY'
             )}
@@ -155,7 +137,15 @@ export default function ProfileScreen({ navigation }) {
       </View>
 
       {/* logout button */}
+
       <View style={{ marginTop: 24 }} />
+      <LogoutButton
+        title={'Top up'}
+        icon={'money-dollar-circle'}
+        func={() => {
+          navigation.navigate('menu-tab-stack')
+        }}
+      />
       <LogoutButton
         title={'account details'}
         icon={'shield-user'}

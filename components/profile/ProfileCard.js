@@ -1,9 +1,10 @@
-import moment from 'moment'
+import Text from 'components/text/Text'
+import Icon from 'react-native-remix-icon'
 
 import { __auth } from 'store/AuthSusbcribeProvider'
 import { SafeAreaRowWrapperDetail } from '~/styles/detail.module'
-import { fontPixel, heightPixel, widthPixel } from 'utils/normalization'
-import { Image, View, Text as RNText, TouchableOpacity } from 'react-native'
+import { heightPixel, widthPixel } from 'utils/normalization'
+import { Image, View, TouchableOpacity } from 'react-native'
 import { animated, useSpring } from '@react-spring/native'
 
 const AnimatedTouchable = animated(TouchableOpacity)
@@ -19,10 +20,10 @@ export default function ProfileCard({ navigation, animate = '' }) {
     <AnimatedTouchable
       style={{
         ...springStyling,
-        marginTop: 10,
-        minHeight: 125,
+        marginTop: 5,
         marginBottom: 21,
         borderRadius: 14,
+        paddingVertical: 10,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fff',
@@ -36,34 +37,21 @@ export default function ProfileCard({ navigation, animate = '' }) {
           style={{ ...styling.image }}
         />
         <View style={{ ...styling.view }}>
-          <RNText
-            style={{
-              marginBottom: 5,
-              ...styling.text,
-              color: '#293462',
-              fontFamily: 'inter-600',
-              fontSize: fontPixel(21),
-            }}>{`${subscribedUser.first_name} ${subscribedUser.last_name}`}</RNText>
-          <RNText style={{ ...styling.text }}>
-            {subscribedUser.hotel_stay.hotel_name}
-          </RNText>
-          <RNText
-            style={{
-              ...styling.text,
-            }}>{`room: ${subscribedUser.hotel_stay.room_floor}-${subscribedUser.hotel_stay.room_number}`}</RNText>
-          <RNText style={{ ...styling.text }}>
-            {`period: ${Math.abs(
-              moment(subscribedUser.hotel_stay.checkin, 'DD-MM-YYYY')
-                .startOf('day')
-                .diff(
-                  moment(
-                    subscribedUser.hotel_stay.checkout,
-                    'DD-MM-YYYY'
-                  ).startOf('day'),
-                  'days'
-                )
-            )} day`}
-          </RNText>
+          <Text
+            size={20}
+            up={'cap'}
+            weight={600}
+            color={'dominant'}
+            content={`${subscribedUser.first_name} ${subscribedUser.last_name}`}
+          />
+          <Text
+            up={'cap'}
+            content={`room: ${subscribedUser.hotel_stay.room_floor}-${subscribedUser.hotel_stay.room_number}`}
+          />
+        </View>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Icon name='ri-wallet-line' style={{ marginRight: 5 }} size={21} />
+          <Text content={'167$'} size={18} weight={700} />
         </View>
       </SafeAreaRowWrapperDetail>
     </AnimatedTouchable>
@@ -72,21 +60,14 @@ export default function ProfileCard({ navigation, animate = '' }) {
 
 const styling = {
   image: {
-    borderRadius: 500,
-    width: widthPixel(82),
-    height: heightPixel(82),
+    borderRadius: 24,
+    width: widthPixel(62),
+    height: heightPixel(62),
   },
 
   view: {
     flex: 1,
     marginHorizontal: 24,
-    justifyContent: 'space-between',
-  },
-
-  text: {
-    letterSpacing: 0.5,
-    fontFamily: 'inter-400',
-    fontSize: fontPixel(16),
-    textTransform: 'capitalize',
+    justifyContent: 'center',
   },
 }
