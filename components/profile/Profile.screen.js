@@ -160,7 +160,6 @@ export default function ProfileScreen({ navigation }) {
         title={'account details'}
         icon={'shield-user'}
         func={() => {
-          logout()
           navigation.navigate('menu-tab-stack-profile-account-setting')
         }}
       />
@@ -168,7 +167,6 @@ export default function ProfileScreen({ navigation }) {
         title={'settings'}
         icon={'settings-2'}
         func={() => {
-          logout()
           navigation.navigate('menu-tab-stack-setting')
         }}
       />
@@ -208,7 +206,7 @@ const styling = {
   },
 }
 
-const LogoutButton = function ({ title, icon, func }) {
+export const LogoutButton = function ({ title, icon, func }) {
   return (
     <ButtonSafety activeOpacity={0.7} onPress={func}>
       <IconBox style={{ backgroundColor: palette.primary.accent_0 }}>
