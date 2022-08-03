@@ -14,6 +14,6 @@ export const Container = styled.ScrollView`
 `
 export const HScrollView = styled.ScrollView`
   background: ${({ theme }) => theme.primary.accent_100};
-  padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(14)}px;
+  padding: 0px ${pixelSizeHorizontal(14)}px;
   flex-direction: row;
 `

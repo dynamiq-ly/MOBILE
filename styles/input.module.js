@@ -11,7 +11,7 @@ export const Field = styled.View`
   border-radius: 10px;
   flex-direction: row;
   align-items: center;
-  height: ${fontPixel(48)}px;
+  height: ${fontPixel(42)}px;
   margin: ${pixelSizeVertical(12)}px 0px;
   padding: 0px ${pixelSizeHorizontal(10)}px;
   background: ${({ bg, theme }) =>
@@ -20,7 +20,7 @@ export const Field = styled.View`
 
 export const StyledInput = styled.TextInput`
   flex: 1;
-  height: ${fontPixel(48)}px;
+  height: ${fontPixel(42)}px;
   font-size: ${fontPixel(16)}px;
 `
 
@@ -50,7 +50,7 @@ export const SearchField = styled.View`
   border-radius: 10px;
   flex-direction: row;
   align-items: center;
-  height: ${fontPixel(40)}px;
+  height: ${fontPixel(42)}px;
   margin-bottom: ${pixelSizeVertical(12)}px;
   padding: 0px ${pixelSizeHorizontal(10)}px;
   background: ${({ bg, theme }) =>

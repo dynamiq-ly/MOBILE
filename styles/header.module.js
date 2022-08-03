@@ -32,7 +32,7 @@ export const ViewHeader = styled.View`
   width: 100%;
   /* align-items: center; */
   justify-content: center;
-  height: ${heightPixel(62)}px;
+  height: ${heightPixel(48)}px;
   padding: 0px ${pixelSizeHorizontal(14)}px;
 `
 

@@ -15,9 +15,16 @@ export default function Text({
   color,
   align,
   up = false,
+  ...rest
 }) {
   return (
-    <StyledText scale={size} font={weight} color={color} up={up} align={align}>
+    <StyledText
+      scale={size}
+      font={weight}
+      color={color}
+      up={up}
+      align={align}
+      {...rest}>
       {content}
     </StyledText>
   )

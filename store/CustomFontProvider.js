@@ -21,8 +21,8 @@ export default function CustomFontProvider({ children }) {
       'SF-300': require('../assets/fonts/SFPro-Light.ttf'),
       'SF-400': require('../assets/fonts/SFPro-Regular.ttf'),
       'SF-500': require('../assets/fonts/SFPro-Medium.ttf'),
-      'SF-600': require('../assets/fonts/SFPro-Bold.ttf'),
-      'SF-700': require('../assets/fonts/SFPro-SemiBold.ttf'),
+      'SF-600': require('../assets/fonts/SFPro-SemiBold.ttf'),
+      'SF-700': require('../assets/fonts/SFPro-Bold.ttf'),
       'SF-800': require('../assets/fonts/SFPro-ExtraBold.ttf'),
       'SF-900': require('../assets/fonts/SFPro-Black.ttf'),
     })

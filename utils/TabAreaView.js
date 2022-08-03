@@ -14,7 +14,10 @@ export default function AreaView({
   ...rest
 }) {
   return (
-    <Container {...rest} automaticallyAdjustKeyboardInsets>
+    <Container
+      {...rest}
+      automaticallyAdjustKeyboardInsets
+      keyboardDismissMode={'on-drag'}>
       <StatusBar style={mode} hidden={statusBar} />
       {children}
     </Container>

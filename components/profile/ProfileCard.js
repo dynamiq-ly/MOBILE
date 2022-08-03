@@ -31,7 +31,7 @@ export default function ProfileCard({ navigation, animate = '' }) {
       onPress={() => navigation.navigate('menu-tab-stack-profile')}
       activeOpacity={0.8}>
       <SafeAreaRowWrapperDetail
-        style={{ marginHorizontal: 10, alignItems: 'center' }}>
+        style={{ marginHorizontal: 15, alignItems: 'center' }}>
         <Image
           source={{ uri: subscribedUser.profile_image }}
           style={{ ...styling.image }}
@@ -60,14 +60,14 @@ export default function ProfileCard({ navigation, animate = '' }) {
 
 const styling = {
   image: {
-    borderRadius: 24,
+    borderRadius: 100,
     width: widthPixel(62),
     height: heightPixel(62),
   },
 
   view: {
     flex: 1,
-    marginHorizontal: 24,
+    marginHorizontal: 18,
     justifyContent: 'center',
   },
 }
