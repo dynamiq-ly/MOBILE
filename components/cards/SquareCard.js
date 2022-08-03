@@ -77,6 +77,7 @@ export default function SquareCard({
       <View
         style={{
           marginTop: 5,
+          marginBottom: 5,
           flexDirection: 'row',
           alignItems: 'center',
         }}>
@@ -90,13 +91,7 @@ export default function SquareCard({
           />
         ))}
       </View>
-      <Text
-        content={location}
-        size={11}
-        up={'cap'}
-        weight={400}
-        color={'gray'}
-      />
+      <Text up={'cap'} weight={400} color={'gray'} content={location} />
     </StyledSquareCard>
   )
 }
