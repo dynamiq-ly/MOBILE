@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fontPixel, heightPixel, pixelSizeVertical } from 'utils/normalization'
+import { fontPixel, heightPixel } from 'utils/normalization'
 
 export const StyledText = styled.Text`
   letter-spacing: 0.25px;
@@ -12,7 +12,7 @@ export const StyledText = styled.Text`
       ? 'lowercase'
       : 'none'};
   font-size: ${({ scale }) => (scale ? fontPixel(scale) : 14)}px;
-  font-family: ${({ font }) => (font ? `inter-${font}` : 'inter-400')};
+  font-family: ${({ font }) => (font ? `SF-${font}` : 'SF-400')};
   color: ${({ theme, color }) => {
     switch (color) {
       case 'white':

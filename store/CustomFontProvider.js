@@ -16,15 +16,15 @@ export default function CustomFontProvider({ children }) {
 
   let loadFonts = async () => {
     await font.loadAsync({
-      'inter-100': require('../assets/fonts/Inter-Thin.ttf'),
-      'inter-200': require('../assets/fonts/Inter-ExtraLight.ttf'),
-      'inter-300': require('../assets/fonts/Inter-Light.ttf'),
-      'inter-400': require('../assets/fonts/Inter-Regular.ttf'),
-      'inter-500': require('../assets/fonts/Inter-Medium.ttf'),
-      'inter-600': require('../assets/fonts/Inter-SemiBold.ttf'),
-      'inter-700': require('../assets/fonts/Inter-Bold.ttf'),
-      'inter-800': require('../assets/fonts/Inter-ExtraBold.ttf'),
-      'inter-900': require('../assets/fonts/Inter-Black.ttf'),
+      'SF-100': require('../assets/font2/SFPro-Thin.ttf'),
+      'SF-200': require('../assets/font2/SFPro-ExtraLight.ttf'),
+      'SF-300': require('../assets/font2/SFPro-Light.ttf'),
+      'SF-400': require('../assets/font2/SFPro-Regular.ttf'),
+      'SF-500': require('../assets/font2/SFPro-Medium.ttf'),
+      'SF-600': require('../assets/font2/SFPro-Bold.ttf'),
+      'SF-700': require('../assets/font2/SFPro-SemiBold.ttf'),
+      'SF-800': require('../assets/font2/SFPro-ExtraBold.ttf'),
+      'SF-900': require('../assets/font2/SFPro-Black.ttf'),
     })
     setFontLoaded(true)
   }
