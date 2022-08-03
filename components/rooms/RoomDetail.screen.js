@@ -33,6 +33,7 @@ export default function RoomDetailScreen({ route }) {
             </Gap>
             <Gap
               style={{
+                width: '25%',
                 flexDirection: 'row',
                 alignItems: 'flex-end',
               }}>

@@ -22,8 +22,8 @@ export const Image = styled.Image`
 export const RadiusView = styled.View`
   flex: 1;
   overflow: hidden;
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 `
 
 export const ButtonWrapperDetail = styled.View`
