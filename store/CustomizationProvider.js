@@ -1,5 +1,6 @@
 import * as font from 'expo-font'
 import { LoadingScreen } from 'screens/export'
+import { _retriveValueByKey } from 'utils/asyncStorage'
 import { useState, useEffect, useContext, createContext } from 'react'
 
 const CustomFontContext = createContext()
@@ -11,7 +12,7 @@ export const _useCustomFont = () => useContext(CustomFontContext)
  * @return {FC} JSX.Element
  */
 
-export default function CustomFontProvider({ children }) {
+export default function CustomizationProvider({ children }) {
   const [isFontLoaded, setFontLoaded] = useState(false)
 
   let loadFonts = async () => {

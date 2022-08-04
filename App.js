@@ -1,10 +1,10 @@
-import { palette, dark_palette } from 'themes/palette'
+import { palette } from 'themes/palette'
 import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 // store
 import AuthProvider from 'store/AuthSusbcribeProvider'
-import CustomFontProvider from 'store/CustomFontProvider'
+import CustomizationProvider from '~/store/CustomizationProvider'
 
 // routing
 import 'react-native-gesture-handler'
@@ -12,7 +12,6 @@ import StackNavigation from 'routes/StackNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 
 // state and fetched data manager
-
 import { QueryClient, QueryClientProvider } from 'react-query'
 
 const queryClient = new QueryClient()
@@ -28,10 +27,10 @@ export default function App() {
             {/* auth provider */}
             <AuthProvider>
               {/* font provider */}
-              <CustomFontProvider>
+              <CustomizationProvider>
                 {/* screen manager */}
                 <StackNavigation />
-              </CustomFontProvider>
+              </CustomizationProvider>
             </AuthProvider>
           </NavigationContainer>
         </QueryClientProvider>

@@ -1,3 +1,4 @@
+import { palette } from 'themes/palette'
 import Icon from 'react-native-remix-icon'
 import {
   Field,
@@ -24,8 +25,8 @@ export default function Input({
         <Icon
           size={18}
           name={icon}
-          color={'#9ca3af'}
           style={{ marginRight: 10 }}
+          color={palette.secondary.accent_500}
         />
       )}
       <StyledInput placeholder={placeholder} bg={background} {...rest} />
