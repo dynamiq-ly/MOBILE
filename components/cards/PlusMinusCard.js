@@ -13,9 +13,14 @@ export default function PlusMinusCard({ title, count = 0, uri, onChange }) {
     <StyledWrapperPlusMinusStyleCard>
       <Image
         source={{ uri: uri }}
-        style={{ width: 42, height: 42, borderRadius: 14 }}
+        style={{ width: 38, height: 38, borderRadius: 10 }}
       />
-      <View style={{ flex: 1, paddingHorizontal: 5 }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'space-between',
+          paddingHorizontal: 10,
+        }}>
         <Text content={title} size={16} weight={500} up={'cap'} />
         <StyledPlusMinusStyleCard>
           <StyledPlusMinusBoxIcon onPress={() => onChange(count - 1)}>

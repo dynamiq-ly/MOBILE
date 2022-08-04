@@ -328,12 +328,11 @@ export const StyledWrapperPlusMinusStyleCard = styled.View`
   align-items: center;
   width: ${widthPixel(165)}px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(5)}px;
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
 `
 
 export const StyledPlusMinusStyleCard = styled.View`
   width: 100%;
-  margin-bottom: 5px;
   border-radius: 10px;
   flex-direction: row;
   align-items: center;
@@ -343,11 +342,11 @@ export const StyledPlusMinusStyleCard = styled.View`
 `
 
 export const StyledPlusMinusBoxIcon = styled.TouchableOpacity`
+  height: 20px;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  width: ${widthPixel(24)}px;
-  height: ${heightPixel(24)}px;
+  width: ${widthPixel(20)}px;
   background: ${({ theme }) => theme.primary.accent_300};
 `
 
