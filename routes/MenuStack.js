@@ -89,13 +89,13 @@ const Stack = createNativeStackNavigator()
 const presentationModal = function (name) {
   switch (name) {
     case 'menu-tab-stack-restaurant-detail-menu-food-list-detail':
-      return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
+      return Platform.OS === 'ios' ? 'modal' : 'containedModal'
     case 'menu-tab-stack-laundry-menu':
-      return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
-    case 'menu-tab-stack-entertaining-events-detail':
       return Platform.OS === 'ios' ? 'modal' : 'formSheet'
+    case 'menu-tab-stack-entertaining-events-detail':
+      return Platform.OS === 'ios' ? 'modal' : 'containedModal'
     default:
-      return 'fullScreen'
+      return 'card'
   }
 }
 
@@ -119,7 +119,7 @@ const MenuStackNavigation = () => {
               component={el.component}
               options={{
                 header: el.header,
-                // presentation: presentationModal(el.path),
+                presentation: presentationModal(el.path),
               }}
             />
           )
