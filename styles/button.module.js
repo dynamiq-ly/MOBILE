@@ -8,7 +8,7 @@ export const StyledButton = styled.TouchableOpacity`
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  height: ${heightPixel(48)}px;
+  height: ${heightPixel(42)}px;
   margin: ${pixelSizeVertical(12)}px 0px;
   background: ${({ theme, bg }) =>
     !bg ? theme.primary.accent_900 : 'transparent'};

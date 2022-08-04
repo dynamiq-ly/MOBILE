@@ -18,6 +18,7 @@ export default function Button({
     <StyledButton bg={fill} activeOpacity={0.9} {...rest}>
       {icon && (
         <Icon
+          size={20}
           name={icon}
           color={!fill ? '#fffffe' : '#18181b'}
           style={{ marginRight: 10 }}
