@@ -3,8 +3,8 @@ import WeatherCard from 'components/cards/WeatherCard'
 import FullDetailedCard from 'components/cards/FullDetailedCard'
 
 import { useQuery } from 'react-query'
-import { RefreshControl, LogBox } from 'react-native'
 import { useCallback, useState } from 'react'
+import { RefreshControl, LogBox, FlatList } from 'react-native'
 
 export default function SwimmingPoolListsScreen({ route }) {
   const { _data } = route.params

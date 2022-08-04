@@ -1,6 +1,5 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
-import Icon from 'react-native-remix-icon'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 
@@ -23,6 +22,7 @@ export default function OurHotelScreenDetails({ route }) {
       <Carsouel imageArray={image_array} />
       <RadiusView>
         <AreaView mode={'light'}>
+          <Gap style={{ marginTop: 10 }} />
           <SafeAreaRowWrapperDetail style={{ alignItems: 'flex-start' }}>
             <Gap style={{ flex: 1 }}>
               <Text

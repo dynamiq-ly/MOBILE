@@ -131,17 +131,18 @@ export function SquareCardSmall({ title, image, ...rest }) {
               loop={false}
               autoPlay={false}
               ref={animation}
-              style={{ width: 42, height: 42, marginLeft: 0, marginTop: 0 }}
               source={require('assets/lottie/bookmark_animation.json')}
+              style={{ width: 42, height: 42, marginLeft: 0, marginTop: 0 }}
             />
           </TouchableOpacity>
         </OverlaySquareCard>
       </ImageSquareCard>
       <Text
-        content={title.length > 24 ? `${title.slice(0, 24)}...` : title}
+        size={16}
         up={'cap'}
         weight={400}
         color={'gray'}
+        content={title.length > 36 ? `${title.slice(0, 36)}...` : title}
       />
     </StyledSquareCard>
   )

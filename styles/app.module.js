@@ -10,10 +10,12 @@ export const SafeArewContainer = styled(SafeAreaView)`
 export const Container = styled.ScrollView`
   flex: 1;
   background: ${({ theme }) => theme.primary.accent_100};
-  padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(14)}px;
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(14)}px;
 `
 export const HScrollView = styled.ScrollView`
   background: ${({ theme }) => theme.primary.accent_100};
-  padding: 0px ${pixelSizeHorizontal(14)}px;
+  padding-left: ${pixelSizeHorizontal(14)}px;
+  padding-right: ${pixelSizeHorizontal(14)}px;
+  padding-bottom: ${pixelSizeHorizontal(5)}px;
   flex-direction: row;
 `

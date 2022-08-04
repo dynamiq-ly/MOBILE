@@ -58,7 +58,7 @@ export default function NightEntertainScreen({ navigation }) {
         numColumns={2}
         data={night_shows}
         horizontal={false}
-        style={{ padding: 16 }}
+        style={{ padding: 14 }}
         columnWrapperStyle={{ justifyContent: 'space-between' }}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (

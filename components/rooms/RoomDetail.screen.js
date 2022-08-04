@@ -22,6 +22,7 @@ export default function RoomDetailScreen({ route }) {
       <Carsouel imageArray={_data.room_images} />
       <RadiusView>
         <AreaView mode={'light'}>
+          <Gap style={{ marginTop: 10 }} />
           <SafeAreaRowWrapperDetail style={{ alignItems: 'flex-start' }}>
             <Gap style={{ flex: 1 }}>
               <Text

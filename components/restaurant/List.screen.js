@@ -1,28 +1,38 @@
-import { restaurants } from 'mock/resto'
-import AreaView from 'utils/TabAreaView'
 import Widecard from 'components/cards/Widecard'
+import NotFound from 'components/notFound/NotFound'
+
+import { restaurants } from 'mock/resto'
+import { FlatList } from 'react-native'
+import { View } from 'styles/detail.module'
 
 let time = new Date().getHours() + ':' + new Date().getMinutes()
 
 export default function ListScreen({ navigation }) {
   return (
-    <AreaView>
-      {restaurants.map((el) => {
-        return (
-          <Widecard
-            key={el.id}
-            name={el.name}
-            image={el.image}
-            state={time < el.close && time > el.open ? true : false}
-            specialiy={el.specialiy}
-            onPress={() =>
-              navigation.navigate('menu-tab-stack-restaurant-detail', {
-                _data: el,
-              })
-            }
-          />
-        )
-      })}
-    </AreaView>
+    <View>
+      {restaurants.length === 0 ? (
+        <NotFound />
+      ) : (
+        <FlatList
+          data={restaurants}
+          style={{ paddingHorizontal: 14 }}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <Widecard
+              key={item.id}
+              name={item.name}
+              image={item.image}
+              state={time < item.close && time > item.open ? true : false}
+              specialiy={item.specialiy}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-restaurant-detail', {
+                  _data: item,
+                })
+              }
+            />
+          )}
+        />
+      )}
+    </View>
   )
 }

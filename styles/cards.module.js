@@ -301,13 +301,13 @@ export const StyledWeatherCard = styled.View`
   border-radius: 10px;
   margin-bottom: 24px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(18)}px;
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
 `
 
 export const StyledWeatherBox = styled.View`
-  align-items: ${({ space }) => (space === 'end' ? 'flex-end' : 'flex-start')};
   justify-content: space-between;
   margin-bottom: ${pixelSizeVertical(10)}px;
+  align-items: ${({ space }) => (space === 'end' ? 'flex-end' : 'flex-start')};
 `
 
 export const ImageWeatherIcon = styled.Image`

@@ -1,4 +1,5 @@
 import AreaView from 'utils/TabAreaView'
+import FixedWidthButton from 'components/button/FixedWidthButton'
 
 import { useState } from 'react'
 import { rooms } from 'mock/rooms'
@@ -8,7 +9,6 @@ import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { VerticalListLine } from 'styles/list.module'
 import { SquareCardSmall } from 'components/cards/SquareCard'
-import FixedWidthButton from 'components/button/FixedWidthButton'
 
 export default function RoomScreen({ navigation }) {
   const [isCategory, setCategory] = useState('all')
