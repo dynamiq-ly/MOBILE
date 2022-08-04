@@ -6,6 +6,7 @@ import { SafeAreaRowWrapperDetail } from '~/styles/detail.module'
 import { heightPixel, widthPixel } from 'utils/normalization'
 import { Image, View, TouchableOpacity } from 'react-native'
 import { animated, useSpring } from '@react-spring/native'
+import { palette } from '~/themes/palette'
 
 const AnimatedTouchable = animated(TouchableOpacity)
 
@@ -26,7 +27,7 @@ export default function ProfileCard({ navigation, animate = '' }) {
         paddingVertical: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: palette.primary.accent_0,
       }}
       onPress={() => navigation.navigate('menu-tab-stack-profile')}
       activeOpacity={0.8}>
@@ -50,7 +51,12 @@ export default function ProfileCard({ navigation, animate = '' }) {
           />
         </View>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Icon name='ri-wallet-line' style={{ marginRight: 5 }} size={21} />
+          <Icon
+            name='ri-wallet-line'
+            color={palette.primary.accent_900}
+            style={{ marginRight: 5 }}
+            size={21}
+          />
           <Text content={'167$'} size={18} weight={700} />
         </View>
       </SafeAreaRowWrapperDetail>

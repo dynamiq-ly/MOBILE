@@ -46,9 +46,9 @@ export default function PointOfInterestDetailScreen({ route }) {
             size={16}
           />
           <Gap style={{ marginBottom: 14 }} />
-          <PhoneDirectoryRow>
+          <PhoneDirectoryRow align>
             <BoxIcon>
-              <Icon name={'ri-time-line'} size={fontPixel(18)} />
+              <Icon name={'ri-time-line'} size={fontPixel(21)} />
             </BoxIcon>
             <BoxText>
               <Text
@@ -60,9 +60,9 @@ export default function PointOfInterestDetailScreen({ route }) {
             </BoxText>
           </PhoneDirectoryRow>
 
-          <PhoneDirectoryRow>
+          <PhoneDirectoryRow align>
             <BoxIcon>
-              <Icon name={'ri-direction-line'} size={fontPixel(18)} />
+              <Icon name={'ri-direction-line'} size={fontPixel(21)} />
             </BoxIcon>
             <BoxText>
               <Text
@@ -74,9 +74,9 @@ export default function PointOfInterestDetailScreen({ route }) {
             </BoxText>
           </PhoneDirectoryRow>
 
-          <PhoneDirectoryRow>
+          <PhoneDirectoryRow align>
             <BoxIcon>
-              <Icon name={'ri-phone-line'} size={fontPixel(18)} />
+              <Icon name={'ri-phone-line'} size={fontPixel(21)} />
             </BoxIcon>
             <BoxText>
               <Text

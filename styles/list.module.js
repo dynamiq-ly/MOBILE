@@ -13,6 +13,7 @@ export const PhoneDirectoryRow = styled.View`
   flex-direction: row;
   margin-top: ${pixelSizeVertical(10)}px;
   margin-bottom: ${pixelSizeVertical(10)}px;
+  ${({ align }) => align && `align-items: center`}
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
   background: ${({ theme }) => theme.primary.accent_0};
 `

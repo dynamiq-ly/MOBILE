@@ -1,4 +1,4 @@
-import { palette } from 'themes/palette'
+import { palette, dark_palette } from 'themes/palette'
 import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
@@ -12,7 +12,9 @@ import StackNavigation from 'routes/StackNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 
 // state and fetched data manager
+
 import { QueryClient, QueryClientProvider } from 'react-query'
+
 const queryClient = new QueryClient()
 
 export default function App() {

@@ -1,16 +1,18 @@
+import { _retriveValueByKey } from 'utils/asyncStorage'
+
 export const palette = {
   primary: {
     accent_0: '#fffffe',
-    accent_50: '#f9fafb',
-    accent_100: '#f3f4f6',
-    accent_200: '#e5e7eb',
-    accent_300: '#d1d5db',
-    accent_400: '#9ca3af',
-    accent_500: '#6b7280',
-    accent_600: '#4b5563',
-    accent_700: '#374151',
-    accent_800: '#1f2937',
-    accent_900: '#18181b',
+    accent_50: '#fafaf9',
+    accent_100: '#f5f5f4',
+    accent_200: '#e7e5e4',
+    accent_300: '#d6d3d1',
+    accent_400: '#a8a29e',
+    accent_500: '#78716c',
+    accent_600: '#57534e',
+    accent_700: '#44403c',
+    accent_800: '#292524',
+    accent_900: '#1c1917',
   },
 
   secondary: {
