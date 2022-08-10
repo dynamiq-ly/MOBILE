@@ -46,8 +46,8 @@ export const BackButton = styled.TouchableOpacity`
 `
 
 export const CircleCloseButton = styled.TouchableOpacity`
-  border-radius: 10px;
   align-items: center;
+  border-radius: 100px;
   justify-content: center;
   width: ${widthPixel(38)}px;
   height: ${heightPixel(38)}px;

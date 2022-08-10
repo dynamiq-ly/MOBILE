@@ -71,13 +71,12 @@ const tabComponents = [
   },
 ]
 
+/**
+ *
+ * @param {string} state
+ */
 const getScreensToHideTabTabOnActiveRoutes = (state) => {
-  switch (state) {
-    case 'menu-tab-stack-our-hotels-list-detail':
-      return true
-    default:
-      return false
-  }
+  return state.includes('menu-tab-stack-')
 }
 
 const barStyle = {
@@ -114,7 +113,12 @@ const TabNavigation = () => {
               tabBarStyle: ((route) => {
                 const state = getFocusedRouteNameFromRoute(route) ?? ''
                 if (getScreensToHideTabTabOnActiveRoutes(state)) {
-                  return { display: 'none' }
+                  return {
+                    height: 0,
+                    opacity: 0,
+                    marginBottom: -24,
+                    backgroundColor: palette.primary.accent_100,
+                  }
                 } else {
                   return { ...barStyle }
                 }
