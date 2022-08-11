@@ -1,14 +1,34 @@
-import AreaView from 'utils/TabAreaView'
 import WeatherCard from 'components/cards/WeatherCard'
+import NotFound from 'components/notFound/NotFound'
 import FullDetailedCard from 'components/cards/FullDetailedCard'
 
 import { useQuery } from 'react-query'
+import { View } from 'styles/detail.module'
 import { useCallback, useState } from 'react'
-import { RefreshControl, LogBox, FlatList } from 'react-native'
+import { baseUrl, __query } from 'hooks/useApi'
+import {
+  View as Gap,
+  RefreshControl,
+  LogBox,
+  FlatList,
+  Alert,
+} from 'react-native'
 
 export default function SwimmingPoolListsScreen({ route }) {
-  const { _data } = route.params
-  const { data, refetch } = useQuery('@weather', fetchWeather)
+  const { _id } = route.params
+  const { data: weather } = useQuery('@weather', fetchWeather, {
+    refetchOnMount: 'always',
+  })
+
+  const { data: pool_list, refetch } = useQuery(
+    ['@swimming-pool-list', _id],
+    () => fetchSwimmingPoolList(_id),
+    {
+      refetchOnMount: true,
+      initialData: [],
+    }
+  )
+
   const [refresh, setRefresh] = useState(false)
 
   let onRefresh = useCallback(() => {
@@ -17,27 +37,42 @@ export default function SwimmingPoolListsScreen({ route }) {
   }, [])
 
   return (
-    <AreaView
-      refreshControl={
-        <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
-      }>
-      <WeatherCard
-        temp_c={data ? data.current.temp_c : '0'}
-        feels_like={data ? data.current.feelslike_c : '0'}
-        weather_icon={data ? data.current.condition.icon : ''}
-        weather_descriptions={data ? data.current.condition.text : 'N/A'}
-      />
-      {_data.map((item, index) => {
-        return (
-          <FullDetailedCard
-            key={index}
-            title={item.name}
-            image={item.image}
-            capacity={`${item.capacity} capacity`}
+    <View>
+      <Gap style={{ paddingHorizontal: 14 }}>
+        <WeatherCard
+          temp_c={weather ? weather.current.temp_c : '0'}
+          feels_like={weather ? weather.current.feelslike_c : '0'}
+          weather_icon={weather ? weather.current.condition.icon : ''}
+          weather_descriptions={
+            weather ? weather.current.condition.text : 'N/A'
+          }
+        />
+      </Gap>
+      <View>
+        {pool_list.length === 0 ? (
+          <NotFound
+            killProcess={(isFetched && pool_list.length === 0) || isError}
           />
-        )
-      })}
-    </AreaView>
+        ) : (
+          <FlatList
+            refreshControl={
+              <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+            }
+            horizontal={false}
+            data={pool_list}
+            style={{ paddingHorizontal: 14 }}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <FullDetailedCard
+                title={item.pool_name}
+                capacity={`${item.pool_capacity} capacity`}
+                image={`${baseUrl}/storage/swimming-pool/images/${item.pool_image}`}
+              />
+            )}
+          />
+        )}
+      </View>
+    </View>
   )
 }
 
@@ -49,4 +84,13 @@ let fetchWeather = function () {
   })
 }
 
-LogBox.ignoreLogs(['Setting a timer'])
+let fetchSwimmingPoolList = function (id) {
+  return __query
+    .get(`api/swimming-pool/pools/type=${id}`)
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)

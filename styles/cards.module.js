@@ -297,7 +297,6 @@ export const StyledTextCardShip = styled.View`
  * in pool screen and maybe other screens
  */
 export const StyledWeatherCard = styled.View`
-  flex: 1;
   border-radius: 10px;
   margin-bottom: 24px;
   background: ${({ theme }) => theme.primary.accent_0};
