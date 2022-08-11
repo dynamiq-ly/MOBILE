@@ -21,7 +21,7 @@ export default function ListScreen({ navigation }) {
               name={item.name}
               image={item.image}
               onPress={() =>
-                navigation.navigate('menu-tab-stack-restaurant-detail', {
+                navigation.navigate('menu-tab-stack-bar-detail', {
                   _data: item,
                 })
               }

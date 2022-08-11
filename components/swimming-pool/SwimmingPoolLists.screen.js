@@ -20,14 +20,15 @@ export default function SwimmingPoolListsScreen({ route }) {
     refetchOnMount: 'always',
   })
 
-  const { data: pool_list, refetch } = useQuery(
-    ['@swimming-pool-list', _id],
-    () => fetchSwimmingPoolList(_id),
-    {
-      refetchOnMount: true,
-      initialData: [],
-    }
-  )
+  const {
+    data: pool_list,
+    refetch,
+    isFetched,
+    isError,
+  } = useQuery(['@swimming-pool-list', _id], () => fetchSwimmingPoolList(_id), {
+    refetchOnMount: true,
+    initialData: [],
+  })
 
   const [refresh, setRefresh] = useState(false)
 

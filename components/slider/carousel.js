@@ -6,11 +6,11 @@ import { Image, StyledCarouselView } from 'styles/slider.module'
  * @param0 {[]} imageArray
  * @returns
  */
-export default function Carsouel({ imageArray }) {
+export default function Carsouel({ imageArray, ...rest }) {
   const interval = 5000
 
   return (
-    <StyledCarouselView>
+    <StyledCarouselView {...rest}>
       <Carousel
         loop
         autoplay

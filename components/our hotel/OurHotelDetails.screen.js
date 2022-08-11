@@ -5,6 +5,8 @@ import CloseHeader from 'components/header/CloseHeader'
 
 import { palette } from 'themes/palette'
 import { View as Gap } from 'react-native'
+import { useSpring } from '@react-spring/native'
+import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
 import {
   ButtonWrapperDetail,
   HFLine,
@@ -16,11 +18,19 @@ import {
 export default function OurHotelScreenDetails({ route }) {
   const { _data } = route.params
 
+  const springContent = useSpring({
+    ...FADE_IN_UP.noOpacity,
+  })
+
+  const springCarousel = useSpring({
+    ...FADE_IN_DONW.noOpacity,
+  })
+
   return (
     <View>
       <CloseHeader />
-      <Carsouel imageArray={image_array} />
-      <RadiusView>
+      <Carsouel imageArray={image_array} style={{ ...springCarousel }} />
+      <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
           <Gap style={{ marginTop: 10 }} />
           <SafeAreaRowWrapperDetail style={{ alignItems: 'flex-start' }}>

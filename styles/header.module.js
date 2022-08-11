@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Platform, StatusBar } from 'react-native'
+import { animated as A } from '@react-spring/native'
 
 import {
   widthPixel,
@@ -17,7 +18,7 @@ export const SafeAreaHeader = styled.View`
     : StatusBar.currentHeight}px;
 `
 
-export const DangerAreaHeader = styled.View`
+export const DangerAreaHeader = styled(A.View)`
   width: 100%;
   z-index: 99;
   position: absolute;

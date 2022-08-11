@@ -6,7 +6,9 @@ import CloseHeader from 'components/header/CloseHeader'
 
 import { palette } from 'themes/palette'
 import { View as Gap } from 'react-native'
+import { useSpring } from '@react-spring/native'
 import { StyledTagCards } from 'styles/cards.module'
+import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
 import {
   HFLine,
   RadiusView,
@@ -16,11 +18,20 @@ import {
 
 export default function RoomDetailScreen({ route }) {
   const { _data } = route.params
+
+  const springContent = useSpring({
+    ...FADE_IN_UP.noOpacity,
+  })
+
+  const springCarousel = useSpring({
+    ...FADE_IN_DONW.noOpacity,
+  })
+
   return (
     <View>
       <CloseHeader />
-      <Carsouel imageArray={_data.room_images} />
-      <RadiusView>
+      <Carsouel imageArray={_data.room_images} style={{ ...springCarousel }} />
+      <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
           <Gap style={{ marginTop: 10 }} />
           <SafeAreaRowWrapperDetail style={{ alignItems: 'flex-start' }}>
