@@ -25,7 +25,7 @@ export const DangerAreaHeader = styled(A.View)`
   align-items: center;
   justify-content: center;
   padding-top: ${Platform.OS === 'ios'
-    ? pixelSizeVertical(42)
+    ? pixelSizeVertical(32)
     : StatusBar.currentHeight}px;
 `
 

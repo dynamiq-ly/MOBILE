@@ -94,6 +94,8 @@ const presentationModal = function (name) {
       return Platform.OS === 'ios' ? 'modal' : 'formSheet'
     case 'menu-tab-stack-entertaining-events-detail':
       return Platform.OS === 'ios' ? 'modal' : 'containedModal'
+    case 'menu-tab-stack-point-of-interest-detail':
+      return Platform.OS === 'ios' ? 'modal' : 'containedModal'
     default:
       return 'card'
   }
