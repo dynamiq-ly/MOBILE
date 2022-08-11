@@ -1,12 +1,29 @@
 import Text from 'components/text/Text'
+import NotFound from 'components/notFound/NotFound'
 import FullImageCard from 'components/cards/FullImageCard'
 
+import { useQuery } from 'react-query'
+import { baseUrl, __query } from 'hooks/useApi'
 import { View } from 'styles/detail.module'
-import { View as Gap, FlatList } from 'react-native'
-
-import { array_swimming_pool } from 'mock/swimmingpool'
+import { useCallback, useState } from 'react'
+import { View as Gap, RefreshControl, LogBox, FlatList } from 'react-native'
 
 export default function SwimmingPoolScreen({ navigation }) {
+  const { data, refetch, isError, isFetched } = useQuery(
+    '@swimmingpool',
+    fetchSwimmingPool,
+    {
+      initialData: [],
+    }
+  )
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
     <View>
       <Gap style={{ paddingHorizontal: 14, marginBottom: 24 }}>
@@ -20,27 +37,47 @@ export default function SwimmingPoolScreen({ navigation }) {
           }
         />
       </Gap>
-      <FlatList
-        numColumns={2}
-        horizontal={false}
-        data={array_swimming_pool}
-        style={{ paddingHorizontal: 14 }}
-        columnWrapperStyle={{ justifyContent: 'space-between' }}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <FullImageCard
-            title={item.name}
-            image={item.image}
-            position={item.id % 2 !== 1 && 'end'}
-            onPress={() =>
-              navigation.navigate('menu-tab-stack-swimming-pool-list', {
-                _name: item.name,
-                _data: item.pools,
-              })
+      <View>
+        {data.length === 0 ? (
+          <NotFound killProcess={(isFetched && data.length === 0) || isError} />
+        ) : (
+          <FlatList
+            refreshControl={
+              <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
             }
+            numColumns={2}
+            horizontal={false}
+            data={data}
+            style={{ paddingHorizontal: 14 }}
+            columnWrapperStyle={{ justifyContent: 'space-between' }}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <FullImageCard
+                title={item.pool_type}
+                image={`${baseUrl}/storage/excursions/thumbnails/${item.pool_image}`}
+                position={item.id % 2 !== 1 && 'end'}
+                onPress={() =>
+                  navigation.navigate('menu-tab-stack-swimming-pool-list', {
+                    _name: item.pool_type,
+                    _data: item.pools,
+                  })
+                }
+              />
+            )}
           />
         )}
-      />
+      </View>
     </View>
   )
 }
+
+const fetchSwimmingPool = function () {
+  return __query
+    .get('/api/swimming-pool')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)
