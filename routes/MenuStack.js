@@ -81,6 +81,7 @@ import {
   ShopScreen,
   SettingScreen,
   SwimmingPoolDetailScree,
+  RoomRequestScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -463,6 +464,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service-electricity',
     component: ElecricityCablesScreen,
     header: () => <StackHeader name={'electricity and cables'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-room-request',
+    component: RoomRequestScreen,
+    header: () => <StackHeader name={'room request'} />,
   },
   {
     path: 'menu-tab-stack-room-service-airconditioner',

@@ -51,7 +51,7 @@ const array = [
     name: 'incidence report',
     path: 'menu-tab-stack-room-service-incidence-report',
   },
-  { name: 'room requests', path: '' },
+  { name: 'room requests', path: 'menu-tab-stack-room-service-room-request' },
   { name: 'room upgrade', path: '' },
   { name: 'housekeeping', path: 'menu-tab-stack-housekeeping' },
   { name: 'laundry', path: 'menu-tab-stack-laundry' },
