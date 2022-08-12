@@ -62,6 +62,7 @@ export {
   AddAlarmScreenOptions,
 } from './reception/alarm/Alarm.screen'
 export { default as AddAlarmScreen } from './reception/alarm/AddReminder.screen'
+export { default as ExtandStayScreen } from './room-service/ExtendStay.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
@@ -79,6 +80,7 @@ export { default as ElecricityCablesScreen } from './room-service/ElectricityAnd
 export { default as AirConditionerScreen } from './room-service/AirConditioner.screen'
 export { default as HairDryerScreen } from './room-service/HairDryer.screen'
 export { default as RoomRequestScreen } from './room-service/RoomRequest.screen'
+export { default as RoomUpgradeScreen } from './room-service/RoomUpgrade.screen'
 // point of interest
 export {
   default as PointOfInterestScreen,

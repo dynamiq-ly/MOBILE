@@ -82,6 +82,8 @@ import {
   SettingScreen,
   SwimmingPoolDetailScree,
   RoomRequestScreen,
+  RoomUpgradeScreen,
+  ExtandStayScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -469,6 +471,16 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service-room-request',
     component: RoomRequestScreen,
     header: () => <StackHeader name={'room request'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-room-upgrade',
+    component: RoomUpgradeScreen,
+    header: () => <StackHeader name={'room upgrade'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-extand-stay',
+    component: ExtandStayScreen,
+    header: () => <StackHeader name={'extand your stay'} />,
   },
   {
     path: 'menu-tab-stack-room-service-airconditioner',

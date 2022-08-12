@@ -52,7 +52,7 @@ const array = [
     path: 'menu-tab-stack-room-service-incidence-report',
   },
   { name: 'room requests', path: 'menu-tab-stack-room-service-room-request' },
-  { name: 'room upgrade', path: '' },
+  { name: 'room upgrade', path: 'menu-tab-stack-room-service-room-upgrade' },
   { name: 'housekeeping', path: 'menu-tab-stack-housekeeping' },
   { name: 'laundry', path: 'menu-tab-stack-laundry' },
   { name: 'towels', path: 'menu-tab-stack-towels' },

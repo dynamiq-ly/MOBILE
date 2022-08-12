@@ -55,13 +55,13 @@ const array = [
   {
     icon: 'ri-home-3-line',
     name: 'room upgrade',
-    path: '',
+    path: 'menu-tab-stack-room-service-room-upgrade',
     color: '#118181',
   },
   {
     icon: 'ri-home-gear-line',
     name: 'extend your stay',
-    path: '',
+    path: 'menu-tab-stack-room-service-extand-stay',
     color: '#118181',
   },
   {
