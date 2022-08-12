@@ -80,6 +80,7 @@ import {
   EntertainingDetailScreen,
   ShopScreen,
   SettingScreen,
+  SwimmingPoolDetailScree,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -502,6 +503,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-swimming-pool-list',
     component: SwimmingPoolListScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-swimming-pool-list-details',
+    component: SwimmingPoolDetailScree,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-span-wellness',

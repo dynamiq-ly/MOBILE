@@ -6,15 +6,9 @@ import { useQuery } from 'react-query'
 import { View } from 'styles/detail.module'
 import { useCallback, useState } from 'react'
 import { baseUrl, __query } from 'hooks/useApi'
-import {
-  View as Gap,
-  RefreshControl,
-  LogBox,
-  FlatList,
-  Alert,
-} from 'react-native'
+import { View as Gap, RefreshControl, LogBox, FlatList } from 'react-native'
 
-export default function SwimmingPoolListsScreen({ route }) {
+export default function SwimmingPoolListsScreen({ route, navigation }) {
   const { _id } = route.params
   const { data: weather } = useQuery('@weather', fetchWeather, {
     refetchOnMount: 'always',
@@ -68,6 +62,15 @@ export default function SwimmingPoolListsScreen({ route }) {
                 title={item.pool_name}
                 capacity={`${item.pool_capacity} capacity`}
                 image={`${baseUrl}/storage/swimming-pool/images/${item.pool_image}`}
+                onPress={() =>
+                  navigation.navigate(
+                    'menu-tab-stack-swimming-pool-list-details',
+                    {
+                      _id: item.id,
+                      _data: item,
+                    }
+                  )
+                }
               />
             )}
           />

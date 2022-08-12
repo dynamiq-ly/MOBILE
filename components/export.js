@@ -92,6 +92,7 @@ export { default as GymEquipementScreen } from './gym/GymEquipement.screen'
 // swimming pool
 export { default as SwimmingPoolScreen } from './swimming-pool/SwimmingPool.screen'
 export { default as SwimmingPoolListScreen } from './swimming-pool/SwimmingPoolLists.screen'
+export { default as SwimmingPoolDetailScree } from './swimming-pool/SwimmingPoolDetail.screen'
 // span and wellness
 export { default as SpaScreen } from './spa/SpanWellness.screen'
 export { default as SpaDetailScreen } from './spa/SpaDetail.screen'
