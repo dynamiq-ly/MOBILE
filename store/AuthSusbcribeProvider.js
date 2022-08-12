@@ -45,7 +45,7 @@ const user = {
   last_name: 'breaty',
   gender: 'female',
   profile_image:
-    'https://pbs.twimg.com/media/EIug-B3UwAAAwrz?format=jpg&name=large',
+    'https://nft.tinyfac.es/static/media/character5.e0c707233c0341907800.jpg',
   hotel_stay: {
     room_floor: 'F2',
     room_number: 250,
