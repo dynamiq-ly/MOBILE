@@ -78,16 +78,13 @@ import {
   ExcursionListScreen,
   ExcursionDetialsScreen,
   EntertainingDetailScreen,
-<<<<<<< HEAD
   TelevisionScreen,
-=======
   ShopScreen,
   SettingScreen,
   SwimmingPoolDetailScree,
   RoomRequestScreen,
   RoomUpgradeScreen,
   ExtandStayScreen,
->>>>>>> 8351f4587c9ffeba7e66e2d4282b829bfbf71745
 } from 'components/export'
 
 import Cart from 'cart/Cart'

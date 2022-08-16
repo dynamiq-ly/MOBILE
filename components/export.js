@@ -79,12 +79,12 @@ export { default as HouseKeepingServiceScreen } from './housekeeping/HouseKeepin
 export { default as ElecricityCablesScreen } from './room-service/ElectricityAndCables.screen'
 export { default as AirConditionerScreen } from './room-service/AirConditioner.screen'
 export { default as HairDryerScreen } from './room-service/HairDryer.screen'
-<<<<<<< HEAD
+
 export { default as TelevisionScreen } from './room-service/Television.screen'
-=======
+
 export { default as RoomRequestScreen } from './room-service/RoomRequest.screen'
 export { default as RoomUpgradeScreen } from './room-service/RoomUpgrade.screen'
->>>>>>> 8351f4587c9ffeba7e66e2d4282b829bfbf71745
+
 // point of interest
 export {
   default as PointOfInterestScreen,
