@@ -19,6 +19,7 @@ export default function ListScreen({ navigation }) {
             <Widecard
               key={item.id}
               name={item.name}
+              state={'hidden'}
               image={item.image}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-bar-detail', {

@@ -37,6 +37,7 @@ export default function ExcursionListScreen({ route, navigation }) {
           renderItem={({ item }) => (
             <Widecard
               name={item.activity_list_name}
+              state={'hidden'}
               image={`${baseUrl}/storage/excursions/thumbnails/${item.activity_list_thumbnail}`}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-excursions-list-details', {

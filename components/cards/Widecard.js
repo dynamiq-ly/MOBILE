@@ -28,7 +28,7 @@ export default function Widecard({
     <WideListCard source={{ uri: image }}>
       <WideListCardButton activeOpacity={1} {...rest}>
         <WideCardSectionHeader>
-          {!state && (
+          {state !== 'hidden' && (
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
               <Text
                 up={'up'}
