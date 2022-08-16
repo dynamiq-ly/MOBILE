@@ -78,12 +78,16 @@ import {
   ExcursionListScreen,
   ExcursionDetialsScreen,
   EntertainingDetailScreen,
+<<<<<<< HEAD
+  TelevisionScreen,
+=======
   ShopScreen,
   SettingScreen,
   SwimmingPoolDetailScree,
   RoomRequestScreen,
   RoomUpgradeScreen,
   ExtandStayScreen,
+>>>>>>> 8351f4587c9ffeba7e66e2d4282b829bfbf71745
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -491,6 +495,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service-hairdryer',
     component: HairDryerScreen,
     header: () => <StackHeader name={'hair dryer'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-television',
+    component: TelevisionScreen,
+    header: () => <StackHeader name={'television'} />,
   },
   {
     path: 'menu-tab-stack-gym',
