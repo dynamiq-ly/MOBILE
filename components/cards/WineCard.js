@@ -26,14 +26,8 @@ const WineCard = ({ image, title, price, origin, ...rest }) => {
           />
         </OverlaySquareCard>
       </ImageSquareCard>
-      <Text content={origin} weight={600} size={14} up={'up'} />
-      <Text
-        color={'dominant'}
-        content={price}
-        weight={600}
-        size={14}
-        up={'up'}
-      />
+      <Text content={origin} weight={600} up={'up'} />
+      <Text color={'dominant'} content={price} weight={600} up={'up'} />
     </StyledSquareCard>
   )
 }

@@ -109,7 +109,7 @@ export const StyledSquareCard = styled.TouchableOpacity`
   border-radius: 10px;
   width: ${widthPixel(165)}px;
   min-height: ${heightPixel(200)}px;
-  margin-bottom: ${pixelSizeVertical(16)}px;
+  margin-bottom: ${pixelSizeVertical(20)}px;
   background: ${({ theme }) => theme.primary.accent_0};
   padding: ${pixelSizeVertical(15)}px ${pixelSizeHorizontal(10)}px;
 `
@@ -118,6 +118,7 @@ export const ImageSquareCard = styled.ImageBackground`
   overflow: hidden;
   position: relative;
   border-radius: 5px;
+  margin-bottom: 5px;
   height: ${heightPixel(132)}px;
 `
 
@@ -296,17 +297,16 @@ export const StyledTextCardShip = styled.View`
  * in pool screen and maybe other screens
  */
 export const StyledWeatherCard = styled.View`
-  flex: 1;
   border-radius: 10px;
   margin-bottom: 24px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(18)}px;
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
 `
 
 export const StyledWeatherBox = styled.View`
-  align-items: ${({ space }) => (space === 'end' ? 'flex-end' : 'flex-start')};
   justify-content: space-between;
   margin-bottom: ${pixelSizeVertical(10)}px;
+  align-items: ${({ space }) => (space === 'end' ? 'flex-end' : 'flex-start')};
 `
 
 export const ImageWeatherIcon = styled.Image`
@@ -327,12 +327,11 @@ export const StyledWrapperPlusMinusStyleCard = styled.View`
   align-items: center;
   width: ${widthPixel(165)}px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(0)}px ${pixelSizeHorizontal(5)}px;
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
 `
 
 export const StyledPlusMinusStyleCard = styled.View`
   width: 100%;
-  margin-bottom: 5px;
   border-radius: 10px;
   flex-direction: row;
   align-items: center;
@@ -342,11 +341,11 @@ export const StyledPlusMinusStyleCard = styled.View`
 `
 
 export const StyledPlusMinusBoxIcon = styled.TouchableOpacity`
+  height: 20px;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  width: ${widthPixel(24)}px;
-  height: ${heightPixel(24)}px;
+  width: ${widthPixel(20)}px;
   background: ${({ theme }) => theme.primary.accent_300};
 `
 

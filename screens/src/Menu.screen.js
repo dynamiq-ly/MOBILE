@@ -195,7 +195,7 @@ const menuArray5 = [
   {
     icon: 'ri-store-line',
     name: 'Shops',
-    path: '',
+    path: 'menu-tab-stack-shops',
     color: '#827397',
   },
 ]
@@ -216,7 +216,7 @@ const menuArray6 = [
   {
     icon: 'ri-Settings-line',
     name: 'setting',
-    path: 'setting-screen',
+    path: 'menu-tab-stack-setting',
     color: '#0ea5e9',
   },
 ]

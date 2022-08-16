@@ -25,7 +25,7 @@ export default function FullImageCard({
         }}>
         <StyledFullImageClickable {...rest}>
           <Text
-            size={18}
+            size={21}
             up={'cap'}
             weight={700}
             color={'white'}

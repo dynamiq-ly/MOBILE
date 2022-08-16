@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Platform, StatusBar } from 'react-native'
+import { animated as A } from '@react-spring/native'
 
 import {
   widthPixel,
@@ -17,14 +18,14 @@ export const SafeAreaHeader = styled.View`
     : StatusBar.currentHeight}px;
 `
 
-export const DangerAreaHeader = styled.View`
+export const DangerAreaHeader = styled(A.View)`
   width: 100%;
   z-index: 99;
   position: absolute;
   align-items: center;
   justify-content: center;
   padding-top: ${Platform.OS === 'ios'
-    ? pixelSizeVertical(42)
+    ? pixelSizeVertical(32)
     : StatusBar.currentHeight}px;
 `
 
@@ -32,7 +33,7 @@ export const ViewHeader = styled.View`
   width: 100%;
   /* align-items: center; */
   justify-content: center;
-  height: ${heightPixel(62)}px;
+  height: ${heightPixel(48)}px;
   padding: 0px ${pixelSizeHorizontal(14)}px;
 `
 
@@ -46,8 +47,8 @@ export const BackButton = styled.TouchableOpacity`
 `
 
 export const CircleCloseButton = styled.TouchableOpacity`
-  border-radius: 10px;
   align-items: center;
+  border-radius: 100px;
   justify-content: center;
   width: ${widthPixel(38)}px;
   height: ${heightPixel(38)}px;

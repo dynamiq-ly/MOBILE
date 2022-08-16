@@ -9,7 +9,13 @@ export default function TextHeader({ name }) {
   return (
     <SafeAreaHeader>
       <ViewHeader>
-        <Text content={name} weight={600} up={'cap'} size={21} />
+        <Text
+          style={{ letterSpacing: 1 }}
+          content={name}
+          weight={600}
+          up={'cap'}
+          size={32}
+        />
       </ViewHeader>
     </SafeAreaHeader>
   )

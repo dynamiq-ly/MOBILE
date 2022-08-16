@@ -1,12 +1,12 @@
-import AreaView from 'utils/TabAreaView'
 import Text from 'components/text/Text'
 import FullDetailedCard from 'components/cards/FullDetailedCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
 import { useState } from 'react'
-import { View as Gap } from 'react-native'
 import { View } from 'styles/detail.module'
+import { Hotels_list_array } from 'mock/hotels'
 import { HScrollView } from 'styles/app.module'
+import { View as Gap, FlatList } from 'react-native'
 import { VerticalListItem, VerticalListLine } from 'styles/list.module'
 
 export default function OurHotelList({ navigation, route }) {
@@ -62,9 +62,23 @@ export default function OurHotelList({ navigation, route }) {
                     key={key}
                     style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <VerticalListItem>
-                      <Text content={elem.region_name} size={16} up={'cap'} />
+                      <Text
+                        content={elem.region_name}
+                        size={16}
+                        up={'cap'}
+                        color={'gray'}
+                      />
                     </VerticalListItem>
-                    <VerticalListLine />
+
+                    <Gap
+                      style={{
+                        width: 5,
+                        height: 5,
+                        borderRadius: 50,
+                        marginHorizontal: 15,
+                        backgroundColor: 'black',
+                      }}
+                    />
                   </Gap>
                 )
               })
@@ -73,33 +87,27 @@ export default function OurHotelList({ navigation, route }) {
         </Gap>
       </Gap>
 
-      <AreaView>
-        {hotelList.data.map((el) =>
-          el.regions.map((el) =>
-            el.hotels.map((el, key) => {
-              return (
-                <FullDetailedCard
-                  key={key}
-                  title={el.hotel_name}
-                  capacity={`${el.hotel_rating}★`}
-                  image={
-                    'https://cdn.ostrovok.ru/t/640x400/content/7e/1d/7e1db80963cafe30b2993442a460db9ed9e1fdbd.jpeg'
-                  }
-                  onPress={() =>
-                    navigation.navigate(
-                      'menu-tab-stack-our-hotels-list-detail',
-                      {
-                        _name: el.hotel_name,
-                        _data: el,
-                      }
-                    )
-                  }
-                />
-              )
-            })
-          )
+      <FlatList
+        data={Hotels_list_array}
+        style={{ paddingHorizontal: 14 }}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <FullDetailedCard
+            key={item.id}
+            title={item.hotel_name}
+            capacity={`${item.hotel_rating}★`}
+            image={
+              'https://cdn.ostrovok.ru/t/640x400/content/7e/1d/7e1db80963cafe30b2993442a460db9ed9e1fdbd.jpeg'
+            }
+            onPress={() =>
+              navigation.navigate('menu-tab-stack-our-hotels-list-detail', {
+                _name: item.hotel_name,
+                _data: item,
+              })
+            }
+          />
         )}
-      </AreaView>
+      />
     </View>
   )
 }

@@ -23,126 +23,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -151,85 +37,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -239,85 +49,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -333,126 +67,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -461,85 +81,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -549,85 +93,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -643,126 +111,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -771,85 +125,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -859,85 +137,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -953,126 +155,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1081,85 +169,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1169,85 +181,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1267,126 +203,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1395,85 +217,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1483,85 +229,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1577,126 +247,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1705,85 +261,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1793,85 +273,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -1887,126 +291,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2015,85 +305,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2103,85 +317,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2202,126 +340,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2330,85 +354,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2418,85 +366,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2512,126 +384,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2640,85 +398,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2728,85 +410,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2822,126 +428,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -2950,85 +442,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3038,85 +454,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3132,126 +472,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3260,85 +486,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3348,85 +498,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3442,126 +516,12 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'borj cedria',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'sidi bousid',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'carthage',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3570,85 +530,9 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'hammamet',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'klibia',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
@@ -3658,90 +542,101 @@ export const our_hotels = [
             regions: [
               {
                 region_name: 'mazrane',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
               {
                 region_name: 'aghir',
-                hotels: [
-                  {
-                    hotel_name: 'hotel 1',
-                    hotel_rating: '4.5',
-                    hotel_price: '$100',
-                    hotel_location: 'Tunis, Tunisia',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 2',
-                    hotel_rating: '2',
-                    hotel_price: '$140',
-                    hotel_location: 'carthage iin zaghouan',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$440',
-                    hotel_location: 'sidi boussid, sidi dhrif',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                  {
-                    hotel_name: 'hotel 3',
-                    hotel_rating: '2',
-                    hotel_price: '$320',
-                    hotel_location: 'yassmine hammamet nabel',
-                    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
-                    hotel_discription:
-                      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
-                  },
-                ],
               },
             ],
           },
         ],
       },
     ],
+  },
+]
+
+export const Hotels_list_array = [
+  {
+    id: 1,
+    hotel_name: 'dar el medina',
+    hotel_rating: '4.5',
+    hotel_price: '$100',
+    hotel_continent: 'africa',
+    hotel_country: 'tunisia',
+    hotel_city: 'tunis',
+    hotel_region: 'mazrane',
+    hotel_location: 'Tunis, Tunisia',
+    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
+    hotel_discription:
+      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
+  },
+  {
+    id: 2,
+    hotel_name: 'hotel carlton',
+    hotel_rating: '4.5',
+    hotel_price: '$100',
+    hotel_continent: 'africa',
+    hotel_country: 'tunisia',
+    hotel_city: 'tunis',
+    hotel_region: 'sidi boussid',
+    hotel_location: 'Tunis, Tunisia',
+    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
+    hotel_discription:
+      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
+  },
+  {
+    id: 3,
+    hotel_name: 'golf royal hotel',
+    hotel_rating: '4.5',
+    hotel_price: '$100',
+    hotel_continent: 'africa',
+    hotel_country: 'tunisia',
+    hotel_city: 'tunis',
+    hotel_region: 'carthage',
+    hotel_location: 'Tunis, Tunisia',
+    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
+    hotel_discription:
+      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
+  },
+  {
+    id: 4,
+    hotel_name: 'adam hotel suites',
+    hotel_rating: '4.5',
+    hotel_price: '$100',
+    hotel_continent: 'africa',
+    hotel_country: 'tunisia',
+    hotel_city: 'tunis',
+    hotel_region: 'carthage',
+    hotel_location: 'Tunis, Tunisia',
+    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
+    hotel_discription:
+      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
+  },
+  {
+    id: 5,
+    hotel_name: 'kantaoui hotel groups',
+    hotel_rating: '4.5',
+    hotel_price: '$100',
+    hotel_continent: 'africa',
+    hotel_country: 'tunisia',
+    hotel_city: 'sousse',
+    hotel_region: 'kantaoui',
+    hotel_location: 'Tunis, Tunisia',
+    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
+    hotel_discription:
+      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
+  },
+  {
+    id: 6,
+    hotel_name: 'mouradi hotel',
+    hotel_rating: '4.5',
+    hotel_price: '$100',
+    hotel_continent: 'africa',
+    hotel_country: 'tunisia',
+    hotel_city: 'sousse',
+    hotel_region: 'sahloul',
+    hotel_location: 'Tunis, Tunisia',
+    hotel_features: 'animation, wifi, pool, clubs, sightseeing',
+    hotel_discription:
+      'Ideally located near the charming historic village of Tabarka, on the splendid northwest coast of Tunisia, La Cigale Tabarka Hotel – Thalasso & Spa – Golf is a magical place where refined luxury, traditional hospitality and green nature combine...',
   },
 ]

@@ -78,7 +78,16 @@ import {
   ExcursionListScreen,
   ExcursionDetialsScreen,
   EntertainingDetailScreen,
+<<<<<<< HEAD
   TelevisionScreen,
+=======
+  ShopScreen,
+  SettingScreen,
+  SwimmingPoolDetailScree,
+  RoomRequestScreen,
+  RoomUpgradeScreen,
+  ExtandStayScreen,
+>>>>>>> 8351f4587c9ffeba7e66e2d4282b829bfbf71745
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -88,13 +97,15 @@ const Stack = createNativeStackNavigator()
 const presentationModal = function (name) {
   switch (name) {
     case 'menu-tab-stack-restaurant-detail-menu-food-list-detail':
-      return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
+      return Platform.OS === 'ios' ? 'modal' : 'containedModal'
     case 'menu-tab-stack-laundry-menu':
-      return Platform.OS === 'ios' ? 'modal' : 'transparentModal'
-    case 'menu-tab-stack-entertaining-events-detail':
       return Platform.OS === 'ios' ? 'modal' : 'formSheet'
+    case 'menu-tab-stack-entertaining-events-detail':
+      return Platform.OS === 'ios' ? 'modal' : 'containedModal'
+    case 'menu-tab-stack-point-of-interest-detail':
+      return Platform.OS === 'ios' ? 'modal' : 'containedModal'
     default:
-      return 'fullScreen'
+      return 'card'
   }
 }
 
@@ -118,7 +129,7 @@ const MenuStackNavigation = () => {
               component={el.component}
               options={{
                 header: el.header,
-                // presentation: presentationModal(el.path),
+                presentation: presentationModal(el.path),
               }}
             />
           )
@@ -131,6 +142,11 @@ const MenuStackNavigation = () => {
 export default MenuStackNavigation
 
 const safety_Stack_Array = [
+  {
+    path: 'menu-tab-stack-shops',
+    component: ShopScreen,
+    header: () => <StackHeader name={'shops'} />,
+  },
   {
     path: 'menu-tab-stack-excursions',
     component: ExcursionScreen,
@@ -150,6 +166,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-profile',
     component: ProfileScreen,
     header: () => <StackHeader name={'profile'} />,
+  },
+  {
+    path: 'menu-tab-stack-setting',
+    component: SettingScreen,
+    header: () => <StackHeader name={'settings'} />,
   },
   {
     path: 'menu-tab-stack-our-hotels',
@@ -451,6 +472,21 @@ const safety_Stack_Array = [
     header: () => <StackHeader name={'electricity and cables'} />,
   },
   {
+    path: 'menu-tab-stack-room-service-room-request',
+    component: RoomRequestScreen,
+    header: () => <StackHeader name={'room request'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-room-upgrade',
+    component: RoomUpgradeScreen,
+    header: () => <StackHeader name={'room upgrade'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-extand-stay',
+    component: ExtandStayScreen,
+    header: () => <StackHeader name={'extand your stay'} />,
+  },
+  {
     path: 'menu-tab-stack-room-service-airconditioner',
     component: AirConditionerScreen,
     header: () => <StackHeader name={'air conditioner'} />,
@@ -494,6 +530,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-swimming-pool-list',
     component: SwimmingPoolListScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-swimming-pool-list-details',
+    component: SwimmingPoolDetailScree,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-span-wellness',

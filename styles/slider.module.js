@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import { Dimensions } from 'react-native'
 import { animated } from '@react-spring/native'
 import { widthPixel, heightPixel } from 'utils/normalization'
+import { animated as A } from '@react-spring/native'
 
-export const StyledCarouselView = styled.View`
+export const StyledCarouselView = styled(A.View)`
   align-items: center;
   margin-bottom: -75px;
   justify-content: flex-end;

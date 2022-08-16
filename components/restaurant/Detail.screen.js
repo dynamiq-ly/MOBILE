@@ -9,6 +9,8 @@ import TextOverImage from 'components/cards/TextOverImage'
 
 import { View as Gap } from 'react-native'
 import { fontPixel } from 'utils/normalization'
+import { useSpring } from '@react-spring/native'
+import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
 import {
   ButtonWrapperDetail,
   View,
@@ -21,10 +23,21 @@ import {
 
 export default function DetailScreen({ navigation, route }) {
   const { _data } = route.params
+
+  const springContent = useSpring({
+    ...FADE_IN_UP.noOpacity,
+  })
+
+  const springCarousel = useSpring({
+    ...FADE_IN_DONW.noOpacity,
+  })
+
   return (
     <View>
       <CloseHeader />
+
       <Carsouel
+        style={{ ...springCarousel }}
         imageArray={[
           { image: _data.image },
           {
@@ -37,8 +50,10 @@ export default function DetailScreen({ navigation, route }) {
           },
         ]}
       />
-      <RadiusView>
+
+      <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
+          <Gap style={{ marginBottom: 10 }} />
           <Text content={_data.name} weight={700} up={'cap'} size={28} />
           <Gap
             style={{

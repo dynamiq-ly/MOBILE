@@ -4,7 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 // store
 import AuthProvider from 'store/AuthSusbcribeProvider'
-import CustomFontProvider from 'store/CustomFontProvider'
+import CustomizationProvider from '~/store/CustomizationProvider'
 
 // routing
 import 'react-native-gesture-handler'
@@ -13,9 +13,19 @@ import { NavigationContainer } from '@react-navigation/native'
 
 // state and fetched data manager
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { useEffect } from 'react'
+import { Platform } from 'react-native'
+import { enableScreens } from 'react-native-screens'
+
 const queryClient = new QueryClient()
 
 export default function App() {
+  useEffect(() => {
+    if (Platform.OS === 'ios') {
+      enableScreens(false)
+    }
+  }, []) // eslint-disable-line
+
   return (
     <ThemeProvider theme={palette}>
       <SafeAreaProvider>
@@ -26,10 +36,10 @@ export default function App() {
             {/* auth provider */}
             <AuthProvider>
               {/* font provider */}
-              <CustomFontProvider>
+              <CustomizationProvider>
                 {/* screen manager */}
                 <StackNavigation />
-              </CustomFontProvider>
+              </CustomizationProvider>
             </AuthProvider>
           </NavigationContainer>
         </QueryClientProvider>

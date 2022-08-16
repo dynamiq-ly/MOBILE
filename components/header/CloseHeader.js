@@ -6,7 +6,12 @@ import {
   StackViewHeader,
   CircleCloseButton,
 } from 'styles/header.module'
+
 import { useContext } from 'react'
+import { palette } from '~/themes/palette'
+
+import { FADE } from 'animation/FADE_IN'
+import { useSpring } from '@react-spring/native'
 
 /**
  * @param {string} name
@@ -14,11 +19,24 @@ import { useContext } from 'react'
 
 export default function CloseHeader() {
   const _nav = useContext(NavigationContext)
+
+  const fadingSpring = useSpring({
+    ...FADE.IN,
+    delay: 300,
+    config: {
+      mass: 10,
+    },
+  })
+
   return (
-    <DangerAreaHeader>
+    <DangerAreaHeader style={{ ...fadingSpring }}>
       <StackViewHeader>
         <CircleCloseButton onPress={() => _nav.goBack()}>
-          <Icon name={'ri-arrow-left-s-line'} color={'#18181b'} size={24} />
+          <Icon
+            name={'ri-close-line'}
+            color={palette.primary.accent_900}
+            size={24}
+          />
         </CircleCloseButton>
       </StackViewHeader>
     </DangerAreaHeader>

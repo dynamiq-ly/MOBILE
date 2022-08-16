@@ -7,8 +7,8 @@ import FixedWidthButton from 'components/button/FixedWidthButton'
 import { useState } from 'react'
 import { palette } from 'themes/palette'
 import { HScrollView } from 'styles/app.module'
+import { widthPixel } from 'utils/normalization'
 import { VerticalListLine } from 'styles/list.module'
-import { heightPixel, widthPixel } from 'utils/normalization'
 import { ButtonWrapperDetail, View } from 'styles/detail.module'
 import { View as Gap, TouchableOpacity, Image } from 'react-native'
 
@@ -30,6 +30,7 @@ export default function DayEntertainScreen({ navigation }) {
             content={moment().add(isActive.index, 'days').calendar()}
           />
         </ButtonWrapperDetail>
+        <Gap style={{ marginTop: 10 }} />
         {/* calendar */}
         <HScrollView horizontal showsHorizontalScrollIndicator={false}>
           {[...Array(7)].map((_, key) => (
@@ -56,6 +57,7 @@ export default function DayEntertainScreen({ navigation }) {
       </Gap>
       {/* category */}
       <Gap>
+        <Gap style={{ marginTop: 10 }} />
         <HScrollView horizontal showsHorizontalScrollIndicator={false}>
           {type_category_Array.map((el, key) => (
             <Gap

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { animated as A } from '@react-spring/native'
 import {
   pixelSizeHorizontal,
   pixelSizeVertical,
@@ -19,11 +20,11 @@ export const Image = styled.Image`
   height: ${fontPixel(350)}px;
 `
 
-export const RadiusView = styled.View`
+export const RadiusView = styled(A.View)`
   flex: 1;
   overflow: hidden;
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
+  /* border-top-left-radius: 16px;
+  border-top-right-radius: 16px; */
 `
 
 export const ButtonWrapperDetail = styled.View`

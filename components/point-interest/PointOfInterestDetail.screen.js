@@ -8,7 +8,11 @@ import { useState } from 'react'
 import { View as Gap } from 'react-native'
 import { palette } from '~/themes/palette'
 import { fontPixel } from '~/utils/normalization'
-import { BoxIcon, BoxText, PhoneDirectoryRow } from '~/styles/list.module'
+import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
+
+import { useSpring } from '@react-spring/native'
+import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
+
 import {
   RadiusView,
   SafeAreaRowWrapperDetail,
@@ -19,12 +23,21 @@ export default function PointOfInterestDetailScreen({ route }) {
   const { _data } = route.params
   const [isLiked, setLiked] = useState(false)
 
+  const springContent = useSpring({
+    ...FADE_IN_UP.noOpacity,
+  })
+
+  const springCarousel = useSpring({
+    ...FADE_IN_DONW.noOpacity,
+  })
+
   return (
     <View>
       <CloseHeader />
-      <Carsouel imageArray={_data.image} />
-      <RadiusView>
+      <Carsouel imageArray={_data.image} style={{ ...springCarousel }} />
+      <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
+          <Gap style={{ marginBottom: 10 }} />
           <SafeAreaRowWrapperDetail
             style={{ alignItems: 'flex-start', marginBottom: 14 }}>
             <Gap style={{ width: '80%' }}>
@@ -46,9 +59,9 @@ export default function PointOfInterestDetailScreen({ route }) {
             size={16}
           />
           <Gap style={{ marginBottom: 14 }} />
-          <PhoneDirectoryRow>
+          <PhoneDirectoryRow align>
             <BoxIcon>
-              <Icon name={'ri-time-line'} size={fontPixel(18)} />
+              <Icon name={'ri-time-line'} size={fontPixel(21)} />
             </BoxIcon>
             <BoxText>
               <Text
@@ -60,9 +73,9 @@ export default function PointOfInterestDetailScreen({ route }) {
             </BoxText>
           </PhoneDirectoryRow>
 
-          <PhoneDirectoryRow>
+          <PhoneDirectoryRow align>
             <BoxIcon>
-              <Icon name={'ri-direction-line'} size={fontPixel(18)} />
+              <Icon name={'ri-direction-line'} size={fontPixel(21)} />
             </BoxIcon>
             <BoxText>
               <Text
@@ -74,9 +87,9 @@ export default function PointOfInterestDetailScreen({ route }) {
             </BoxText>
           </PhoneDirectoryRow>
 
-          <PhoneDirectoryRow>
+          <PhoneDirectoryRow align>
             <BoxIcon>
-              <Icon name={'ri-phone-line'} size={fontPixel(18)} />
+              <Icon name={'ri-phone-line'} size={fontPixel(21)} />
             </BoxIcon>
             <BoxText>
               <Text

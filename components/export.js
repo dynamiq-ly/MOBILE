@@ -62,6 +62,7 @@ export {
   AddAlarmScreenOptions,
 } from './reception/alarm/Alarm.screen'
 export { default as AddAlarmScreen } from './reception/alarm/AddReminder.screen'
+export { default as ExtandStayScreen } from './room-service/ExtendStay.screen'
 // renting screen
 export { default as RentingScreen } from './renting/Renting.screen'
 // room service screen
@@ -78,7 +79,12 @@ export { default as HouseKeepingServiceScreen } from './housekeeping/HouseKeepin
 export { default as ElecricityCablesScreen } from './room-service/ElectricityAndCables.screen'
 export { default as AirConditionerScreen } from './room-service/AirConditioner.screen'
 export { default as HairDryerScreen } from './room-service/HairDryer.screen'
+<<<<<<< HEAD
 export { default as TelevisionScreen } from './room-service/Television.screen'
+=======
+export { default as RoomRequestScreen } from './room-service/RoomRequest.screen'
+export { default as RoomUpgradeScreen } from './room-service/RoomUpgrade.screen'
+>>>>>>> 8351f4587c9ffeba7e66e2d4282b829bfbf71745
 // point of interest
 export {
   default as PointOfInterestScreen,
@@ -93,6 +99,7 @@ export { default as GymEquipementScreen } from './gym/GymEquipement.screen'
 // swimming pool
 export { default as SwimmingPoolScreen } from './swimming-pool/SwimmingPool.screen'
 export { default as SwimmingPoolListScreen } from './swimming-pool/SwimmingPoolLists.screen'
+export { default as SwimmingPoolDetailScree } from './swimming-pool/SwimmingPoolDetail.screen'
 // span and wellness
 export { default as SpaScreen } from './spa/SpanWellness.screen'
 export { default as SpaDetailScreen } from './spa/SpaDetail.screen'
@@ -105,6 +112,7 @@ export { default as EntertainingEventsScreen } from './entertainement/EntertainE
 export { default as EntertainingDetailScreen } from './entertainement/EntertainementDetail.screen'
 // profile screen and settings
 export { default as ProfileScreen } from './profile/Profile.screen'
+export { default as SettingScreen } from './profile/Setting.screen'
 // our hotels screens
 export { default as OurHotelScreen } from './our hotel/OurHotel.screen'
 export { default as OurHotelListScreen } from './our hotel/OurHotelList.screen'
@@ -113,3 +121,5 @@ export { default as OurHotelScreenDetails } from './our hotel/OurHotelDetails.sc
 export { default as ExcursionScreen } from './excursions/Excurison.screen'
 export { default as ExcursionListScreen } from './excursions/ExcursionList.screen'
 export { default as ExcursionDetialsScreen } from './excursions/ExcursionDetail.screen'
+// shop screen
+export { default as ShopScreen } from './shops/Shops.screen'
