@@ -1,11 +1,12 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
+import Markdown from 'react-native-showdown'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
-import Markdown, { MarkdownIt } from 'react-native-markdown-display'
 
 import { useQuery } from 'react-query'
+import { palette } from 'themes/palette'
 import { baseUrl, __query } from 'hooks/useApi'
 import { useSpring } from '@react-spring/native'
 import { View as Gap, LogBox } from 'react-native'
@@ -49,7 +50,7 @@ export default function SwimmingPoolDetails({ route }) {
         ]}
       />
       <RadiusView style={{ ...springContent }}>
-        <AreaView contentInsetAdjustmentBehavior='automatic'>
+        <AreaView>
           <Gap style={{ marginBottom: 10 }} />
           <Text content={data.pool_name} weight={700} up={'cap'} size={28} />
           <Gap style={{ marginBottom: 6 }} />
@@ -70,9 +71,14 @@ export default function SwimmingPoolDetails({ route }) {
             />
             <Text content={' person'} size={18} color={'gray'} />
           </SafeAreaRowWrapperDetail>
-          <Markdown markdownit={MarkdownIt({ typographer: true })}>
-            {data.pool_description}
-          </Markdown>
+          <Gap style={{ marginTop: 24, height: 1000 }}>
+            <Markdown
+              css={markdownStyle}
+              markdown={data.pool_description}
+              scalesPageToFit={false}
+              scrollEnabled={false}
+            />
+          </Gap>
         </AreaView>
         <Gap style={{ marginBottom: 24 }} />
       </RadiusView>
@@ -89,3 +95,32 @@ const fetchSwimmingPoolById = function (id) {
 }
 
 LogBox.ignoreAllLogs(true)
+
+const markdownStyle = `
+
+  * {
+    margin:0;
+    padding:0;
+    font-size: 14px;
+    line-height: 24px;
+    background: ${palette.primary.accent_100};
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${palette.secondary.accent_500};
+  }
+
+`

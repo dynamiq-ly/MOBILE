@@ -42,7 +42,9 @@
     "react-native-remix-icon": "^0.3.0",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-showdown": "^1.0.1",
     "react-native-svg": "12.1.1",
+    "react-native-webview": "^11.23.0",
     "react-native-x-carousel": "^1.0.1",
     "react-query": "^3.39.1",
     "styled-components": "^5.3.5"
