@@ -8,7 +8,7 @@ import CloseHeader from 'components/header/CloseHeader'
 import TextOverImage from 'components/cards/TextOverImage'
 
 import { View as Gap } from 'react-native'
-import { fontPixel } from 'utils/normalization'
+import { baseUrl, __query } from 'hooks/useApi'
 import { useSpring } from '@react-spring/native'
 import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
 import {
@@ -16,13 +16,13 @@ import {
   View,
   SafeAreaRowWrapperDetail,
   HFLine,
-  HdRow,
   TextWrapper,
   RadiusView,
 } from 'styles/detail.module'
+import { useQuery } from 'react-query'
 
 export default function DetailScreen({ navigation, route }) {
-  const { _data } = route.params
+  const { _id, _data } = route.params
 
   const springContent = useSpring({
     ...FADE_IN_UP.noOpacity,
@@ -32,6 +32,15 @@ export default function DetailScreen({ navigation, route }) {
     ...FADE_IN_DONW.noOpacity,
   })
 
+  const { data } = useQuery(
+    ['@restaurant-details', _id],
+    () => fetchRestaurantById(_id),
+    {
+      initialData: _data,
+      refetchOnMount: true,
+    }
+  )
+
   return (
     <View>
       <CloseHeader />
@@ -39,22 +48,21 @@ export default function DetailScreen({ navigation, route }) {
       <Carsouel
         style={{ ...springCarousel }}
         imageArray={[
-          { image: _data.image },
-          {
-            image:
-              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmvZEDCLiaOOIfx_vOLiJ5JDVF-PiFLGwvWg&usqp=CAU',
-          },
-          {
-            image:
-              'https://media-cdn.tripadvisor.com/media/photo-s/1b/a9/f2/ee/le-cafe-des-arts.jpg',
-          },
+          ...data.images.map((el) => ({
+            image: `${baseUrl}storage/restaurants/${el.image}`,
+          })),
         ]}
       />
 
       <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
           <Gap style={{ marginBottom: 10 }} />
-          <Text content={_data.name} weight={700} up={'cap'} size={28} />
+          <Text
+            content={data.restaurant_name}
+            weight={700}
+            up={'cap'}
+            size={28}
+          />
           <Gap
             style={{
               marginTop: 5,
@@ -63,28 +71,36 @@ export default function DetailScreen({ navigation, route }) {
               marginBottom: 10,
             }}>
             <Icon name={'ri-time-line'} style={{ marginRight: 5 }} size={18} />
-            <Text content={`${_data.open} to ${_data.close}`} />
+            <Text
+              content={`${data.restaurant_opens} to ${data.restaurant_closes}`}
+            />
           </Gap>
-          <Text content={_data.content} color={'gray'} weight={400} size={16} />
+          <Text
+            content={data.restaurant_descripton}
+            color={'gray'}
+            weight={400}
+            size={16}
+          />
 
-          <HFLine />
-          <Text content={'chefs'} weight={500} size={18} up={'cap'} />
-          <SafeAreaRowWrapperDetail>
-            <ShipCard
-              name='wale e.sebii'
-              underName='E.CHEF'
-              image={
-                'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
-              }
-            />
-            <ShipCard
-              name='grodon l.ramsey'
-              underName='S.CHEF'
-              image={
-                'https://img.freepik.com/free-photo/portrait-smiling-chef-uniform_329181-675.jpg'
-              }
-            />
-          </SafeAreaRowWrapperDetail>
+          {data.chefs !== null && (
+            <>
+              <HFLine />
+              <Text content={'chefs'} weight={500} size={18} up={'cap'} />
+              <SafeAreaRowWrapperDetail>
+                <ShipCard
+                  name={data.chefs.restaurant_chef_exec_name}
+                  underName='E.CHEF'
+                  image={`${baseUrl}storage/restaurants/chefs/${data.chefs.restaurant_chef_exec_image}`}
+                />
+                <ShipCard
+                  name={data.chefs.restaurant_chef_name}
+                  underName='S.CHEF'
+                  image={`${baseUrl}storage/restaurants/chefs/${data.chefs.restaurant_chef_image}`}
+                />
+              </SafeAreaRowWrapperDetail>
+            </>
+          )}
+
           <HFLine />
           <Text content={'Menus'} weight={500} size={18} up={'cap'} />
 
@@ -113,25 +129,33 @@ export default function DetailScreen({ navigation, route }) {
             />
           </SafeAreaRowWrapperDetail>
 
-          <HFLine />
-          <Text content={'Dress code'} weight={500} size={18} up={'cap'} />
-          <Gap style={{ marginBottom: 10 }} />
-          <HdRow>
-            <Icon
-              color={'#191919'}
-              name='ri-shirt-line'
-              style={{ marginRight: 10 }}
-              size={fontPixel(28)}
-            />
-            <TextWrapper>
-              <Text
-                content={_data.dress_code}
-                color={'gray'}
-                weight={400}
-                size={16}
-              />
-            </TextWrapper>
-          </HdRow>
+          {data.regulations.length !== 0 && (
+            <>
+              <HFLine />
+              {data.regulations.reverse().map((el) => {
+                return (
+                  <>
+                    <Text
+                      content={el.restaurant_regulations_name}
+                      weight={500}
+                      size={18}
+                      up={'cap'}
+                    />
+                    <Gap style={{ marginBottom: 5 }} />
+                    <TextWrapper>
+                      <Text
+                        content={el.restaurant_regulations_description}
+                        color={'gray'}
+                        weight={400}
+                        size={16}
+                      />
+                    </TextWrapper>
+                    <Gap style={{ marginBottom: 22 }} />
+                  </>
+                )
+              })}
+            </>
+          )}
           <Gap style={{ marginBottom: 32 }} />
         </AreaView>
       </RadiusView>
@@ -140,4 +164,13 @@ export default function DetailScreen({ navigation, route }) {
       </ButtonWrapperDetail>
     </View>
   )
+}
+
+let fetchRestaurantById = function (id) {
+  return __query
+    .get(`api/restaurant/${id}`)
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
 }

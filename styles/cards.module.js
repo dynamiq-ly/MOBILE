@@ -270,7 +270,7 @@ export const StyledFullDetailedCardContent = styled.View`
  */
 
 export const StyledShipCard = styled.View`
-  width: 165px;
+  width: 50%;
   overflow: hidden;
   border-radius: 5px;
   align-items: center;

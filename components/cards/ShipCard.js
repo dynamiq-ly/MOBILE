@@ -22,7 +22,7 @@ const ShipCard = ({ name = 'NAME', underName = 'N/A', image }) => {
       />
       <StyledTextCardShip>
         <Text
-          content={name.length > 11 ? `${name.slice(0, 11)}...` : name}
+          content={name.length > 18 ? `${name.slice(0, 18)}...` : name}
           up={'cap'}
           weight={600}
           size={16}
