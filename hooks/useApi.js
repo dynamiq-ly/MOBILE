@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // export const baseUrl = 'https://smarhotel.herokuapp.com'
-export const baseUrl = 'https://338f-197-14-81-89.eu.ngrok.io'
+export const baseUrl = 'https://a1a9-102-157-201-6.eu.ngrok.io/'
 
 /**
  * @description create a default instance for axios so we can use it in our components

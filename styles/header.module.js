@@ -50,8 +50,8 @@ export const CircleCloseButton = styled.TouchableOpacity`
   align-items: center;
   border-radius: 100px;
   justify-content: center;
-  width: ${widthPixel(38)}px;
-  height: ${heightPixel(38)}px;
+  width: ${widthPixel(32)}px;
+  height: ${heightPixel(32)}px;
   margin-right: ${pixelSizeHorizontal(10)}px;
   background: ${({ theme }) => theme.primary.accent_0};
 `

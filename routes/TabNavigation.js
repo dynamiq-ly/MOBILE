@@ -1,3 +1,4 @@
+import { Platform } from 'react-native'
 import { palette } from 'themes/palette'
 import Icon from 'react-native-remix-icon'
 import MenuStackNavigation from './MenuStack'
@@ -116,7 +117,7 @@ const TabNavigation = () => {
                   return {
                     height: 0,
                     opacity: 0,
-                    marginBottom: -24,
+                    marginBottom: Platform.OS === 'ios' ? -24 : 0,
                     backgroundColor: palette.primary.accent_100,
                   }
                 } else {

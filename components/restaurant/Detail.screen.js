@@ -135,7 +135,6 @@ export default function DetailScreen({ navigation, route }) {
           <Gap style={{ marginBottom: 32 }} />
         </AreaView>
       </RadiusView>
-
       <ButtonWrapperDetail>
         <Button title={'book table'} icon={'ri-bookmark-3-line'} />
       </ButtonWrapperDetail>
