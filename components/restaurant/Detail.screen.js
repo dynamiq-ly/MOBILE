@@ -134,7 +134,7 @@ export default function DetailScreen({ navigation, route }) {
               <HFLine />
               {data.regulations.reverse().map((el) => {
                 return (
-                  <>
+                  <Gap key={el.id}>
                     <Text
                       content={el.restaurant_regulations_name}
                       weight={500}
@@ -151,7 +151,7 @@ export default function DetailScreen({ navigation, route }) {
                       />
                     </TextWrapper>
                     <Gap style={{ marginBottom: 22 }} />
-                  </>
+                  </Gap>
                 )
               })}
             </>
@@ -159,9 +159,11 @@ export default function DetailScreen({ navigation, route }) {
           <Gap style={{ marginBottom: 32 }} />
         </AreaView>
       </RadiusView>
-      <ButtonWrapperDetail>
-        <Button title={'book table'} icon={'ri-bookmark-3-line'} />
-      </ButtonWrapperDetail>
+      {data.restaurant_can_book === 1 && (
+        <ButtonWrapperDetail>
+          <Button title={'book table'} icon={'ri-bookmark-3-line'} />
+        </ButtonWrapperDetail>
+      )}
     </View>
   )
 }
