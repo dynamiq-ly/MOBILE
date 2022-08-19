@@ -7,6 +7,7 @@ import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 import TextOverImage from 'components/cards/TextOverImage'
 
+import { useQuery } from 'react-query'
 import { View as Gap } from 'react-native'
 import { baseUrl, __query } from 'hooks/useApi'
 import { useSpring } from '@react-spring/native'
@@ -19,7 +20,6 @@ import {
   TextWrapper,
   RadiusView,
 } from 'styles/detail.module'
-import { useQuery } from 'react-query'
 
 export default function DetailScreen({ navigation, route }) {
   const { _id, _data } = route.params
