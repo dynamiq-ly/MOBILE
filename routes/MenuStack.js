@@ -358,7 +358,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-tour-operator',
     component: TourOperator,
-    header: () => <StackHeader name={'tour operator'} />,
+    header: () => <StackHeader name={'tour operators'} />,
   },
   {
     path: 'menu-tab-stack-money-exchange',
