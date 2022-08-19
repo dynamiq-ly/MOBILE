@@ -31,13 +31,15 @@ export default function DetailedCard({
       <RowDetailedCardContent>
         <TitleDetailedCardContent>
           <Text size={18} up={'cap'} weight={600} content={title} />
-          <Text
-            size={20}
-            up={'cap'}
-            weight={600}
-            content={`${price}$`}
-            color={'dominant'}
-          />
+          {price !== '' && (
+            <Text
+              size={20}
+              up={'cap'}
+              weight={600}
+              content={`${price}$`}
+              color={'dominant'}
+            />
+          )}
         </TitleDetailedCardContent>
 
         <Text size={16} weight={400} content={description} color={'gray'} />
