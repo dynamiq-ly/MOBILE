@@ -1,9 +1,16 @@
+import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
+import DetailedCard from 'components/cards/DetailedCard'
+
 import { Image } from 'styles/image.module'
 import { View as NewView } from 'react-native'
+
 import Text from 'components/text/Text'
 import DetailedCard from 'components/cards/DetailedCard'
 import { agency_Array } from 'mock/food_service'
+
+import { agency_Array } from 'mock/tour-operators'
+
 export default function TourOperator() {
   return (
     <AreaView>
@@ -32,6 +39,7 @@ export default function TourOperator() {
         return (
           <DetailedCard
             key={key}
+            price={''}
             title={el.agency_name}
             image={el.agency_image}
             description={
