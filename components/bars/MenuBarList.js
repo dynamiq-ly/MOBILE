@@ -40,7 +40,7 @@ export default function MenuBarScreen({ route, navigation }) {
               image={`${baseUrl}storage/bars/menus/${el.bar_menu_category_image}`}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-bar-menu-details', {
-                  _name: el.name,
+                  _name: el.bar_menu_category,
                 })
               }
             />
