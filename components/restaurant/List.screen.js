@@ -29,9 +29,7 @@ export default function ListScreen({ navigation }) {
   return (
     <View>
       {data.length === 0 ? (
-        <NotFound
-          killProcess={(isFetched && pool_list.length === 0) || isError}
-        />
+        <NotFound killProcess={(isFetched && data.length === 0) || isError} />
       ) : (
         <FlatList
           refreshControl={
