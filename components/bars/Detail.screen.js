@@ -71,7 +71,12 @@ export default function DetailScreen({ route, navigation }) {
               'https://img.freepik.com/premium-vector/vector-mock-up-white-glass-blank-wine-close-bootle-with-cap-white-label-illustration-realistic-with-shadow-template-design-isolated-dark-background_111984-477.jpg?w=360'
             }
             name={'drinks menu'}
-            onPress={() => navigation.navigate('menu-tab-stack-bar-menu-list')}
+            onPress={() =>
+              navigation.navigate('menu-tab-stack-bar-menu-list', {
+                _id: _id,
+                _data: data.menus,
+              })
+            }
           />
 
           {data.bar_closed_days.length > 0 && (
