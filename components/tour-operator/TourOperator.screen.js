@@ -3,6 +3,7 @@ import { Image } from 'styles/image.module'
 import { View as NewView } from 'react-native'
 import Text from 'components/text/Text'
 import DetailedCard from 'components/cards/DetailedCard'
+import { agency_Array } from 'mock/food_service'
 export default function TourOperator() {
   return (
     <AreaView>
@@ -14,6 +15,7 @@ export default function TourOperator() {
       <NewView style={{ marginBottom: 15 }} />
       <Text
         size={18}
+        color={'gray'}
         content={
           'Our hotel is contracted with some of the best tour operators in the region that combine two or more travel services  (e.g., transport, accommodation, meals, entertainment, sightseeing), so it can provide our clients with the best experience and more entertainment.'
         }
