@@ -121,7 +121,7 @@ const array = [
   {
     icon: 'ri-user-line',
     name: 'tour operators',
-    path: '',
+    path: 'menu-tab-stack-tour-operator',
     color: '#118181',
   },
   {
