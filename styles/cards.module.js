@@ -192,7 +192,7 @@ export const DetailedCardImage = styled.Image`
 export const RowDetailedCardContent = styled.View`
   flex: 1;
   flex-direction: column;
-  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
 `
 
 export const TitleDetailedCardContent = styled.View`
