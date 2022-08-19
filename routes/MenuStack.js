@@ -85,6 +85,7 @@ import {
   RoomRequestScreen,
   RoomUpgradeScreen,
   ExtandStayScreen,
+  TourOperator,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -353,6 +354,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-parking',
     component: ParkingLotScreen,
     header: () => <StackHeader name={'parking spot'} />,
+  },
+  {
+    path: 'menu-tab-stack-tour-operator',
+    component: TourOperator,
+    header: () => <StackHeader name={'tour operator'} />,
   },
   {
     path: 'menu-tab-stack-money-exchange',
