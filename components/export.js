@@ -86,6 +86,7 @@ export { default as TelevisionScreen } from './room-service/Television.screen'
 export { default as RoomRequestScreen } from './room-service/RoomRequest.screen'
 export { default as RoomUpgradeScreen } from './room-service/RoomUpgrade.screen'
 export { default as TourOperator } from './tour-operator/TourOperator.screen'
+export { default as AgencyDetails } from './tour-operator/AgencyDetails.screen'
 // point of interest
 export {
   default as PointOfInterestScreen,

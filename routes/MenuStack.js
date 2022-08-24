@@ -86,6 +86,7 @@ import {
   RoomUpgradeScreen,
   ExtandStayScreen,
   TourOperator,
+  AgencyDetails,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -359,6 +360,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-tour-operator',
     component: TourOperator,
     header: () => <StackHeader name={'tour operators'} />,
+  },
+  {
+    path: 'menu-tab-stack-agency-details',
+    component: AgencyDetails,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
   {
     path: 'menu-tab-stack-money-exchange',

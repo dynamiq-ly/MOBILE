@@ -7,7 +7,7 @@ import { View as NewView } from 'react-native'
 
 import { agency_Array } from 'mock/tour-operators'
 
-export default function TourOperator() {
+export default function TourOperator({ navigation }) {
   return (
     <AreaView>
       <Image
@@ -44,7 +44,10 @@ export default function TourOperator() {
                 : el.agency_details
             }
             onPress={() =>
-              navigation.navigate('', { _name: el.agency_name, _data: el })
+              navigation.navigate('menu-tab-stack-agency-details', {
+                _name: el.agency_name,
+                _data: el,
+              })
             }
           />
         )
