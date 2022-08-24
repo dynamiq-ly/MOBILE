@@ -18,8 +18,8 @@ export const agency_Array = [
   {
     id: 3,
     agency_name: 'PEPE TOURS',
-    food_image:
-      'https://img.freepik.com/premium-vector/summer-travel-gradient-logo-ocean-sea-wave-with-plane-logo-concept_144543-564.jpg?w=2000',
+    agency_image:
+      'https://st2.depositphotos.com/2766056/7201/v/950/depositphotos_72011217-stock-illustration-travel-agency-logo-in-black.jpg',
     agency_details:
       'Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
   },

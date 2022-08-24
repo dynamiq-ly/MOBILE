@@ -5,10 +5,6 @@ import DetailedCard from 'components/cards/DetailedCard'
 import { Image } from 'styles/image.module'
 import { View as NewView } from 'react-native'
 
-import Text from 'components/text/Text'
-import DetailedCard from 'components/cards/DetailedCard'
-import { agency_Array } from 'mock/food_service'
-
 import { agency_Array } from 'mock/tour-operators'
 
 export default function TourOperator() {
