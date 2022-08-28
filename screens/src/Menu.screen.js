@@ -92,7 +92,7 @@ const menuArray1 = [
   {
     icon: 'ri-information-line',
     name: 'About Hotel',
-    path: '',
+    path: 'menu-tab-stack-about-hotels',
     color: '#BABD42',
   },
   {
