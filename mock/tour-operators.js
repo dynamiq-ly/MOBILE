@@ -32,3 +32,32 @@ export const agency_Array = [
       'Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
   },
 ]
+
+/*
+export const agency_array = [
+  {
+    id: 1,
+    agency_name: '',
+    agency_logo: '',
+    agency_image: [{ image: 'image' }, { imag: 'image' }, { imag: 'image' }],
+    agency_desc: '',
+    agency_website: '',
+    agency_services: [
+      { agency_service_title: '', agency_service_link: '' },
+      { agency_service_title: '', agency_service_link: '' },
+    ],
+    agency_tour_guides: [
+      {
+        agency_guide_name: '',
+        agency_guide_picture: '',
+        agency_guide_phone: '',
+        agency_guide_instagram: '',
+        agency_guide_twitter: '',
+        agency_guide_resume: "",
+        agency_guide_language: "french,arabic,spanich",
+        agency_guide_portfolio: ""
+      },
+    ],
+  },
+]
+*/
