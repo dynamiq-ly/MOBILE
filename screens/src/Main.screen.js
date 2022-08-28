@@ -174,7 +174,7 @@ const AccountHeader = function () {
     <SafeAreaRowWrapperDetail
       style={{
         alignItems: 'center',
-        marginTop: Platform.OS === 'ios' ? 62 : StatusBar.currentHeight,
+        marginTop: Platform.OS === 'ios' ? 62 : StatusBar.currentHeight + 12,
         marginBottom: 24,
       }}>
       <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
