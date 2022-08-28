@@ -145,7 +145,7 @@ export default function MainScreen({ navigation }) {
       <HScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={{ paddingLeft: 0, marginTop: 14 }}>
+        style={{ paddingLeft: 0 }}>
         {luxury_and_relax_array.map((item, key) => (
           <Gap key={key} style={{ marginRight: 12 }}>
             <FullImageCard
