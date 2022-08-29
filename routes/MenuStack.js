@@ -175,7 +175,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-about-hotels',
     component: AboutHotelScreen,
-    header: () => <StackHeader name={'about hotel'} />,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-our-hotels',
