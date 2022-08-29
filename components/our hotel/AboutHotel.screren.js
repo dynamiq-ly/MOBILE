@@ -5,7 +5,7 @@ import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 
 import { StatusBar } from 'expo-status-bar'
-import { View } from 'styles/detail.module'
+import { SafeAreaRowWrapperDetail, View } from 'styles/detail.module'
 import { FADE_IN_DONW } from 'animation/FADE_IN'
 import { animated, useSpring } from '@react-spring/native'
 import { ScrollView, View as RnView, Image as RnImage } from 'react-native'
@@ -57,6 +57,17 @@ export default function AboutHotelScreen() {
             up={'cap'}
             size={28}
           />
+          {/* awards */}
+          <SafeAreaRowWrapperDetail
+            style={{ alignItems: 'center', marginTop: 10 }}>
+            <Text
+              content={'holder of 7 international awards'}
+              up={'up'}
+              color={'gray'}
+            />
+            <Icon name={'ri-medal-line'} color={'#36D7B7'} />
+          </SafeAreaRowWrapperDetail>
+          {/* description */}
           <Text
             style={{ marginTop: 10 }}
             content={
@@ -102,8 +113,8 @@ const button = [
     func: () => {},
   },
   {
-    name: 'awards',
-    icon: 'ri-medal-line',
+    name: 'location',
+    icon: 'ri-map-line',
     func: () => {},
   },
   {
