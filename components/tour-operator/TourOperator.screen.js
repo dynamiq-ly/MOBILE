@@ -37,11 +37,11 @@ export default function TourOperator({ navigation }) {
             key={key}
             price={''}
             title={el.agency_name}
-            image={el.agency_image}
+            image={el.agency_logo}
             description={
-              el.agency_details.length > 70
-                ? `${el.agency_details.slice(0, 70)}...`
-                : el.agency_details
+              el.agency_desc.length > 70
+                ? `${el.agency_desc.slice(0, 70)}...`
+                : el.agency_desc
             }
             onPress={() =>
               navigation.navigate('menu-tab-stack-agency-details', {
