@@ -4,6 +4,7 @@ import Icon from 'react-native-remix-icon'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 
+import { rooms } from 'mock/rooms'
 import { palette } from 'themes/palette'
 import { View as Gap } from 'react-native'
 import { useSpring } from '@react-spring/native'
@@ -30,7 +31,7 @@ export default function RoomDetailScreen({ route }) {
   return (
     <View>
       <CloseHeader />
-      <Carsouel imageArray={_data.room_images} style={{ ...springCarousel }} />
+      <Carsouel imageArray={rooms.room_images} style={{ ...springCarousel }} />
       <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
           <Gap style={{ marginTop: 10 }} />
@@ -49,7 +50,7 @@ export default function RoomDetailScreen({ route }) {
                 flexDirection: 'row',
                 alignItems: 'flex-end',
               }}>
-              {_data.room_price_promotion > 1 ? (
+              {/* {_data.room_price_promotion > 1 ? (
                 <Text
                   size={21}
                   up={'cap'}
@@ -59,15 +60,15 @@ export default function RoomDetailScreen({ route }) {
                     _data.room_price - (_data.room_price * 15) / 100
                   }$`}
                 />
-              ) : (
-                <Text
-                  size={21}
-                  up={'cap'}
-                  weight={600}
-                  color={'dominant'}
-                  content={`${_data.room_price}$`}
-                />
-              )}
+              ) : ( */}
+              <Text
+                size={21}
+                up={'cap'}
+                weight={600}
+                color={'dominant'}
+                content={`${_data.room_price}$`}
+              />
+              {/* )} */}
 
               <Gap>
                 <Text size={14} up={'cap'} weight={500} content={'/night'} />
@@ -75,7 +76,7 @@ export default function RoomDetailScreen({ route }) {
             </Gap>
           </SafeAreaRowWrapperDetail>
           <Gap style={{ marginTop: 10 }} />
-          <Text size={16} color={'gray'} content={_data.room_description} />
+          <Text size={16} color={'gray'} content={_data.room_descripton} />
           <Gap style={{ marginTop: 10 }} />
           <Gap style={{ marginTop: 10 }} />
           <>
@@ -89,18 +90,18 @@ export default function RoomDetailScreen({ route }) {
                   size={14}
                   up={'up'}
                   weight={500}
-                  content={`${_data.room_location_floor} - ${_data.room_location_number}`}
+                  content={`${_data.room_floor} - ${_data.room_number}`}
                 />
               </StyledTagCards>
               <StyledTagCards>
                 <Icon
                   name={
-                    _data.room_quality_smoking
+                    _data.room_smoking
                       ? 'ri-shield-check-line'
                       : 'ri-alarm-warning-line'
                   }
                   color={
-                    _data.room_quality_smoking
+                    _data.room_smoking
                       ? palette.success.accent_500
                       : palette.error.accent_500
                   }
@@ -113,19 +114,14 @@ export default function RoomDetailScreen({ route }) {
                   name={'ri-hotel-bed-line'}
                   color={palette.secondary.accent_500}
                 />
-                <Text
-                  size={14}
-                  up={'up'}
-                  weight={500}
-                  content={_data.room_quality_size}
-                />
+                <Text size={14} up={'up'} weight={500} content={'double'} />
               </StyledTagCards>
               <StyledTagCards>
                 <Text
                   size={21}
                   up={'up'}
                   weight={500}
-                  content={_data.room_quality_area}
+                  content={_data.room_space_area}
                 />
                 <Text size={14} up={'up'} weight={500} content={'Area'} />
               </StyledTagCards>
@@ -134,7 +130,7 @@ export default function RoomDetailScreen({ route }) {
           <>
             <HFLine />
             <Text content={'occupency'} weight={500} size={18} up={'cap'} />
-            {_data.room_occupency.max_occupency > 0 && (
+            {_data.room_occupency_max > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -143,7 +139,7 @@ export default function RoomDetailScreen({ route }) {
                   up={'cap'}
                 />
                 <Text
-                  content={_data.room_occupency.max_occupency}
+                  content={_data.room_occupency_max}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -152,7 +148,7 @@ export default function RoomDetailScreen({ route }) {
               </SafeAreaRowWrapperDetail>
             )}
 
-            {_data.room_occupency.max_adult > 0 && (
+            {_data.room_occupency_max_adultt > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -161,7 +157,7 @@ export default function RoomDetailScreen({ route }) {
                   up={'cap'}
                 />
                 <Text
-                  content={_data.room_occupency.max_adult}
+                  content={_data.room_occupency_max_adult}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -170,7 +166,7 @@ export default function RoomDetailScreen({ route }) {
               </SafeAreaRowWrapperDetail>
             )}
 
-            {_data.room_occupency.max_children > 0 && (
+            {_data.room_occupency_max_children > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -179,7 +175,7 @@ export default function RoomDetailScreen({ route }) {
                   up={'cap'}
                 />
                 <Text
-                  content={_data.room_occupency.max_children}
+                  content={_data.room_occupency_max_children}
                   color={'dominant'}
                   weight={500}
                   size={16}
@@ -187,7 +183,7 @@ export default function RoomDetailScreen({ route }) {
                 />
               </SafeAreaRowWrapperDetail>
             )}
-            {_data.room_occupency.max_guests > 0 && (
+            {_data.room_occupency_max_guest > 0 && (
               <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
                 <Text
                   color={'gray'}
@@ -196,7 +192,7 @@ export default function RoomDetailScreen({ route }) {
                   up={'cap'}
                 />
                 <Text
-                  content={_data.room_occupency.max_guests}
+                  content={_data.room_occupency_max_guest}
                   color={'dominant'}
                   weight={500}
                   size={16}
