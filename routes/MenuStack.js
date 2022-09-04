@@ -88,6 +88,7 @@ import {
   TourOperator,
   AgencyDetails,
   AboutHotelScreen,
+  PoolTowelsScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -585,6 +586,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-entertaining-events-detail',
     component: EntertainingDetailScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-pool-towels',
+    component: PoolTowelsScreen,
+    header: () => <StackHeader name={'pool towels'} />,
   },
   {
     path: 'menu-tab-stack-transportation',

@@ -91,7 +91,7 @@ const array = [
   {
     icon: 'ri-contrast-drop-line',
     name: 'pool towels',
-    path: '',
+    path: 'menu-tab-stack-pool-towels',
     color: '#118181',
   },
   {

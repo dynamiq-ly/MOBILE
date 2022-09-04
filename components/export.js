@@ -55,7 +55,7 @@ export { default as ConnectivityScreen } from './connectivity/Connectivity'
 export { default as OthersScreen } from './other-request/OtherRequest.screen'
 export { default as MedicalAssistanceScreen } from './medical-assis/MedicalAssis.screen'
 export { default as ParkingLotScreen } from './parking/Parking.screen'
-
+export { default as PoolTowelsScreen } from './reception/PoolTowles.screen'
 export { default as TransportationsScreen } from './transportations/Transportation'
 export { default as MoneyConverter } from './reception/MoneyExchange.screen'
 export {
@@ -80,9 +80,7 @@ export { default as HouseKeepingServiceScreen } from './housekeeping/HouseKeepin
 export { default as ElecricityCablesScreen } from './room-service/ElectricityAndCables.screen'
 export { default as AirConditionerScreen } from './room-service/AirConditioner.screen'
 export { default as HairDryerScreen } from './room-service/HairDryer.screen'
-
 export { default as TelevisionScreen } from './room-service/Television.screen'
-
 export { default as RoomRequestScreen } from './room-service/RoomRequest.screen'
 export { default as RoomUpgradeScreen } from './room-service/RoomUpgrade.screen'
 export { default as TourOperator } from './tour-operator/TourOperator.screen'
