@@ -78,8 +78,7 @@ export default function AgencyDetails({ route, navigation }) {
               activeOpacity={0.7}
               onPress={() => {
                 setChecked(!checked)
-              }}
-            >
+              }}>
               <ContentViewMinCard>
                 <Text
                   content={el.agency_service_title}
@@ -109,24 +108,22 @@ export default function AgencyDetails({ route, navigation }) {
         />
         <NewView style={{ marginBottom: 15 }} />
 
-        <AnimatedTouchable
-          style={{
-            marginTop: 3,
-            marginBottom: 15,
-            borderRadius: 15,
-            paddingVertical: 10,
+        {_data.agency_tour_guides.map((el, key) => {
+          return (
+            <AnimatedTouchable
+              style={{
+                marginTop: 3,
+                marginBottom: 15,
+                borderRadius: 15,
+                paddingVertical: 10,
 
-            backgroundColor: palette.primary.accent_0,
-          }}
-          onPress={() => navigation.navigate('')}
-          activeOpacity={0.8}
-        >
-          {_data.agency_tour_guides.map((el, key) => {
-            return (
+                backgroundColor: palette.primary.accent_0,
+              }}
+              onPress={() => navigation.navigate('')}
+              activeOpacity={0.8}>
               <SafeAreaRowWrapperDetail
                 key={key}
-                style={{ marginHorizontal: 15, alignItems: 'center' }}
-              >
+                style={{ marginHorizontal: 15, alignItems: 'center' }}>
                 <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <RnImage
                     source={{
@@ -159,9 +156,9 @@ export default function AgencyDetails({ route, navigation }) {
                   />
                 </View>
               </SafeAreaRowWrapperDetail>
-            )
-          })}
-        </AnimatedTouchable>
+            </AnimatedTouchable>
+          )
+        })}
       </AreaView>
     )
   }

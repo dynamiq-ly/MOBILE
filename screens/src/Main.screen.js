@@ -208,6 +208,12 @@ const AccountHeader = function () {
 
 const services_and_facilties_array = [
   {
+    name: 'how can we help',
+    path: 'menu-tab-stack-how-can-we-help',
+    image:
+      'https://img.freepik.com/free-photo/one-two-young-hotel-receptionists-standing-by-counter-looking-touchpad-display-consulting-client-phone-against-colleague_274679-18500.jpg',
+  },
+  {
     name: 'bars',
     path: 'menu-tab-stack-bar-list',
     image:
@@ -272,6 +278,18 @@ const good_plans_array = [
 ]
 
 const luxury_and_relax_array = [
+  {
+    name: "room's services",
+    path: 'menu-tab-stack-room-service',
+    image:
+      'https://media.istockphoto.com/videos/ordering-room-service-video-id1083647268?s=640x640',
+  },
+  {
+    name: 'rooms',
+    path: 'menu-tab-stack-rooms',
+    image:
+      'https://static.readytotrip.com/upload/information_system_24/1/4/2/item_1423732/photo_56343033.jpg',
+  },
   {
     name: 'swimming pool',
     path: 'menu-tab-stack-swimming-pool',
