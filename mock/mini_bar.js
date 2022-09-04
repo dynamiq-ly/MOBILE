@@ -1,52 +1,26 @@
 export const mini_bar = [
   {
-    id: 1,
-    name: 'COMPRESSED GAS',
-    price: 2.4,
+    mini_bar_category: 'alcoholic drinks',
+    mini_bar_items: [
+      { item_name: 'canned beer', item_price: '3.00' },
+      { item_name: 'wheat beer', item_price: '2.59' },
+      { item_name: 'vodka 30ml', item_price: '7.99' },
+      { item_name: 'whisky 30ml', item_price: '8.66' },
+    ],
   },
   {
-    id: 2,
-    name: 'Retin-A MICRO',
-    price: 10.98,
+    mini_bar_category: 'drinks',
+    mini_bar_items: [
+      { item_name: 'water 1L', item_price: '1.50' },
+      { item_name: 'coke', item_price: '2.00' },
+    ],
   },
   {
-    id: 3,
-    name: 'Clobetasol Propionate',
-    price: 12.12,
-  },
-  {
-    id: 4,
-    name: 'Pyridostigmine Bromide',
-    price: 5.19,
-  },
-  {
-    id: 5,
-    name: 'Oxybutynin Chloride',
-    price: 17.24,
-  },
-  {
-    id: 6,
-    name: 'Good Sense Antacid',
-    price: 10.91,
-  },
-  {
-    id: 7,
-    name: 'Bupropion Hydrochloride',
-    price: 18.45,
-  },
-  {
-    id: 8,
-    name: 'omeprazole',
-    price: 1.1,
-  },
-  {
-    id: 9,
-    name: 'Pumpkin Seeds',
-    price: 8.79,
-  },
-  {
-    id: 10,
-    name: 'Meclizine Hydrochloride',
-    price: 13.42,
+    mini_bar_category: 'snacks',
+    mini_bar_items: [
+      { item_name: 'pringels', item_price: '4.99' },
+      { item_name: 'chips', item_price: '1.99' },
+      { item_name: 'oreo', item_price: '0.99' },
+    ],
   },
 ]

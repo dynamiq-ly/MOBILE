@@ -36,13 +36,14 @@ export const StyledLaundryRow = styled.View`
   margin-top: ${pixelSizeVertical(10)}px;
   margin-bottom: ${pixelSizeVertical(10)}px;
   background: ${({ theme }) => theme.primary.accent_0};
-  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(10)}px;
+  padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
 `
 
 export const SpaceBetweenRow = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(0)}px;
 `
 
 export const Line = styled.View`

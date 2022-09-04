@@ -415,17 +415,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-room-service-mini-bar',
     component: MiniBarScreen,
-    header: ({ navigation }) => (
-      <OptionHeader
-        name={'mini bar'}
-        components={
-          <Cart
-            name={'mini_bar'}
-            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
-          />
-        }
-      />
-    ),
+    header: () => <StackHeader name={'Mini Bar'} />,
   },
   {
     path: 'menu-tab-stack-room-service-food-service',
