@@ -1,4 +1,13 @@
+import Text from 'components/text/Text'
+import Icon from 'react-native-remix-icon'
 import AreaView from 'utils/TabAreaView'
+
+import { palette } from '/themes/palette'
+import { Image } from 'styles/image.module'
+import { animated } from '@react-spring/native'
+import { SafeAreaRowWrapperDetail } from '~/styles/detail.module'
+import { MiniCard, ContentViewMinCard } from '~/styles/cards.module'
+
 import {
   View as NewView,
   Image as RnImage,
@@ -6,13 +15,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { SafeAreaRowWrapperDetail } from '~/styles/detail.module'
-import Text from 'components/text/Text'
-import Icon from 'react-native-remix-icon'
-import { MiniCard, ContentViewMinCard } from '~/styles/cards.module'
-import { Image } from 'styles/image.module'
-import { palette } from '~/themes/palette'
-import { animated } from '@react-spring/native'
 
 const AnimatedTouchable = animated(TouchableOpacity)
 export default function AgencyDetails({ route, navigation }) {
@@ -26,31 +28,28 @@ export default function AgencyDetails({ route, navigation }) {
           }}
         />
         <NewView style={{ marginBottom: 15 }} />
-        <SafeAreaRowWrapperDetail>
+        <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
           <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RnImage
               source={{
                 uri: _data.agency_logo,
               }}
-              style={{ borderRadius: 15, height: 58, width: 58 }}
+              style={{ borderRadius: 15, height: 52, width: 52 }}
             />
 
             <Text
               size={22}
               up={'cap'}
               weight={600}
-              color={'dominant'}
               content={_data.agency_name}
               style={{ marginLeft: 15 }}
             />
-
-            <Icon
-              name='ri-global-line'
-              color={'black'}
-              style={{ marginLeft: 150 }}
-              size={24}
-            />
           </Gap>
+          <Icon
+            name='ri-global-line'
+            color={palette.secondary.accent_700}
+            size={24}
+          />
         </SafeAreaRowWrapperDetail>
         <NewView style={{ marginBottom: 15 }} />
         <Text
@@ -73,12 +72,7 @@ export default function AgencyDetails({ route, navigation }) {
         <NewView style={{ marginBottom: 15 }} />
         {_data.agency_services.map((el, key) => {
           return (
-            <MiniCard
-              key={key}
-              activeOpacity={0.7}
-              onPress={() => {
-                setChecked(!checked)
-              }}>
+            <MiniCard key={key} activeOpacity={0.7}>
               <ContentViewMinCard>
                 <Text
                   content={el.agency_service_title}
@@ -86,12 +80,7 @@ export default function AgencyDetails({ route, navigation }) {
                   up={'cap'}
                   size={18}
                 />
-                <Text
-                  content={'See more'}
-                  weight={600}
-                  color={'dominant'}
-                  size={18}
-                />
+                <Text content={'See more'} color={'dominant'} size={18} />
               </ContentViewMinCard>
               <Icon name='ri-reply-line' color={'black'} size={24} />
             </MiniCard>
@@ -112,11 +101,9 @@ export default function AgencyDetails({ route, navigation }) {
           return (
             <AnimatedTouchable
               style={{
-                marginTop: 3,
-                marginBottom: 15,
+                marginBottom: 14,
                 borderRadius: 15,
                 paddingVertical: 10,
-
                 backgroundColor: palette.primary.accent_0,
               }}
               onPress={() => navigation.navigate('')}
@@ -130,9 +117,9 @@ export default function AgencyDetails({ route, navigation }) {
                       uri: el.agency_guide_picture,
                     }}
                     style={{
-                      borderRadius: 10,
-                      height: 60,
-                      width: 60,
+                      width: 48,
+                      height: 48,
+                      borderRadius: 5,
                       marginRight: 15,
                     }}
                   />
@@ -147,14 +134,13 @@ export default function AgencyDetails({ route, navigation }) {
                     <Text up={'cap'} content={el.agency_guide_language} />
                   </View>
                 </Gap>
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                  <Icon
-                    name='ri-arrow-drop-right-line'
-                    color={palette.primary.accent_900}
-                    style={{ marginLeft: 20 }}
-                    size={21}
-                  />
-                </View>
+
+                <Icon
+                  name='ri-arrow-drop-right-line'
+                  color={palette.primary.accent_900}
+                  style={{ marginLeft: 20 }}
+                  size={21}
+                />
               </SafeAreaRowWrapperDetail>
             </AnimatedTouchable>
           )
