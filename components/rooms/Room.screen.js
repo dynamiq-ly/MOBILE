@@ -1,6 +1,9 @@
 import AreaView from 'utils/TabAreaView'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
+import { useQuery } from 'react-query'
+import { __query } from 'hooks/useApi'
+
 import { useState } from 'react'
 import { rooms } from 'mock/rooms'
 import { View as Gap } from 'react-native'
@@ -9,52 +12,98 @@ import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { VerticalListLine } from 'styles/list.module'
 import { SquareCardSmall } from 'components/cards/SquareCard'
+import { LogBox, RefreshControl } from 'react-native'
 
 export default function RoomScreen({ navigation }) {
-  const [isCategory, setCategory] = useState('all')
+  const [isCategory, setCategory] = useState({ id: -1, room_type_name: 'all' })
+
+  const { data: roomCategory } = useQuery(
+    '@room-category',
+    roomCategoryFetcher,
+    {
+      refetchOnMount: true,
+      initialData: [],
+    }
+  )
+
+  const {
+    data: all_Rooms,
+    refetch,
+    isFetched,
+  } = useQuery('@rooms', roomsFetcher, {
+    refetchOnMount: true,
+    initialData: [],
+  })
 
   return (
     <View>
       <Gap>
         <HScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {room_category_Array.map((el, key) => {
-            return (
-              <Gap
-                style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
-                <FixedWidthButton
-                  title={el}
-                  func={() => setCategory(el)}
-                  active={isCategory !== el ? true : false}
-                />
-                {room_category_Array.length !== key + 1 && <VerticalListLine />}
-              </Gap>
-            )
-          })}
+          {[{ id: -1, room_type_name: 'all' }, ...roomCategory].map(
+            (el, key) => {
+              return (
+                <Gap
+                  style={{ alignItems: 'center', flexDirection: 'row' }}
+                  key={key}>
+                  <FixedWidthButton
+                    title={el.room_type_name}
+                    func={() => setCategory(el)}
+                    active={
+                      isCategory.room_type_name !== el.room_type_name
+                        ? true
+                        : false
+                    }
+                  />
+                  {roomCategory.length !== key && <VerticalListLine />}
+                </Gap>
+              )
+            }
+          )}
+          <Gap style={{ marginLeft: 24 }} />
         </HScrollView>
       </Gap>
       <AreaView>
         <GridLayout>
-          {[...Array(10)].map((_, key) => {
-            return (
-              <SquareCardSmall
-                key={key}
-                title={rooms[0].room_name}
-                image={
-                  rooms[0].room_images[Math.floor(Math.random() * 3)].image
-                }
-                onPress={() =>
-                  navigation.navigate('menu-tab-stack-rooms-detail', {
-                    _data: rooms[0],
-                  })
-                }
-              />
+          {all_Rooms
+            .filter((el) =>
+              isCategory.room_type_name === 'all'
+                ? el
+                : el.room_type_name === isCategory.room_type_name
             )
-          })}
+            .map((el) => {
+              return (
+                <SquareCardSmall
+                  key={el.id}
+                  title={el.room_name}
+                  image={rooms[0].room_images[el.id].image}
+                  onPress={() =>
+                    navigation.navigate('menu-tab-stack-rooms-detail', {
+                      _data: el,
+                    })
+                  }
+                />
+              )
+            })}
         </GridLayout>
       </AreaView>
     </View>
   )
 }
 
-const room_category_Array = ['all', 'suites', 'rooms', 'deluxe', 'themed']
+let roomCategoryFetcher = function () {
+  return __query('api/rooms/room-category')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+let roomsFetcher = function () {
+  return __query('api/rooms&status=1')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)
