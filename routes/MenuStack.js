@@ -89,6 +89,7 @@ import {
   AgencyDetails,
   AboutHotelScreen,
   PoolTowelsScreen,
+  BankAndAtmScreen,
 } from 'components/export'
 
 import Cart from 'cart/Cart'
@@ -506,6 +507,11 @@ const safety_Stack_Array = [
     path: 'menu-tab-stack-room-service-television',
     component: TelevisionScreen,
     header: () => <StackHeader name={'television'} />,
+  },
+  {
+    path: 'menu-tab-stack-bank-and-atm',
+    component: BankAndAtmScreen,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-gym',

@@ -115,7 +115,7 @@ const array = [
   {
     icon: 'ri-bank-line',
     name: 'Banks & ATMs',
-    path: '',
+    path: 'menu-tab-stack-bank-and-atm',
     color: '#118181',
   },
   {
