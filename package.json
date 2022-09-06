@@ -29,6 +29,7 @@
     "@react-navigation/native-stack": "^6.6.2",
     "@react-navigation/stack": "^6.2.2",
     "@react-spring/native": "^9.4.5",
+    "@rnmapbox/maps": "github:rnmapbox/maps#main",
     "axios": "^0.27.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "lodash": "^4.17.21",
