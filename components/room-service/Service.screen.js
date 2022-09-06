@@ -29,9 +29,15 @@ export default function Services({ navigation }) {
 
 const menus = [
   {
-    name: 'food service',
+    name: 'food rooms services',
     color: '#A91079',
     icon: 'ri-restaurant-line',
+    path: 'menu-tab-stack-room-service-food-service',
+  },
+  {
+    name: 'drinks rooms services',
+    color: '#A91079',
+    icon: 'ri-bowel-line',
     path: 'menu-tab-stack-room-service-food-service',
   },
   {

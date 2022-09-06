@@ -410,7 +410,7 @@ const safety_Stack_Array = [
   {
     path: 'menu-tab-stack-room-service',
     component: RoomService,
-    header: () => <StackHeader name={'room service'} />,
+    header: () => <StackHeader name={"room's services"} />,
   },
   {
     path: 'menu-tab-stack-room-service-mini-bar',

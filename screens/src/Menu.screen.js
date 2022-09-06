@@ -140,7 +140,7 @@ const menuArray3 = [
   },
   {
     icon: 'ri-home-wifi-line',
-    name: 'room Services',
+    name: "room's services",
     path: 'menu-tab-stack-room-service',
     color: '#be185d',
   },
