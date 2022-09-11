@@ -106,11 +106,18 @@ export default function AgencyDetails({ route, navigation }) {
                 paddingVertical: 10,
                 backgroundColor: palette.primary.accent_0,
               }}
-              onPress={() => navigation.navigate('')}
-              activeOpacity={0.8}>
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-agency-tour-guide', {
+                  _name: el.agency_guide_name,
+                  _data: el,
+                })
+              }
+              activeOpacity={0.8}
+            >
               <SafeAreaRowWrapperDetail
                 key={key}
-                style={{ marginHorizontal: 15, alignItems: 'center' }}>
+                style={{ marginHorizontal: 15, alignItems: 'center' }}
+              >
                 <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <RnImage
                     source={{
