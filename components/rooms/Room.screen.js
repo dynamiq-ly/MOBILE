@@ -4,10 +4,10 @@ import FixedWidthButton from 'components/button/FixedWidthButton'
 import { useQuery } from 'react-query'
 import { __query } from 'hooks/useApi'
 
-import { useState } from 'react'
 import { rooms } from 'mock/rooms'
 import { View as Gap } from 'react-native'
 import { View } from 'styles/detail.module'
+import { useCallback, useState } from 'react'
 import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { VerticalListLine } from 'styles/list.module'
@@ -34,6 +34,13 @@ export default function RoomScreen({ navigation }) {
     refetchOnMount: true,
     initialData: [],
   })
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
 
   return (
     <View>
@@ -62,7 +69,10 @@ export default function RoomScreen({ navigation }) {
           <Gap style={{ marginLeft: 24 }} />
         </HScrollView>
       </Gap>
-      <AreaView>
+      <AreaView
+        refreshControl={
+          <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+        }>
         <GridLayout>
           {all_Rooms
             .filter((el) =>
