@@ -12,7 +12,7 @@ export const StyledText = styled.Text`
       ? 'lowercase'
       : 'none'};
   font-size: ${({ scale }) => (scale ? fontPixel(scale) : 14)}px;
-  font-family: ${({ font }) => (font ? `SF-${font}` : 'SF-400')};
+  font-family: ${({ font }) => (font ? `SF_${font}` : 'SF_400')};
   color: ${({ theme, color }) => {
     switch (color) {
       case 'white':
