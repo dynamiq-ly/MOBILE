@@ -4,29 +4,18 @@ import Icon from 'react-native-remix-icon'
 import Widecard from 'components/cards/Widecard'
 import FullImageCard from 'components/cards/FullImageCard'
 
-import { palette } from 'themes/palette'
 import { HScrollView } from 'styles/app.module'
 import { __auth } from 'store/AuthSusbcribeProvider'
-import { SafeAreaRowWrapperDetail } from 'styles/detail.module'
 import {
   ImageSquareCard,
   StyledSquareCard,
   StyledTagCards,
 } from 'styles/cards.module'
-import {
-  View as Gap,
-  Image as RnImage,
-  Platform,
-  StatusBar,
-  TouchableOpacity,
-} from 'react-native'
-import { useQuery } from 'react-query'
+import { View as Gap, TouchableOpacity } from 'react-native'
 
 export default function MainScreen({ navigation }) {
   return (
     <AreaView>
-      <AccountHeader />
-
       <Gap
         style={{
           justifyContent: 'space-between',
@@ -37,10 +26,7 @@ export default function MainScreen({ navigation }) {
           <TouchableOpacity
             style={{ flex: 1, justifyContent: 'center' }}
             onPress={() =>
-              navigation.navigate('menu-tab', {
-                screen: 'menu-tab-stack-how-can-we-help',
-                initial: false,
-              })
+              navigation.navigate('menu-tab-stack-how-can-we-help')
             }>
             <Icon name={'ri-headphone-line'} color={'black'} />
             <Text size={14} up={'up'} weight={500} content={'reception'} />
@@ -49,12 +35,7 @@ export default function MainScreen({ navigation }) {
         <StyledTagCards style={{ width: '23%', height: 78 }}>
           <TouchableOpacity
             style={{ flex: 1, justifyContent: 'center' }}
-            onPress={() =>
-              navigation.navigate('menu-tab', {
-                screen: 'menu-tab-stack-room-service',
-                initial: false,
-              })
-            }>
+            onPress={() => navigation.navigate('menu-tab-stack-room-service')}>
             <Icon name={'ri-hand-heart-line'} color={'purple'} />
             <Text size={14} up={'up'} weight={500} content={'Services'} />
           </TouchableOpacity>
@@ -64,10 +45,7 @@ export default function MainScreen({ navigation }) {
           <TouchableOpacity
             style={{ flex: 1, justifyContent: 'center' }}
             onPress={() =>
-              navigation.navigate('menu-tab', {
-                screen: 'menu-tab-stack-transportation',
-                initial: false,
-              })
+              navigation.navigate('menu-tab-stack-transportation')
             }>
             <Icon name={'ri-car-line'} color={'red'} />
             <Text size={13} up={'up'} weight={500} content={'transport'} />
@@ -77,12 +55,7 @@ export default function MainScreen({ navigation }) {
         <StyledTagCards style={{ width: '23%', height: 78 }}>
           <TouchableOpacity
             style={{ flex: 1, justifyContent: 'center' }}
-            onPress={() =>
-              navigation.navigate('menu-tab', {
-                screen: 'menu-tab-stack-our-hotels',
-                initial: false,
-              })
-            }>
+            onPress={() => navigation.navigate('menu-tab-stack-our-hotels')}>
             <Icon name={'ri-hotel-line'} color={'blue'} />
             <Text size={14} up={'up'} weight={500} content={'hotels'} />
           </TouchableOpacity>
@@ -100,12 +73,7 @@ export default function MainScreen({ navigation }) {
             key={key}
             title={item.name}
             image={item.image}
-            onPress={() =>
-              navigation.navigate('menu-tab', {
-                screen: item.path,
-                initial: false,
-              })
-            }
+            onPress={() => navigation.navigate(item.path)}
           />
         ))}
       </HScrollView>
@@ -124,12 +92,7 @@ export default function MainScreen({ navigation }) {
             name={item.name}
             image={item.image}
             state={'hidden'}
-            onPress={() =>
-              navigation.navigate('menu-tab', {
-                screen: item.path,
-                initial: false,
-              })
-            }
+            onPress={() => navigation.navigate(item.path)}
           />
         </Gap>
       ))}
@@ -152,12 +115,7 @@ export default function MainScreen({ navigation }) {
               title={item.name}
               image={item.image}
               position={item.id % 2 !== 1 && 'end'}
-              onPress={() =>
-                navigation.navigate('menu-tab', {
-                  screen: item.path,
-                  initial: false,
-                })
-              }
+              onPress={() => navigation.navigate(item.path)}
             />
           </Gap>
         ))}
@@ -165,80 +123,6 @@ export default function MainScreen({ navigation }) {
 
       <Gap style={{ marginBottom: 24 }} />
     </AreaView>
-  )
-}
-
-const AccountHeader = function () {
-  const { isLoggedIn, subscribedUser } = __auth()
-
-  const { data } = useQuery('@weather', fetchWeather, {
-    refetchOnMount: true,
-  })
-
-  return (
-    <SafeAreaRowWrapperDetail
-      style={{
-        alignItems: 'center',
-        marginTop: Platform.OS === 'ios' ? 52 : StatusBar.currentHeight + 18,
-        marginBottom: 24,
-      }}>
-      <Gap
-        style={{
-          flex: 1,
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}>
-        <Gap
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            flexDirection: 'row',
-          }}>
-          <Icon
-            size={28}
-            name={'ri-map-pin-line'}
-            color={palette.secondary.accent_800}
-          />
-          <Gap style={{ marginLeft: 5, flex: 1 }}>
-            <Text size={18} up={'up'} content={'beia Grp'} weight={600} />
-            <Text
-              up={'cap'}
-              size={18}
-              content={'hotel lella el beia kantaoui'}
-            />
-          </Gap>
-        </Gap>
-        <Gap>
-          <RnImage
-            style={{
-              width: 42,
-              height: 42,
-              alignItems: 'center',
-              marginHorizontal: 10,
-              justifyContent: 'center',
-            }}
-            source={{
-              uri: data
-                ? `http:${data.current.condition.icon}`
-                : 'https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png',
-            }}
-          />
-        </Gap>
-        {isLoggedIn && (
-          <RnImage
-            style={{
-              width: 42,
-              height: 42,
-              borderRadius: 18,
-              marginRight: 10,
-              alignSelf: 'flex-end',
-            }}
-            source={{ uri: subscribedUser.profile_image }}
-          />
-        )}
-      </Gap>
-    </SafeAreaRowWrapperDetail>
   )
 }
 
@@ -339,11 +223,3 @@ const luxury_and_relax_array = [
       'https://www.lifefitnessemea.com/resource/image/643794/portrait_ratio1x1/400/400/5cbd7a48ed5dd9647aad3d2bd2562c90/Ge/lfa-trainers-fitfair2019-20191122-wf2-8495-2-.jpg',
   },
 ]
-
-let fetchWeather = function () {
-  return fetch(
-    'http://api.weatherapi.com/v1/current.json?key=bfb63b0183bf4384969123512201010&q=36.8392,10.1577&aqi=no'
-  ).then((res) => {
-    return res.json()
-  })
-}

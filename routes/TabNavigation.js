@@ -64,12 +64,6 @@ const tabComponents = [
     component: NotificationTab,
     header: <TextHeader name={'Notifications'} />,
   },
-  {
-    path: 'menu-tab',
-    name: 'Menu',
-    component: MenuStackNavigation,
-    header: false,
-  },
 ]
 
 /**

@@ -124,7 +124,7 @@ const MenuStackNavigation = () => {
       />
 
       <Stack.Group key={'menu stack'}>
-        {safety_Stack_Array.map((el, key) => {
+        {Stack_Array.map((el, key) => {
           return (
             <Stack.Screen
               key={key}
@@ -144,7 +144,7 @@ const MenuStackNavigation = () => {
 
 export default MenuStackNavigation
 
-const safety_Stack_Array = [
+export const Stack_Array = [
   {
     path: 'menu-tab-stack-shops',
     component: ShopScreen,
