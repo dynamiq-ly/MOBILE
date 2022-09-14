@@ -1,7 +1,7 @@
 import TabNavigation from './TabNavigation'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 
-import MenuScreen from '../screens/src/Menu.screen'
+import MenuScreen from '../components/drawer/Menu.screen'
 
 const Drawer = createDrawerNavigator()
 
@@ -14,7 +14,7 @@ const DrawerNavigation = () => {
         swipeEnabled: true,
         drawerAllowFontScaling: true,
         drawerStyle: {
-          width: '85%',
+          width: '90%',
         },
       }}
       drawerContent={(props) => <MenuScreen {...props} />}>

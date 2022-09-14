@@ -1,18 +1,11 @@
-import { Platform } from 'react-native'
-import { palette } from 'themes/palette'
 import Icon from 'react-native-remix-icon'
-import MenuStackNavigation from './MenuStack'
+
+import { palette } from 'themes/palette'
 import { SearchHeader, TextHeader } from 'components/export'
 import { fontPixel, pixelSizeHorizontal } from 'utils/normalization'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { getFocusedRouteNameFromRoute } from '@react-navigation/native'
-
-import {
-  MainTab,
-  SearchTab,
-  BookmarkTab,
-  NotificationTab,
-} from 'screens/export'
+import { MainTab, SearchTab, BookmarkTab } from 'screens/export'
+import { DrawerHeaderMain } from 'components/header/DrawerHeader'
 
 const Tab = createBottomTabNavigator()
 
@@ -44,7 +37,7 @@ const tabComponents = [
     path: 'main-tab',
     name: 'Main',
     component: MainTab,
-    header: false,
+    header: <DrawerHeaderMain name={'hipotels'} />,
   },
   {
     path: 'bookmark-tab',
@@ -57,12 +50,6 @@ const tabComponents = [
     name: 'Search',
     component: SearchTab,
     header: <SearchHeader />,
-  },
-  {
-    path: 'notification-tab',
-    name: 'Notifications',
-    component: NotificationTab,
-    header: <TextHeader name={'Notifications'} />,
   },
 ]
 
@@ -103,22 +90,10 @@ const TabNavigation = () => {
             name={el.path}
             key={el.path}
             component={el.component}
-            options={({ route }) => ({
+            options={{
               header: () => el.header,
-              tabBarStyle: ((route) => {
-                const state = getFocusedRouteNameFromRoute(route) ?? ''
-                if (getScreensToHideTabTabOnActiveRoutes(state)) {
-                  return {
-                    height: 0,
-                    opacity: 0,
-                    marginBottom: Platform.OS === 'ios' ? -24 : 0,
-                    backgroundColor: palette.primary.accent_100,
-                  }
-                } else {
-                  return { ...barStyle }
-                }
-              })(route),
-            })}
+              tabBarStyle: { ...barStyle },
+            }}
           />
         )
       })}

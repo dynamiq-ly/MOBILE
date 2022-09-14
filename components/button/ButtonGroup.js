@@ -1,7 +1,12 @@
+import { useContext } from 'react'
 import { View } from 'react-native'
 import Text from 'components/text/Text'
 import Icon from 'react-native-remix-icon'
 import { fontPixel } from 'utils/normalization'
+
+import { NavigationContext, DrawerActions } from '@react-navigation/native'
+import { useDrawerStatus } from '@react-navigation/drawer'
+
 import {
   GroupsBtn,
   ButtonItem,
@@ -16,6 +21,8 @@ import {
  */
 
 export default function GroupButton({ array = [], index, callback }) {
+  const _nav = useContext(NavigationContext)
+
   if (array.length === 0) return null
   else
     return (
@@ -25,7 +32,10 @@ export default function GroupButton({ array = [], index, callback }) {
             <View key={`${key}-${index}`}>
               <ButtonItem
                 activeOpacity={0.9}
-                onPress={() => callback.navigate(el.path)}>
+                onPress={() => {
+                  callback.navigate(el.path)
+                  _nav.dispatch(DrawerActions.closeDrawer())
+                }}>
                 <IconBox color={el.color}>
                   <Icon name={el.icon} size={fontPixel(24)} color={'#fffffe'} />
                 </IconBox>
