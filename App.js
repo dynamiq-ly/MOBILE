@@ -11,14 +11,13 @@ import StackNavigation from 'routes/StackNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 
 // state and fetched data manager
+import { useEffect } from 'react'
 import { Platform, Text, View } from 'react-native'
-import { useCallback, useEffect } from 'react'
 import { enableScreens } from 'react-native-screens'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
 // custom font
 import { useFonts } from 'expo-font'
-import * as SplashScreen from 'expo-splash-screen'
 
 const queryClient = new QueryClient()
 SplashScreen.preventAutoHideAsync()
@@ -36,24 +35,13 @@ export default function App() {
     SF_900: require('./assets/fonts/SF_900.ttf'),
   })
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      await SplashScreen.hideAsync()
-    }
-  }, [fontsLoaded])
-
   useEffect(() => {
     if (Platform.OS === 'ios') {
       enableScreens(false)
     }
   }, []) // eslint-disable-line
 
-  if (!fontsLoaded)
-    return (
-      <View style={{ paddingTop: 100 }}>
-        <Text>{JSON.stringify(fontsLoaded)}</Text>
-      </View>
-    )
+  if (!fontsLoaded) return null
   else {
     return (
       <ThemeProvider theme={palette}>
@@ -65,9 +53,7 @@ export default function App() {
               {/* auth provider */}
               <AuthProvider>
                 {/* screen manager */}
-                <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                  <StackNavigation />
-                </View>
+                <StackNavigation />
               </AuthProvider>
             </NavigationContainer>
           </QueryClientProvider>
