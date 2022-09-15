@@ -11,13 +11,14 @@ import StackNavigation from 'routes/StackNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 
 // state and fetched data manager
-import { useEffect } from 'react'
-import { Platform, Text, View } from 'react-native'
+import { Platform, View } from 'react-native'
+import { useCallback, useEffect } from 'react'
 import { enableScreens } from 'react-native-screens'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
 // custom font
 import { useFonts } from 'expo-font'
+import * as SplashScreen from 'expo-splash-screen'
 
 const queryClient = new QueryClient()
 SplashScreen.preventAutoHideAsync()
@@ -34,6 +35,12 @@ export default function App() {
     SF_800: require('./assets/fonts/SF_800.ttf'),
     SF_900: require('./assets/fonts/SF_900.ttf'),
   })
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync()
+    }
+  }, [fontsLoaded])
 
   useEffect(() => {
     if (Platform.OS === 'ios') {
@@ -53,7 +60,9 @@ export default function App() {
               {/* auth provider */}
               <AuthProvider>
                 {/* screen manager */}
-                <StackNavigation />
+                <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                  <StackNavigation />
+                </View>
               </AuthProvider>
             </NavigationContainer>
           </QueryClientProvider>
