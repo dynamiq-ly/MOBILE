@@ -37,7 +37,7 @@ const DrawerHeaderMain = ({ name }) => {
               borderRadius: 100,
             }}
             source={{
-              uri: 'https://yt3.ggpht.com/ytc/AMLnZu_tKCuboK3yaSmmG2d_KNurTVoD6-72B9C3B550Fw=s900-c-k-c0x00ffffff-no-rj',
+              uri: 'https://www.pngitem.com/pimgs/m/267-2679921_star-crown-png-crown-hotel-logo-png-transparent.png',
             }}
           />
           <Text

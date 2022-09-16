@@ -29,18 +29,21 @@ export default function PhoneDirectoryScreen() {
           <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
         </BoxIcon>
         <BoxText>
+          <Text content={'reception'} weight={600} up={'cap'} size={20} />
+          <Text content={'dial 9.'} color={'gray'} up={'cap'} size={16} />
+        </BoxText>
+      </PhoneDirectoryRow>
+      {/*  */}
+      <PhoneDirectoryRow>
+        <BoxIcon>
+          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
+        </BoxIcon>
+        <BoxText>
+          <Text content={'room to room'} weight={600} up={'cap'} size={20} />
           <Text
-            content={'call another room within hotel'}
-            weight={600}
-            up={'cap'}
-            size={18}
-          />
-          <Text
-            content={
-              'Tap # then type in the room of the number you want to call.'
-            }
+            content={'Dial directly the room number'}
             color={'gray'}
-            size={14}
+            size={16}
           />
         </BoxText>
       </PhoneDirectoryRow>
@@ -51,17 +54,15 @@ export default function PhoneDirectoryScreen() {
         </BoxIcon>
         <BoxText>
           <Text
-            content={'make national calls'}
+            content={'international calls'}
             weight={600}
             up={'cap'}
-            size={18}
+            size={20}
           />
           <Text
-            content={
-              'to call someone outside the hotel within the country simply type in the number you want to call.'
-            }
+            content={'Dial 0 + Internation code + Number.'}
             color={'gray'}
-            size={14}
+            size={16}
           />
         </BoxText>
       </PhoneDirectoryRow>
@@ -71,19 +72,8 @@ export default function PhoneDirectoryScreen() {
           <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
         </BoxIcon>
         <BoxText>
-          <Text
-            content={'make international calls'}
-            weight={600}
-            up={'cap'}
-            size={18}
-          />
-          <Text
-            content={
-              'to call someone outside the hotel outside the country simply type in the country phone code then the number you want to call.'
-            }
-            color={'gray'}
-            size={14}
-          />
+          <Text content={'national call'} weight={600} up={'cap'} size={20} />
+          <Text content={'Dial 0 + number.'} color={'gray'} size={16} />
         </BoxText>
       </PhoneDirectoryRow>
       {/*  */}
@@ -92,19 +82,18 @@ export default function PhoneDirectoryScreen() {
           <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
         </BoxIcon>
         <BoxText>
-          <Text
-            content={'to call reception'}
-            weight={600}
-            up={'cap'}
-            size={18}
-          />
-          <Text
-            content={
-              'simply hold on 0 for a moment and you will be connected to reception.'
-            }
-            color={'gray'}
-            size={14}
-          />
+          <Text content={'spa'} weight={600} up={'cap'} size={20} />
+          <Text content={'Dial 11.'} color={'gray'} size={16} />
+        </BoxText>
+      </PhoneDirectoryRow>
+      {/*  */}
+      <PhoneDirectoryRow>
+        <BoxIcon>
+          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
+        </BoxIcon>
+        <BoxText>
+          <Text content={'emergency'} weight={600} up={'cap'} size={20} />
+          <Text content={'Dial 0 + 911.'} color={'gray'} size={16} />
         </BoxText>
       </PhoneDirectoryRow>
       <View style={{ marginTop: 24 }} />

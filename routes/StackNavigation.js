@@ -52,7 +52,6 @@ import {
   RestoMenuAlcoholDrinksDetailsScreen,
   SpaScreen,
   HouseKeepingScreen,
-  HouseKeepingServiceScreen,
   RoomScreen,
   FoodServiceScreen,
   FoodServiceDetailScreen,
@@ -94,7 +93,6 @@ import {
   PoolTowelsScreen,
   BankAndAtmScreen,
   AgencyTourGuide,
-  TextHeader,
 } from 'components/export'
 
 const Stack = createNativeStackNavigator()
@@ -495,11 +493,6 @@ const stack_array_screens = [
   {
     path: 'menu-tab-stack-housekeeping',
     component: HouseKeepingScreen,
-    header: () => <StackHeader name={'house keeping'} />,
-  },
-  {
-    path: 'menu-tab-stack-housekeeping-service',
-    component: HouseKeepingServiceScreen,
     header: () => <StackHeader name={'house keeping'} />,
   },
   {

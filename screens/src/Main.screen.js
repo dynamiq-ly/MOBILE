@@ -16,13 +16,13 @@ import { View as Gap, TouchableOpacity } from 'react-native'
 export default function MainScreen({ navigation }) {
   return (
     <AreaView>
-      <Gap style={{ marginTop: 0, marginBottom: 24 }}>
+      <Gap style={{ marginBottom: 24 }}>
         <Text
           size={24}
           up={'cap'}
           color={'gray'}
           align={'center'}
-          content={'playa de palma placa'}
+          content={'Beia bakhta palaca'}
         />
       </Gap>
       <Gap

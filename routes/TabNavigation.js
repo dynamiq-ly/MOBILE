@@ -37,7 +37,7 @@ const tabComponents = [
     path: 'main-tab',
     name: 'Main',
     component: MainTab,
-    header: <DrawerHeaderMain name={'hipotels'} />,
+    header: <DrawerHeaderMain name={'Bakhta'} />,
   },
   {
     path: 'bookmark-tab',
