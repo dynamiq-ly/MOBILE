@@ -165,7 +165,7 @@ export default function ProfileScreen({ navigation }) {
         icon={'logout-circle'}
         func={() => {
           logout()
-          navigation.navigate('menu-tab-stack')
+          navigation.navigate('Home-initial-drawer')
         }}
       />
       <View style={{ marginBottom: 24 }} />

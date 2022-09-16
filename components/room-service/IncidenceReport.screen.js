@@ -1,5 +1,6 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
+import Input from 'components/input/Input'
 import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
 import DropDownPicker from 'react-native-dropdown-picker'
@@ -66,6 +67,12 @@ export default function IncidenceReport() {
         }}
       />
       <animated.View style={{ ...spring }} />
+      <Text
+        size={18}
+        color={'gray'}
+        content={'if there is multiple items please specify which one.'}
+      />
+      <Input icon={'ri-settings-line'} placeholder={'specify item location'} />
       <Text
         size={18}
         color={'gray'}

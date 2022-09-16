@@ -1,7 +1,7 @@
 // tabs
 export { default as MainTab } from './src/Main.screen'
-export { default as MenuTab } from './src/Menu.screen'
-export { default as NotificationTab } from './src/Notification.screen'
+export { default as MenuTab } from '../components/drawer/Menu.screen'
+export { default as NotificationTab } from './stack/Notification.screen'
 export { default as SearchTab } from './src/Search.screen'
 export { default as BookmarkTab } from './src/Bookmark.screen'
 

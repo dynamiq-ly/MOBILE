@@ -21,6 +21,7 @@ import { useFonts } from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
 
 const queryClient = new QueryClient()
+SplashScreen.preventAutoHideAsync()
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,13 +35,6 @@ export default function App() {
     SF_800: require('./assets/fonts/SF_800.ttf'),
     SF_900: require('./assets/fonts/SF_900.ttf'),
   })
-
-  useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync()
-    }
-    prepare()
-  }, [])
 
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {

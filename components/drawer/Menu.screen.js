@@ -1,4 +1,5 @@
 import AreaView from 'utils/TabAreaView'
+import SafeAreaView from 'utils/SafeAreaView'
 
 import { useEffect, useState } from 'react'
 import { __auth } from 'store/AuthSusbcribeProvider'
@@ -64,18 +65,18 @@ export default function MenuScreen({ navigation }) {
   }, [text])
 
   return (
-    <AreaView>
-      <SearchInput value={text} onChange={setText} />
+    <SafeAreaView>
       {isLoggedIn && text.length === 0 && (
         <ProfileButtonCard navigation={navigation} animate={text} />
       )}
+      <SearchInput value={text} onChange={setText} />
       <GroupButton array={arr1} index={1} callback={navigation} />
       <GroupButton array={arr2} index={2} callback={navigation} />
       <GroupButton array={arr3} index={3} callback={navigation} />
       <GroupButton array={arr4} index={4} callback={navigation} />
       <GroupButton array={arr5} index={5} callback={navigation} />
       <GroupButton array={arr6} index={6} callback={navigation} />
-    </AreaView>
+    </SafeAreaView>
   )
 }
 
