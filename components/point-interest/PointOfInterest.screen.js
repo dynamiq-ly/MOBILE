@@ -1,65 +1,113 @@
-import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
+import NotFound from 'components/notFound/NotFound'
 import SquareCard from 'components/cards/SquareCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
+import { useQuery } from 'react-query'
+import { baseUrl, __query } from 'hooks/useApi'
 import { View } from 'styles/detail.module'
 import { View as Gap } from 'react-native'
 import { CartView } from 'styles/cart.module'
-import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { fontPixel } from 'utils/normalization'
 import { VerticalListLine } from 'styles/list.module'
-import { Interesting_Point } from 'mock/interest_list'
+
+import { FlatList, LogBox, RefreshControl } from 'react-native'
 
 export default function PointInterestScreen({ navigation }) {
-  const [isCategory, setCategory] = useState('monuments')
+  const [isCategory, setCategory] = useState('all')
+
+  const { data: points_type } = useQuery(
+    '@point-interest-type',
+    pointOfinterestTypesFetcher,
+    {
+      refetchOnMount: true,
+      initialData: [],
+    }
+  )
+
+  const {
+    data: places,
+    refetch,
+    status,
+  } = useQuery('@point-interest', pointOfInterestFetcher, {
+    refetchOnMount: true,
+    initialData: [],
+  })
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
     <View>
-      <Gap>
-        <HScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {food_category_Array.map((el, key) => {
-            return (
-              <Gap
-                style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}>
-                <FixedWidthButton
-                  title={el}
-                  func={() => setCategory(el)}
-                  active={isCategory !== el ? true : false}
-                />
-                {food_category_Array.length !== key + 1 && <VerticalListLine />}
-              </Gap>
-            )
-          })}
-        </HScrollView>
-      </Gap>
-      <AreaView>
-        <GridLayout>
-          {Interesting_Point.filter((el) =>
-            isCategory === 'all' ? el.type !== 'all' : el.type === isCategory
-          ).map((element) => {
-            return (
+      {status === 'error' && <NotFound killProcess />}
+      {places.length < 1 ? (
+        <NotFound />
+      ) : (
+        status === 'success' && (
+          <FlatList
+            refreshControl={
+              <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+            }
+            data={places.filter((el) =>
+              isCategory === 'all'
+                ? el.point_type !== 'all'
+                : el.point_type === isCategory
+            )}
+            stickyHeaderIndices={[0]}
+            keyExtractor={(item) => item.id}
+            ListHeaderComponent={
+              <HScrollView horizontal showsHorizontalScrollIndicator={false}>
+                {points_type.length > 0 &&
+                  [{ id: -1, point_type: 'all' }, ...points_type].map(
+                    (el, key) => {
+                      return (
+                        <Gap
+                          style={{ alignItems: 'center', flexDirection: 'row' }}
+                          key={el.id}>
+                          <FixedWidthButton
+                            title={el.point_type}
+                            func={() => setCategory(el.point_type)}
+                            active={isCategory !== el.point_type ? true : false}
+                          />
+                          {points_type.length !== key && <VerticalListLine />}
+                        </Gap>
+                      )
+                    }
+                  )}
+              </HScrollView>
+            }
+            renderItem={({ item }) => (
               <SquareCard
-                key={element.id}
-                title={element.name}
-                image={element.image[Math.floor(Math.random() * 3)].image}
-                rating={element.rating}
-                location={element.location}
+                key={item.id}
+                title={item.point_title}
+                image={`${baseUrl}storage/bars/${item.images[0].image}`}
+                rating={item.rating}
+                location={item.point_small_summary}
                 onPress={() =>
                   navigation.navigate(
                     'menu-tab-stack-point-of-interest-detail',
                     {
-                      _data: element,
+                      _id: item.id,
+                      _data: item,
                     }
                   )
                 }
               />
-            )
-          })}
-        </GridLayout>
-      </AreaView>
+            )}
+            numColumns={2}
+            columnWrapperStyle={{
+              paddingTop: 16,
+              paddingHorizontal: 16,
+            }}
+          />
+        )
+      )}
     </View>
   )
 }
@@ -76,10 +124,22 @@ export const PointInterestScreenOptions = ({ func }) => {
   )
 }
 
-const food_category_Array = [
-  'all',
-  'monuments',
-  'beaches',
-  'churches',
-  'factories',
-]
+let pointOfinterestTypesFetcher = function () {
+  return __query
+    .get('api/point-of-interest/type')
+    .then((res) => res.data)
+    .catch(() => {
+      throw new Error(err.message)
+    })
+}
+
+let pointOfInterestFetcher = function () {
+  return __query
+    .get('api/point-of-interest&status=1')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)
