@@ -5,7 +5,7 @@ export const food_servie_array = [
 
     food_duration: 'From 8:00 AM to 11:00 AM',
     food_description:
-      'Start a great day with great beakfast. With gluten free products and vegan breakfast are also available.                                                                           Room service are 7£ pe room(vat included). ',
+      'Start a great day with great beakfast. With gluten free products and vegan breakfast are also available.Room service are 7£ pe room(vat included).',
     food_min_price: ' Minimum order is 15£',
 
     food_name: 'Main',

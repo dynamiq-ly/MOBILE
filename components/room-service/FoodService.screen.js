@@ -23,8 +23,7 @@ export default function FoodService({ navigation, route }) {
             return (
               <Gap
                 style={{ alignItems: 'center', flexDirection: 'row' }}
-                key={key}
-              >
+                key={key}>
                 <FixedWidthButton
                   title={el}
                   func={() => setCategory(el)}
@@ -34,16 +33,16 @@ export default function FoodService({ navigation, route }) {
               </Gap>
             )
           })}
+          <Gap style={{ marginRight: 26 }} />
         </HScrollView>
       </Gap>
-      <NewView style={{ marginBottom: 15 }} />
-      <NewView>
+
+      <AreaView>
         <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Icon
             name='ri-time-line'
             color={palette.secondary.accent_700}
             size={24}
-            style={{ marginLeft: 15 }}
           />
           {food_servie_array
             .filter((el) => el.food_type === isCategory)
@@ -54,18 +53,17 @@ export default function FoodService({ navigation, route }) {
                   size={18}
                   weight={500}
                   content={el.food_duration}
-                  style={{ marginLeft: 15 }}
+                  style={{ marginLeft: 10 }}
                 />
               )
             })}
         </Gap>
-        <NewView style={{ marginBottom: 15 }} />
+        <NewView style={{ marginBottom: 5 }} />
         <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Icon
             name='ri-money-dollar-circle-line'
             color={palette.secondary.accent_700}
             size={24}
-            style={{ marginLeft: 15 }}
           />
           {food_servie_array
             .filter((el) => el.food_type === isCategory)
@@ -81,25 +79,23 @@ export default function FoodService({ navigation, route }) {
               )
             })}
         </Gap>
-        <NewView style={{ marginBottom: 15 }} />
-        <Gap>
-          {food_servie_array
-            .filter((el) => el.food_type === isCategory)
-            .map((el, key) => {
-              return (
-                <Text
-                  key={key}
-                  size={16}
-                  weight={500}
-                  content={el.food_description}
-                  style={{ marginLeft: 15 }}
-                  color={'gray'}
-                />
-              )
-            })}
-        </Gap>
-      </NewView>
-      <AreaView>
+
+        {food_servie_array
+          .filter((el) => el.food_type === isCategory)
+          .slice(0, 1)
+          .map((el, key) => {
+            return (
+              <Text
+                key={key}
+                size={16}
+                weight={500}
+                content={el.food_description}
+                color={'gray'}
+                style={{ marginTop: 15, marginBottom: 24 }}
+              />
+            )
+          })}
+
         {food_servie_array
           .filter((el) => el.food_type === isCategory)
           .map((el, key) => {
