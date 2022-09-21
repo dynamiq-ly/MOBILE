@@ -361,6 +361,10 @@ export const food_servie_array = [
   {
     id: 11,
     food_type: 'fast food',
+    food_duration: 'Open 24h',
+    food_description:
+      'We provide you with a menu full with delicious fastfood to chose from and enjoy. ',
+    food_min_price: ' Minimum order is 8£',
     food_name: 'Bayside',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -395,6 +399,10 @@ export const food_servie_array = [
   {
     id: 12,
     food_type: 'snacks',
+    food_duration: 'Open 24h',
+    food_description:
+      ' We have for you a variety of sweet and healthy snacks to choose from and to enjoy. ',
+    food_min_price: ' Minimum order is 3£',
     food_name: 'Almo',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
