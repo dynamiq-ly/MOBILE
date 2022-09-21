@@ -113,7 +113,7 @@ export const food_servie_array = [
   {
     id: 4,
     food_type: 'dinner',
-    food_duration: 'From 12:00 PM to 15:00 PM',
+    food_duration: 'From 17:00 PM to 20:00 PM',
     food_description:
       'Finish your day with a delicious and a healthy dinner menu from our finest chefs. ',
     food_min_price: ' Minimum order is 15£',
@@ -152,7 +152,7 @@ export const food_servie_array = [
   {
     id: 5,
     food_type: 'lunch',
-    food_duration: 'From 17:00 PM to 20:00 PM',
+    food_duration: 'From 12:00 PM to 15:00 PM',
     food_description:
       'At this time of the day we present you with a varies food menu full with delicious and healthy  plates to choose from. ',
     food_min_price: ' Minimum order is 15£',
@@ -363,7 +363,7 @@ export const food_servie_array = [
     food_type: 'fast food',
     food_duration: 'Open 24h',
     food_description:
-      'We provide you with a menu full with delicious fastfood to chose from and enjoy. ',
+      'We provide you with a menu full with delicious fastfood to chose from and enjoy.                                                                                                         ',
     food_min_price: ' Minimum order is 8£',
     food_name: 'Bayside',
     food_variance: 'egg,milk,weat,sausage,cheese',
