@@ -217,7 +217,7 @@ const luxury_and_relax_array = [
     name: 'rooms',
     path: 'menu-tab-stack-rooms',
     image:
-      'https://static.readytotrip.com/upload/information_system_24/1/4/2/item_1423732/photo_56343033.jpg',
+      'https://www.casabianca-santorini.com/wp-content/uploads/2015/10/room-2-500x500.jpg',
   },
   {
     name: 'swimming pool',
