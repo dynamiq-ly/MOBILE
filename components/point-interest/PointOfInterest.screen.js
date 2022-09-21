@@ -87,7 +87,7 @@ export default function PointInterestScreen({ navigation }) {
                 key={item.id}
                 title={item.point_title}
                 image={`${baseUrl}storage/bars/${item.images[0].image}`}
-                rating={item.rating}
+                rating={2}
                 location={item.point_small_summary}
                 onPress={() =>
                   navigation.navigate(

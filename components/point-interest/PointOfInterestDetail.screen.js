@@ -16,6 +16,7 @@ import { useSpring } from '@react-spring/native'
 import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
 
 import {
+  HFLine,
   RadiusView,
   SafeAreaRowWrapperDetail,
   View,
@@ -110,6 +111,30 @@ export default function PointOfInterestDetailScreen({ route }) {
               />
             </BoxText>
           </PhoneDirectoryRow>
+          <>
+            <HFLine />
+            <Text
+              content={'Schedule'}
+              weight={500}
+              size={18}
+              up={'cap'}
+              style={{ marginBottom: 10 }}
+            />
+            {Object.entries(data.schedule).map(([key, val], index) => (
+              <SafeAreaRowWrapperDetail
+                key={index}
+                style={{ alignItems: 'center' }}>
+                <Text color={'gray'} content={key} size={16} up={'cap'} />
+                <Text
+                  content={val ? val : 'close'}
+                  color={val ? 'dominant' : 'red'}
+                  weight={600}
+                  size={16}
+                />
+              </SafeAreaRowWrapperDetail>
+            ))}
+          </>
+
           <Gap style={{ marginBottom: 24 }} />
         </AreaView>
       </RadiusView>
