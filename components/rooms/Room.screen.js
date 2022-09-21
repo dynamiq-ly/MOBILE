@@ -1,21 +1,19 @@
-import AreaView from 'utils/TabAreaView'
+import NotFound from 'components/notFound/NotFound'
+import { SquareCardSmall } from 'components/cards/SquareCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
 import { useQuery } from 'react-query'
-import { __query } from 'hooks/useApi'
+import { baseUrl, __query } from 'hooks/useApi'
 
-import { rooms } from 'mock/rooms'
 import { View as Gap } from 'react-native'
 import { View } from 'styles/detail.module'
 import { useCallback, useState } from 'react'
-import { GridLayout } from 'styles/grid.module'
 import { HScrollView } from 'styles/app.module'
 import { VerticalListLine } from 'styles/list.module'
-import { SquareCardSmall } from 'components/cards/SquareCard'
-import { LogBox, RefreshControl } from 'react-native'
+import { FlatList, LogBox, RefreshControl } from 'react-native'
 
 export default function RoomScreen({ navigation }) {
-  const [isCategory, setCategory] = useState({ id: -1, room_type_name: 'all' })
+  const [isCategory, setCategory] = useState('all')
 
   const { data: roomCategory } = useQuery(
     '@room-category',
@@ -29,7 +27,7 @@ export default function RoomScreen({ navigation }) {
   const {
     data: all_Rooms,
     refetch,
-    isFetched,
+    status,
   } = useQuery('@rooms', roomsFetcher, {
     refetchOnMount: true,
     initialData: [],
@@ -44,58 +42,67 @@ export default function RoomScreen({ navigation }) {
 
   return (
     <View>
-      <Gap>
-        <HScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {[{ id: -1, room_type_name: 'all' }, ...roomCategory].map(
-            (el, key) => {
-              return (
-                <Gap
-                  style={{ alignItems: 'center', flexDirection: 'row' }}
-                  key={key}>
-                  <FixedWidthButton
-                    title={el.room_type_name}
-                    func={() => setCategory(el)}
-                    active={
-                      isCategory.room_type_name !== el.room_type_name
-                        ? true
-                        : false
-                    }
-                  />
-                  {roomCategory.length !== key && <VerticalListLine />}
-                </Gap>
-              )
+      {status === 'error' && <NotFound killProcess />}
+      {all_Rooms.length < 1 ? (
+        <NotFound />
+      ) : (
+        status === 'success' && (
+          <FlatList
+            refreshControl={
+              <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
             }
-          )}
-          <Gap style={{ marginLeft: 24 }} />
-        </HScrollView>
-      </Gap>
-      <AreaView
-        refreshControl={
-          <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
-        }>
-        <GridLayout>
-          {all_Rooms
-            .filter((el) =>
-              isCategory.room_type_name === 'all'
-                ? el
-                : el.room_type_name === isCategory.room_type_name
-            )
-            .map((el) => {
-              return (
-                <SquareCardSmall
-                  key={el.id}
-                  title={el.room_name}
-                  image={rooms[0].room_images[el.id].image}
-                  onPress={() =>
-                    navigation.navigate('menu-tab-stack-rooms-detail', {
-                      _data: el,
-                    })
-                  }
-                />
-              )
-            })}
-        </GridLayout>
-      </AreaView>
+            data={all_Rooms.filter((el) =>
+              isCategory === 'all'
+                ? el.room_type_name !== 'all'
+                : el.room_type_name === isCategory
+            )}
+            stickyHeaderIndices={[0]}
+            keyExtractor={(item) => item.id}
+            ListHeaderComponent={
+              <HScrollView horizontal showsHorizontalScrollIndicator={false}>
+                {roomCategory.length > 0 &&
+                  [{ id: -1, room_type_name: 'all' }, ...roomCategory].map(
+                    (el, key) => {
+                      return (
+                        <Gap
+                          style={{ alignItems: 'center', flexDirection: 'row' }}
+                          key={el.id}>
+                          <FixedWidthButton
+                            title={el.room_type_name}
+                            func={() => setCategory(el.room_type_name)}
+                            active={
+                              isCategory !== el.room_type_name ? true : false
+                            }
+                          />
+                          {roomCategory.length !== key && <VerticalListLine />}
+                        </Gap>
+                      )
+                    }
+                  )}
+              </HScrollView>
+            }
+            renderItem={({ item }) => (
+              <SquareCardSmall
+                key={item.id}
+                title={item.room_name}
+                image={`${baseUrl}storage/bars/${item.images[0].image}`}
+                location={item.room_descripton}
+                onPress={() =>
+                  navigation.navigate('menu-tab-stack-rooms-detail', {
+                    _id: item.id,
+                    _data: item,
+                  })
+                }
+              />
+            )}
+            numColumns={2}
+            columnWrapperStyle={{
+              paddingTop: 16,
+              paddingHorizontal: 16,
+            }}
+          />
+        )
+      )}
     </View>
   )
 }

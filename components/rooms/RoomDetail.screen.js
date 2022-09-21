@@ -4,7 +4,7 @@ import Icon from 'react-native-remix-icon'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
 
-import { rooms } from 'mock/rooms'
+import { baseUrl } from 'hooks/useApi'
 import { palette } from 'themes/palette'
 import { View as Gap } from 'react-native'
 import { useSpring } from '@react-spring/native'
@@ -31,7 +31,14 @@ export default function RoomDetailScreen({ route }) {
   return (
     <View>
       <CloseHeader />
-      <Carsouel imageArray={rooms.room_images} style={{ ...springCarousel }} />
+      <Carsouel
+        style={{ ...springCarousel }}
+        imageArray={[
+          ..._data.images.map((el) => ({
+            image: `${baseUrl}storage/bars/${el.image}`,
+          })),
+        ]}
+      />
       <RadiusView style={{ ...springContent }}>
         <AreaView mode={'light'}>
           <Gap style={{ marginTop: 10 }} />
@@ -46,21 +53,10 @@ export default function RoomDetailScreen({ route }) {
             </Gap>
             <Gap
               style={{
-                width: '25%',
+                // width: '25%',
                 flexDirection: 'row',
                 alignItems: 'flex-end',
               }}>
-              {/* {_data.room_price_promotion > 1 ? (
-                <Text
-                  size={21}
-                  up={'cap'}
-                  weight={600}
-                  color={'dominant'}
-                  content={`${
-                    _data.room_price - (_data.room_price * 15) / 100
-                  }$`}
-                />
-              ) : ( */}
               <Text
                 size={21}
                 up={'cap'}
@@ -68,7 +64,6 @@ export default function RoomDetailScreen({ route }) {
                 color={'dominant'}
                 content={`${_data.room_price}$`}
               />
-              {/* )} */}
 
               <Gap>
                 <Text size={14} up={'cap'} weight={500} content={'/night'} />
