@@ -2,6 +2,12 @@ export const food_servie_array = [
   {
     id: 1,
     food_type: 'breakfast',
+
+    food_duration: 'From 8:00 AM to 11:00 AM',
+    food_description:
+      'Start a great day with great beakfast. With gluten free products and vegan breakfast are also available.                                                                           Room service are 7£ pe room(vat included). ',
+    food_min_price: ' Minimum order is 15£',
+
     food_name: 'Main',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -9,6 +15,7 @@ export const food_servie_array = [
     food_summary:
       'Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
     food_price: 99.97,
+
     food_supplement: [
       {
         id: 1,
@@ -17,6 +24,7 @@ export const food_servie_array = [
         supplement_image:
           'https://images.eatthismuch.com/img/136_simmyras_74cd840a-74ad-4ba6-bf9f-43b2f0768056.png',
       },
+
       {
         id: 2,
         suplement_name: 'Eziechiele',
@@ -43,6 +51,7 @@ export const food_servie_array = [
     food_summary:
       'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.',
     food_price: 69.12,
+
     food_supplement: [
       {
         id: 1,
@@ -104,6 +113,11 @@ export const food_servie_array = [
   {
     id: 4,
     food_type: 'dinner',
+    food_duration: 'From 12:00 PM to 15:00 PM',
+    food_description:
+      'Finish your day with a delicious and a healthy dinner menu from our finest chefs. ',
+    food_min_price: ' Minimum order is 15£',
+
     food_name: 'Hauk',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
@@ -138,6 +152,11 @@ export const food_servie_array = [
   {
     id: 5,
     food_type: 'lunch',
+    food_duration: 'From 17:00 PM to 20:00 PM',
+    food_description:
+      'At this time of the day we present you with a varies food menu full with delicious and healthy  plates to choose from. ',
+    food_min_price: ' Minimum order is 15£',
+
     food_name: 'Pearson',
     food_variance: 'egg,milk,weat,sausage,cheese',
     food_image:
