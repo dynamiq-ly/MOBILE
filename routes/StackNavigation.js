@@ -109,8 +109,6 @@ const presentationModal = function (name) {
       return Platform.OS === 'ios' ? 'modal' : 'containedModal'
     case 'menu-tab-stack-about-hotels':
       return Platform.OS === 'ios' ? 'containedModal' : 'containedModal'
-    case 'menu-tab-stack-how-can-we-help':
-      return Platform.OS === 'ios' ? 'containedModal' : 'containedModal'
     default:
       return 'card'
   }
