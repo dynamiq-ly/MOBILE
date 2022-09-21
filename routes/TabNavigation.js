@@ -1,10 +1,16 @@
 import Icon from 'react-native-remix-icon'
 
 import { palette } from 'themes/palette'
-import { SearchHeader, TextHeader } from 'components/export'
+import { SearchHeader, Text, TextHeader } from 'components/export'
 import { fontPixel, pixelSizeHorizontal } from 'utils/normalization'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { MainTab, SearchTab, BookmarkTab } from 'screens/export'
+import {
+  MainTab,
+  SearchTab,
+  BookmarkTab,
+  MapTab,
+  WeatherTab,
+} from 'screens/export'
 import { DrawerHeaderMain } from 'components/header/DrawerHeader'
 
 const Tab = createBottomTabNavigator()
@@ -26,6 +32,12 @@ const iconTab = (route, color, focused) => {
       break
     case 'menu-tab':
       iconName = `ri-menu${focused ? '-fill' : '-line'}`
+      break
+    case 'map-tab':
+      iconName = `ri-compass-discover${focused ? '-fill' : '-line'}`
+      break
+    case 'weather-tab':
+      iconName = `ri-sun-cloudy${focused ? '-fill' : '-line'}`
       break
   }
 
@@ -51,6 +63,18 @@ const tabComponents = [
     component: SearchTab,
     header: <SearchHeader />,
   },
+  {
+    path: 'map-tab',
+    name: 'map',
+    component: MapTab,
+    header: <TextHeader name={'map view'} size={16} />,
+  },
+  {
+    path: 'weather-tab',
+    name: 'weather',
+    component: WeatherTab,
+    header: <TextHeader name={'weather cast'} size={16} />,
+  },
 ]
 
 /**
@@ -73,7 +97,7 @@ const TabNavigation = () => {
     <Tab.Navigator
       initialRouteName='main-tab'
       screenOptions={({ route }) => ({
-        tabBarShowLabel: false,
+        // tabBarShowLabel: false,
         tabBarStyle: {
           paddingLeft: pixelSizeHorizontal(24),
           paddingRight: pixelSizeHorizontal(24),
@@ -93,6 +117,7 @@ const TabNavigation = () => {
             options={{
               header: () => el.header,
               tabBarStyle: { ...barStyle },
+              tabBarLabel: () => <Text content={el.name} size={12} />,
             }}
           />
         )
