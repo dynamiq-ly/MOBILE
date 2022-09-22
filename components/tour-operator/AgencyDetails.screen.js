@@ -4,7 +4,6 @@ import AreaView from 'utils/TabAreaView'
 
 import { palette } from '/themes/palette'
 import { Image } from 'styles/image.module'
-import { animated } from '@react-spring/native'
 import { SafeAreaRowWrapperDetail } from '~/styles/detail.module'
 import { MiniCard, ContentViewMinCard } from '~/styles/cards.module'
 
@@ -16,7 +15,6 @@ import {
   View,
 } from 'react-native'
 
-const AnimatedTouchable = animated(TouchableOpacity)
 export default function AgencyDetails({ route, navigation }) {
   const { _data } = route.params
   {
@@ -99,7 +97,8 @@ export default function AgencyDetails({ route, navigation }) {
 
         {_data.agency_tour_guides.map((el, key) => {
           return (
-            <AnimatedTouchable
+            <TouchableOpacity
+              key={key}
               style={{
                 marginBottom: 14,
                 borderRadius: 15,
@@ -112,12 +111,9 @@ export default function AgencyDetails({ route, navigation }) {
                   _data: el,
                 })
               }
-              activeOpacity={0.8}
-            >
+              activeOpacity={0.8}>
               <SafeAreaRowWrapperDetail
-                key={key}
-                style={{ marginHorizontal: 15, alignItems: 'center' }}
-              >
+                style={{ marginHorizontal: 15, alignItems: 'center' }}>
                 <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <RnImage
                     source={{
@@ -149,7 +145,7 @@ export default function AgencyDetails({ route, navigation }) {
                   size={21}
                 />
               </SafeAreaRowWrapperDetail>
-            </AnimatedTouchable>
+            </TouchableOpacity>
           )
         })}
       </AreaView>

@@ -1,20 +1,22 @@
 import AreaView from 'utils/TabAreaView'
-import { Image } from 'styles/image.module'
 import Text from 'components/text/Text'
-import { View as NewView, View as Gap } from 'react-native'
 import Icon from 'react-native-remix-icon'
-import { palette } from '/themes/palette'
-export default function AgencyTourGuide({ navigate, route }) {
+
+import { palette } from 'themes/palette'
+import { View as NewView, View as Gap, Image } from 'react-native'
+
+export default function AgencyTourGuide({ route }) {
   const { _data } = route.params
+
   return (
     <AreaView>
-      <NewView style={{ marginBottom: 20 }} />
+      <NewView style={{ marginBottom: 10 }} />
       <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
         <Image
+          style={{ borderRadius: 8, height: 125, width: 125 }}
           source={{
             uri: _data.agency_guide_picture,
           }}
-          style={{ borderRadius: 15, height: 150, width: 150 }}
         />
         <Gap>
           <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -31,7 +33,7 @@ export default function AgencyTourGuide({ navigate, route }) {
               style={{ marginLeft: 15 }}
             />
           </Gap>
-          <NewView style={{ marginBottom: 20 }} />
+          <NewView style={{ marginBottom: 10 }} />
           <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Icon
               name={'ri-mail-line'}
@@ -47,7 +49,7 @@ export default function AgencyTourGuide({ navigate, route }) {
             />
           </Gap>
 
-          <NewView style={{ marginBottom: 20 }} />
+          <NewView style={{ marginBottom: 10 }} />
           <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Icon
               name={'ri-instagram-line'}
@@ -64,21 +66,21 @@ export default function AgencyTourGuide({ navigate, route }) {
           </Gap>
         </Gap>
       </Gap>
-      <NewView style={{ marginBottom: 40 }} />
+      <NewView style={{ marginBottom: 24 }} />
       <Text size={18} weight={600} color={'black'} content={'Languages'} />
-      <NewView style={{ marginBottom: 15 }} />
+      <NewView style={{ marginBottom: 5 }} />
       <Text
         size={18}
-        weight={450}
+        weight={500}
         color={'gray'}
         content={_data.agency_guide_language}
       />
-      <NewView style={{ marginBottom: 20 }} />
+      <NewView style={{ marginBottom: 24 }} />
       <Text size={18} weight={600} color={'black'} content={'About:'} />
-      <NewView style={{ marginBottom: 15 }} />
+      <NewView style={{ marginBottom: 5 }} />
       <Text
         size={18}
-        weight={450}
+        weight={500}
         color={'gray'}
         content={_data.agency_guide_desc}
       />
