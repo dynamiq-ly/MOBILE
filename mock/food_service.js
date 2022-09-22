@@ -363,7 +363,7 @@ export const food_servie_array = [
     food_type: 'fast food',
     food_duration: 'Open 24h',
     food_description:
-      'We provide you with a menu full with delicious fastfood to chose from and enjoy.                                                                                                         ',
+      'We provide you with a menu full with delicious fastfood to chose from and enjoy.  ',
     food_min_price: ' Minimum order is 8£',
     food_name: 'Bayside',
     food_variance: 'egg,milk,weat,sausage,cheese',

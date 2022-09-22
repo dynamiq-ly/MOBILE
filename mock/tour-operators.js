@@ -33,8 +33,10 @@ export const agency_Array = [
         agency_guide_phone: '901-433-5488',
         agency_guide_instagram: '@Lyam_Abel',
         agency_guide_email: 'LyamAbel@gmail.com',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_language: 'french, arabic, spanich',
       },
       {
         agency_guide_name: 'Camille Gauthier',
@@ -43,8 +45,10 @@ export const agency_Array = [
         agency_guide_phone: '323-528-6307',
         agency_guide_instagram: '@Camille_Gauthier',
         agency_guide_email: 'CamilleGauthier@gmail.com',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_language: 'french, arabic, spanich',
       },
     ],
   },
@@ -82,8 +86,9 @@ export const agency_Array = [
         agency_guide_phone: '323-528-6307',
         agency_guide_instagram: '@Camille_Gauthier',
         agency_guide_email: 'CamilleGauthier@gmail.com',
-
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        agency_guide_language: 'french, arabic, spanich',
       },
       {
         agency_guide_name: 'Lyam Abel',
@@ -92,8 +97,9 @@ export const agency_Array = [
         agency_guide_phone: '901-433-5488',
         agency_guide_instagram: '@Lyam_Abel',
         agency_guide_email: 'LyamAbel@gmail.com',
-
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        agency_guide_language: 'french, arabic, spanich',
       },
     ],
   },
@@ -132,8 +138,9 @@ export const agency_Array = [
         agency_guide_phone: '443-635-7241',
         agency_guide_instagram: '@Léonel_Ovide',
         agency_guide_email: 'LéonelOvide@gmail.com',
-
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        agency_guide_language: 'french, arabic, spanich',
       },
       {
         agency_guide_name: 'Lyam Abel',
@@ -142,8 +149,9 @@ export const agency_Array = [
         agency_guide_phone: '901-433-5488',
         agency_guide_instagram: '@Lyam_Abel',
         agency_guide_email: 'LyamAbel@gmail.com',
-
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        agency_guide_language: 'french, arabic, spanich',
       },
     ],
   },
@@ -181,8 +189,9 @@ export const agency_Array = [
         agency_guide_phone: '419-796-4430',
         agency_guide_instagram: '@Fred_Pascal',
         agency_guide_email: 'FredPascal@gmail.com',
-
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        agency_guide_language: 'french, arabic, spanich',
       },
       {
         agency_guide_name: 'Lyam Abel',
@@ -191,38 +200,10 @@ export const agency_Array = [
         agency_guide_phone: '901-433-5488',
         agency_guide_instagram: '@Lyam_Abel',
         agency_guide_email: 'LyamAbel@gmail.com',
-
-        agency_guide_language: 'french,arabic,spanich',
+        agency_guide_desc:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        agency_guide_language: 'french, arabic, spanich',
       },
     ],
   },
 ]
-
-/*
-export const agency_array = [
-  {
-    id: 1,
-    agency_name: '',
-    agency_logo: '',
-    agency_image: [{ image: 'image' }, { imag: 'image' }, { imag: 'image' }],
-    agency_desc: '',
-    agency_website: '',
-    agency_services: [
-      { agency_service_title: '', agency_service_link: '' },
-      { agency_service_title: '', agency_service_link: '' },
-    ],
-    agency_tour_guides: [
-      {
-        agency_guide_name: '',
-        agency_guide_picture: '',
-        agency_guide_phone: '',
-        agency_guide_instagram: '',
-        agency_guide_twitter: '',
-        agency_guide_resume: "",
-        agency_guide_language: "french,arabic,spanich",
-        agency_guide_portfolio: ""
-      },
-    ],
-  },
-]
-*/
