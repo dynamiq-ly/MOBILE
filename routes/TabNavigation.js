@@ -97,7 +97,7 @@ const TabNavigation = () => {
     <Tab.Navigator
       initialRouteName='main-tab'
       screenOptions={({ route }) => ({
-        // tabBarShowLabel: false,
+        tabBarShowLabel: false,
         tabBarStyle: {
           paddingLeft: pixelSizeHorizontal(24),
           paddingRight: pixelSizeHorizontal(24),
@@ -117,7 +117,6 @@ const TabNavigation = () => {
             options={{
               header: () => el.header,
               tabBarStyle: { ...barStyle },
-              tabBarLabel: () => <Text content={el.name} size={12} />,
             }}
           />
         )
