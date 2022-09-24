@@ -1,9 +1,11 @@
-import AreaView from '~/utils/TabAreaView'
 import Text from 'components/text/Text'
+import AreaView from '~/utils/TabAreaView'
+import Button from 'components/button/Button'
 
-import { Image } from 'styles/image.module'
-import { PhoneDirectoryRow } from 'styles/list.module'
 import { View } from 'react-native'
+import { Image } from 'styles/image.module'
+import { TextArea } from 'components/input/Input'
+import { PhoneDirectoryRow } from 'styles/list.module'
 
 export default function ElectricityAndCablesScreen() {
   return (
@@ -48,6 +50,8 @@ export default function ElectricityAndCablesScreen() {
       <PhoneDirectoryRow>
         <Text size={16} content={'1 bathroom light '} />
       </PhoneDirectoryRow>
+      <TextArea placeholder={'request an item'} />
+      <Button title={'request cables'} />
       <View style={{ marginBottom: 24 }} />
     </AreaView>
   )
