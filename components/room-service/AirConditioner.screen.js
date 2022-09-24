@@ -1,8 +1,11 @@
-import { Image } from 'styles/image.module'
-import AreaView from '~/utils/TabAreaView'
 import Text from 'components/text/Text'
-import { PhoneDirectoryRow } from 'styles/list.module'
+import AreaView from '~/utils/TabAreaView'
+import Icon from 'react-native-remix-icon'
+
+import { Image } from 'styles/image.module'
+import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 import { View as NewView } from 'react-native'
+
 export default function AirConditioner() {
   return (
     <AreaView>
@@ -28,12 +31,32 @@ export default function AirConditioner() {
       <NewView style={{ marginBottom: 15 }} />
       <PhoneDirectoryRow>
         <Text
-          size={16}
           color={'gray'}
           content={
-            'The switch is located on the head of the bed. It has three speeds (1 = strong, 2 = normal, 3 = soft) and a thermostat at the entrance of the bedroom. When you open the terrace door, the air conditioning will switch off automatically.'
+            'The switch is located on the head of the bed. It has three speeds (1 = strong, 2 = normal, 3 = soft)'
           }
         />
+      </PhoneDirectoryRow>
+      <PhoneDirectoryRow>
+        <Text
+          size={16}
+          color={'gray'}
+          content={'Thermostat at the entrance of the bedroom.'}
+        />
+      </PhoneDirectoryRow>
+      <PhoneDirectoryRow>
+        <BoxIcon>
+          <Icon name={'ri-error-warning-line'} color={'orange'} />
+        </BoxIcon>
+        <BoxText>
+          <Text
+            size={16}
+            color={'gray'}
+            content={
+              'When you open the terrace door, the air conditioning will switch off automatically.'
+            }
+          />
+        </BoxText>
       </PhoneDirectoryRow>
     </AreaView>
   )
