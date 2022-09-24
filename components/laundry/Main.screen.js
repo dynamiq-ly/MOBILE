@@ -26,28 +26,41 @@ export default function MainLaundryScreen({ navigation }) {
           content={'instruction to use the hotel laundry service'}
         />
 
-        <PhoneDirectoryRow>
+        <PhoneDirectoryRow style={{ alignItems: 'center' }}>
           <BoxIcon>
             <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
           </BoxIcon>
           <BoxText>
-            <Text content={'where'} weight={600} up={'cap'} size={18} />
             <Text
-              content={'the laundry bag is in the wardrobe.'}
+              content={'The laundry bag is in the wardrobe.'}
               color={'gray'}
-              size={14}
+              size={16}
             />
+          </BoxText>
+        </PhoneDirectoryRow>
+        <PhoneDirectoryRow style={{ alignItems: 'center' }}>
+          <BoxIcon>
+            <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
+          </BoxIcon>
+          <BoxText>
             <Text
-              content={'leave the laundry bag on the bed.'}
+              content={'Leave the laundry bag on the bed.'}
               color={'gray'}
-              size={14}
+              size={16}
             />
+          </BoxText>
+        </PhoneDirectoryRow>
+        <PhoneDirectoryRow style={{ alignItems: 'center' }}>
+          <BoxIcon>
+            <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
+          </BoxIcon>
+          <BoxText>
             <Text
               content={
-                'if laundry are left in the morning, the will generally be returned before dinner.'
+                'If laundry are left in the morning, they will generally be returned before dinner.'
               }
               color={'gray'}
-              size={14}
+              size={16}
             />
           </BoxText>
         </PhoneDirectoryRow>
