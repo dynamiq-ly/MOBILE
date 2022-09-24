@@ -14,10 +14,20 @@ export default function TowelsScreen() {
         style={{ marginBottom: 14 }}
       />
       <Text
-        size={16}
+        size={18}
+        weight={500}
         content={
-          'the change of towels is done daily. if you want to collaborate with our enviromental policy.'
+          'Pool towel with 10$ deposit, you will get a Card (1 towel 1 card ).'
         }
+        style={{ marginBottom: 5 }}
+      />
+      <Text
+        size={18}
+        weight={500}
+        content={
+          'The day of your check out, bring the card or the towel and we give back the deposit.'
+        }
+        style={{ marginBottom: 24 }}
       />
       <Text size={16} content={'we want to let you know that:'} />
 
