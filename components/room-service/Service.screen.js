@@ -37,13 +37,13 @@ const menus = [
   {
     name: 'drinks rooms services',
     color: '#A91079',
-    icon: 'ri-bowel-line',
+    icon: 'ri-goblet-line',
     path: 'menu-tab-stack-room-service-food-service',
   },
   {
     name: 'minibar service',
     color: '#A91079',
-    icon: 'ri-goblet-line',
+    icon: 'ri-fridge-line',
     path: 'menu-tab-stack-room-service-mini-bar',
   },
 ]
