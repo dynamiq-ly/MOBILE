@@ -4,7 +4,7 @@ import Icon from 'react-native-remix-icon'
 
 import { palette } from 'themes/palette'
 import { View as Gap, Image } from 'react-native'
-
+import { HFLine, SafeAreaRowWrapperDetail } from 'styles/detail.module'
 export default function AgencyTourGuide({ route }) {
   const { _data } = route.params
 
@@ -94,13 +94,13 @@ export default function AgencyTourGuide({ route }) {
         content={_data.agency_guide_language}
         style={{ marginTop: 5 }}
       />
-
+      <HFLine />
       <Text
         size={18}
         weight={600}
         color={'black'}
         content={'About:'}
-        style={{ marginTop: 24 }}
+        style={{ marginTop: 5 }}
       />
 
       <Text
@@ -110,6 +110,71 @@ export default function AgencyTourGuide({ route }) {
         content={_data.agency_guide_desc}
         style={{ marginTop: 5 }}
       />
+      <HFLine />
+      <Text
+        size={18}
+        weight={600}
+        color={'black'}
+        content={'Time Schedule'}
+        style={{ marginTop: 5 }}
+      />
+
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Monday              12:00 PM - 17:00 PM'}
+          color={'dominant'}
+          weight={600}
+          style={{ marginTop: 16 }}
+        />
+      </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 8 }} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Tuesday              8:00 AM - 12:00 PM'}
+          color={'dominant'}
+          weight={600}
+        />
+      </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 8 }} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Wednesday      12:00 PM - 17:00 PM  '}
+          color={'dominant'}
+          weight={600}
+        />
+      </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 8 }} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Thursday           15:00 PM - 19:00 PM '}
+          color={'dominant'}
+          weight={600}
+        />
+      </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 8 }} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Friday                  8:00 AM - 12:00 PM'}
+          color={'dominant'}
+          weight={600}
+        />
+      </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 8 }} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Saturday            12:00 PM - 17:00 PM  '}
+          color={'dominant'}
+          weight={600}
+        />
+      </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 8 }} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
+        <Text
+          content={'Sunday               15:00 PM - 19:00 PM '}
+          color={'dominant'}
+          weight={600}
+        />
+      </SafeAreaRowWrapperDetail>
     </AreaView>
   )
 }
