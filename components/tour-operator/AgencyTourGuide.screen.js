@@ -11,8 +11,7 @@ export default function AgencyTourGuide({ route }) {
   return (
     <AreaView>
       <Gap
-        style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}
-      >
+        style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
         <Image
           style={{ borderRadius: 8, height: 125, width: 125 }}
           source={{
@@ -40,8 +39,7 @@ export default function AgencyTourGuide({ route }) {
               flexDirection: 'row',
               alignItems: 'center',
               marginTop: 10,
-            }}
-          >
+            }}>
             <Icon
               name={'ri-mail-line'}
               color={palette.secondary.accent_500}
@@ -61,8 +59,7 @@ export default function AgencyTourGuide({ route }) {
               flexDirection: 'row',
               alignItems: 'center',
               marginTop: 10,
-            }}
-          >
+            }}>
             <Icon
               name={'ri-instagram-line'}
               color={palette.secondary.accent_500}
@@ -175,6 +172,7 @@ export default function AgencyTourGuide({ route }) {
           weight={600}
         />
       </SafeAreaRowWrapperDetail>
+      <Gap style={{ marginBottom: 24 }} />
     </AreaView>
   )
 }
