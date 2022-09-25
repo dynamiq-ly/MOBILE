@@ -1,19 +1,15 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
-import Icon from 'react-native-remix-icon'
 import Button from 'components/button/Button'
-import CheckBox from 'components/checkbox/Checkbox'
 
 import { useState } from 'react'
 import { Image } from 'styles/image.module'
 import { View as Gap } from 'react-native'
 import { TextArea } from 'components/input/Input'
 import { View, ButtonWrapperDetail } from 'styles/detail.module'
-import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 
 export default function HouseKeepingScreen({ navigation }) {
   const [text, setText] = useState('')
-  const [isChecked, setChecked] = useState(false)
   return (
     <View>
       <AreaView>
@@ -48,24 +44,10 @@ export default function HouseKeepingScreen({ navigation }) {
           />
         </Gap>
 
-        {array_checking.map((el, key) => (
-          <PhoneDirectoryRow key={key}>
-            <BoxIcon>
-              <Icon name={el.icon} />
-            </BoxIcon>
-            <BoxText>
-              <Text content={el.name} weight={600} up={'cap'} size={18} />
-              <Text content={`${el.price} USD`} color={'dominant'} size={14} />
-            </BoxText>
-            <BoxIcon>
-              <CheckBox checked={isChecked} onChange={setChecked} />
-            </BoxIcon>
-          </PhoneDirectoryRow>
-        ))}
         <TextArea
           value={text}
           onChangeText={(e) => setText(e)}
-          placeholder={'describe your problem...'}
+          placeholder={'request extra services...'}
           icon={'ri-message-line'}
         />
       </AreaView>
@@ -75,16 +57,3 @@ export default function HouseKeepingScreen({ navigation }) {
     </View>
   )
 }
-
-const array_checking = [
-  {
-    name: 'rooms',
-    icon: 'ri-home-line',
-    price: 25,
-  },
-  {
-    name: 'suites',
-    icon: 'ri-building-line',
-    price: 25,
-  },
-]

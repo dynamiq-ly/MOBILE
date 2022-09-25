@@ -114,7 +114,7 @@ export default function PointOfInterestDetailScreen({ route }) {
           <>
             <HFLine />
             <Text
-              content={'Schedule'}
+              content={'open hours'}
               weight={500}
               size={18}
               up={'cap'}

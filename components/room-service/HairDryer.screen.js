@@ -67,16 +67,13 @@ export default function HairDryer() {
 
       <PhoneDirectoryRow>
         <BoxIcon>
-          <Icon name={'ri-alert-fill'} size={fontPixel(21)} color={'orange'} />
-        </BoxIcon>
-        <BoxText>
-          <Text
-            content={'Warning'}
-            weight={600}
-            up={'cap'}
-            size={18}
+          <Icon
+            name={'ri-error-warning-line'}
+            size={fontPixel(21)}
             color={'orange'}
           />
+        </BoxIcon>
+        <BoxText>
           <Text
             content={
               'This device may be used by children over 8 years of age and persons with reduced physical, sensory or mental capabilities. Never put the power cable, the plug or the whole device into the water.                                                                 Never use the product in humid conditions.'

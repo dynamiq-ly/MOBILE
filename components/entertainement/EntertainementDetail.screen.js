@@ -9,7 +9,7 @@ import { View as Gap, Image as Img, TouchableOpacity } from 'react-native'
 
 export default function EntertainementDetailScreen() {
   return (
-    <AreaView>
+    <AreaView mode={'dark'}>
       {/* <SafeAreaRowWrapperDetail
         style={{ alignItems: 'center', marginBottom: 16 }}>
         <Img

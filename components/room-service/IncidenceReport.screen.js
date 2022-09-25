@@ -70,13 +70,25 @@ export default function IncidenceReport() {
       <Text
         size={18}
         color={'gray'}
-        content={'if there is multiple items please specify which one.'}
+        content={'If there is multiple items please specify which one.'}
+      />
+      <Text
+        size={14}
+        color={'gray'}
+        content={'*left, right, in the hall, bedroom'}
+        style={{ marginTop: 10 }}
       />
       <Input icon={'ri-settings-line'} placeholder={'specify item location'} />
       <Text
         size={18}
         color={'gray'}
-        content={'do not forget to give a detailed report about the problem.'}
+        content={'Do not forget to give a detailed report about the problem.'}
+      />
+      <Text
+        size={14}
+        color={'gray'}
+        content={'*the lamp is not properly plugged.'}
+        style={{ marginTop: 10 }}
       />
       <TextArea
         value={text}
@@ -84,6 +96,7 @@ export default function IncidenceReport() {
         placeholder={'describe your problem...'}
         icon={'ri-message-line'}
       />
+
       <Button title={'report'} />
     </AreaView>
   )

@@ -34,7 +34,7 @@ export default function EntertainementScreen({ navigation }) {
         ]}
       />
       <RadiusView>
-        <AreaView mode={'light'}>
+        <AreaView mode={'dark'}>
           <Text content={'Entertainement'} size={24} weight={600} up={'cap'} />
           <Gap style={{ marginTop: 14 }} />
           <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>

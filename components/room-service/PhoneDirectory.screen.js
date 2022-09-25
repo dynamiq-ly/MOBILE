@@ -23,23 +23,23 @@ export default function PhoneDirectoryScreen() {
           'in this section we will show you how to make use of our phone system. in case you needed to call someone'
         }
       />
+      <PhoneDirectoryRow>
+        <BoxText>
+          <Text content={'emergency'} weight={600} up={'cap'} size={18} />
+          <Text content={'Dial 0 + 911.'} color={'red'} size={16} />
+        </BoxText>
+      </PhoneDirectoryRow>
       {/*  */}
       <PhoneDirectoryRow>
-        <BoxIcon>
-          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-        </BoxIcon>
         <BoxText>
-          <Text content={'reception'} weight={600} up={'cap'} size={20} />
+          <Text content={'reception'} weight={600} up={'cap'} size={18} />
           <Text content={'dial 9.'} color={'gray'} up={'cap'} size={16} />
         </BoxText>
       </PhoneDirectoryRow>
       {/*  */}
       <PhoneDirectoryRow>
-        <BoxIcon>
-          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-        </BoxIcon>
         <BoxText>
-          <Text content={'room to room'} weight={600} up={'cap'} size={20} />
+          <Text content={'room to room'} weight={600} up={'cap'} size={18} />
           <Text
             content={'Dial directly the room number'}
             color={'gray'}
@@ -49,15 +49,12 @@ export default function PhoneDirectoryScreen() {
       </PhoneDirectoryRow>
       {/*  */}
       <PhoneDirectoryRow>
-        <BoxIcon>
-          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-        </BoxIcon>
         <BoxText>
           <Text
             content={'international calls'}
             weight={600}
             up={'cap'}
-            size={20}
+            size={18}
           />
           <Text
             content={'Dial 0 + Internation code + Number.'}
@@ -68,32 +65,16 @@ export default function PhoneDirectoryScreen() {
       </PhoneDirectoryRow>
       {/*  */}
       <PhoneDirectoryRow>
-        <BoxIcon>
-          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-        </BoxIcon>
         <BoxText>
-          <Text content={'national call'} weight={600} up={'cap'} size={20} />
+          <Text content={'national call'} weight={600} up={'cap'} size={18} />
           <Text content={'Dial 0 + number.'} color={'gray'} size={16} />
         </BoxText>
       </PhoneDirectoryRow>
       {/*  */}
       <PhoneDirectoryRow>
-        <BoxIcon>
-          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-        </BoxIcon>
         <BoxText>
-          <Text content={'spa'} weight={600} up={'cap'} size={20} />
+          <Text content={'spa'} weight={600} up={'cap'} size={18} />
           <Text content={'Dial 11.'} color={'gray'} size={16} />
-        </BoxText>
-      </PhoneDirectoryRow>
-      {/*  */}
-      <PhoneDirectoryRow>
-        <BoxIcon>
-          <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-        </BoxIcon>
-        <BoxText>
-          <Text content={'emergency'} weight={600} up={'cap'} size={20} />
-          <Text content={'Dial 0 + 911.'} color={'gray'} size={16} />
         </BoxText>
       </PhoneDirectoryRow>
       <View style={{ marginTop: 24 }} />
