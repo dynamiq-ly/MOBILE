@@ -136,7 +136,13 @@ export default function NightEntertainScreen({ navigation }) {
               name={item.entertainements_title}
               image={`${baseUrl}storage/entertainement/${item.images[0].image}`}
               onPress={() =>
-                navigation.navigate('menu-tab-stack-excursions-list')
+                navigation.navigate(
+                  'menu-tab-stack-entertaining-night-shows-detail',
+                  {
+                    _id: item.id,
+                    _data: data.filter((el) => el.id === item.id)[0],
+                  }
+                )
               }
               specialiy={moment
                 .unix(

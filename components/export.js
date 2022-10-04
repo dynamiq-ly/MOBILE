@@ -110,6 +110,7 @@ export { default as RoomDetailScreen } from './rooms/RoomDetail.screen'
 export { default as EntertainingScreen } from './entertainement/Entertainement.screen'
 export { default as EntertainingEventsScreen } from './entertainement/EntertainEvents.screen'
 export { default as EntertainingDetailScreen } from './entertainement/EntertainementDetail.screen'
+export { default as NightShowsDetails } from './entertainement/details/NightDetails.screen'
 // profile screen and settings
 export { default as ProfileScreen } from './profile/Profile.screen'
 export { default as SettingScreen } from './profile/Setting.screen'

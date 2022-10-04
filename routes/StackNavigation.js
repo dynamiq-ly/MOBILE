@@ -93,6 +93,7 @@ import {
   PoolTowelsScreen,
   BankAndAtmScreen,
   AgencyTourGuide,
+  NightShowsDetails,
 } from 'components/export'
 
 const Stack = createNativeStackNavigator()
@@ -602,6 +603,11 @@ const stack_array_screens = [
     path: 'menu-tab-stack-entertaining-events-detail',
     component: EntertainingDetailScreen,
     header: ({ route }) => <StackHeader name={route.params._name} />,
+  },
+  {
+    path: 'menu-tab-stack-entertaining-night-shows-detail',
+    component: NightShowsDetails,
+    header: () => false,
   },
   {
     path: 'menu-tab-stack-pool-towels',
