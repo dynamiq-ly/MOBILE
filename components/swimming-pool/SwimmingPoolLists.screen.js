@@ -61,7 +61,7 @@ export default function SwimmingPoolListsScreen({ route, navigation }) {
               <FullDetailedCard
                 title={item.pool_name}
                 capacity={`${item.pool_capacity} capacity`}
-                image={`${baseUrl}/storage/swimming-pool/images/${item.pool_image}`}
+                image={`${baseUrl}storage/swimming-pool/images/${item.pool_image}`}
                 onPress={() =>
                   navigation.navigate(
                     'menu-tab-stack-swimming-pool-list-details',

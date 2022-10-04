@@ -45,7 +45,7 @@ export default function SwimmingPoolDetails({ route }) {
         style={{ ...springCarousel }}
         imageArray={[
           {
-            image: `${baseUrl}/storage/swimming-pool/images/${data.pool_image}`,
+            image: `${baseUrl}storage/swimming-pool/images/${data.pool_image}`,
           },
         ]}
       />

@@ -43,7 +43,7 @@ export default function ExcusionDetailScreen({ route }) {
       <AreaView>
         <Image
           source={{
-            uri: `${baseUrl}/storage/excursions/thumbnails/${_data.activity_list_thumbnail}`,
+            uri: `${baseUrl}storage/excursions/thumbnails/${_data.activity_list_thumbnail}`,
           }}
         />
         <Gap style={{ marginTop: 14 }} />
@@ -66,10 +66,7 @@ export default function ExcusionDetailScreen({ route }) {
         <Gap style={{ marginBottom: 24 }} />
       </AreaView>
       <ButtonWrapperDetail>
-        <Button
-          title={'Book now'}
-          onPress={() => navigation.navigate('menu-tab-stack-bar-menu-list')}
-        />
+        <Button title={'Book now'} />
       </ButtonWrapperDetail>
     </View>
   )

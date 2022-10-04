@@ -55,7 +55,7 @@ export default function SwimmingPoolScreen({ navigation }) {
             renderItem={({ item }) => (
               <FullImageCard
                 title={item.pool_type}
-                image={`${baseUrl}/storage/swimming-pool/thumbnails/${item.pool_image}`}
+                image={`${baseUrl}storage/swimming-pool/thumbnails/${item.pool_image}`}
                 position={item.id % 2 !== 1 && 'end'}
                 onPress={() =>
                   navigation.navigate('menu-tab-stack-swimming-pool-list', {

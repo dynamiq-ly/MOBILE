@@ -86,7 +86,7 @@ export default function PointInterestScreen({ navigation }) {
               <SquareCard
                 key={item.id}
                 title={item.point_title}
-                image={`${baseUrl}storage/bars/${item.images[0].image}`}
+                image={`${baseUrl}storage/points-of-interest/${item.images[0].image}`}
                 rating={2}
                 location={item.point_small_summary}
                 onPress={() =>

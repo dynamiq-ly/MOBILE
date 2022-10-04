@@ -50,7 +50,7 @@ export default function PointOfInterestDetailScreen({ route }) {
         style={{ ...springCarousel }}
         imageArray={[
           ...data.images.map((el) => ({
-            image: `${baseUrl}storage/bars/${el.image}`,
+            image: `${baseUrl}storage/points-of-interest/${el.image}`,
           })),
         ]}
       />
