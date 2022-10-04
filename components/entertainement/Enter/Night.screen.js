@@ -4,6 +4,7 @@ import Radio from 'components/checkbox/Radio'
 import Widecard from 'components/cards/Widecard'
 // import FullImageCard from 'components/cards/FullImageCard'
 import NotFound from 'components/notFound/NotFound'
+import FixedWidthButton from 'components/button/FixedWidthButton'
 
 import { useState, useCallback } from 'react'
 import { useQuery } from 'react-query'
@@ -11,6 +12,7 @@ import { baseUrl, __query } from 'hooks/useApi'
 import { palette } from 'themes/palette'
 import { widthPixel } from 'utils/normalization'
 import { View } from 'styles/detail.module'
+import { VerticalListLine } from 'styles/list.module'
 
 import {
   View as Gap,
@@ -25,6 +27,8 @@ export default function NightEntertainScreen({ navigation }) {
     index: 0,
     time: moment().format('DD / MM / YYYY'),
   })
+
+  const [category, setCategory] = useState('all')
 
   const { data, refetch, status } = useQuery(
     '@entertainement-night-shows',
@@ -50,21 +54,27 @@ export default function NightEntertainScreen({ navigation }) {
           refreshControl={
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
-          data={data.filter(
-            (el) =>
-              el.timings.filter(
-                (el) =>
-                  moment
-                    .unix(el.entertainement_timings_date)
-                    .format('DD / MM / YYYY') === isActive.time
-              ).length > 0
-          )}
+          data={data
+            .filter(
+              (el) =>
+                el.timings.filter(
+                  (el) =>
+                    moment
+                      .unix(el.entertainement_timings_date)
+                      .format('DD / MM / YYYY') === isActive.time
+                ).length > 0
+            )
+            .filter((el) =>
+              category === 'all'
+                ? el.entertainements_location !== 'all'
+                : el.entertainements_location === category
+            )}
           stickyHeaderIndices={[0]}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
             <Gap
               style={{
-                paddingBottom: 16,
+                // paddingBottom: 16,
                 backgroundColor: palette.primary.accent_100,
               }}>
               <Text
@@ -99,6 +109,24 @@ export default function NightEntertainScreen({ navigation }) {
                   />
                 ))}
                 <Gap style={{ marginRight: 16 }} />
+              </ScrollView>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                {location.map((el, key) => (
+                  <Gap
+                    key={key}
+                    style={{
+                      alignItems: 'center',
+                      flexDirection: 'row',
+                      paddingVertical: 16,
+                    }}>
+                    <FixedWidthButton
+                      title={el}
+                      func={() => setCategory(el)}
+                      active={category !== el ? true : false}
+                    />
+                    {location.length !== key + 1 && <VerticalListLine />}
+                  </Gap>
+                ))}
               </ScrollView>
             </Gap>
           }
@@ -139,6 +167,8 @@ let entertainementNightShows = () => {
       throw new Error(err.message)
     })
 }
+
+const location = ['all', 'lobby bar', 'main hall', 'main theatre']
 
 LogBox.ignoreAllLogs(true)
 
