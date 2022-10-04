@@ -1,17 +1,16 @@
 import moment from 'moment'
 import Text from 'components/text/Text'
 import Radio from 'components/checkbox/Radio'
-import FullImageCard from 'components/cards/FullImageCard'
+import Widecard from 'components/cards/Widecard'
+// import FullImageCard from 'components/cards/FullImageCard'
 import NotFound from 'components/notFound/NotFound'
 
 import { useState, useCallback } from 'react'
 import { useQuery } from 'react-query'
 import { baseUrl, __query } from 'hooks/useApi'
 import { palette } from 'themes/palette'
-import { night_shows } from 'mock/entertain'
-import { HScrollView } from 'styles/app.module'
 import { widthPixel } from 'utils/normalization'
-import { ButtonWrapperDetail, View } from 'styles/detail.module'
+import { View } from 'styles/detail.module'
 
 import {
   View as Gap,
@@ -51,14 +50,21 @@ export default function NightEntertainScreen({ navigation }) {
           refreshControl={
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
-          data={data}
+          data={data.filter(
+            (el) =>
+              el.timings.filter(
+                (el) =>
+                  moment
+                    .unix(el.entertainement_timings_date)
+                    .format('DD / MM / YYYY') === isActive.time
+              ).length > 0
+          )}
           stickyHeaderIndices={[0]}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
             <Gap
               style={{
-                paddingBottom: 10,
-                paddingHorizontal: 10,
+                paddingBottom: 16,
                 backgroundColor: palette.primary.accent_100,
               }}>
               <Text
@@ -97,19 +103,27 @@ export default function NightEntertainScreen({ navigation }) {
             </Gap>
           }
           renderItem={({ item }) => (
-            <FullImageCard
-              title={item.entertainements_title}
+            <Widecard
+              state={'hidden'}
+              name={item.entertainements_title}
               image={`${baseUrl}storage/entertainement/${item.images[0].image}`}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-excursions-list')
               }
+              specialiy={moment
+                .unix(
+                  item.timings.filter(
+                    (el) =>
+                      moment
+                        .unix(el.entertainement_timings_date)
+                        .format('DD / MM / YYYY') === isActive.time
+                  )[0].entertainement_timings_date
+                )
+                .format('LT')}
             />
           )}
-          numColumns={2}
-          columnWrapperStyle={{
-            paddingTop: 16,
+          style={{
             paddingHorizontal: 16,
-            justifyContent: 'space-between',
           }}
         />
       )}
