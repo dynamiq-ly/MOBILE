@@ -63,12 +63,12 @@ const tabComponents = [
     component: SearchTab,
     header: <SearchHeader />,
   },
-  {
-    path: 'map-tab',
-    name: 'map',
-    component: MapTab,
-    header: <TextHeader name={'map view'} size={16} />,
-  },
+  // {
+  //   path: 'map-tab',
+  //   name: 'map',
+  //   component: MapTab,
+  //   header: <TextHeader name={'map view'} size={16} />,
+  // },
   {
     path: 'weather-tab',
     name: 'weather',
@@ -97,7 +97,8 @@ const TabNavigation = () => {
     <Tab.Navigator
       initialRouteName='main-tab'
       screenOptions={({ route }) => ({
-        tabBarShowLabel: false,
+        // tabBarShowLabel: false,
+
         tabBarStyle: {
           paddingLeft: pixelSizeHorizontal(24),
           paddingRight: pixelSizeHorizontal(24),
@@ -117,6 +118,11 @@ const TabNavigation = () => {
             options={{
               header: () => el.header,
               tabBarStyle: { ...barStyle },
+              tabBarLabel: el.name,
+              tabBarLabelStyle: {
+                fontSize: 12,
+                paddingBottom: 2,
+              },
             }}
           />
         )
