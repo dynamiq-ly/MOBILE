@@ -154,6 +154,33 @@ export default function DetailScreen({ navigation, route }) {
             />
           </SafeAreaRowWrapperDetail>
 
+          {data.schedule && (
+            <>
+              <HFLine />
+              <Text
+                content={'weekly themes'}
+                style={{ marginBottom: 15 }}
+                weight={500}
+                up={'cap'}
+                size={18}
+              />
+              {Object.entries(data.schedule).map(([key, val], index) => (
+                <SafeAreaRowWrapperDetail
+                  key={index}
+                  style={{ alignItems: 'center' }}>
+                  <Text color={'gray'} content={key} size={16} up={'cap'} />
+                  <Text
+                    content={val ? val : 'all round'}
+                    color={!val && 'gray'}
+                    weight={600}
+                    up={'cap'}
+                    size={16}
+                  />
+                </SafeAreaRowWrapperDetail>
+              ))}
+            </>
+          )}
+
           {data.regulations.length !== 0 && (
             <>
               <HFLine />

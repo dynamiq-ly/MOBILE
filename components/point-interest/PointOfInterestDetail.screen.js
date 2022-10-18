@@ -169,13 +169,21 @@ export default function PointOfInterestDetailScreen({ route }) {
 
           <>
             <HFLine />
-            <Text
-              content={'open hours'}
-              weight={500}
-              size={18}
-              up={'cap'}
-              style={{ marginBottom: 10 }}
-            />
+            <Text content={'open hours'} weight={500} size={18} up={'cap'} />
+
+            <PhoneDirectoryRow style={{ marginBottom: 15 }}>
+              <BoxIcon>
+                <Icon name={'ri-error-warning-line'} color={'orange'} />
+              </BoxIcon>
+              <BoxText>
+                <Text
+                  size={16}
+                  color={'gray'}
+                  content={'hours may change and can not be updated regularly.'}
+                />
+              </BoxText>
+            </PhoneDirectoryRow>
+
             {Object.entries(data.schedule).map(([key, val], index) => (
               <SafeAreaRowWrapperDetail
                 key={index}
