@@ -8,10 +8,11 @@ import CloseHeader from 'components/header/CloseHeader'
 import TextOverImage from 'components/cards/TextOverImage'
 
 import { useQuery } from 'react-query'
-import { View as Gap } from 'react-native'
+import { palette } from 'themes/palette'
 import { baseUrl, __query } from 'hooks/useApi'
 import { useSpring } from '@react-spring/native'
 import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
+import { View as Gap, TouchableOpacity } from 'react-native'
 import {
   ButtonWrapperDetail,
   View,
@@ -68,7 +69,7 @@ export default function DetailScreen({ navigation, route }) {
               marginTop: 5,
               flexDirection: 'row',
               alignItems: 'center',
-              marginBottom: 10,
+              marginBottom: 15,
             }}>
             <Icon name={'ri-time-line'} style={{ marginRight: 5 }} size={18} />
             <Text
@@ -103,6 +104,30 @@ export default function DetailScreen({ navigation, route }) {
 
           <HFLine />
           <Text content={'Menus'} weight={500} size={18} up={'cap'} />
+
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginTop: 5,
+            }}
+            onPress={() =>
+              navigation.navigate('menu-tab-stack-safety-detail', {
+                _id: 2,
+                _name: 'food allergy',
+                _data: {
+                  measure_content: '',
+                },
+              })
+            }>
+            <Icon
+              name={'ri-focus-2-line'}
+              style={{ marginRight: 5 }}
+              color={palette.secondary.accent_700}
+              size={18}
+            />
+            <Text content={'food protocol'} up={'cap'} color={'dominant'} />
+          </TouchableOpacity>
 
           <SafeAreaRowWrapperDetail>
             <TextOverImage

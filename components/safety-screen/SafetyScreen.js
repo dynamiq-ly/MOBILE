@@ -11,13 +11,9 @@ import { RefreshControl, LogBox } from 'react-native'
 import { ButtonSafety, IconBox, TextBox } from 'styles/safety.module'
 
 export default function SafetyScreen({ navigation }) {
-  const { data, refetch, isError } = useQuery(
-    '@measures',
-    fetchSafetyMeasures,
-    {
-      initialData: [],
-    }
-  )
+  const { data, refetch, status } = useQuery('@measures', fetchSafetyMeasures, {
+    refetchOnMount: true,
+  })
 
   const [refresh, setRefresh] = useState(false)
 
@@ -31,9 +27,9 @@ export default function SafetyScreen({ navigation }) {
       refreshControl={
         <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
       }>
-      {data.length === 0 ? (
-        <NotFound killProcess={isError} />
-      ) : (
+      {status === 'loading' && <NotFound />}
+      {status === 'error' && <NotFound killProcess />}
+      {status === 'success' &&
         data.map((el) => {
           return (
             <ButtonSafety
@@ -41,6 +37,7 @@ export default function SafetyScreen({ navigation }) {
               activeOpacity={0.7}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-safety-detail', {
+                  _id: el.id,
                   _name: el.measure_name,
                   _data: el,
                 })
@@ -67,8 +64,7 @@ export default function SafetyScreen({ navigation }) {
               />
             </ButtonSafety>
           )
-        })
-      )}
+        })}
     </AreaView>
   )
 }
