@@ -72,3 +72,13 @@ export const DismissKeyboardButton = styled.Pressable`
   height: ${fontPixel(20)}px;
   background: ${({ theme }) => theme.primary.accent_300};
 `
+
+export const GoSearchKeyboardButton = styled.Pressable`
+  height: 32px;
+  margin-left: 10px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  width: ${widthPixel(32)}px;
+  background: ${({ theme }) => theme.primary.accent_900};
+`

@@ -1,16 +1,10 @@
 import Icon from 'react-native-remix-icon'
 
 import { palette } from 'themes/palette'
-import { SearchHeader, Text, TextHeader } from 'components/export'
+import { TextHeader } from 'components/export'
 import { fontPixel, pixelSizeHorizontal } from 'utils/normalization'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import {
-  MainTab,
-  SearchTab,
-  BookmarkTab,
-  MapTab,
-  WeatherTab,
-} from 'screens/export'
+import { MainTab, SearchTab, BookmarkTab, WeatherTab } from 'screens/export'
 import { DrawerHeaderMain } from 'components/header/DrawerHeader'
 
 const Tab = createBottomTabNavigator()
@@ -61,7 +55,7 @@ const tabComponents = [
     path: 'search-tab',
     name: 'Search',
     component: SearchTab,
-    header: <SearchHeader />,
+    header: <TextHeader name={'Search'} size={16} />,
   },
   // {
   //   path: 'map-tab',

@@ -6,6 +6,8 @@ import FullImageCard from 'components/cards/FullImageCard'
 
 import { HScrollView } from 'styles/app.module'
 import { __auth } from 'store/AuthSusbcribeProvider'
+import Carsouel from 'components/slider/carousel'
+
 import {
   ImageSquareCard,
   StyledSquareCard,
@@ -25,6 +27,27 @@ export default function MainScreen({ navigation }) {
           content={'Beia bakhta palaca'}
         />
       </Gap>
+
+      <>
+        <Carsouel
+          style={{ marginBottom: 24, height: 175, borderRadius: 14 }}
+          imageArray={[
+            {
+              image:
+                'https://www.amarinsamuiresort.com/images/promotion/banner-promotion-amarin-1.jpg',
+            },
+            {
+              image:
+                'https://www.altnana.com/images/banner-altnana-longstay.jpg',
+            },
+            {
+              image:
+                'https://www.centrepoint.com/bookingbackend/images/promotion/cp4/chidlom-hot%20deal-2020_l.jpg',
+            },
+          ]}
+        />
+      </>
+
       <Gap
         style={{
           justifyContent: 'space-between',
