@@ -1,9 +1,10 @@
-import { View } from 'react-native'
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
-import { Image } from 'styles/image.module'
 import ButtonGroup from 'components/button/ButtonGroup'
 import ButtonGroupSide from 'components/button/ButtonGroupSide'
+
+import { View } from 'react-native'
+import { Image } from 'styles/image.module'
 
 export default function Services({ navigation }) {
   return (
@@ -38,7 +39,7 @@ const menus = [
     name: 'drinks rooms services',
     color: '#A91079',
     icon: 'ri-goblet-line',
-    path: 'menu-tab-stack-room-service-food-service',
+    path: 'menu-tab-stack-restaurant-detail-menu-drinks',
   },
   {
     name: 'minibar service',

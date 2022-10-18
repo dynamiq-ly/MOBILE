@@ -28,7 +28,7 @@ export const TextAreaField = styled.View`
   width: 100%;
   border-radius: 10px;
   flex-direction: row;
-  height: ${fontPixel(200)}px;
+  height: ${fontPixel(125)}px;
   margin: ${pixelSizeVertical(12)}px 0px;
   padding: ${pixelSizeVertical(14)}px ${pixelSizeHorizontal(10)}px;
   background: ${({ bg, theme }) =>

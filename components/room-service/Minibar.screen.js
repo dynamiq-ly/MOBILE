@@ -1,8 +1,10 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
+import Button from 'components/button/Button'
 
 import { mini_bar } from 'mock/mini_bar'
 import { Image } from 'styles/image.module'
+import { TextArea } from 'components/input/Input'
 import { SpaceBetweenRow, StyledLaundryRow } from 'styles/list.module'
 
 export default function MiniBar() {
@@ -42,6 +44,18 @@ export default function MiniBar() {
           ))}
         </StyledLaundryRow>
       ))}
+      <>
+        <Text
+          size={16}
+          style={{ marginTop: 10 }}
+          color={'gray'}
+          content={
+            'You can request specific items to be added to you mini bar (V.A.T included). '
+          }
+        />
+        <TextArea placeholder={'content of request'} icon={'ri-message-line'} />
+        <Button title={'request'} />
+      </>
     </AreaView>
   )
 }

@@ -6,10 +6,10 @@ import CloseHeader from 'components/header/CloseHeader'
 
 import { useState } from 'react'
 import { useQuery } from 'react-query'
-import { View as Gap } from 'react-native'
-import { palette } from '~/themes/palette'
+import { palette } from 'themes/palette'
 import { baseUrl, __query } from 'hooks/useApi'
-import { fontPixel } from '~/utils/normalization'
+import { fontPixel } from 'utils/normalization'
+import { View as Gap, TouchableOpacity as Button } from 'react-native'
 import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 
 import { useSpring } from '@react-spring/native'
@@ -82,35 +82,91 @@ export default function PointOfInterestDetailScreen({ route }) {
             weight={400}
             size={16}
           />
-          <Gap style={{ marginBottom: 14 }} />
+          <Gap style={{ marginBottom: 5 }} />
 
-          <PhoneDirectoryRow align>
-            <BoxIcon>
-              <Icon name={'ri-direction-line'} size={fontPixel(21)} />
-            </BoxIcon>
-            <BoxText>
+          <SafeAreaRowWrapperDetail
+            style={{ alignItems: 'center', marginTop: 10, marginBottom: 10 }}>
+            <Button
+              activeOpacity={0.8}
+              style={{
+                flex: 1,
+                height: 36,
+                borderRadius: 5,
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: palette.secondary.accent_200,
+              }}>
               <Text
-                content={data.point_textual_location}
-                weight={400}
+                content={'website'}
+                color={'dominant'}
+                weight={600}
                 up={'cap'}
-                size={18}
               />
-            </BoxText>
-          </PhoneDirectoryRow>
+            </Button>
+            <Gap style={{ width: 24 }} />
+            <Button
+              activeOpacity={0.8}
+              style={{
+                flex: 1,
+                height: 36,
+                borderRadius: 5,
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: palette.secondary.accent_200,
+              }}>
+              <Text
+                content={'location'}
+                color={'dominant'}
+                weight={600}
+                up={'cap'}
+              />
+            </Button>
+          </SafeAreaRowWrapperDetail>
 
-          <PhoneDirectoryRow align>
-            <BoxIcon>
-              <Icon name={'ri-phone-line'} size={fontPixel(21)} />
-            </BoxIcon>
-            <BoxText>
-              <Text
-                content={data.point_contact_number}
-                weight={400}
-                up={'cap'}
-                size={18}
-              />
-            </BoxText>
-          </PhoneDirectoryRow>
+          <Gap style={{ marginBottom: 5 }} />
+          <>
+            <PhoneDirectoryRow align>
+              <BoxIcon>
+                <Icon name={'ri-direction-line'} size={fontPixel(21)} />
+              </BoxIcon>
+              <BoxText>
+                <Text
+                  content={data.point_textual_location}
+                  weight={400}
+                  up={'cap'}
+                  size={18}
+                />
+              </BoxText>
+            </PhoneDirectoryRow>
+
+            <PhoneDirectoryRow align>
+              <BoxIcon>
+                <Icon name={'ri-phone-line'} size={fontPixel(21)} />
+              </BoxIcon>
+              <BoxText>
+                <Text
+                  content={data.point_contact_number}
+                  weight={400}
+                  up={'cap'}
+                  size={18}
+                />
+              </BoxText>
+            </PhoneDirectoryRow>
+            <PhoneDirectoryRow align>
+              <BoxIcon>
+                <Icon name={'ri-whatsapp-line'} size={fontPixel(21)} />
+              </BoxIcon>
+              <BoxText>
+                <Text
+                  content={data.point_contact_number}
+                  weight={400}
+                  up={'cap'}
+                  size={18}
+                />
+              </BoxText>
+            </PhoneDirectoryRow>
+          </>
+
           <>
             <HFLine />
             <Text

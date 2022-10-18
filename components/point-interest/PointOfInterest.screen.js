@@ -45,68 +45,72 @@ export default function PointInterestScreen({ navigation }) {
 
   return (
     <View>
+      {status === 'loading' && <NotFound />}
       {status === 'error' && <NotFound killProcess />}
-      {places.length < 1 ? (
-        <NotFound />
-      ) : (
-        status === 'success' && (
-          <FlatList
-            refreshControl={
-              <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
-            }
-            data={places.filter((el) =>
-              isCategory === 'all'
-                ? el.point_type !== 'all'
-                : el.point_type === isCategory
-            )}
-            stickyHeaderIndices={[0]}
-            keyExtractor={(item) => item.id}
-            ListHeaderComponent={
-              <HScrollView horizontal showsHorizontalScrollIndicator={false}>
-                {points_type.length > 0 &&
-                  [{ id: -1, point_type: 'all' }, ...points_type].map(
-                    (el, key) => {
-                      return (
-                        <Gap
-                          style={{ alignItems: 'center', flexDirection: 'row' }}
-                          key={el.id}>
-                          <FixedWidthButton
-                            title={el.point_type}
-                            func={() => setCategory(el.point_type)}
-                            active={isCategory !== el.point_type ? true : false}
-                          />
-                          {points_type.length !== key && <VerticalListLine />}
-                        </Gap>
-                      )
-                    }
-                  )}
-              </HScrollView>
-            }
-            renderItem={({ item }) => (
-              <SquareCard
-                key={item.id}
-                title={item.point_title}
-                image={`${baseUrl}storage/points-of-interest/${item.images[0].image}`}
-                rating={2}
-                location={item.point_small_summary}
-                onPress={() =>
-                  navigation.navigate(
-                    'menu-tab-stack-point-of-interest-detail',
-                    {
-                      _id: item.id,
-                      _data: item,
-                    }
-                  )
-                }
-              />
-            )}
-            numColumns={2}
-            columnWrapperStyle={{
-              paddingTop: 16,
-              paddingHorizontal: 16,
-            }}
-          />
-        )
+      {status === 'success' && (
+        <FlatList
+          refreshControl={
+            <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+          }
+          data={places.filter((el) =>
+            isCategory === 'all'
+              ? el.point_type !== 'all'
+              : el.point_type === isCategory
+          )}
+          stickyHeaderIndices={[0]}
+          keyExtractor={(item) => item.id}
+          ListHeaderComponent={
+            <HScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {points_type.length > 0 &&
+                [{ id: -1, point_type: 'all' }, ...points_type].map(
+                  (el, key) => {
+                    return (
+                      <Gap
+                        style={{ alignItems: 'center', flexDirection: 'row' }}
+                        key={el.id}>
+                        <FixedWidthButton
+                          title={el.point_type}
+                          func={() => setCategory(el.point_type)}
+                          active={isCategory !== el.point_type ? true : false}
+                        />
+                        {points_type.length !== key && <VerticalListLine />}
+                      </Gap>
+                    )
+                  }
+                )}
+            </HScrollView>
+          }
+          renderItem={({ item }) => (
+            <SquareCard
+              key={item.id}
+              title={item.point_title}
+              image={`${baseUrl}storage/points-of-interest/${item.images[0].image}`}
+              rating={2}
+              location={item.point_small_summary}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-point-of-interest-detail', {
+                  _id: item.id,
+                  _data: item,
+                })
+              }
+              style={{
+                shadowColor: '#000',
+                shadowOffset: {
+                  width: 0,
+                  height: 1,
+                },
+                shadowOpacity: 0.22,
+                shadowRadius: 2.22,
+                elevation: 1,
+              }}
+            />
+          )}
+          numColumns={2}
+          columnWrapperStyle={{
+            paddingTop: 16,
+            paddingHorizontal: 16,
+          }}
+        />
       )}
     </View>
   )

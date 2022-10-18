@@ -7,7 +7,7 @@ import CloseHeader from 'components/header/CloseHeader'
 import TextOverImage from 'components/cards/TextOverImage'
 
 import { useQuery } from 'react-query'
-import { View as Gap } from 'react-native'
+import { ImageBackground, View as Gap } from 'react-native'
 import { baseUrl, __query } from 'hooks/useApi'
 import { useSpring } from '@react-spring/native'
 import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
@@ -17,7 +17,9 @@ import {
   ButtonWrapperDetail,
   HdRow,
   HFLine,
+  SafeAreaRowWrapperDetail,
 } from 'styles/detail.module'
+import { palette } from '~/themes/palette'
 
 export default function DetailScreen({ route, navigation }) {
   const { _id, _data } = route.params
@@ -55,16 +57,58 @@ export default function DetailScreen({ route, navigation }) {
             <Icon name={'ri-phone-line'} size={18} style={{ marginRight: 5 }} />
             <Text content={data.bar_phone_number} />
           </HdRow>
-          <HdRow style={{ marginTop: 5, marginBottom: 10 }}>
+          <HdRow style={{ marginTop: 5, marginBottom: 5 }}>
             <Icon name={'ri-time-line'} size={18} style={{ marginRight: 5 }} />
             <Text content={data.bar_open_time} />
           </HdRow>
-          <Text
-            content={data.bar_description}
-            color={'gray'}
-            weight={400}
-            size={16}
-          />
+          {/* to get back later */}
+          <HdRow style={{ marginBottom: 10 }}>
+            <Icon
+              name={'ri-map-pin-line'}
+              size={18}
+              style={{ marginRight: 5 }}
+              color={palette.secondary.accent_700}
+            />
+            <Text content={'location'} color={'dominant'} />
+          </HdRow>
+
+          <SafeAreaRowWrapperDetail
+            style={{ alignItems: 'center', marginTop: 5 }}>
+            <ImageBackground
+              style={{
+                width: 42,
+                height: 42,
+              }}
+              source={{
+                uri: 'https://w7.pngwing.com/pngs/529/271/png-transparent-panagiotis-giannakis-t-shirt-arm-shoulder-professional-fitness-coach-tshirt-physical-fitness-arm.png',
+              }}
+            />
+            <Gap style={{ flex: 1, marginLeft: 24 }}>
+              <Text
+                color={'gray'}
+                content={
+                  'This is Liam the head of the animation and inhote activities departement.'
+                }
+              />
+            </Gap>
+          </SafeAreaRowWrapperDetail>
+
+          <>
+            <HFLine />
+            <Text
+              style={{ marginBottom: 10 }}
+              content={'descripton'}
+              weight={500}
+              size={18}
+              up={'cap'}
+            />
+            <Text
+              content={data.bar_description}
+              color={'gray'}
+              weight={400}
+              size={16}
+            />
+          </>
           <Gap style={{ marginBottom: 10 }} />
           <TextOverImage
             image={
