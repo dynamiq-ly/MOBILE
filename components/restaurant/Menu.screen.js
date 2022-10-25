@@ -1,22 +1,47 @@
 import AreaView from 'utils/TabAreaView'
-import { GridLayout } from 'styles/grid.module'
-import { array_menu_restaurant } from 'mock/resto'
 import SimpleCard from 'components/cards/SimpleCard'
 
-export default function MenuRestaurantScreen({ navigation }) {
+import { useQuery } from 'react-query'
+import { useCallback, useState } from 'react'
+import { GridLayout } from 'styles/grid.module'
+import { baseUrl, __query } from 'hooks/useApi'
+import { LogBox, RefreshControl } from 'react-native'
+
+export default function MenuRestaurantScreen({ route, navigation }) {
+  const { _id, _data } = route.params
+
+  const { data, refetch } = useQuery(
+    ['@restaurant-food-menu', _id],
+    () => restaurantFoodMenuById(_id),
+    {
+      refetchOnMount: true,
+      initialData: _data,
+    }
+  )
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
-    <AreaView>
+    <AreaView
+      refreshControl={
+        <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+      }>
       <GridLayout>
-        {array_menu_restaurant.map((el, key) => {
+        {data.map((el, key) => {
           return (
             <SimpleCard
               key={key}
-              title={el.name}
-              image={el.image}
+              title={el.restaurant_food_category}
+              image={`${baseUrl}storage/restaurants/menu/food/thumbnails/${el.restaurant_food_image}`}
               onPress={() =>
                 navigation.navigate(
                   'menu-tab-stack-restaurant-detail-menu-food-list',
-                  { _name: el.name }
+                  { _name: el.restaurant_food_category }
                 )
               }
             />
@@ -26,3 +51,14 @@ export default function MenuRestaurantScreen({ navigation }) {
     </AreaView>
   )
 }
+
+let restaurantFoodMenuById = function (id) {
+  return __query
+    .get(`api/restaurant/menu/food=${id}`)
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)
