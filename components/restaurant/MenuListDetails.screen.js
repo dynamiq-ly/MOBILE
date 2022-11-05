@@ -3,6 +3,7 @@ import AreaView from 'utils/TabAreaView'
 
 import { View } from 'react-native'
 import { Image } from 'styles/image.module'
+import { baseUrl } from 'hooks/useApi'
 
 const MenuListDetailsScreen = ({ route }) => {
   const { _data } = route.params
@@ -10,21 +11,21 @@ const MenuListDetailsScreen = ({ route }) => {
     <AreaView>
       <Image
         source={{
-          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTcNy1Prx33_8N0lgoeo-1XpFjW7bjwZPKA&usqp=CAU',
+          uri: `${baseUrl}storage/restaurants/menu/food/dishes/${_data.dish_image}`,
         }}
       />
       <View
         style={{
           marginTop: 14,
+          marginBottom: 24,
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-        }}
-      >
-        <Text content={_data.title} size={24} weight={700} up={'cap'} />
+        }}>
+        <Text content={_data.dish_name} size={24} weight={700} up={'cap'} />
         <Text
-          content={`${_data.price}$`}
-          size={18}
+          content={`${_data.dish_price}$`}
+          size={21}
           weight={600}
           up={'cap'}
           color={'dominant'}
@@ -32,7 +33,7 @@ const MenuListDetailsScreen = ({ route }) => {
       </View>
 
       <Text
-        content={_data.description}
+        content={_data.dish_description}
         size={16}
         weight={400}
         up={'cap'}

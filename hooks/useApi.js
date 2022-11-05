@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const baseUrl = 'https://a4e1-165-51-21-217.eu.ngrok.io/'
+export const baseUrl = 'https://e56d-165-51-21-217.eu.ngrok.io/'
 
 /**
  * @description create a default instance for axios so we can use it in our components

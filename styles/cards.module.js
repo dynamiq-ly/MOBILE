@@ -181,13 +181,13 @@ export const StyledDetailedCardView = styled.TouchableOpacity`
   overflow: hidden;
   border-radius: 10px;
   flex-direction: row;
-  height: ${heightPixel(100)}px;
+  min-height: ${heightPixel(100)}px;
   margin-bottom: ${pixelSizeVertical(14)}px;
   background-color: ${({ theme }) => theme.primary.accent_0};
 `
 export const DetailedCardImage = styled.Image`
   width: ${widthPixel(100)}px;
-  height: ${heightPixel(100)}px;
+  height: 100%;
 `
 export const RowDetailedCardContent = styled.View`
   flex: 1;
@@ -197,6 +197,7 @@ export const RowDetailedCardContent = styled.View`
 
 export const TitleDetailedCardContent = styled.View`
   flex-direction: row;
+  margin-bottom: 5px;
   justify-content: space-between;
   width: 100%;
 `

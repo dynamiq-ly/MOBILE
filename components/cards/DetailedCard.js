@@ -33,7 +33,7 @@ export default function DetailedCard({
           <Text size={18} up={'cap'} weight={600} content={title} />
           {price !== '' && (
             <Text
-              size={20}
+              size={18}
               up={'cap'}
               weight={600}
               content={`${price}$`}
@@ -42,7 +42,7 @@ export default function DetailedCard({
           )}
         </TitleDetailedCardContent>
 
-        <Text size={16} weight={400} content={description} color={'gray'} />
+        <Text size={14} weight={400} content={description} color={'gray'} />
       </RowDetailedCardContent>
     </StyledDetailedCardView>
   )

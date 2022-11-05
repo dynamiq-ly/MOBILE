@@ -41,7 +41,11 @@ export default function MenuRestaurantScreen({ route, navigation }) {
               onPress={() =>
                 navigation.navigate(
                   'menu-tab-stack-restaurant-detail-menu-food-list',
-                  { _name: el.restaurant_food_category }
+                  {
+                    _id: el.id,
+                    _data: [...el.dishes],
+                    _name: el.restaurant_food_category,
+                  }
                 )
               }
             />
