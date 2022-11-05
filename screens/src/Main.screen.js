@@ -6,32 +6,49 @@ import FullImageCard from 'components/cards/FullImageCard'
 
 import { HScrollView } from 'styles/app.module'
 import { __auth } from 'store/AuthSusbcribeProvider'
-import Carsouel from 'components/slider/carousel'
+import Carousel, { Pagination } from 'react-native-x-carousel'
 
 import {
   ImageSquareCard,
   StyledSquareCard,
   StyledTagCards,
 } from 'styles/cards.module'
-import { View as Gap, TouchableOpacity } from 'react-native'
+
+import {
+  View as Gap,
+  TouchableOpacity,
+  ImageBackground,
+  Dimensions,
+} from 'react-native'
 
 export default function MainScreen({ navigation }) {
+  const interval = 5000
   return (
     <AreaView>
-      <Gap style={{ marginBottom: 24 }}>
-        <Text
-          size={24}
-          up={'cap'}
-          color={'gray'}
-          align={'center'}
-          content={'Beia bakhta palaca'}
-        />
-      </Gap>
-
-      <>
-        <Carsouel
-          style={{ marginBottom: 24, height: 175, borderRadius: 14 }}
-          imageArray={[
+      <Gap
+        style={{
+          position: 'relative',
+          overflow: 'hidden',
+          borderRadius: 8,
+          marginBottom: 24,
+        }}>
+        <Carousel
+          loop
+          autoplay
+          style={{ flex: 1 }}
+          autoplayInterval={interval}
+          Pagination={Pagination}
+          renderItem={(item, key) => (
+            <ImageBackground
+              key={key}
+              source={{ uri: item.image }}
+              style={{
+                width: Dimensions.get('window').width - 26,
+                height: 250,
+              }}
+            />
+          )}
+          data={[
             {
               image:
                 'https://www.amarinsamuiresort.com/images/promotion/banner-promotion-amarin-1.jpg',
@@ -46,7 +63,7 @@ export default function MainScreen({ navigation }) {
             },
           ]}
         />
-      </>
+      </Gap>
 
       <Gap
         style={{
