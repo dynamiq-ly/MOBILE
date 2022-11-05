@@ -152,7 +152,11 @@ export default function DetailScreen({ navigation, route }) {
               name={'drinks'}
               onPress={() =>
                 navigation.navigate(
-                  'menu-tab-stack-restaurant-detail-menu-drinks'
+                  'menu-tab-stack-restaurant-detail-menu-drinks',
+                  {
+                    _id: data.id,
+                    _data: [...data.drink_categories],
+                  }
                 )
               }
             />
