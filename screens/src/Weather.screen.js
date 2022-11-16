@@ -1,7 +1,10 @@
-import AreaView from 'utils/TabAreaView'
+import moment from 'moment'
 import Text from 'components/text/Text'
-import { View as Gap } from 'react-native'
+import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
+
+import { View as Gap } from 'react-native'
+
 import {
   StyledCurrentTe,
   StyledWeatherContainer,
@@ -13,7 +16,7 @@ import {
 export default function WeatherScreen() {
   return (
     <AreaView mode={'dark'}>
-      <StyledWeatherContainer style={{ marginTop: 24 }}>
+      <StyledWeatherContainer style={{ marginTop: 14 }}>
         <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Icon
             name='ri-map-pin-line'
@@ -30,7 +33,7 @@ export default function WeatherScreen() {
         </Gap>
 
         <Text
-          content={'Thur. 15 November 16h24'}
+          content={moment().format('llll')}
           up={'cap'}
           size={14}
           color={'gray'}
@@ -42,7 +45,7 @@ export default function WeatherScreen() {
               name='ri-sun-line'
               size={32}
               style={{ marginRight: 10 }}
-              color={'orange'}
+              color={'#FFA01C'}
             />
             <Text content={'27°'} size={32} weight={600} />
           </Gap>
@@ -88,22 +91,31 @@ export default function WeatherScreen() {
           )
         })}
       </StyledWeatherContainer>
-      <StyledWeatherContainer
-        style={{ marginTop: 24, paddingTop: 24, marginBottom: 24 }}
-      >
+      <StyledWeatherContainer style={{ marginTop: 24, marginBottom: 24 }}>
         {sun_rise_set.map((el, key) => {
           return (
-            <WeatherTable key={key}>
-              <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon
-                  name={'ri-haze-line'}
-                  style={{ marginRight: 12 }}
-                  color={el.state === 'sunrise' ? 'orange' : 'red'}
+            <>
+              <WeatherTable key={key} style={{ marginBottom: 0 }}>
+                <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Icon
+                    name={'ri-haze-line'}
+                    style={{ marginRight: 12 }}
+                    color={el.state === 'sunrise' ? '#FFA01C' : '#CD2B31'}
+                  />
+                  <Text content={el.state} up={'cap'} weight={600} />
+                </Gap>
+                <Text content={el.time} color={'gray'} />
+              </WeatherTable>
+              {sun_rise_set.length - 1 != key && (
+                <Gap
+                  style={{
+                    height: 1,
+                    marginVertical: 6,
+                    backgroundColor: '#dadada',
+                  }}
                 />
-                <Text content={el.state} up={'cap'} weight={600} />
-              </Gap>
-              <Text content={el.time} color={'gray'} />
-            </WeatherTable>
+              )}
+            </>
           )
         })}
       </StyledWeatherContainer>
