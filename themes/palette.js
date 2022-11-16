@@ -16,6 +16,7 @@ export const palette = {
   },
 
   secondary: {
+    accent_100: '#e5f1ff',
     accent_200: '#bfdbfe',
     accent_300: '#93c5fd',
     accent_400: '#60a5fa',
