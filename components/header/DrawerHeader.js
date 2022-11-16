@@ -31,22 +31,16 @@ const DrawerHeaderMain = ({ name }) => {
           }}>
           <Image
             style={{
-              width: 26,
-              height: 26,
+              width: 21,
+              height: 21,
               marginRight: 8,
               borderRadius: 100,
             }}
             source={{
-              uri: 'https://www.pngitem.com/pimgs/m/267-2679921_star-crown-png-crown-hotel-logo-png-transparent.png',
+              uri: 'https://camo.githubusercontent.com/add2c9721e333f0043ac938f3dadbc26a282776e01b95b308fcaba5afaf74ae3/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313538383830353835382f7265706f7369746f726965732f76657263656c2f6c6f676f2e706e67',
             }}
           />
-          <Text
-            up={'up'}
-            size={21}
-            weight={700}
-            content={name}
-            color={'dominant'}
-          />
+          <Text up={'up'} size={18} weight={700} content={name} />
         </TextWrapper>
         <BackButton
           style={{ alignItems: 'flex-end', marginRight: 0 }}

@@ -112,7 +112,7 @@ export default function MainScreen({ navigation }) {
       </Gap>
 
       {/* good plans */}
-      <Text content={'good plans'} weight={700} up={'cap'} size={21} />
+      <Text content={'good plans'} weight={700} up={'cap'} size={26} />
       <HScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -132,7 +132,7 @@ export default function MainScreen({ navigation }) {
         content={'services and facilties'}
         weight={700}
         up={'cap'}
-        size={21}
+        size={26}
         style={{ marginBottom: 10 }}
       />
       {services_and_facilties_array.map((item, key) => (
@@ -149,26 +149,21 @@ export default function MainScreen({ navigation }) {
       {/* luxury and relax services */}
       <Text
         content={'luxury and relax'}
-        style={{ marginTop: 18 }}
+        style={{ marginTop: 18, marginBottom: 10 }}
         weight={700}
         up={'cap'}
-        size={21}
+        size={26}
       />
-      <HScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={{ paddingLeft: 0 }}>
-        {luxury_and_relax_array.map((item, key) => (
-          <Gap key={key} style={{ marginRight: 12 }}>
-            <FullImageCard
-              title={item.name}
-              image={item.image}
-              position={item.id % 2 !== 1 && 'end'}
-              onPress={() => navigation.navigate(item.path)}
-            />
-          </Gap>
-        ))}
-      </HScrollView>
+      {luxury_and_relax_array.map((item, key) => (
+        <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
+          <Widecard
+            name={item.name}
+            image={item.image}
+            state={'hidden'}
+            onPress={() => navigation.navigate(item.path)}
+          />
+        </Gap>
+      ))}
 
       <Gap style={{ marginBottom: 24 }} />
     </AreaView>
