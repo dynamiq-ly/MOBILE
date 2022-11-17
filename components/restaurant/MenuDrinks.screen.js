@@ -4,7 +4,6 @@ import SimpleCard from 'components/cards/SimpleCard'
 
 import { GridLayout } from 'styles/grid.module'
 
-import { array_drinks_restaurant } from 'mock/resto'
 import {
   VerticalList,
   VerticalListItem,
@@ -14,7 +13,7 @@ import {
 import { useQuery } from 'react-query'
 import { useCallback, useState } from 'react'
 import { __query, baseUrl } from 'hooks/useApi'
-import { FlatList, LogBox, RefreshControl } from 'react-native'
+import { LogBox, RefreshControl } from 'react-native'
 
 export default function MenuDrinksScreen({ navigation, route }) {
   const { _id, _data } = route.params
@@ -83,6 +82,8 @@ export default function MenuDrinksScreen({ navigation, route }) {
                       ? 'menu-tab-stack-restaurant-detail-menu-drinks-details-alcohol'
                       : 'menu-tab-stack-restaurant-detail-menu-drinks-details',
                     {
+                      _id: el.id,
+                      _data: el.softdrinks,
                       _name: el.restaurant_drink_category,
                       _image: `${baseUrl}storage/restaurants/menu/drink/thumbnails/${el.restaurant_drink_image}`,
                     }
