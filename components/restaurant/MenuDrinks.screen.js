@@ -83,7 +83,10 @@ export default function MenuDrinksScreen({ navigation, route }) {
                       : 'menu-tab-stack-restaurant-detail-menu-drinks-details',
                     {
                       _id: el.id,
-                      _data: el.softdrinks,
+                      _data:
+                        el.restaurant_drink_type === 'ALCOHOL'
+                          ? el.alcoholdrinks
+                          : el.softdrinks,
                       _name: el.restaurant_drink_category,
                       _image: `${baseUrl}storage/restaurants/menu/drink/thumbnails/${el.restaurant_drink_image}`,
                     }
