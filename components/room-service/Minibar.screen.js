@@ -2,12 +2,25 @@ import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Button from 'components/button/Button'
 
+import { useCallback, useState } from 'react'
+import { __query } from 'hooks/useApi'
+
+import { useQuery } from 'react-query'
 import { mini_bar } from 'mock/mini_bar'
 import { Image } from 'styles/image.module'
 import { TextArea } from 'components/input/Input'
+import { FlatList, LogBox, RefreshControl } from 'react-native'
 import { SpaceBetweenRow, StyledLaundryRow } from 'styles/list.module'
 
 export default function MiniBar() {
+  const { data } = useQuery(
+    '@room-service-mini-bar',
+    roomServiceMiniBarFetcher,
+    {
+      refetchOnMount: true,
+    }
+  )
+
   return (
     <AreaView>
       <Image
@@ -23,27 +36,63 @@ export default function MiniBar() {
         }
       />
 
-      {mini_bar.map((el, key) => (
-        <StyledLaundryRow key={key}>
-          <Text
-            content={el.mini_bar_category}
-            weight={600}
-            up={'up'}
-            size={21}
-          />
-          {el.mini_bar_items.map((el, key) => (
-            <SpaceBetweenRow key={key}>
-              <Text content={el.item_name} size={16} up={'cap'} />
-              <Text
-                content={`${el.item_price}$`}
-                color={'dominant'}
-                weight={600}
-                size={16}
-              />
-            </SpaceBetweenRow>
-          ))}
+      <>
+        <StyledLaundryRow>
+          <Text content={'Alcohols'} weight={600} up={'up'} size={21} />
+          {data
+            .filter((el) => el.min_bar_item_type === 'alcohol')
+            .map((el, key) => (
+              <SpaceBetweenRow key={key}>
+                <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
+                <Text
+                  content={`${el.mini_bar_item_price}$`}
+                  color={'dominant'}
+                  weight={600}
+                  size={16}
+                />
+              </SpaceBetweenRow>
+            ))}
         </StyledLaundryRow>
-      ))}
+      </>
+
+      <>
+        <StyledLaundryRow>
+          <Text content={'drinks'} weight={600} up={'up'} size={21} />
+          {data
+            .filter((el) => el.min_bar_item_type === 'soft')
+            .map((el, key) => (
+              <SpaceBetweenRow key={key}>
+                <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
+                <Text
+                  content={`${el.mini_bar_item_price}$`}
+                  color={'dominant'}
+                  weight={600}
+                  size={16}
+                />
+              </SpaceBetweenRow>
+            ))}
+        </StyledLaundryRow>
+      </>
+
+      <>
+        <StyledLaundryRow>
+          <Text content={'snacks'} weight={600} up={'up'} size={21} />
+          {data
+            .filter((el) => el.min_bar_item_type === 'snacks')
+            .map((el, key) => (
+              <SpaceBetweenRow key={key}>
+                <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
+                <Text
+                  content={`${el.mini_bar_item_price}$`}
+                  color={'dominant'}
+                  weight={600}
+                  size={16}
+                />
+              </SpaceBetweenRow>
+            ))}
+        </StyledLaundryRow>
+      </>
+
       <>
         <Text
           size={16}
@@ -58,4 +107,13 @@ export default function MiniBar() {
       </>
     </AreaView>
   )
+}
+
+let roomServiceMiniBarFetcher = function () {
+  return __query
+    .get('api/room-service/mini-bar')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
 }

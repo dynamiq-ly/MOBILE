@@ -24,7 +24,7 @@ const MenuAlcoholDrinksDetails = ({ navigation, route }) => {
     }
   )
 
-  const category = [...data.map((el) => el.drink_alcohol_type)]
+  const category = [...new Set(data.map((el) => el.drink_alcohol_type))]
   const [isCategory, setCategory] = useState(category[0])
 
   const [refresh, setRefresh] = useState(false)
