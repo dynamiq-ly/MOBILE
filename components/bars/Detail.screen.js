@@ -152,11 +152,12 @@ export default function DetailScreen({ route, navigation }) {
           <Gap style={{ marginBottom: 24 }} />
         </AreaView>
       </RadiusView>
-      {data.bar_can_book === 1 && (
+      {/* removed for extra purpose maybe he don't want bars to be reserved a place */}
+      {/* {data.bar_can_book === 1 && (
         <ButtonWrapperDetail>
           <Button title={'reserve your stand'} />
         </ButtonWrapperDetail>
-      )}
+      )} */}
     </View>
   )
 }

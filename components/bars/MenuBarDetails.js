@@ -1,66 +1,67 @@
-import { useState } from 'react'
-import { View as Gap } from 'react-native'
-import { View } from 'styles/detail.module'
+import { useCallback, useState } from 'react'
 import { GridLayout } from 'styles/grid.module'
-import { HScrollView } from 'styles/app.module'
-import { VerticalListLine } from 'styles/list.module'
-import { array_drinks_alcohol_list } from 'mock/resto'
+import { __query, baseUrl } from 'hooks/useApi'
+import { LogBox, RefreshControl } from 'react-native'
 
 import AreaView from 'utils/TabAreaView'
 import WineCard from 'components/cards/WineCard'
-import FixedWidthButton from 'components/button/FixedWidthButton'
+import { useQuery } from 'react-query'
 
-const MenuBarDetails = ({ navigation }) => {
-  const [isCategory, setCategory] = useState('whisky')
+const MenuBarDetails = ({ navigation, route }) => {
+  const { _id, _data } = route.params
+
+  const { data, refetch } = useQuery(
+    ['@bar-detail-menu-drinks', _id],
+    () => barsMenuDrinksFetcher(_id),
+    {
+      refetchOnMount: true,
+      initialData: _data,
+    }
+  )
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
-    <View>
-      <Gap>
-        <HScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {Wine_category_Array.map((el, key) => {
-            return (
-              <Gap
-                style={{
-                  alignItems: 'center',
-                  flexDirection: 'row',
-                }}
-                key={key}>
-                <FixedWidthButton
-                  title={el}
-                  func={() => setCategory(el)}
-                  active={isCategory !== el ? true : false}
-                />
-                {Wine_category_Array.length !== key + 1 && <VerticalListLine />}
-              </Gap>
-            )
-          })}
-        </HScrollView>
-      </Gap>
-      <AreaView>
-        <GridLayout>
-          {array_drinks_alcohol_list
-            .filter((elem) => elem.bottle_category === isCategory)
-            .map((el) => {
-              return (
-                <WineCard
-                  key={el.id}
-                  title={el.bottle_name}
-                  image={el.bottle_image}
-                  price={`${el.bottle_price_bottle}$`}
-                  origin={`${el.bottle_region} ${el.bottle_date_made}`}
-                  onPress={() =>
-                    navigation.navigate('menu-tab-bar-menu-drink-detail', {
-                      _name: el.bottle_name,
-                      _data: el,
-                    })
-                  }
-                />
-              )
-            })}
-        </GridLayout>
-      </AreaView>
-    </View>
+    <AreaView
+      refreshControl={
+        <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+      }>
+      <GridLayout>
+        {data.map((el) => {
+          return (
+            <WineCard
+              key={el.id}
+              image={`${baseUrl}storage/bars/drinks/${el.bar_drink_image}`}
+              price={`${el.bar_drink_price}$`}
+              origin={el.bar_drink_name}
+              onPress={() =>
+                navigation.navigate('menu-tab-bar-menu-drink-detail', {
+                  _name: el.bar_drink_name,
+                  _data: el,
+                })
+              }
+            />
+          )
+        })}
+      </GridLayout>
+    </AreaView>
   )
 }
 
+let barsMenuDrinksFetcher = function (id) {
+  return __query
+    .get(`api/bar/menu/drinks/${id}`)
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)
+
 export default MenuBarDetails
-const Wine_category_Array = ['whisky', 'vodka', 'tequila', 'rum']

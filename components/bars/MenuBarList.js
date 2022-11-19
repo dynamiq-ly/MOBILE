@@ -32,14 +32,16 @@ export default function MenuBarScreen({ route, navigation }) {
         <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
       }>
       <GridLayout>
-        {data.map((el, key) => {
+        {data.map((el) => {
           return (
             <SimpleCard
-              key={key}
+              key={el.id}
               title={el.bar_menu_category}
               image={`${baseUrl}storage/bars/menus/${el.bar_menu_category_image}`}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-bar-menu-details', {
+                  _id: el.id,
+                  _data: el.drinks,
                   _name: el.bar_menu_category,
                 })
               }
