@@ -13,7 +13,7 @@ import { FlatList, LogBox, RefreshControl } from 'react-native'
 import { SpaceBetweenRow, StyledLaundryRow } from 'styles/list.module'
 
 export default function MiniBar() {
-  const { data } = useQuery(
+  const { data, isFetched } = useQuery(
     '@room-service-mini-bar',
     roomServiceMiniBarFetcher,
     {
@@ -36,62 +36,60 @@ export default function MiniBar() {
         }
       />
 
-      <>
-        <StyledLaundryRow>
-          <Text content={'Alcohols'} weight={600} up={'up'} size={21} />
-          {data
-            .filter((el) => el.min_bar_item_type === 'alcohol')
-            .map((el, key) => (
-              <SpaceBetweenRow key={key}>
-                <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
-                <Text
-                  content={`${el.mini_bar_item_price}$`}
-                  color={'dominant'}
-                  weight={600}
-                  size={16}
-                />
-              </SpaceBetweenRow>
-            ))}
-        </StyledLaundryRow>
-      </>
+      {isFetched && (
+        <>
+          <StyledLaundryRow>
+            <Text content={'Alcohols'} weight={600} up={'up'} size={21} />
+            {data
+              .filter((el) => el.min_bar_item_type === 'alcohol')
+              .map((el, key) => (
+                <SpaceBetweenRow key={key}>
+                  <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
+                  <Text
+                    content={`${el.mini_bar_item_price}$`}
+                    color={'dominant'}
+                    weight={600}
+                    size={16}
+                  />
+                </SpaceBetweenRow>
+              ))}
+          </StyledLaundryRow>
 
-      <>
-        <StyledLaundryRow>
-          <Text content={'drinks'} weight={600} up={'up'} size={21} />
-          {data
-            .filter((el) => el.min_bar_item_type === 'soft')
-            .map((el, key) => (
-              <SpaceBetweenRow key={key}>
-                <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
-                <Text
-                  content={`${el.mini_bar_item_price}$`}
-                  color={'dominant'}
-                  weight={600}
-                  size={16}
-                />
-              </SpaceBetweenRow>
-            ))}
-        </StyledLaundryRow>
-      </>
+          <StyledLaundryRow>
+            <Text content={'drinks'} weight={600} up={'up'} size={21} />
+            {data
+              .filter((el) => el.min_bar_item_type === 'soft')
+              .map((el, key) => (
+                <SpaceBetweenRow key={key}>
+                  <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
+                  <Text
+                    content={`${el.mini_bar_item_price}$`}
+                    color={'dominant'}
+                    weight={600}
+                    size={16}
+                  />
+                </SpaceBetweenRow>
+              ))}
+          </StyledLaundryRow>
 
-      <>
-        <StyledLaundryRow>
-          <Text content={'snacks'} weight={600} up={'up'} size={21} />
-          {data
-            .filter((el) => el.min_bar_item_type === 'snacks')
-            .map((el, key) => (
-              <SpaceBetweenRow key={key}>
-                <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
-                <Text
-                  content={`${el.mini_bar_item_price}$`}
-                  color={'dominant'}
-                  weight={600}
-                  size={16}
-                />
-              </SpaceBetweenRow>
-            ))}
-        </StyledLaundryRow>
-      </>
+          <StyledLaundryRow>
+            <Text content={'snacks'} weight={600} up={'up'} size={21} />
+            {data
+              .filter((el) => el.min_bar_item_type === 'snacks')
+              .map((el, key) => (
+                <SpaceBetweenRow key={key}>
+                  <Text content={el.mini_bar_item_name} size={16} up={'cap'} />
+                  <Text
+                    content={`${el.mini_bar_item_price}$`}
+                    color={'dominant'}
+                    weight={600}
+                    size={16}
+                  />
+                </SpaceBetweenRow>
+              ))}
+          </StyledLaundryRow>
+        </>
+      )}
 
       <>
         <Text
