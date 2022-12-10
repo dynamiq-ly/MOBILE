@@ -322,32 +322,30 @@ export const ImageWeatherIcon = styled.Image`
  */
 
 export const StyledWrapperPlusMinusStyleCard = styled.View`
+  flex: 1;
   margin-top: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   flex-direction: row;
   align-items: center;
-  width: ${widthPixel(165)}px;
   background: ${({ theme }) => theme.primary.accent_0};
   padding: ${pixelSizeVertical(5)}px ${pixelSizeHorizontal(5)}px;
 `
 
 export const StyledPlusMinusStyleCard = styled.View`
-  width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   flex-direction: row;
   align-items: center;
-  height: ${heightPixel(28)}px;
   justify-content: space-between;
   background: ${({ theme }) => theme.primary.accent_0};
 `
 
 export const StyledPlusMinusBoxIcon = styled.TouchableOpacity`
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
-  width: ${widthPixel(20)}px;
-  background: ${({ theme }) => theme.primary.accent_300};
+  background: ${({ theme }) => theme.primary.accent_200};
 `
 
 /**

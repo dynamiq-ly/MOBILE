@@ -85,7 +85,10 @@ export default function RoomScreen({ navigation }) {
               <SquareCardSmall
                 key={item.id}
                 title={item.room_name}
-                image={`${baseUrl}storage/bars/${item.images[0].image}`}
+                // image={`${baseUrl}storage/bars/${item.images[0].image}`}
+                image={
+                  'https://imageio.forbes.com/specials-images/imageserve/5cdb058a5218470008b0b00f/Nobu-Ryokan-Malibu/0x0.jpg?format=jpg&height=1009&width=2000'
+                }
                 location={item.room_descripton}
                 onPress={() =>
                   navigation.navigate('menu-tab-stack-rooms-detail', {

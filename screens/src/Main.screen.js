@@ -19,17 +19,17 @@ import {
   TouchableOpacity,
   ImageBackground,
   Dimensions,
+  ScrollView,
 } from 'react-native'
 
 export default function MainScreen({ navigation }) {
   const interval = 5000
   return (
-    <AreaView>
+    <ScrollView>
       <Gap
         style={{
           position: 'relative',
           overflow: 'hidden',
-          borderRadius: 8,
           marginBottom: 24,
         }}>
         <Carousel
@@ -43,7 +43,7 @@ export default function MainScreen({ navigation }) {
               key={key}
               source={{ uri: item.image }}
               style={{
-                width: Dimensions.get('window').width - 26,
+                width: Dimensions.get('window').width,
                 height: 250,
               }}
             />
@@ -64,109 +64,143 @@ export default function MainScreen({ navigation }) {
           ]}
         />
       </Gap>
+      <Gap style={{ marginHorizontal: 16 }}>
+        <Gap
+          style={{
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            marginBottom: 24,
+          }}>
+          <StyledTagCards style={{ width: '19%', height: 62 }}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              // onPress={() => navigation.navigate('menu-tab-stack-our-hotels')}
+            >
+              <Icon size={18} name={'ri-refund-line'} color={'blue'} />
+              <Text size={10} up={'up'} weight={500} content={'digital key'} />
+            </TouchableOpacity>
+          </StyledTagCards>
 
-      <Gap
-        style={{
-          justifyContent: 'space-between',
-          flexDirection: 'row',
-          marginBottom: 24,
-        }}>
-        <StyledTagCards style={{ width: '23%', height: 78 }}>
-          <TouchableOpacity
-            style={{ flex: 1, justifyContent: 'center' }}
-            onPress={() =>
-              navigation.navigate('menu-tab-stack-how-can-we-help')
-            }>
-            <Icon name={'ri-headphone-line'} color={'black'} />
-            <Text size={14} up={'up'} weight={500} content={'reception'} />
-          </TouchableOpacity>
-        </StyledTagCards>
-        <StyledTagCards style={{ width: '23%', height: 78 }}>
-          <TouchableOpacity
-            style={{ flex: 1, justifyContent: 'center' }}
-            onPress={() => navigation.navigate('menu-tab-stack-room-service')}>
-            <Icon name={'ri-hand-heart-line'} color={'purple'} />
-            <Text size={14} up={'up'} weight={500} content={'Services'} />
-          </TouchableOpacity>
-        </StyledTagCards>
+          <StyledTagCards style={{ width: '19%', height: 62 }}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              // onPress={() => navigation.navigate('menu-tab-stack-our-hotels')}
+            >
+              <Icon size={18} name={'ri-medal-line'} color={'blue'} />
+              <Text size={10} up={'up'} weight={500} content={'something'} />
+            </TouchableOpacity>
+          </StyledTagCards>
 
-        <StyledTagCards style={{ width: '23%', height: 78 }}>
-          <TouchableOpacity
-            style={{ flex: 1, justifyContent: 'center' }}
-            onPress={() =>
-              navigation.navigate('menu-tab-stack-transportation')
-            }>
-            <Icon name={'ri-car-line'} color={'red'} />
-            <Text size={13} up={'up'} weight={500} content={'transport'} />
-          </TouchableOpacity>
-        </StyledTagCards>
+          <StyledTagCards style={{ width: '19%', height: 62 }}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-how-can-we-help')
+              }>
+              <Icon size={18} name={'ri-headphone-line'} color={'black'} />
+              <Text size={10} up={'up'} weight={500} content={'reception'} />
+            </TouchableOpacity>
+          </StyledTagCards>
+          <StyledTagCards style={{ width: '19%', height: 62 }}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-room-service')
+              }>
+              <Icon size={18} name={'ri-hand-heart-line'} color={'purple'} />
+              <Text size={10} up={'up'} weight={500} content={'Services'} />
+            </TouchableOpacity>
+          </StyledTagCards>
 
-        <StyledTagCards style={{ width: '23%', height: 78 }}>
-          <TouchableOpacity
-            style={{ flex: 1, justifyContent: 'center' }}
-            onPress={() => navigation.navigate('menu-tab-stack-our-hotels')}>
-            <Icon name={'ri-hotel-line'} color={'blue'} />
-            <Text size={14} up={'up'} weight={500} content={'hotels'} />
-          </TouchableOpacity>
-        </StyledTagCards>
+          <StyledTagCards style={{ width: '19%', height: 62 }}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-transportation')
+              }>
+              <Icon size={18} name={'ri-car-line'} color={'red'} />
+              <Text size={10} up={'up'} weight={500} content={'transport'} />
+            </TouchableOpacity>
+          </StyledTagCards>
+        </Gap>
+
+        {/* good plans */}
+        <Text content={'good plans'} weight={700} up={'cap'} size={26} />
+        <HScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={{ paddingLeft: 0, marginTop: 14 }}>
+          {good_plans_array.map((item, key) => (
+            <SquareCardSmall
+              key={key}
+              title={item.name}
+              image={item.image}
+              onPress={() => navigation.navigate(item.path)}
+            />
+          ))}
+        </HScrollView>
+
+        {/* servicess and facilties */}
+        <Text
+          content={'services and facilties'}
+          weight={700}
+          up={'cap'}
+          size={26}
+          style={{ marginBottom: 10 }}
+        />
+        {services_and_facilties_array.map((item, key) => (
+          <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
+            <Widecard
+              name={item.name}
+              image={item.image}
+              state={'hidden'}
+              onPress={() => navigation.navigate(item.path)}
+            />
+          </Gap>
+        ))}
+
+        {/* luxury and relax services */}
+        <Text
+          content={'luxury and relax'}
+          style={{ marginTop: 18, marginBottom: 10 }}
+          weight={700}
+          up={'cap'}
+          size={26}
+        />
+        {luxury_and_relax_array.map((item, key) => (
+          <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
+            <Widecard
+              name={item.name}
+              image={item.image}
+              state={'hidden'}
+              onPress={() => navigation.navigate(item.path)}
+            />
+          </Gap>
+        ))}
       </Gap>
 
-      {/* good plans */}
-      <Text content={'good plans'} weight={700} up={'cap'} size={26} />
-      <HScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={{ paddingLeft: 0, marginTop: 14 }}>
-        {good_plans_array.map((item, key) => (
-          <SquareCardSmall
-            key={key}
-            title={item.name}
-            image={item.image}
-            onPress={() => navigation.navigate(item.path)}
-          />
-        ))}
-      </HScrollView>
-
-      {/* servicess and facilties */}
-      <Text
-        content={'services and facilties'}
-        weight={700}
-        up={'cap'}
-        size={26}
-        style={{ marginBottom: 10 }}
-      />
-      {services_and_facilties_array.map((item, key) => (
-        <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
-          <Widecard
-            name={item.name}
-            image={item.image}
-            state={'hidden'}
-            onPress={() => navigation.navigate(item.path)}
-          />
-        </Gap>
-      ))}
-
-      {/* luxury and relax services */}
-      <Text
-        content={'luxury and relax'}
-        style={{ marginTop: 18, marginBottom: 10 }}
-        weight={700}
-        up={'cap'}
-        size={26}
-      />
-      {luxury_and_relax_array.map((item, key) => (
-        <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
-          <Widecard
-            name={item.name}
-            image={item.image}
-            state={'hidden'}
-            onPress={() => navigation.navigate(item.path)}
-          />
-        </Gap>
-      ))}
-
       <Gap style={{ marginBottom: 24 }} />
-    </AreaView>
+    </ScrollView>
   )
 }
 

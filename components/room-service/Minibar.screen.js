@@ -2,14 +2,11 @@ import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Button from 'components/button/Button'
 
-import { useCallback, useState } from 'react'
 import { __query } from 'hooks/useApi'
 
 import { useQuery } from 'react-query'
-import { mini_bar } from 'mock/mini_bar'
 import { Image } from 'styles/image.module'
 import { TextArea } from 'components/input/Input'
-import { FlatList, LogBox, RefreshControl } from 'react-native'
 import { SpaceBetweenRow, StyledLaundryRow } from 'styles/list.module'
 
 export default function MiniBar() {
@@ -36,7 +33,7 @@ export default function MiniBar() {
         }
       />
 
-      {isFetched && (
+      {isFetched && data && (
         <>
           <StyledLaundryRow>
             <Text content={'Alcohols'} weight={600} up={'up'} size={21} />

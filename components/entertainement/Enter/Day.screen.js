@@ -167,4 +167,4 @@ const CalendarItem = function ({ name, date, active = false, onClick }) {
   )
 }
 
-const type_category_Array = ['all', 'adults', 'teens', 'family']
+const type_category_Array = ['all', 'adults', 'teens', 'family', 'kids']

@@ -47,14 +47,13 @@ export default function PointOfInterestDetailScreen({ route }) {
     <View>
       <CloseHeader />
       <Carsouel
-        style={{ ...springCarousel }}
         imageArray={[
           ...data.images.map((el) => ({
             image: `${baseUrl}storage/points-of-interest/${el.image}`,
           })),
         ]}
       />
-      <RadiusView style={{ ...springContent }}>
+      <RadiusView>
         <AreaView mode={'light'}>
           <Gap style={{ marginBottom: 10 }} />
           <SafeAreaRowWrapperDetail
@@ -171,7 +170,8 @@ export default function PointOfInterestDetailScreen({ route }) {
             <HFLine />
             <Text content={'open hours'} weight={500} size={18} up={'cap'} />
 
-            <PhoneDirectoryRow style={{ marginBottom: 15 }}>
+            <PhoneDirectoryRow
+              style={{ marginBottom: 15, alignItems: 'center' }}>
               <BoxIcon>
                 <Icon name={'ri-error-warning-line'} color={'orange'} />
               </BoxIcon>
@@ -184,19 +184,20 @@ export default function PointOfInterestDetailScreen({ route }) {
               </BoxText>
             </PhoneDirectoryRow>
 
-            {Object.entries(data.schedule).map(([key, val], index) => (
-              <SafeAreaRowWrapperDetail
-                key={index}
-                style={{ alignItems: 'center' }}>
-                <Text color={'gray'} content={key} size={16} up={'cap'} />
-                <Text
-                  content={val ? val : 'close'}
-                  color={val ? 'dominant' : 'red'}
-                  weight={600}
-                  size={16}
-                />
-              </SafeAreaRowWrapperDetail>
-            ))}
+            {data.schedule &&
+              Object.entries(data.schedule).map(([key, val], index) => (
+                <SafeAreaRowWrapperDetail
+                  key={index}
+                  style={{ alignItems: 'center' }}>
+                  <Text color={'gray'} content={key} size={16} up={'cap'} />
+                  <Text
+                    content={val ? val : 'close'}
+                    color={val ? 'dominant' : 'red'}
+                    weight={600}
+                    size={16}
+                  />
+                </SafeAreaRowWrapperDetail>
+              ))}
           </>
 
           <Gap style={{ marginBottom: 24 }} />

@@ -53,16 +53,14 @@ export default function PointInterestScreen({ navigation }) {
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
           data={places.filter((el) =>
-            isCategory === 'all'
-              ? el.point_type !== 'all'
-              : el.point_type === isCategory
+            isCategory === 'all' ? el : el.point_type.point_type === isCategory
           )}
           stickyHeaderIndices={[0]}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
             <HScrollView horizontal showsHorizontalScrollIndicator={false}>
               {points_type.length > 0 &&
-                [{ id: -1, point_type: 'all' }, ...points_type].map(
+                [{ id: 0, point_type: 'all' }, ...points_type].map(
                   (el, key) => {
                     return (
                       <Gap
@@ -74,12 +72,18 @@ export default function PointInterestScreen({ navigation }) {
                           active={isCategory !== el.point_type ? true : false}
                         />
                         {points_type.length !== key && <VerticalListLine />}
+                        {points_type.length === key && (
+                          <Gap style={{ marginRight: 16 }} />
+                        )}
                       </Gap>
                     )
                   }
                 )}
             </HScrollView>
           }
+          ListHeaderComponentStyle={{
+            marginBottom: 16,
+          }}
           renderItem={({ item }) => (
             <SquareCard
               key={item.id}
@@ -107,8 +111,8 @@ export default function PointInterestScreen({ navigation }) {
           )}
           numColumns={2}
           columnWrapperStyle={{
-            paddingTop: 16,
             paddingHorizontal: 16,
+            justifyContent: 'space-between',
           }}
         />
       )}

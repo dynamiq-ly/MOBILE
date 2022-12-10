@@ -1,4 +1,4 @@
-import AreaView from 'utils/TabAreaView'
+import Text from 'components/text/Text'
 import SafeAreaView from 'utils/SafeAreaView'
 
 import { useEffect, useState } from 'react'
@@ -67,7 +67,17 @@ export default function MenuScreen({ navigation }) {
   return (
     <SafeAreaView>
       {isLoggedIn && text.length === 0 && (
-        <ProfileButtonCard navigation={navigation} animate={text} />
+        <>
+          <Text
+            content={'Welcome back!'}
+            size={32}
+            weight={700}
+            up={'cap'}
+            color={'dominant'}
+            style={{ marginBottom: 16 }}
+          />
+          <ProfileButtonCard navigation={navigation} animate={text} />
+        </>
       )}
       <SearchInput value={text} onChange={setText} />
       <GroupButton array={arr1} index={1} callback={navigation} />
