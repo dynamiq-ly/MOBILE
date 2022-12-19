@@ -5,7 +5,6 @@ import Icon from 'react-native-remix-icon'
 import { fontPixel } from 'utils/normalization'
 
 import { NavigationContext, DrawerActions } from '@react-navigation/native'
-import { useDrawerStatus } from '@react-navigation/drawer'
 
 import {
   GroupsBtn,
