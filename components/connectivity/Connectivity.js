@@ -9,8 +9,16 @@ import { Image } from 'styles/image.module'
 import { wifi_list } from 'mock/wifi_list'
 import { Alert, View as VV } from 'react-native'
 
+import { useQuery } from 'react-query'
+import { __query } from 'hooks/useApi'
+import { LogBox } from 'react-native'
 export default function Connectivity() {
   const [wifiList, setWifiList] = useState(false)
+
+  const { data, status } = useQuery('@connectivity', connectivityFetcher, {
+    refetchOnMount: true,
+    initialData: [],
+  })
 
   return (
     <View>
@@ -21,18 +29,23 @@ export default function Connectivity() {
           }}
         />
         <VV style={{ marginBottom: 24 }} />
-        {wifi_list.map((item, index) => {
+        {data.map((item) => {
           return (
             <ClipBoardButton
-              key={index}
-              name={item.wifi_name}
-              icon={item.wifi_type ? 'ri-router-line' : 'ri-wifi-line'}
-              password={item.wifi_type ? 'Private network' : item.wifi_password}
+              key={item.id}
+              name={item.connectivity_name}
+              icon={item.connectivity_state ? 'ri-router-line' : 'ri-wifi-line'}
+              password={
+                item.connectivity_state
+                  ? 'Private network'
+                  : item.connectivity_password
+              }
               onPress={() => {
-                item.wifi_type
+                item.connectivity_state
                   ? (Alert.alert('this is a private network'),
                     setWifiList(false))
-                  : (clipboard.setString(item.wifi_password), setWifiList(true))
+                  : (clipboard.setString(item.connectivity_password),
+                    setWifiList(true))
                 setTimeout(() => {
                   setWifiList(false)
                 }, 1000)
@@ -46,3 +59,13 @@ export default function Connectivity() {
     </View>
   )
 }
+
+let connectivityFetcher = function () {
+  return __query
+    .get('api/connectivity')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+LogBox.ignoreAllLogs(true)
