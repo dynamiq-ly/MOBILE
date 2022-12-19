@@ -30,12 +30,19 @@ export default function DetailedCard({
       />
       <RowDetailedCardContent>
         <TitleDetailedCardContent>
-          <Text size={18} up={'cap'} weight={600} content={title} />
+          <Text
+            size={18}
+            up={'cap'}
+            weight={600}
+            content={title}
+            style={{ width: '90%' }}
+          />
           {price !== '' && (
             <Text
               size={18}
               up={'cap'}
               weight={600}
+              align={'center'}
               content={`${price}$`}
               color={'dominant'}
             />

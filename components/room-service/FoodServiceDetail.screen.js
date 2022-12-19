@@ -3,8 +3,8 @@ import AreaView from 'utils/TabAreaView'
 import Button from 'components/button/Button'
 import PlusMinusCard from 'components/cards/PlusMinusCard'
 
-import { useState } from 'react'
-import { LogBox, View as Gap } from 'react-native'
+import { useCallback, useState } from 'react'
+import { LogBox, View as Gap, RefreshControl } from 'react-native'
 import { Image } from 'styles/image.module'
 
 import {
@@ -13,16 +13,14 @@ import {
   ButtonWrapperDetail,
   SafeAreaRowWrapperDetail,
 } from 'styles/detail.module'
-import { GridLayout } from 'styles/grid.module'
 
 import { baseUrl, __query } from 'hooks/useApi'
 import { useQuery } from 'react-query'
 
 export default function ({ route }) {
   const { _data, _id } = route.params
-  const [count, setCount] = useState(0)
 
-  const { data } = useQuery(
+  const { data, refetch } = useQuery(
     ['@food-service-plate', _id],
     () => foodServicePlateFetcher(_id),
     {
@@ -31,17 +29,33 @@ export default function ({ route }) {
     }
   )
 
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
     <View>
-      <AreaView>
+      <AreaView
+        refreshControl={
+          <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+        }>
         <Image
           source={{
             uri: `${baseUrl}storage/room-service/food-service/${data.plate_image}`,
           }}
         />
-        <Gap style={{ marginBottom: 5 }} />
+        <Gap style={{ marginBottom: 10, marginTop: 8 }} />
         <SafeAreaRowWrapperDetail>
-          <Text content={data.plate_name} weight={700} up={'cap'} size={24} />
+          <Text
+            content={data.plate_name}
+            weight={700}
+            up={'cap'}
+            size={24}
+            style={{ width: '90%' }}
+          />
           <Text
             content={`${data.plate_price}$`}
             weight={600}
@@ -49,24 +63,26 @@ export default function ({ route }) {
             color={'dominant'}
           />
         </SafeAreaRowWrapperDetail>
-        <Text content={data.plate_descripiton} size={16} color={'gray'} />
-        {data.supplements && (
+        <Text
+          content={data.plate_descripiton}
+          size={16}
+          color={'gray'}
+          style={{ marginTop: 10 }}
+        />
+        {data.supplements.length > 0 && (
           <>
             <HFLine />
             <Text content={'suplements'} weight={500} size={18} up={'cap'} />
-            <GridLayout>
-              {data.supplements.map((el, key) => {
-                return (
-                  <PlusMinusCard
-                    key={key}
-                    count={count}
-                    onChange={setCount}
-                    title={el.supplement_name}
-                    price={el.supplement_price}
-                  />
-                )
-              })}
-            </GridLayout>
+
+            {data.supplements.map((el, key) => {
+              return (
+                <PlusMinusCard
+                  key={key}
+                  title={el.supplement_name}
+                  price={el.supplement_price}
+                />
+              )
+            })}
           </>
         )}
         {data.plate_variance && (
@@ -78,6 +94,7 @@ export default function ({ route }) {
                 flexDirection: 'row',
                 alignItems: 'center',
                 marginTop: 10,
+                flexWrap: 'wrap',
               }}>
               {data.plate_variance.split(',').map((el, key) => (
                 <Gap
@@ -88,6 +105,7 @@ export default function ({ route }) {
                     borderRadius: 5,
                     paddingVertical: 2,
                     paddingHorizontal: 10,
+                    marginBottom: 10,
                   }}>
                   <Text size={16} content={el} />
                 </Gap>

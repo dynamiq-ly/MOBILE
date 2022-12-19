@@ -7,8 +7,11 @@ import {
   StyledPlusMinusStyleCard,
   StyledWrapperPlusMinusStyleCard,
 } from 'styles/cards.module'
+import { useState } from 'react'
 
-export default function PlusMinusCard({ title, count = 0, price, onChange }) {
+export default function PlusMinusCard({ title, price }) {
+  const [quantity, setQuantity] = useState(0)
+
   return (
     <StyledWrapperPlusMinusStyleCard>
       <View style={{ flex: 1 }}>
@@ -16,11 +19,13 @@ export default function PlusMinusCard({ title, count = 0, price, onChange }) {
         <Text content={price} size={16} weight={500} up={'cap'} />
       </View>
       <StyledPlusMinusStyleCard>
-        <StyledPlusMinusBoxIcon onPress={() => onChange(count - 1)}>
-          <Icon name='ri-subtract-line' size={16} />
-        </StyledPlusMinusBoxIcon>
-        <Text style={{ marginHorizontal: 8 }} content={count} size={18} />
-        <StyledPlusMinusBoxIcon onPress={() => onChange(count + 1)}>
+        {quantity > 0 && (
+          <StyledPlusMinusBoxIcon onPress={() => setQuantity(quantity - 1)}>
+            <Icon name='ri-subtract-line' size={16} />
+          </StyledPlusMinusBoxIcon>
+        )}
+        <Text style={{ marginHorizontal: 8 }} content={quantity} size={18} />
+        <StyledPlusMinusBoxIcon onPress={() => setQuantity(quantity + 1)}>
           <Icon name='ri-add-line' size={16} />
         </StyledPlusMinusBoxIcon>
       </StyledPlusMinusStyleCard>

@@ -4,24 +4,35 @@ import AreaView from 'utils/TabAreaView'
 import DetailedCard from 'components/cards/DetailedCard'
 import FixedWidthButton from 'components/button/FixedWidthButton'
 
-import { useState } from 'react'
 import { palette } from '/themes/palette'
 import { View } from 'styles/detail.module'
+import { useCallback, useState } from 'react'
 import { HScrollView } from 'styles/app.module'
-import { LogBox, View as Gap } from 'react-native'
 import { VerticalListLine } from 'styles/list.module'
+import { LogBox, View as Gap, RefreshControl } from 'react-native'
 
 import { baseUrl, __query } from 'hooks/useApi'
-import { food_servie_array } from 'mock/food_service'
+
 import { useQuery } from 'react-query'
 
 export default function FoodService({ navigation }) {
   const [isCategory, setCategory] = useState('breakfast')
 
-  const { data, isFetched } = useQuery('food-service', foodServiceFetcher, {
-    refetchOnMount: true,
-    initialData: [],
-  })
+  const { data, isFetched, refetch } = useQuery(
+    'food-service',
+    foodServiceFetcher,
+    {
+      refetchOnMount: true,
+      initialData: [],
+    }
+  )
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
 
   return (
     <>
@@ -49,7 +60,10 @@ export default function FoodService({ navigation }) {
             </HScrollView>
           </Gap>
 
-          <AreaView>
+          <AreaView
+            refreshControl={
+              <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+            }>
             <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
               <Icon
                 size={21}
