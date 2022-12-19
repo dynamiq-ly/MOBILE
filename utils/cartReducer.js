@@ -1,4 +1,4 @@
-const { _storeValueByKey } = require('./asyncStorage')
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 /**
  * states store
@@ -16,10 +16,10 @@ export const actionState = {
  * @description card setter
  * @param {any[]} cartItems
  */
-const storage = (cartItems) => {
-  _storeValueByKey(
-    'services',
-    JSON.stringify(cartItems.length > 0 ? cartItems : [])
+const storage = async (cartItems) => {
+  await AsyncStorage.setItem(
+    '@services',
+    cartItems.length > 0 ? JSON.stringify(cartItems) : JSON.stringify([])
   )
 }
 
