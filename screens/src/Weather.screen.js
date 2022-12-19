@@ -94,7 +94,7 @@ export default function WeatherScreen() {
       <StyledWeatherContainer style={{ marginTop: 24, marginBottom: 24 }}>
         {sun_rise_set.map((el, key) => {
           return (
-            <>
+            <Gap key={key}>
               <WeatherTable key={key} style={{ marginBottom: 0 }}>
                 <Gap style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <Icon
@@ -115,7 +115,7 @@ export default function WeatherScreen() {
                   }}
                 />
               )}
-            </>
+            </Gap>
           )
         })}
       </StyledWeatherContainer>
