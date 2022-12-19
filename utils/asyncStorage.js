@@ -19,16 +19,7 @@ export const _storeValueByKey = async (key, value) => {
  * @param0 {string} key
  */
 export const _retriveValueByKey = async (key) => {
-  try {
-    const value = await AsyncStorage.getItem(`@${key}`)
-    if (value !== null) {
-      return value
-    } else {
-      return null
-    }
-  } catch (error) {
-    console.log(error)
-  }
+  return await AsyncStorage.getItem(`@${key}`, (_, result) => result)
 }
 
 /**

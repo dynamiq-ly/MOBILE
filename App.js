@@ -4,6 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 // store
 import AuthProvider from 'store/AuthSusbcribeProvider'
+import CartManagerProvider from './store/CartManagerProvider'
 
 // routing
 import 'react-native-gesture-handler'
@@ -59,10 +60,13 @@ export default function App() {
             <NavigationContainer>
               {/* auth provider */}
               <AuthProvider>
-                {/* screen manager */}
-                <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                  <StackNavigation />
-                </View>
+                {/* cart manager */}
+                <CartManagerProvider>
+                  {/* screen manager */}
+                  <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                    <StackNavigation />
+                  </View>
+                </CartManagerProvider>
               </AuthProvider>
             </NavigationContainer>
           </QueryClientProvider>
