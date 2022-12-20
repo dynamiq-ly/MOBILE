@@ -86,6 +86,8 @@ export { default as RoomUpgradeScreen } from './room-service/RoomUpgrade.screen'
 export { default as TourOperator } from './tour-operator/TourOperator.screen'
 export { default as AgencyDetails } from './tour-operator/AgencyDetails.screen'
 export { default as AgencyTourGuide } from './tour-operator/AgencyTourGuide.screen'
+export { default as DrinksService } from './room-service/DrinksService.screen'
+
 export {
   default as PointOfInterestScreen,
   PointInterestScreenOptions,
