@@ -7,12 +7,21 @@ import {
   StyledThumbnail,
 } from 'styles/bookMark.module'
 import Text from 'components/text/Text'
-export default function BookmarkScreen() {
+export default function BookmarkScreen({ navigation }) {
   return (
     <AreaView mode={'dark'}>
       <StyledGrid>
         <StyledBookMark>
-          <StyledGalleryPhoto>
+          <StyledGalleryPhoto
+            onPress={() =>
+              navigation.navigate('menu-tab-stack-bookmark-details', {
+                _name: 'all',
+                _data: Object.keys(bookmarked_data)
+                  .map((el) => bookmarked_data[el])
+                  .flat(1),
+              })
+            }
+          >
             {Object.keys(bookmarked_data)
               .map((el) => bookmarked_data[el])
               .flat(1)
@@ -21,7 +30,8 @@ export default function BookmarkScreen() {
                   key={key}
                   source={{
                     uri: el.image,
-                  }}>
+                  }}
+                >
                   <StyledThmubnailOverlay />
                 </StyledThumbnail>
               ))}
@@ -37,13 +47,21 @@ export default function BookmarkScreen() {
         </StyledBookMark>
         {Object.keys(bookmarked_data).map((el, index) => (
           <StyledBookMark key={index}>
-            <StyledGalleryPhoto>
+            <StyledGalleryPhoto
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-bookmark-details', {
+                  _name: el.replaceAll('_', ' '),
+                  _data: bookmarked_data[el],
+                })
+              }
+            >
               {bookmarked_data[el].map((elem, key) => (
                 <StyledThumbnail
                   key={key}
                   source={{
                     uri: elem.image,
-                  }}>
+                  }}
+                >
                   <StyledThmubnailOverlay />
                 </StyledThumbnail>
               ))}
