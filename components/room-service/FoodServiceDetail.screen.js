@@ -16,9 +16,11 @@ import {
 
 import { baseUrl, __query } from 'hooks/useApi'
 import { useQuery } from 'react-query'
+import { __cart } from 'store/CartManagerProvider'
 
 export default function ({ route }) {
   const { _data, _id } = route.params
+  const { ADD_ITEM, INCREASE_ITEM, isInCart } = __cart()
 
   const { data, refetch } = useQuery(
     ['@food-service-plate', _id],
@@ -116,7 +118,29 @@ export default function ({ route }) {
         <Gap style={{ marginBottom: 24 }} />
       </AreaView>
       <ButtonWrapperDetail>
-        <Button title={'add to cart'} />
+        {isInCart(data) ? (
+          <Button
+            title={'add more'}
+            onPress={() =>
+              INCREASE_ITEM({
+                id: data.id,
+                name: data.plate_name,
+                price: data.plate_price,
+              })
+            }
+          />
+        ) : (
+          <Button
+            title={'add to cart'}
+            onPress={() =>
+              ADD_ITEM({
+                id: data.id,
+                name: data.plate_name,
+                price: data.plate_price,
+              })
+            }
+          />
+        )}
       </ButtonWrapperDetail>
     </View>
   )

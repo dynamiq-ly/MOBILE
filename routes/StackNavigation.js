@@ -95,6 +95,7 @@ import {
   AgencyTourGuide,
   NightShowsDetails,
   BookmarkDetails,
+  DrinksService,
 } from 'components/export'
 
 const Stack = createNativeStackNavigator()
@@ -467,6 +468,21 @@ const stack_array_screens = [
     header: ({ route, navigation }) => (
       <OptionHeader
         name={route.params._name}
+        components={
+          <Cart
+            name={'mini_bar'}
+            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
+          />
+        }
+      />
+    ),
+  },
+  {
+    path: 'menu-tab-stack-room-service-drinks-service',
+    component: DrinksService,
+    header: ({ navigation }) => (
+      <OptionHeader
+        name={'drink services'}
         components={
           <Cart
             name={'mini_bar'}

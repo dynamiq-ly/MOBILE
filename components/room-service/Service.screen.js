@@ -39,7 +39,7 @@ const menus = [
     name: 'drinks rooms services',
     color: '#A91079',
     icon: 'ri-goblet-line',
-    path: 'menu-tab-stack-restaurant-detail-menu-drinks',
+    path: 'menu-tab-stack-room-service-drinks-service',
   },
   {
     name: 'minibar service',

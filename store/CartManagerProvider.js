@@ -52,6 +52,9 @@ export default function CartManagerProvider({ children }) {
 
   console.log('storage => ', storage)
 
+  const isInCart = (payload) =>
+    !!state.cartItems.find((item) => item.id === payload.id)
+
   const context = {
     INCREASE_ITEM,
     DECREASE_ITEM,
@@ -60,7 +63,7 @@ export default function CartManagerProvider({ children }) {
     REMOVE_ITEM,
   }
   return (
-    <CartContext.Provider value={{ ...context, ...state }}>
+    <CartContext.Provider value={{ ...context, ...state, isInCart }}>
       {children}
     </CartContext.Provider>
   )
