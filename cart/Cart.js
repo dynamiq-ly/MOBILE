@@ -7,8 +7,8 @@ import { BadgeView, CartBadge, CartView } from 'styles/cart.module'
 
 import { __cart } from 'store/CartManagerProvider'
 
-export default function Cart({ name, path }) {
-  const { itemCount } = __cart()
+export default function Cart({ path }) {
+  const { cartItems } = __cart()
 
   return (
     <CartView onPress={path}>
@@ -16,7 +16,7 @@ export default function Cart({ name, path }) {
       <BadgeView>
         <CartBadge>
           <Text style={{ color: '#fff', fontSize: fontPixel(14) }}>
-            {itemCount}
+            {cartItems.length}
           </Text>
         </CartBadge>
       </BadgeView>

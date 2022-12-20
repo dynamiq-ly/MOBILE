@@ -102,3 +102,16 @@ export const BookButton = styled.TouchableOpacity`
   height: ${heightPixel(32)}px;
   background: ${({ theme }) => theme.primary.accent_900};
 `
+
+/**
+ * CART BUTTON
+ */
+
+export const CheckOutButton = styled.TouchableOpacity`
+  padding: 8px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  background: ${({ theme }) => theme.primary.accent_900};
+`

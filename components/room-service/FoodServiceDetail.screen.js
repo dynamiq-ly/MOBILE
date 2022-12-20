@@ -119,9 +119,27 @@ export default function ({ route }) {
       </AreaView>
       <ButtonWrapperDetail>
         {isInCart(data) ? (
-          <Button title={'add more'} onPress={() => INCREASE_ITEM(data)} />
+          <Button
+            title={'add more'}
+            onPress={() =>
+              INCREASE_ITEM({
+                id: data.id,
+                name: data.plate_name,
+                price: data.plate_price,
+              })
+            }
+          />
         ) : (
-          <Button title={'add to cart'} onPress={() => ADD_ITEM(data)} />
+          <Button
+            title={'add to cart'}
+            onPress={() =>
+              ADD_ITEM({
+                id: data.id,
+                name: data.plate_name,
+                price: data.plate_price,
+              })
+            }
+          />
         )}
       </ButtonWrapperDetail>
     </View>
