@@ -67,17 +67,7 @@ export default function MenuScreen({ navigation }) {
   return (
     <SafeAreaView>
       {isLoggedIn && text.length === 0 && (
-        <>
-          <Text
-            content={'Welcome back!'}
-            size={32}
-            weight={700}
-            up={'cap'}
-            color={'dominant'}
-            style={{ marginBottom: 16 }}
-          />
-          <ProfileButtonCard navigation={navigation} animate={text} />
-        </>
+        <ProfileButtonCard navigation={navigation} animate={text} />
       )}
       <SearchInput value={text} onChange={setText} />
       <GroupButton array={arr1} index={1} callback={navigation} />

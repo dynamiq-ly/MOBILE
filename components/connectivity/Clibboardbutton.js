@@ -30,7 +30,7 @@ export default function ClipBoardButton({
   )
 }
 
-const StyledClipBoardButton = styled.TouchableOpacity`
+export const StyledClipBoardButton = styled.TouchableOpacity`
   overflow: hidden;
   border-radius: 10px;
   align-items: center;
@@ -40,14 +40,14 @@ const StyledClipBoardButton = styled.TouchableOpacity`
   background: ${({ theme }) => theme.primary.accent_0};
 `
 
-const BoxIcon = styled.View`
+export const BoxIcon = styled.View`
   align-items: center;
   justify-content: center;
   width: ${widthPixel(52)}px;
   height: ${heightPixel(72)}px;
 `
 
-const BoxText = styled.View`
+export const BoxText = styled.View`
   flex: 1;
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(10)}px;
 `

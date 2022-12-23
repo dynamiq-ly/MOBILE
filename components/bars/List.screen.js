@@ -1,5 +1,6 @@
-import Widecard from 'components/cards/Widecard'
 import moment from 'moment'
+import Text from 'components/text/Text'
+import Widecard from 'components/cards/Widecard'
 import NotFound from 'components/notFound/NotFound'
 
 import { useQuery } from 'react-query'
@@ -34,12 +35,12 @@ export default function ListScreen({ navigation }) {
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
           data={data}
-          style={{ paddingHorizontal: 14 }}
+          style={{ paddingHorizontal: 16 }}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <Widecard
               key={item.id}
-              name={day}
+              name={item.bar_name}
               state={
                 item.bar_open_time < time || item.bar_closed_days.includes(day)
                   ? false
@@ -54,6 +55,15 @@ export default function ListScreen({ navigation }) {
               }
             />
           )}
+          ListHeaderComponent={
+            <Text
+              size={18}
+              weight={500}
+              color={'gray'}
+              content={'Enjoy a good night with our finest bars available'}
+              style={{ marginBottom: 14 }}
+            />
+          }
         />
       )}
     </View>

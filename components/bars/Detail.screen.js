@@ -1,20 +1,19 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
-import Button from 'components/button/Button'
 import Carsouel from 'components/slider/carousel'
 import CloseHeader from 'components/header/CloseHeader'
-import TextOverImage from 'components/cards/TextOverImage'
+import ShipCard from 'components/cards/ShipCard'
 
 import { useQuery } from 'react-query'
-import { ImageBackground, View as Gap } from 'react-native'
 import { baseUrl, __query } from 'hooks/useApi'
 import { useSpring } from '@react-spring/native'
 import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
+import { ImageBackground, View as Gap, TouchableOpacity } from 'react-native'
+
 import {
   View,
   RadiusView,
-  ButtonWrapperDetail,
   HdRow,
   HFLine,
   SafeAreaRowWrapperDetail,
@@ -72,26 +71,26 @@ export default function DetailScreen({ route, navigation }) {
             <Text content={'location'} color={'dominant'} />
           </HdRow>
 
-          <SafeAreaRowWrapperDetail
-            style={{ alignItems: 'center', marginTop: 5 }}>
-            <ImageBackground
-              style={{
-                width: 42,
-                height: 42,
-              }}
-              source={{
-                uri: 'https://w7.pngwing.com/pngs/529/271/png-transparent-panagiotis-giannakis-t-shirt-arm-shoulder-professional-fitness-coach-tshirt-physical-fitness-arm.png',
-              }}
-            />
-            <Gap style={{ flex: 1, marginLeft: 24 }}>
-              <Text
-                color={'gray'}
-                content={
-                  'This is Liam the head of the animation and inhote activities departement.'
+          <>
+            <Text content={'Attendant'} weight={500} size={18} up={'cap'} />
+            <SafeAreaRowWrapperDetail
+              style={{ marginBottom: -24, marginTop: -10 }}>
+              <ShipCard
+                name={'arnold'}
+                underName='E.CHEF'
+                image={
+                  'https://www.sapkoenchev.com/SPK_StsContFiles/1647851-1-marco-674x418.jpg'
                 }
               />
-            </Gap>
-          </SafeAreaRowWrapperDetail>
+              <ShipCard
+                name={'alex'}
+                underName='S.CHEF'
+                image={
+                  'https://servingalcohol.com/wp-content/uploads/2021/10/attractive-male-barman-is-making-cocktail-in-bar.jpg'
+                }
+              />
+            </SafeAreaRowWrapperDetail>
+          </>
 
           <>
             <HFLine />
@@ -110,18 +109,38 @@ export default function DetailScreen({ route, navigation }) {
             />
           </>
           <Gap style={{ marginBottom: 10 }} />
-          <TextOverImage
-            image={
-              'https://img.freepik.com/premium-vector/vector-mock-up-white-glass-blank-wine-close-bootle-with-cap-white-label-illustration-realistic-with-shadow-template-design-isolated-dark-background_111984-477.jpg?w=360'
-            }
-            name={'drinks menu'}
-            onPress={() =>
-              navigation.navigate('menu-tab-stack-bar-menu-list', {
-                _id: _id,
-                _data: data.menus,
-              })
-            }
-          />
+          <ImageBackground
+            source={{
+              uri: 'https://media.istockphoto.com/id/861030682/vector/cocktails-menu-chalkboard-set.jpg?s=612x612&w=0&k=20&c=eCN08wJCq8dJVUaPKD_SUHMQyP8SDpjn6bQ-iodLuMg=',
+            }}
+            style={{
+              height: 100,
+              width: '100%',
+              borderRadius: 8,
+              overflow: 'hidden',
+            }}>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#0a0a0a50',
+              }}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-bar-menu-list', {
+                  _id: _id,
+                  _data: data.menus,
+                })
+              }>
+              <Text
+                size={28}
+                up={'cap'}
+                weight={600}
+                color={'white'}
+                content={'bar menu'}
+              />
+            </TouchableOpacity>
+          </ImageBackground>
 
           {data.bar_closed_days.length > 0 && (
             <>

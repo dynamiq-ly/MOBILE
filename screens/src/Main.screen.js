@@ -30,7 +30,7 @@ export default function MainScreen({ navigation }) {
         style={{
           position: 'relative',
           overflow: 'hidden',
-          marginBottom: 24,
+          marginBottom: 14,
         }}>
         <Carousel
           loop
@@ -64,6 +64,11 @@ export default function MainScreen({ navigation }) {
           ]}
         />
       </Gap>
+
+      <Gap style={{ marginHorizontal: 16, marginBottom: 24 }}>
+        <Text content={'Welcome back!'} size={32} weight={700} up={'cap'} />
+      </Gap>
+
       <Gap style={{ marginHorizontal: 16 }}>
         <Gap
           style={{
@@ -71,77 +76,31 @@ export default function MainScreen({ navigation }) {
             flexDirection: 'row',
             marginBottom: 24,
           }}>
-          <StyledTagCards style={{ width: '19%', height: 62 }}>
-            <TouchableOpacity
+          {quck_access.map((el, key) => (
+            <StyledTagCards
+              key={key}
               style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              // onPress={() => navigation.navigate('menu-tab-stack-our-hotels')}
-            >
-              <Icon size={18} name={'ri-refund-line'} color={'blue'} />
-              <Text size={10} up={'up'} weight={500} content={'digital key'} />
-            </TouchableOpacity>
-          </StyledTagCards>
-
-          <StyledTagCards style={{ width: '19%', height: 62 }}>
-            <TouchableOpacity
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              // onPress={() => navigation.navigate('menu-tab-stack-our-hotels')}
-            >
-              <Icon size={18} name={'ri-medal-line'} color={'blue'} />
-              <Text size={10} up={'up'} weight={500} content={'something'} />
-            </TouchableOpacity>
-          </StyledTagCards>
-
-          <StyledTagCards style={{ width: '19%', height: 62 }}>
-            <TouchableOpacity
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              onPress={() =>
-                navigation.navigate('menu-tab-stack-how-can-we-help')
-              }>
-              <Icon size={18} name={'ri-headphone-line'} color={'black'} />
-              <Text size={10} up={'up'} weight={500} content={'reception'} />
-            </TouchableOpacity>
-          </StyledTagCards>
-          <StyledTagCards style={{ width: '19%', height: 62 }}>
-            <TouchableOpacity
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              onPress={() =>
-                navigation.navigate('menu-tab-stack-room-service')
-              }>
-              <Icon size={18} name={'ri-hand-heart-line'} color={'purple'} />
-              <Text size={10} up={'up'} weight={500} content={'Services'} />
-            </TouchableOpacity>
-          </StyledTagCards>
-
-          <StyledTagCards style={{ width: '19%', height: 62 }}>
-            <TouchableOpacity
-              style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              onPress={() =>
-                navigation.navigate('menu-tab-stack-transportation')
-              }>
-              <Icon size={18} name={'ri-car-line'} color={'red'} />
-              <Text size={10} up={'up'} weight={500} content={'transport'} />
-            </TouchableOpacity>
-          </StyledTagCards>
+                width:
+                  (Dimensions.get('screen').width - 62) / quck_access.length,
+                height: 72,
+              }}>
+              <TouchableOpacity
+                style={{ alignItems: 'center' }}
+                // onPress={() =>
+                //   navigation.navigate('menu-tab-stack-transportation')
+                // }
+              >
+                <Icon size={21} name={el.icon} color={el.color} />
+                <Text
+                  size={12}
+                  up={'up'}
+                  align={'center'}
+                  weight={500}
+                  content={el.name}
+                />
+              </TouchableOpacity>
+            </StyledTagCards>
+          ))}
         </Gap>
 
         {/* good plans */}
@@ -251,6 +210,17 @@ export function SquareCardSmall({ title, image, ...rest }) {
 
 const good_plans_array = [
   {
+    name: 'excursions',
+    path: 'menu-tab-stack-excursions',
+    image: 'https://www.hmebc.com/wp-content/uploads/freedom-excursion.jpg',
+  },
+  {
+    name: 'rent vehicules',
+    path: 'menu-tab-stack-renting',
+    image:
+      'https://www.northamericanar.com/wp-content/uploads/2020/04/car-rental.jpg',
+  },
+  {
     name: 'interesting point',
     path: 'menu-tab-stack-point-of-interest',
     image:
@@ -261,17 +231,6 @@ const good_plans_array = [
     path: 'menu-tab-stack-shops',
     image:
       'https://www.terratintagroup.com/wp-content/uploads/2017/07/Zwart-60x60-30x60_Stonedesign-Chalk-60x60_b-400x400.jpeg',
-  },
-  {
-    name: 'excursions',
-    path: 'menu-tab-stack-excursions',
-    image: 'https://www.hmebc.com/wp-content/uploads/freedom-excursion.jpg',
-  },
-  {
-    name: 'rent vehicules',
-    path: 'menu-tab-stack-renting',
-    image:
-      'https://www.northamericanar.com/wp-content/uploads/2020/04/car-rental.jpg',
   },
 ]
 
@@ -299,5 +258,32 @@ const luxury_and_relax_array = [
     path: 'menu-tab-stack-gym',
     image:
       'https://www.lifefitnessemea.com/resource/image/643794/portrait_ratio1x1/400/400/5cbd7a48ed5dd9647aad3d2bd2562c90/Ge/lfa-trainers-fitfair2019-20191122-wf2-8495-2-.jpg',
+  },
+]
+
+const quck_access = [
+  {
+    path: '',
+    name: 'our hotels',
+    color: '#472183',
+    icon: 'ri-hotel-line',
+  },
+  {
+    path: 'wallet',
+    name: 'wallet',
+    color: '#227C70',
+    icon: 'ri-wallet-line',
+  },
+  {
+    path: '',
+    name: 'bookings',
+    color: '#CE7777',
+    icon: 'ri-book-2-line',
+  },
+  {
+    path: '',
+    name: 'digital key',
+    color: '#3A4F7A',
+    icon: 'ri-refund-line',
   },
 ]

@@ -68,7 +68,7 @@ export const TextBox = styled.View`
 export const HdRow = styled.View`
   width: 100%;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
 `
 
 export const HFLine = styled.View`

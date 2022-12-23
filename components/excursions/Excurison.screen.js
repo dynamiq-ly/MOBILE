@@ -1,3 +1,4 @@
+import Text from 'components/text/Text'
 import NotFound from 'components/notFound/NotFound'
 import FullImageCard from 'components/cards/FullImageCard'
 
@@ -33,7 +34,7 @@ export default function ExcursionScreen({ navigation }) {
             <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
           }
           data={data}
-          style={{ padding: 16 }}
+          style={{ paddingHorizontal: 16 }}
           numColumns={2}
           horizontal={false}
           columnWrapperStyle={{ justifyContent: 'space-between' }}
@@ -50,6 +51,17 @@ export default function ExcursionScreen({ navigation }) {
               }
             />
           )}
+          ListHeaderComponent={
+            <Text
+              size={18}
+              weight={500}
+              color={'gray'}
+              content={
+                'Enjoy a collection of adventures with our excursion and acitivites programs.'
+              }
+              style={{ marginBottom: 14 }}
+            />
+          }
         />
       )}
     </View>
