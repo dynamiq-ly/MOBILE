@@ -94,6 +94,7 @@ import {
   BankAndAtmScreen,
   AgencyTourGuide,
   NightShowsDetails,
+  BookmarkDetails,
   DrinksService,
 } from 'components/export'
 
@@ -123,7 +124,8 @@ const StackNavigation = () => {
     <Stack.Navigator
       initialRouteName={
         isLoggedIn ? 'main-initial-stack' : 'first-initial-stack'
-      }>
+      }
+    >
       {!isLoggedIn && (
         <>
           <Stack.Screen
@@ -634,5 +636,10 @@ const stack_array_screens = [
     path: 'menu-tab-stack-transportation',
     component: TransportationsScreen,
     header: () => <StackHeader name={'transportations'} />,
+  },
+  {
+    path: 'menu-tab-stack-bookmark-details',
+    component: BookmarkDetails,
+    header: ({ route }) => <StackHeader name={route.params._name} />,
   },
 ]

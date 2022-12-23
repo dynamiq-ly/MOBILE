@@ -127,3 +127,5 @@ export { default as ExcursionListScreen } from './excursions/ExcursionList.scree
 export { default as ExcursionDetialsScreen } from './excursions/ExcursionDetail.screen'
 // shop screen
 export { default as ShopScreen } from './shops/Shops.screen'
+// bookmarkDetail screen
+export { default as BookmarkDetails } from './bookmark/BookmarkDetails'

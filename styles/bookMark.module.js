@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Dimensions } from 'react-native'
 
 export const StyledGrid = styled.View`
   flex-wrap: wrap;
@@ -35,4 +36,22 @@ export const StyledThmubnailOverlay = styled.View`
   width: 100%;
   height: 100%;
   background: ${({ theme }) => `${theme.primary.accent_900}40`};
+`
+export const StyledBookMarkDetailsItem = styled.TouchableOpacity`
+  width: 30%;
+  height: ${Dimensions.get('screen').width / 3.3};
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 5%;
+  margin-left: ${({ m }) => (m ? '5%' : '0%')};
+`
+export const StyledBookMarkDetails = styled.Image`
+  flex: 1;
+  width: 100%;
+  height: 100%;
+`
+export const StyledGridImage = styled.View`
+  flex-wrap: wrap;
+  margin-top: 14px;
+  flex-direction: row;
 `
