@@ -39,7 +39,7 @@ export const StyledThmubnailOverlay = styled.View`
 `
 export const StyledBookMarkDetailsItem = styled.TouchableOpacity`
   width: 30%;
-  height: ${Dimensions.get('screen').width / 3.3};
+  height: ${Dimensions.get('screen').width / 3.3}px;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 5%;
