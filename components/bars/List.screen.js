@@ -57,8 +57,7 @@ export default function ListScreen({ navigation }) {
           )}
           ListHeaderComponent={
             <Text
-              size={18}
-              weight={500}
+              size={16}
               color={'gray'}
               content={'Enjoy a good night with our finest bars available'}
               style={{ marginBottom: 14 }}

@@ -9,7 +9,7 @@ import { useQuery } from 'react-query'
 import { palette } from 'themes/palette'
 import { baseUrl, __query } from 'hooks/useApi'
 import { fontPixel } from 'utils/normalization'
-import { View as Gap, TouchableOpacity as Button } from 'react-native'
+import { View as Gap, TouchableOpacity as Button, Linking } from 'react-native'
 import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 
 import { useSpring } from '@react-spring/native'
@@ -94,7 +94,8 @@ export default function PointOfInterestDetailScreen({ route }) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundColor: palette.secondary.accent_200,
-              }}>
+              }}
+              onPress={() => Linking.openURL(data.point_website_information)}>
               <Text
                 content={'website'}
                 color={'dominant'}

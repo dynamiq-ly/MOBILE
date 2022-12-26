@@ -8,7 +8,7 @@ import {
   BackButton,
 } from 'styles/header.module'
 import { useContext } from 'react'
-import { Image } from 'react-native'
+import { Image, View as Gap } from 'react-native'
 import { NavigationContext, DrawerActions } from '@react-navigation/native'
 
 const DrawerHeaderMain = ({ name }) => {
@@ -50,6 +50,17 @@ const DrawerHeaderMain = ({ name }) => {
         <BackButton
           style={{ alignItems: 'flex-end', marginRight: 0 }}
           onPress={() => _nav.navigate('menu-tab-notification')}>
+          <Gap
+            style={{
+              zIndex: 1,
+              top: '20%',
+              padding: 5,
+              left: '70%',
+              borderRadius: 100,
+              position: 'absolute',
+              backgroundColor: '#ee0000',
+            }}
+          />
           <Icon name={'ri-notification-line'} size={24} />
         </BackButton>
       </StackViewHeader>

@@ -53,8 +53,7 @@ export default function ExcursionScreen({ navigation }) {
           )}
           ListHeaderComponent={
             <Text
-              size={18}
-              weight={500}
+              size={16}
               color={'gray'}
               content={
                 'Enjoy a collection of adventures with our excursion and acitivites programs.'

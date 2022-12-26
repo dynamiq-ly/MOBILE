@@ -1,8 +1,6 @@
 import Text from 'components/text/Text'
-import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
 import Widecard from 'components/cards/Widecard'
-import FullImageCard from 'components/cards/FullImageCard'
 
 import { HScrollView } from 'styles/app.module'
 import { __auth } from 'store/AuthSusbcribeProvider'
@@ -24,6 +22,7 @@ import {
 
 export default function MainScreen({ navigation }) {
   const interval = 5000
+
   return (
     <ScrollView>
       <Gap
@@ -66,7 +65,12 @@ export default function MainScreen({ navigation }) {
       </Gap>
 
       <Gap style={{ marginHorizontal: 16, marginBottom: 24 }}>
-        <Text content={'Welcome back!'} size={32} weight={700} up={'cap'} />
+        <Text
+          size={24}
+          up={'cap'}
+          weight={700}
+          content={`Welcome, nadine breaty`}
+        />
       </Gap>
 
       <Gap style={{ marginHorizontal: 16 }}>
@@ -86,10 +90,7 @@ export default function MainScreen({ navigation }) {
               }}>
               <TouchableOpacity
                 style={{ alignItems: 'center' }}
-                // onPress={() =>
-                //   navigation.navigate('menu-tab-stack-transportation')
-                // }
-              >
+                onPress={() => navigation.navigate(el.path)}>
                 <Icon size={21} name={el.icon} color={el.color} />
                 <Text
                   size={12}
@@ -210,16 +211,17 @@ export function SquareCardSmall({ title, image, ...rest }) {
 
 const good_plans_array = [
   {
-    name: 'excursions',
-    path: 'menu-tab-stack-excursions',
-    image: 'https://www.hmebc.com/wp-content/uploads/freedom-excursion.jpg',
-  },
-  {
     name: 'rent vehicules',
     path: 'menu-tab-stack-renting',
     image:
       'https://www.northamericanar.com/wp-content/uploads/2020/04/car-rental.jpg',
   },
+  {
+    name: 'excursions',
+    path: 'menu-tab-stack-excursions',
+    image: 'https://www.hmebc.com/wp-content/uploads/freedom-excursion.jpg',
+  },
+
   {
     name: 'interesting point',
     path: 'menu-tab-stack-point-of-interest',
@@ -263,20 +265,20 @@ const luxury_and_relax_array = [
 
 const quck_access = [
   {
-    path: '',
+    path: 'menu-tab-stack-our-hotels',
     name: 'our hotels',
     color: '#472183',
     icon: 'ri-hotel-line',
   },
   {
-    path: 'wallet',
-    name: 'wallet',
+    path: 'menu-tab-stack-quick-access',
+    name: 'quick access',
     color: '#227C70',
     icon: 'ri-wallet-line',
   },
   {
     path: '',
-    name: 'bookings',
+    name: 'my bookings',
     color: '#CE7777',
     icon: 'ri-book-2-line',
   },

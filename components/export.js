@@ -129,3 +129,5 @@ export { default as ExcursionDetialsScreen } from './excursions/ExcursionDetail.
 export { default as ShopScreen } from './shops/Shops.screen'
 // bookmarkDetail screen
 export { default as BookmarkDetails } from './bookmark/BookmarkDetails'
+// quick access
+export { default as QuickAccess } from './quick-access/QuickAccess'
