@@ -97,6 +97,7 @@ import {
   BookmarkDetails,
   DrinksService,
   QuickAccess,
+  LaguageVaultScreen,
 } from 'components/export'
 
 const Stack = createNativeStackNavigator()
@@ -646,5 +647,10 @@ const stack_array_screens = [
     path: 'menu-tab-stack-quick-access',
     component: QuickAccess,
     header: ({ route }) => <StackHeader name={'Quick Access'} />,
+  },
+  {
+    path: 'menu-tab-stack-laguage',
+    component: LaguageVaultScreen,
+    header: () => <StackHeader name={'Laguage Vault'} />,
   },
 ]
