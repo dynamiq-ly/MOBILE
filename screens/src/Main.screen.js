@@ -24,7 +24,7 @@ export default function MainScreen({ navigation }) {
   const interval = 5000
 
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: '#f5f5f4' }}>
       <Gap
         style={{
           position: 'relative',
