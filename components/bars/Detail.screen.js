@@ -72,7 +72,6 @@ export default function DetailScreen({ route, navigation }) {
           </HdRow>
 
           <>
-            <Text content={'Attendant'} weight={500} size={18} up={'cap'} />
             <SafeAreaRowWrapperDetail
               style={{ marginBottom: -24, marginTop: -10 }}>
               <ShipCard

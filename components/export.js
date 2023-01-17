@@ -132,3 +132,5 @@ export { default as ShopScreen } from './shops/Shops.screen'
 export { default as BookmarkDetails } from './bookmark/BookmarkDetails'
 // quick access
 export { default as QuickAccess } from './quick-access/QuickAccess'
+// setting
+export { default as LanguageScreen } from './profile/language/Language.screen'

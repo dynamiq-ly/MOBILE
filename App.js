@@ -20,6 +20,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 // custom font
 import { useFonts } from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
+import LocalizationProvider from './store/LocalizationProvider'
 
 const queryClient = new QueryClient()
 SplashScreen.preventAutoHideAsync()
@@ -56,19 +57,22 @@ export default function App() {
         <SafeAreaProvider>
           {/* query provider */}
           <QueryClientProvider client={queryClient}>
-            {/* navigation provider */}
-            <NavigationContainer>
-              {/* auth provider */}
-              <AuthProvider>
-                {/* cart manager */}
-                <CartManagerProvider>
-                  {/* screen manager */}
-                  <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                    <StackNavigation />
-                  </View>
-                </CartManagerProvider>
-              </AuthProvider>
-            </NavigationContainer>
+            {/* localization provider */}
+            <LocalizationProvider>
+              {/* navigation provider */}
+              <NavigationContainer>
+                {/* auth provider */}
+                <AuthProvider>
+                  {/* cart manager */}
+                  <CartManagerProvider>
+                    {/* screen manager */}
+                    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                      <StackNavigation />
+                    </View>
+                  </CartManagerProvider>
+                </AuthProvider>
+              </NavigationContainer>
+            </LocalizationProvider>
           </QueryClientProvider>
         </SafeAreaProvider>
       </ThemeProvider>

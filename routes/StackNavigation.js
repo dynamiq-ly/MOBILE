@@ -98,6 +98,7 @@ import {
   DrinksService,
   QuickAccess,
   LaguageVaultScreen,
+  LanguageScreen,
 } from 'components/export'
 
 const Stack = createNativeStackNavigator()
@@ -652,5 +653,10 @@ const stack_array_screens = [
     path: 'menu-tab-stack-laguage',
     component: LaguageVaultScreen,
     header: () => <StackHeader name={'Laguage Vault'} />,
+  },
+  {
+    path: 'menu-tab-stack-setting-language',
+    component: LanguageScreen,
+    header: () => <StackHeader name={'Language Settings'} />,
   },
 ]

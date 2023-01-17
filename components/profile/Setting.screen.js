@@ -3,7 +3,7 @@ import AreaView from 'utils/TabAreaView'
 import { LogoutButton } from './Profile.screen'
 import { __auth } from 'store/AuthSusbcribeProvider'
 
-export default function SettingScreen() {
+export default function SettingScreen({ navigation }) {
   const { isLoggedIn } = __auth()
 
   return (
@@ -13,7 +13,7 @@ export default function SettingScreen() {
           key={key}
           title={el.title}
           icon={el.icon}
-          func={el.function}
+          func={() => navigation.navigate(el.path)}
         />
       ))}
       {isLoggedIn ? (
@@ -29,21 +29,21 @@ const action_buttons = [
   {
     title: 'theme',
     icon: 'toggle',
-    function: () => {},
+    path: '',
   },
   {
     title: 'languages',
     icon: 'earth',
-    function: () => {},
+    path: 'menu-tab-stack-setting-language',
   },
   {
     title: 'Privacy & cookies',
     icon: 'chat-private',
-    function: () => {},
+    path: '',
   },
   {
     title: 'contact us',
     icon: 'customer-service-2',
-    function: () => {},
+    path: '',
   },
 ]

@@ -20,8 +20,20 @@ import {
   ScrollView,
 } from 'react-native'
 
+import { lang } from 'lang/main.i18n'
+import { __t } from 'store/LocalizationProvider'
+
 export default function MainScreen({ navigation }) {
   const interval = 5000
+  const { local } = __t()
+
+  const t = (key) => {
+    const translation = lang[local][key]
+    if (!translation) {
+      return key
+    }
+    return translation
+  }
 
   return (
     <ScrollView style={{ backgroundColor: '#f5f5f4' }}>
@@ -69,7 +81,7 @@ export default function MainScreen({ navigation }) {
           size={24}
           up={'cap'}
           weight={700}
-          content={`Welcome, nadine breaty`}
+          content={`${t('greeting')}, nadine breaty`}
         />
       </Gap>
 
@@ -105,7 +117,7 @@ export default function MainScreen({ navigation }) {
         </Gap>
 
         {/* good plans */}
-        <Text content={'good plans'} weight={700} up={'cap'} size={26} />
+        <Text content={t('gp')} weight={700} up={'cap'} size={26} />
         <HScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -113,7 +125,7 @@ export default function MainScreen({ navigation }) {
           {good_plans_array.map((item, key) => (
             <SquareCardSmall
               key={key}
-              title={item.name}
+              title={t(item.name)}
               image={item.image}
               onPress={() => navigation.navigate(item.path)}
             />
@@ -122,7 +134,7 @@ export default function MainScreen({ navigation }) {
 
         {/* servicess and facilties */}
         <Text
-          content={'services and facilties'}
+          content={t('s_f')}
           weight={700}
           up={'cap'}
           size={26}
@@ -131,7 +143,7 @@ export default function MainScreen({ navigation }) {
         {services_and_facilties_array.map((item, key) => (
           <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
             <Widecard
-              name={item.name}
+              name={t(item.name)}
               image={item.image}
               state={'hidden'}
               onPress={() => navigation.navigate(item.path)}
@@ -141,7 +153,7 @@ export default function MainScreen({ navigation }) {
 
         {/* luxury and relax services */}
         <Text
-          content={'luxury and relax'}
+          content={t('l_r')}
           style={{ marginTop: 18, marginBottom: 10 }}
           weight={700}
           up={'cap'}
@@ -150,7 +162,7 @@ export default function MainScreen({ navigation }) {
         {luxury_and_relax_array.map((item, key) => (
           <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
             <Widecard
-              name={item.name}
+              name={t(item.name)}
               image={item.image}
               state={'hidden'}
               onPress={() => navigation.navigate(item.path)}
@@ -166,7 +178,7 @@ export default function MainScreen({ navigation }) {
 
 const services_and_facilties_array = [
   {
-    name: 'how can we help',
+    name: 'how_can_we_help',
     path: 'menu-tab-stack-how-can-we-help',
     image:
       'https://img.freepik.com/free-photo/one-two-young-hotel-receptionists-standing-by-counter-looking-touchpad-display-consulting-client-phone-against-colleague_274679-18500.jpg',
@@ -211,7 +223,7 @@ export function SquareCardSmall({ title, image, ...rest }) {
 
 const good_plans_array = [
   {
-    name: 'rent vehicules',
+    name: 'rent_vehicules',
     path: 'menu-tab-stack-renting',
     image:
       'https://www.northamericanar.com/wp-content/uploads/2020/04/car-rental.jpg',
@@ -223,7 +235,7 @@ const good_plans_array = [
   },
 
   {
-    name: 'interesting point',
+    name: 'interesting_point',
     path: 'menu-tab-stack-point-of-interest',
     image:
       'https://gladiatortours.com/wp-content/uploads/amalfi-and-positano-coast-excursion-400x400.jpg',
@@ -238,7 +250,7 @@ const good_plans_array = [
 
 const luxury_and_relax_array = [
   {
-    name: "room's services",
+    name: 'rooms_services',
     path: 'menu-tab-stack-room-service',
     image:
       'https://media.istockphoto.com/videos/ordering-room-service-video-id1083647268?s=640x640',
@@ -250,13 +262,13 @@ const luxury_and_relax_array = [
       'https://www.casabianca-santorini.com/wp-content/uploads/2015/10/room-2-500x500.jpg',
   },
   {
-    name: 'swimming pool',
+    name: 'swimming_pool',
     path: 'menu-tab-stack-swimming-pool',
     image:
       'https://sirbenainsliesportscentre.com/wp-content/uploads/2015/10/JR20140624_TSchool_Swimming-10-400x400.jpg',
   },
   {
-    name: 'gym training',
+    name: 'gym_training',
     path: 'menu-tab-stack-gym',
     image:
       'https://www.lifefitnessemea.com/resource/image/643794/portrait_ratio1x1/400/400/5cbd7a48ed5dd9647aad3d2bd2562c90/Ge/lfa-trainers-fitfair2019-20191122-wf2-8495-2-.jpg',

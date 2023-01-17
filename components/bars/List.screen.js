@@ -46,6 +46,7 @@ export default function ListScreen({ navigation }) {
                   ? false
                   : true
               }
+              specialiy={'Night Club'}
               image={`${baseUrl}storage/bars/${item.images[0].image}`}
               onPress={() =>
                 navigation.navigate('menu-tab-stack-bar-detail', {
