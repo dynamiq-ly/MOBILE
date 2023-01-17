@@ -16,6 +16,10 @@ export const lang = {
     rooms: 'rooms',
     swimming_pool: 'swimming pool',
     gym_training: 'gym training',
+    our_hotels: 'our hotels',
+    quick_access: 'quick access',
+    my_bookings: 'my bookings',
+    digital_key: 'digital key',
   },
 
   fr: {
@@ -35,6 +39,10 @@ export const lang = {
     rooms: 'Chambres',
     swimming_pool: 'piscine',
     gym_training: 'salle de sport',
+    our_hotels: 'Nos hôtels',
+    quick_access: 'Accès rapide',
+    my_bookings: 'Mes réservations',
+    digital_key: 'Clé numérique',
   },
 
   es: {
@@ -54,5 +62,9 @@ export const lang = {
     rooms: 'habitaciones',
     swimming_pool: 'piscina',
     gym_training: 'gimnasio',
+    our_hotels: 'Nuestros hoteles',
+    quick_access: 'Acceso rápido',
+    my_bookings: 'Mis reservas',
+    digital_key: 'Llave digital',
   },
 }

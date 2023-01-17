@@ -97,7 +97,7 @@ export default function MainScreen({ navigation }) {
               key={key}
               style={{
                 width:
-                  (Dimensions.get('screen').width - 62) / quck_access.length,
+                  (Dimensions.get('screen').width - 42) / quck_access.length,
                 height: 72,
               }}>
               <TouchableOpacity
@@ -109,7 +109,7 @@ export default function MainScreen({ navigation }) {
                   up={'up'}
                   align={'center'}
                   weight={500}
-                  content={el.name}
+                  content={t(el.name)}
                 />
               </TouchableOpacity>
             </StyledTagCards>
@@ -278,25 +278,25 @@ const luxury_and_relax_array = [
 const quck_access = [
   {
     path: 'menu-tab-stack-our-hotels',
-    name: 'our hotels',
+    name: 'our_hotels',
     color: '#472183',
     icon: 'ri-hotel-line',
   },
   {
     path: 'menu-tab-stack-quick-access',
-    name: 'quick access',
+    name: 'quick_access',
     color: '#227C70',
     icon: 'ri-wallet-line',
   },
   {
     path: '',
-    name: 'my bookings',
+    name: 'my_bookings',
     color: '#CE7777',
     icon: 'ri-book-2-line',
   },
   {
     path: '',
-    name: 'digital key',
+    name: 'digital_key',
     color: '#3A4F7A',
     icon: 'ri-refund-line',
   },
