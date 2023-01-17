@@ -1,3 +1,4 @@
+import Text from 'components/text/Text'
 import Widecard from 'components/cards/Widecard'
 import NotFound from 'components/notFound/NotFound'
 
@@ -57,6 +58,16 @@ export default function ListScreen({ navigation }) {
               }
             />
           )}
+          ListHeaderComponent={
+            <Text
+              size={16}
+              color={'gray'}
+              content={
+                'We are partenered with the best restaurant, from good refreshing breakfasts to a fancy and classy dinings.'
+              }
+              style={{ marginBottom: 14 }}
+            />
+          }
         />
       )}
     </View>

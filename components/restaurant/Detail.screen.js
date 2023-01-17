@@ -64,6 +64,29 @@ export default function DetailScreen({ navigation, route }) {
             up={'cap'}
             size={28}
           />
+
+          <Gap
+            style={{
+              marginTop: 5,
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <Icon name={'ri-phone-line'} size={18} style={{ marginRight: 5 }} />
+            <Text content={`28 10 54 45`} />
+          </Gap>
+          <Gap
+            style={{
+              marginTop: 5,
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <Icon
+              name={'ri-map-pin-line'}
+              style={{ marginRight: 5 }}
+              size={18}
+            />
+            <Text content={'Main Hall'} />
+          </Gap>
           <Gap
             style={{
               marginTop: 5,
@@ -76,6 +99,7 @@ export default function DetailScreen({ navigation, route }) {
               content={`${data.restaurant_opens} to ${data.restaurant_closes}`}
             />
           </Gap>
+
           <Text
             content={data.restaurant_descripton}
             color={'gray'}
@@ -83,10 +107,21 @@ export default function DetailScreen({ navigation, route }) {
             size={16}
           />
 
+          <>
+            <HFLine />
+            <Gap style={{ flexDirection: 'row' }}>
+              <Text up={'cap'} size={16} content={'speciality: '} />
+              <Text
+                up={'cap'}
+                size={16}
+                weight={600}
+                content={data.restaurant_speciality}
+              />
+            </Gap>
+          </>
+
           {data.chefs !== null && (
             <>
-              <HFLine />
-              <Text content={'chefs'} weight={500} size={18} up={'cap'} />
               <SafeAreaRowWrapperDetail>
                 <ShipCard
                   name={data.chefs.restaurant_chef_exec_name}

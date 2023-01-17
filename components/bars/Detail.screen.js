@@ -60,15 +60,13 @@ export default function DetailScreen({ route, navigation }) {
             <Icon name={'ri-time-line'} size={18} style={{ marginRight: 5 }} />
             <Text content={data.bar_open_time} />
           </HdRow>
-          {/* to get back later */}
-          <HdRow style={{ marginBottom: 10 }}>
+          <HdRow style={{ marginBottom: 5 }}>
             <Icon
               name={'ri-map-pin-line'}
               size={18}
               style={{ marginRight: 5 }}
-              color={palette.secondary.accent_700}
             />
-            <Text content={'location'} color={'dominant'} />
+            <Text content={data.bar_location} />
           </HdRow>
 
           <>
