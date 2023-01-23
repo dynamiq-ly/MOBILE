@@ -11,7 +11,7 @@ import { SafeAreaRowWrapperDetail } from 'styles/detail.module'
 const MenuDrinksDetails = ({ route }) => {
   const { _id, _image, _data } = route.params
 
-  const { data } = useQuery(
+  const { data, refetch } = useQuery(
     ['@restaurant-drink-menu-soft', _id],
     () => restaurantDrinkMenuSoft(_id),
     {
@@ -52,7 +52,10 @@ const MenuDrinksDetails = ({ route }) => {
                 size={18}
                 weight={600}
                 color={'dominant'}
-                content={el.soft_drink_price}
+                content={new Intl.NumberFormat('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                }).format(el.soft_drink_price)}
               />
             </SafeAreaRowWrapperDetail>
             <Text
