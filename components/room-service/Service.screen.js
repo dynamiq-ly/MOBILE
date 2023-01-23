@@ -6,7 +6,20 @@ import ButtonGroupSide from 'components/button/ButtonGroupSide'
 import { View } from 'react-native'
 import { Image } from 'styles/image.module'
 
+import { lang } from 'lang/services.i18n'
+import { __t } from 'store/LocalizationProvider'
+
 export default function Services({ navigation }) {
+  const { local } = __t()
+
+  const t = (key) => {
+    const translation = lang[local][key]
+    if (!translation) {
+      return key
+    }
+    return translation
+  }
+
   return (
     <AreaView>
       <Image
@@ -22,27 +35,35 @@ export default function Services({ navigation }) {
         }
       />
       <View style={{ marginBottom: 15 }} />
-      <ButtonGroup array={menus} index={1} callback={navigation} />
-      <ButtonGroupSide array={array} index={2} callback={navigation} />
+      <ButtonGroup
+        array={menus.map((el) => ({ ...el, name: t(el.name) }))}
+        index={1}
+        callback={navigation}
+      />
+      <ButtonGroupSide
+        array={array.map((el) => ({ ...el, name: t(el.name) }))}
+        index={2}
+        callback={navigation}
+      />
     </AreaView>
   )
 }
 
 const menus = [
   {
-    name: 'food rooms services',
+    name: 'food_rooms_services',
     color: '#A91079',
     icon: 'ri-restaurant-line',
     path: 'menu-tab-stack-room-service-food-service',
   },
   {
-    name: 'drinks rooms services',
+    name: 'drinks_rooms_services',
     color: '#A91079',
     icon: 'ri-goblet-line',
     path: 'menu-tab-stack-room-service-drinks-service',
   },
   {
-    name: 'minibar service',
+    name: 'minibar_service',
     color: '#A91079',
     icon: 'ri-fridge-line',
     path: 'menu-tab-stack-room-service-mini-bar',
@@ -51,27 +72,27 @@ const menus = [
 
 const array = [
   {
-    name: 'phone directory',
+    name: 'phone_directory',
     path: 'menu-tab-stack-room-service-phone-directory',
   },
   {
-    name: 'incidence report',
+    name: 'incidence_report',
     path: 'menu-tab-stack-room-service-incidence-report',
   },
-  { name: 'room requests', path: 'menu-tab-stack-room-service-room-request' },
-  { name: 'room upgrade', path: 'menu-tab-stack-room-service-room-upgrade' },
+  { name: 'room_requests', path: 'menu-tab-stack-room-service-room-request' },
+  { name: 'room_upgrade', path: 'menu-tab-stack-room-service-room-upgrade' },
   { name: 'housekeeping', path: 'menu-tab-stack-housekeeping' },
   { name: 'laundry', path: 'menu-tab-stack-laundry' },
   { name: 'towels', path: 'menu-tab-stack-towels' },
   { name: 'television', path: 'menu-tab-stack-room-service-television' },
-  { name: 'safe deposit box', path: 'menu-tab-stack-safe-box' },
+  { name: 'safe_deposit_box', path: 'menu-tab-stack-safe-box' },
   {
-    name: 'electricity and cables',
+    name: 'electricity_and_cables',
     path: 'menu-tab-stack-room-service-electricity',
   },
   {
-    name: 'air conditioner',
+    name: 'air_conditioner',
     path: 'menu-tab-stack-room-service-airconditioner',
   },
-  { name: 'hair dryer', path: 'menu-tab-stack-room-service-hairdryer' },
+  { name: 'hair_dryer', path: 'menu-tab-stack-room-service-hairdryer' },
 ]

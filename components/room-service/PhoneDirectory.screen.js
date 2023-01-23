@@ -5,12 +5,31 @@ import AreaView from 'utils/TabAreaView'
 import Icon from 'react-native-remix-icon'
 
 import { Image } from 'styles/image.module'
-import { fontPixel } from 'utils/normalization'
-import { BoxIcon, BoxText, PhoneDirectoryRow } from '~/styles/list.module'
+import { BoxText, PhoneDirectoryRow } from '~/styles/list.module'
+
+import { __query } from 'hooks/useApi'
+import { useQuery } from 'react-query'
+import { useCallback, useState } from 'react'
+import { FlatList, LogBox, RefreshControl } from 'react-native'
 
 export default function PhoneDirectoryScreen() {
+  const { data, refetch } = useQuery('@phone-directory', phoneFetcher, {
+    refetchOnMount: true,
+    initialData: [],
+  })
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
-    <AreaView>
+    <AreaView
+      refreshControl={
+        <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+      }>
       <Image
         source={{
           uri: 'https://www.whitepageshull.co.uk/wp-content/uploads/2020/06/Telephone-KCOM-Directory-Enquiries.jpg',
@@ -23,61 +42,31 @@ export default function PhoneDirectoryScreen() {
           'in this section we will show you how to make use of our phone system. in case you needed to call someone'
         }
       />
-      <PhoneDirectoryRow>
-        <BoxText>
-          <Text content={'emergency'} weight={600} up={'cap'} size={18} />
-          <Text content={'Dial 0 + 911.'} color={'red'} size={16} />
-        </BoxText>
-      </PhoneDirectoryRow>
-      {/*  */}
-      <PhoneDirectoryRow>
-        <BoxText>
-          <Text content={'reception'} weight={600} up={'cap'} size={18} />
-          <Text content={'dial 9.'} color={'gray'} up={'cap'} size={16} />
-        </BoxText>
-      </PhoneDirectoryRow>
-      {/*  */}
-      <PhoneDirectoryRow>
-        <BoxText>
-          <Text content={'room to room'} weight={600} up={'cap'} size={18} />
-          <Text
-            content={'Dial directly the room number'}
-            color={'gray'}
-            size={16}
-          />
-        </BoxText>
-      </PhoneDirectoryRow>
-      {/*  */}
-      <PhoneDirectoryRow>
-        <BoxText>
-          <Text
-            content={'international calls'}
-            weight={600}
-            up={'cap'}
-            size={18}
-          />
-          <Text
-            content={'Dial 0 + Internation code + Number.'}
-            color={'gray'}
-            size={16}
-          />
-        </BoxText>
-      </PhoneDirectoryRow>
-      {/*  */}
-      <PhoneDirectoryRow>
-        <BoxText>
-          <Text content={'national call'} weight={600} up={'cap'} size={18} />
-          <Text content={'Dial 0 + number.'} color={'gray'} size={16} />
-        </BoxText>
-      </PhoneDirectoryRow>
-      {/*  */}
-      <PhoneDirectoryRow>
-        <BoxText>
-          <Text content={'spa'} weight={600} up={'cap'} size={18} />
-          <Text content={'Dial 11.'} color={'gray'} size={16} />
-        </BoxText>
-      </PhoneDirectoryRow>
+      {data.map((el) => (
+        <PhoneDirectoryRow key={el.id}>
+          <BoxText>
+            <Text content={el.phone_title} weight={600} up={'cap'} size={18} />
+            <Text
+              content={el.phone_instruction}
+              color={el.phone_urgent ? 'red' : 'gray'}
+              size={16}
+            />
+          </BoxText>
+        </PhoneDirectoryRow>
+      ))}
+
       <View style={{ marginTop: 24 }} />
     </AreaView>
   )
 }
+
+let phoneFetcher = function () {
+  return __query
+    .get('api/directory')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)

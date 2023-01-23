@@ -7,6 +7,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { MainTab, SearchTab, BookmarkTab, WeatherTab } from 'screens/export'
 import { DrawerHeaderMain } from 'components/header/DrawerHeader'
 
+import { lang } from 'lang/tabs.i18n'
+import { __t } from 'store/LocalizationProvider'
+
 const Tab = createBottomTabNavigator()
 
 const iconTab = (route, color, focused) => {
@@ -41,43 +44,28 @@ const iconTab = (route, color, focused) => {
 const tabComponents = [
   {
     path: 'main-tab',
-    name: 'Main',
+    name: 'main',
     component: MainTab,
-    header: <DrawerHeaderMain name={'smarhotel'} />,
   },
   {
     path: 'bookmark-tab',
-    name: 'Bookmarks',
+    name: 'bookmarks',
     component: BookmarkTab,
-    header: <TextHeader name={'Bookmarks'} size={16} />,
+    header: 'bookmarks',
   },
   {
     path: 'search-tab',
-    name: 'Search',
+    name: 'search',
     component: SearchTab,
-    header: <TextHeader name={'Search'} size={16} />,
+    header: 'search',
   },
-  // {
-  //   path: 'map-tab',
-  //   name: 'map',
-  //   component: MapTab,
-  //   header: <TextHeader name={'map view'} size={16} />,
-  // },
   {
     path: 'weather-tab',
     name: 'weather',
     component: WeatherTab,
-    header: <TextHeader name={'weather cast'} size={16} />,
+    header: 'weather',
   },
 ]
-
-/**
- *
- * @param {string} state
- */
-const getScreensToHideTabTabOnActiveRoutes = (state) => {
-  return state.includes('menu-tab-stack-')
-}
 
 const barStyle = {
   paddingLeft: pixelSizeHorizontal(24),
@@ -87,12 +75,20 @@ const barStyle = {
 }
 
 const TabNavigation = () => {
+  const { local } = __t()
+
+  const t = (key) => {
+    const translation = lang[local][key]
+    if (!translation) {
+      return key
+    }
+    return translation
+  }
+
   return (
     <Tab.Navigator
       initialRouteName='main-tab'
       screenOptions={({ route }) => ({
-        // tabBarShowLabel: false,
-
         tabBarStyle: {
           paddingLeft: pixelSizeHorizontal(24),
           paddingRight: pixelSizeHorizontal(24),
@@ -110,9 +106,14 @@ const TabNavigation = () => {
             key={el.path}
             component={el.component}
             options={{
-              header: () => el.header,
+              header: () =>
+                el.path === 'main-tab' ? (
+                  <DrawerHeaderMain name={'smarhotel'} />
+                ) : (
+                  <TextHeader name={t(el.header)} size={16} />
+                ),
               tabBarStyle: { ...barStyle },
-              tabBarLabel: el.name,
+              tabBarLabel: t(el.name),
               tabBarLabelStyle: {
                 fontSize: 12,
                 paddingBottom: 2,
