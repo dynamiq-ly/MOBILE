@@ -17,14 +17,8 @@ export default function GymEquipementScreen({ route }) {
   return (
     <AreaView>
       <GridLayout>
-        {data.map((el) => {
-          return (
-            <SimpleCard
-              key={el.id}
-              title={el.gym_equipement_name}
-              image={`${baseUrl}storage/gym/equipments/${el.gym_equipment_image}`}
-            />
-          )
+        {_equipement.map((el) => {
+          return <SimpleCard key={el.id} title={el.gym_equipement_name} image={`${baseUrl}storage/gym/equipments/${el.gym_equipment_image}`} />
         })}
       </GridLayout>
     </AreaView>
