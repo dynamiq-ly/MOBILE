@@ -15,12 +15,7 @@ import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 import { useSpring } from '@react-spring/native'
 import { FADE_IN_DONW, FADE_IN_UP } from 'animation/FADE_IN'
 
-import {
-  HFLine,
-  RadiusView,
-  SafeAreaRowWrapperDetail,
-  View,
-} from 'styles/detail.module'
+import { HFLine, RadiusView, SafeAreaRowWrapperDetail, View } from 'styles/detail.module'
 
 export default function PointOfInterestDetailScreen({ route }) {
   const { _id, _data } = route.params
@@ -34,57 +29,35 @@ export default function PointOfInterestDetailScreen({ route }) {
     ...FADE_IN_DONW.noOpacity,
   })
 
-  const { data } = useQuery(
-    ['@point-interest-detail', _id],
-    () => fetchPointById(_id),
-    {
-      refetchOnMount: true,
-      initialData: _data,
-    }
-  )
+  const { data } = useQuery(['@point-interest-detail', _id], () => fetchPointById(_id), {
+    refetchOnMount: true,
+    initialData: _data,
+  })
 
   return (
     <View>
       <CloseHeader />
       <Carsouel
         imageArray={[
-          ...data.images.map((el) => ({
-            image: `${baseUrl}storage/points-of-interest/${el.image}`,
+          ...JSON.parse(data.images).map((el) => ({
+            image: `${baseUrl}storage/points-of-interest/${el}`,
           })),
         ]}
       />
       <RadiusView>
         <AreaView mode={'light'}>
           <Gap style={{ marginBottom: 10 }} />
-          <SafeAreaRowWrapperDetail
-            style={{ alignItems: 'flex-start', marginBottom: 14 }}>
+          <SafeAreaRowWrapperDetail style={{ alignItems: 'flex-start', marginBottom: 14 }}>
             <Gap style={{ width: '80%' }}>
-              <Text
-                content={data.point_title}
-                weight={700}
-                up={'cap'}
-                size={28}
-              />
+              <Text content={data.point_title} weight={700} up={'cap'} size={28} />
             </Gap>
-            <Icon
-              size={fontPixel(28)}
-              name={`ri-heart-${isLiked ? 'fill' : 'line'}`}
-              color={palette.error.accent_500}
-              onPress={() => setLiked(!isLiked)}
-              style={{ marginTop: 5 }}
-            />
+            <Icon size={fontPixel(28)} name={`ri-heart-${isLiked ? 'fill' : 'line'}`} color={palette.error.accent_500} onPress={() => setLiked(!isLiked)} style={{ marginTop: 5 }} />
           </SafeAreaRowWrapperDetail>
 
-          <Text
-            content={data.point_description}
-            color={'gray'}
-            weight={400}
-            size={16}
-          />
+          <Text content={data.point_description} color={'gray'} weight={400} size={16} />
           <Gap style={{ marginBottom: 5 }} />
 
-          <SafeAreaRowWrapperDetail
-            style={{ alignItems: 'center', marginTop: 10, marginBottom: 10 }}>
+          <SafeAreaRowWrapperDetail style={{ alignItems: 'center', marginTop: 10, marginBottom: 10 }}>
             <Button
               activeOpacity={0.8}
               style={{
@@ -96,12 +69,7 @@ export default function PointOfInterestDetailScreen({ route }) {
                 backgroundColor: palette.secondary.accent_200,
               }}
               onPress={() => Linking.openURL(data.point_website_information)}>
-              <Text
-                content={'website'}
-                color={'dominant'}
-                weight={600}
-                up={'cap'}
-              />
+              <Text content={'website'} color={'dominant'} weight={600} up={'cap'} />
             </Button>
             <Gap style={{ width: 24 }} />
             <Button
@@ -114,12 +82,7 @@ export default function PointOfInterestDetailScreen({ route }) {
                 justifyContent: 'center',
                 backgroundColor: palette.secondary.accent_200,
               }}>
-              <Text
-                content={'location'}
-                color={'dominant'}
-                weight={600}
-                up={'cap'}
-              />
+              <Text content={'location'} color={'dominant'} weight={600} up={'cap'} />
             </Button>
           </SafeAreaRowWrapperDetail>
 
@@ -130,12 +93,7 @@ export default function PointOfInterestDetailScreen({ route }) {
                 <Icon name={'ri-direction-line'} size={fontPixel(21)} />
               </BoxIcon>
               <BoxText>
-                <Text
-                  content={data.point_textual_location}
-                  weight={400}
-                  up={'cap'}
-                  size={18}
-                />
+                <Text content={data.point_textual_location} weight={400} up={'cap'} size={18} />
               </BoxText>
             </PhoneDirectoryRow>
 
@@ -144,12 +102,7 @@ export default function PointOfInterestDetailScreen({ route }) {
                 <Icon name={'ri-phone-line'} size={fontPixel(21)} />
               </BoxIcon>
               <BoxText>
-                <Text
-                  content={data.point_contact_number}
-                  weight={400}
-                  up={'cap'}
-                  size={18}
-                />
+                <Text content={data.point_contact_number} weight={400} up={'cap'} size={18} />
               </BoxText>
             </PhoneDirectoryRow>
             <PhoneDirectoryRow align>
@@ -157,12 +110,7 @@ export default function PointOfInterestDetailScreen({ route }) {
                 <Icon name={'ri-whatsapp-line'} size={fontPixel(21)} />
               </BoxIcon>
               <BoxText>
-                <Text
-                  content={data.point_contact_number}
-                  weight={400}
-                  up={'cap'}
-                  size={18}
-                />
+                <Text content={data.point_contact_number} weight={400} up={'cap'} size={18} />
               </BoxText>
             </PhoneDirectoryRow>
           </>
@@ -171,32 +119,20 @@ export default function PointOfInterestDetailScreen({ route }) {
             <HFLine />
             <Text content={'open hours'} weight={500} size={18} up={'cap'} />
 
-            <PhoneDirectoryRow
-              style={{ marginBottom: 15, alignItems: 'center' }}>
+            <PhoneDirectoryRow style={{ marginBottom: 15, alignItems: 'center' }}>
               <BoxIcon>
                 <Icon name={'ri-error-warning-line'} color={'orange'} />
               </BoxIcon>
               <BoxText>
-                <Text
-                  size={16}
-                  color={'gray'}
-                  content={'hours may change and can not be updated regularly.'}
-                />
+                <Text size={16} color={'gray'} content={'hours may change and can not be updated regularly.'} />
               </BoxText>
             </PhoneDirectoryRow>
 
             {data.schedule &&
               Object.entries(data.schedule).map(([key, val], index) => (
-                <SafeAreaRowWrapperDetail
-                  key={index}
-                  style={{ alignItems: 'center' }}>
+                <SafeAreaRowWrapperDetail key={index} style={{ alignItems: 'center' }}>
                   <Text color={'gray'} content={key} size={16} up={'cap'} />
-                  <Text
-                    content={val ? val : 'close'}
-                    color={val ? 'dominant' : 'red'}
-                    weight={600}
-                    size={16}
-                  />
+                  <Text content={val ? val : 'close'} color={val ? 'dominant' : 'red'} weight={600} size={16} />
                 </SafeAreaRowWrapperDetail>
               ))}
           </>

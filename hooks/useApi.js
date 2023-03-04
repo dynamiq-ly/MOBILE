@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const baseUrl = 'http://bassemb5.sg-host.com/'
+export const baseUrl = 'https://api.smarhotel.com/'
 // export const baseUrl = 'https://21ef-196-235-89-197.eu.ngrok.io/'
 
 /**

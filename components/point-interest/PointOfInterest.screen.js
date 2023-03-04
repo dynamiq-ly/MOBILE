@@ -18,14 +18,10 @@ import { FlatList, LogBox, RefreshControl } from 'react-native'
 export default function PointInterestScreen({ navigation }) {
   const [isCategory, setCategory] = useState('all')
 
-  const { data: points_type } = useQuery(
-    '@point-interest-type',
-    pointOfinterestTypesFetcher,
-    {
-      refetchOnMount: true,
-      initialData: [],
-    }
-  )
+  const { data: points_type } = useQuery('@point-interest-type', pointOfinterestTypesFetcher, {
+    refetchOnMount: true,
+    initialData: [],
+  })
 
   const {
     data: places,
@@ -49,36 +45,22 @@ export default function PointInterestScreen({ navigation }) {
       {status === 'error' && <NotFound killProcess />}
       {status === 'success' && (
         <FlatList
-          refreshControl={
-            <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
-          }
-          data={places.filter((el) =>
-            isCategory === 'all' ? el : el.point_type.point_type === isCategory
-          )}
+          refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}
+          data={places.filter((el) => (isCategory === 'all' ? el : el.point_type.point_type === isCategory))}
           stickyHeaderIndices={[0]}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
             <HScrollView horizontal showsHorizontalScrollIndicator={false}>
               {points_type.length > 0 &&
-                [{ id: 0, point_type: 'all' }, ...points_type].map(
-                  (el, key) => {
-                    return (
-                      <Gap
-                        style={{ alignItems: 'center', flexDirection: 'row' }}
-                        key={el.id}>
-                        <FixedWidthButton
-                          title={el.point_type}
-                          func={() => setCategory(el.point_type)}
-                          active={isCategory !== el.point_type ? true : false}
-                        />
-                        {points_type.length !== key && <VerticalListLine />}
-                        {points_type.length === key && (
-                          <Gap style={{ marginRight: 16 }} />
-                        )}
-                      </Gap>
-                    )
-                  }
-                )}
+                [{ id: 0, point_type: 'all' }, ...points_type].map((el, key) => {
+                  return (
+                    <Gap style={{ alignItems: 'center', flexDirection: 'row' }} key={el.id}>
+                      <FixedWidthButton title={el.point_type} func={() => setCategory(el.point_type)} active={isCategory !== el.point_type ? true : false} />
+                      {points_type.length !== key && <VerticalListLine />}
+                      {points_type.length === key && <Gap style={{ marginRight: 16 }} />}
+                    </Gap>
+                  )
+                })}
             </HScrollView>
           }
           ListHeaderComponentStyle={{
@@ -88,7 +70,7 @@ export default function PointInterestScreen({ navigation }) {
             <SquareCard
               key={item.id}
               title={item.point_title}
-              image={`${baseUrl}storage/points-of-interest/${item.images[0].image}`}
+              image={`${baseUrl}storage/points-of-interest/${JSON.parse(item.images)[0]}`}
               rating={2}
               location={item.point_small_summary}
               onPress={() =>
