@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import { View as Gap } from 'react-native'
 import { Image } from 'styles/image.module'
-import {
-  PrioritRadioButton,
-  StyledCalenderbutton,
-} from 'styles/calendar.module'
+import { PrioritRadioButton, StyledCalenderbutton } from 'styles/calendar.module'
 
 import moment from 'moment'
 import AreaView from 'utils/TabAreaView'
@@ -41,20 +38,10 @@ export default function AddReminderAlarmScreen({ navigation }) {
       />
 
       <Gap style={{ marginBottom: 14 }} />
-      <Input
-        value={isReminder.reminder_title}
-        icon={'ri-chat-history-line'}
-        placeholder={'reminder title...'}
-        onChangeText={(text) => handleFormChange('reminder_title', text)}
-      />
+      <Input value={isReminder.reminder_title} icon={'ri-chat-history-line'} placeholder={'reminder title...'} onChangeText={(text) => handleFormChange('reminder_title', text)} />
 
       <StyledCalenderbutton onPress={() => setDatePickerOpen(true)}>
-        <Icon
-          size={18}
-          color={'#9ca3af'}
-          style={{ marginRight: 10 }}
-          name={'ri-calendar-2-line'}
-        />
+        <Icon size={18} color={'#9ca3af'} style={{ marginRight: 10 }} name={'ri-calendar-2-line'} />
         <Text size={16} color={'gray'} content={isDataNow} />
       </StyledCalenderbutton>
       <DatePicker
@@ -62,10 +49,7 @@ export default function AddReminderAlarmScreen({ navigation }) {
         onConfirm={({ date }) => {
           setDatePickerOpen(false)
           setCurrentDate(moment(date.getTime()).format('DD / MM / YYYY'))
-          handleFormChange(
-            'reminder_date',
-            moment(date.getTime()).format('DD / MM / YYYY')
-          )
+          handleFormChange('reminder_date', moment(date.getTime()).format('DD / MM / YYYY'))
         }}
         isVisible={isDatePickerOpen}
         minDate={new Date()}
@@ -88,22 +72,13 @@ export default function AddReminderAlarmScreen({ navigation }) {
             justifyContent: 'space-between',
           }}>
           {priority_array.map((el, key) => (
-            <PrioritRadioButton
-              key={key}
-              color={isReminder.reminder_priority === el.name && el.color}
-              onPress={() => handleFormChange('reminder_priority', el.name)}
-              activeOpacity={1}>
+            <PrioritRadioButton key={key} color={isReminder.reminder_priority === el.name && el.color} onPress={() => handleFormChange('reminder_priority', el.name)} activeOpacity={1}>
               <Text size={16} up={'cap'} content={el.name} />
               <Text size={16} up={'cap'} content={el.remindes} />
             </PrioritRadioButton>
           ))}
         </Gap>
-        <Text
-          color={'gray'}
-          content={
-            'setting priority will determine the number of calls and tries so we can reach you.'
-          }
-        />
+        <Text color={'gray'} content={'setting priority will determine the number of calls and tries so we can reach you.'} />
         <Button
           title={isLoading ? 'creating...' : 'save reminder'}
           onPress={() => {
