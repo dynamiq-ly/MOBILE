@@ -13,24 +13,14 @@ export default function LaundryScreen() {
             {el.dry_clean && (
               <SpaceBetweenRow>
                 <Text content={'dry cleaning'} size={16} />
-                <Text
-                  content={`${el.dry_clean}$`}
-                  color={'dominant'}
-                  weight={600}
-                  size={16}
-                />
+                <Text content={`${el.dry_clean}$`} color={'dominant'} weight={600} size={16} />
               </SpaceBetweenRow>
             )}
             {el.dry_clean && <Line />}
             {el.pressing && (
               <SpaceBetweenRow>
                 <Text content={'pressing'} size={16} />
-                <Text
-                  content={`${el.pressing}$`}
-                  color={'dominant'}
-                  weight={600}
-                  size={16}
-                />
+                <Text content={`${el.pressing}$`} color={'dominant'} weight={600} size={16} />
               </SpaceBetweenRow>
             )}
 
@@ -38,12 +28,7 @@ export default function LaundryScreen() {
             {el.laundry && (
               <SpaceBetweenRow>
                 <Text content={'laundry'} size={16} />
-                <Text
-                  content={`${el.laundry}$`}
-                  color={'dominant'}
-                  weight={600}
-                  size={16}
-                />
+                <Text content={`${el.laundry}$`} color={'dominant'} weight={600} size={16} />
               </SpaceBetweenRow>
             )}
           </StyledLaundryRow>

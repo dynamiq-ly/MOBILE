@@ -9,69 +9,60 @@ import { fontPixel } from 'utils/normalization'
 import { ButtonWrapperDetail, View } from 'styles/detail.module'
 import { BoxIcon, BoxText, PhoneDirectoryRow } from 'styles/list.module'
 
+import { __query } from 'hooks/useApi'
+import { useQuery } from 'react-query'
+import { useCallback, useState } from 'react'
+import { LogBox, RefreshControl } from 'react-native'
+
 export default function MainLaundryScreen({ navigation }) {
+  const { data, refetch, isFetched, isError } = useQuery('@laundry', laundryInstructionFetcher, {
+    refetchOnMount: true,
+    initialData: [],
+  })
+
+  const [refresh, setRefresh] = useState(false)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
   return (
     <View>
-      <AreaView>
+      <AreaView refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}>
         <Image
           source={{
             uri: 'https://www.laundryluv.com/images/self-service-laundry/hero.png',
           }}
         />
         <NewView style={{ marginBottom: 15 }} />
-        <Text
-          up={'up'}
-          size={18}
-          weight={600}
-          content={'instruction to use the hotel laundry service'}
-        />
+        <Text up={'up'} size={18} weight={600} content={'instruction to use the hotel laundry service'} />
 
-        <PhoneDirectoryRow style={{ alignItems: 'center' }}>
-          <BoxIcon>
-            <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-          </BoxIcon>
-          <BoxText>
-            <Text
-              content={'The laundry bag is in the wardrobe.'}
-              color={'gray'}
-              size={16}
-            />
-          </BoxText>
-        </PhoneDirectoryRow>
-        <PhoneDirectoryRow style={{ alignItems: 'center' }}>
-          <BoxIcon>
-            <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-          </BoxIcon>
-          <BoxText>
-            <Text
-              content={'Leave the laundry bag on the bed.'}
-              color={'gray'}
-              size={16}
-            />
-          </BoxText>
-        </PhoneDirectoryRow>
-        <PhoneDirectoryRow style={{ alignItems: 'center' }}>
-          <BoxIcon>
-            <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
-          </BoxIcon>
-          <BoxText>
-            <Text
-              content={
-                'If laundry are left in the morning, they will generally be returned before dinner.'
-              }
-              color={'gray'}
-              size={16}
-            />
-          </BoxText>
-        </PhoneDirectoryRow>
+        {data.map((el) => (
+          <PhoneDirectoryRow key={el.id} style={{ alignItems: 'center' }}>
+            <BoxIcon>
+              <Icon name={'ri-arrow-right-circle-fill'} size={fontPixel(18)} />
+            </BoxIcon>
+            <BoxText>
+              <Text content={el.LaundryInstruction} color={'gray'} size={16} />
+            </BoxText>
+          </PhoneDirectoryRow>
+        ))}
       </AreaView>
       <ButtonWrapperDetail>
-        <Button
-          title={'view menu'}
-          icon={'ri-arrow-right-line'}
-          onPress={() => navigation.navigate('menu-tab-stack-laundry-menu')}
-        />
+        <Button title={'view menu'} icon={'ri-arrow-right-line'} onPress={() => navigation.navigate('menu-tab-stack-laundry-menu')} />
       </ButtonWrapperDetail>
     </View>
   )
 }
+
+let laundryInstructionFetcher = function () {
+  return __query
+    .get('api/laundry')
+    .then((res) => res.data)
+    .catch((err) => {
+      throw new Error(err.message)
+    })
+}
+
+LogBox.ignoreAllLogs(true)
