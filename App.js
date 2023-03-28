@@ -13,7 +13,7 @@ import { NavigationContainer } from '@react-navigation/native'
 
 // state and fetched data manager
 import { Platform, View } from 'react-native'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { enableScreens } from 'react-native-screens'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
@@ -21,6 +21,9 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { useFonts } from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
 import LocalizationProvider from './store/LocalizationProvider'
+
+// custom splash screen
+import { InitialScreen } from 'screens/export'
 
 const queryClient = new QueryClient()
 SplashScreen.preventAutoHideAsync()
@@ -50,6 +53,15 @@ export default function App() {
     }
   }, []) // eslint-disable-line
 
+  const [isAppReady, setAppReady] = useState(false)
+
+  // setTimer for 3 seconds
+  useEffect(() => {
+    setTimeout(() => {
+      setAppReady(true)
+    }, 10000)
+  }, [isAppReady])
+
   if (!fontsLoaded) return null
   else {
     return (
@@ -67,7 +79,7 @@ export default function App() {
                   <CartManagerProvider>
                     {/* screen manager */}
                     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                      <StackNavigation />
+                      {isAppReady ? <StackNavigation /> : <InitialScreen />}
                     </View>
                   </CartManagerProvider>
                 </AuthProvider>

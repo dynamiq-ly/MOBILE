@@ -1,6 +1,6 @@
 import { Platform } from 'react-native'
 import { __auth } from 'store/AuthSusbcribeProvider'
-import { InitialScreen, LoginScreen, NotificationTab } from 'screens/export'
+import { LoginScreen, NotificationTab } from 'screens/export'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Cart from 'cart/Cart'
