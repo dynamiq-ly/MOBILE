@@ -10,14 +10,11 @@ export const __auth = () => useContext(AuthContext)
  */
 
 export default function AuthProvider({ children }) {
-  const [isLoggedIn, setLoggedIn] = useState(true)
+  const [isLoggedIn, setLoggedIn] = useState(false)
   const [subscribedUser] = useState({ ...user })
 
   const login = ({ email, password }) => {
-    if (
-      email === subscribedUser.email &&
-      password === subscribedUser.password
-    ) {
+    if (email === subscribedUser.email && password === subscribedUser.password) {
       console.log('logged')
       setLoggedIn(true)
     } else {
@@ -32,11 +29,7 @@ export default function AuthProvider({ children }) {
     logout,
   }
 
-  return (
-    <AuthContext.Provider value={{ isLoggedIn, subscribedUser, ...functions }}>
-      {children}
-    </AuthContext.Provider>
-  )
+  return <AuthContext.Provider value={{ isLoggedIn, subscribedUser, ...functions }}>{children}</AuthContext.Provider>
 }
 
 const user = {
@@ -44,8 +37,7 @@ const user = {
   first_name: 'nadine',
   last_name: 'breaty',
   gender: 'female',
-  profile_image:
-    'https://nft.tinyfac.es/static/media/character5.e0c707233c0341907800.jpg',
+  profile_image: 'https://nft.tinyfac.es/static/media/character5.e0c707233c0341907800.jpg',
   hotel_stay: {
     room_floor: 'F2',
     room_number: 250,

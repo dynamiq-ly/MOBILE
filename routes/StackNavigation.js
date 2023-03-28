@@ -124,29 +124,9 @@ const StackNavigation = () => {
   const { isLoggedIn } = __auth()
 
   return (
-    <Stack.Navigator
-      initialRouteName={
-        isLoggedIn ? 'main-initial-stack' : 'first-initial-stack'
-      }>
-      {!isLoggedIn && (
-        <>
-          <Stack.Screen
-            name='first-initial-stack'
-            component={InitialScreen}
-            options={{ header: () => false }}
-          />
-          <Stack.Screen
-            name='login-initial-stack'
-            component={LoginScreen}
-            options={{ header: () => false }}
-          />
-        </>
-      )}
-      <Stack.Screen
-        name='main-initial-stack'
-        component={DrawerNavigation}
-        options={{ header: () => false }}
-      />
+    <Stack.Navigator initialRouteName={isLoggedIn ? 'main-initial-stack' : 'login-initial-stack'}>
+      {!isLoggedIn && <Stack.Screen name='login-initial-stack' component={LoginScreen} options={{ header: () => false }} />}
+      <Stack.Screen name='main-initial-stack' component={DrawerNavigation} options={{ header: () => false }} />
       {stack_array_screens.map((el, key) => (
         <Stack.Screen
           key={key}
@@ -213,9 +193,7 @@ const stack_array_screens = [
   {
     path: 'menu-tab-stack-our-hotels-list',
     component: OurHotelListScreen,
-    header: ({ route }) => (
-      <StackHeader name={`${route.params._name} hotels`} />
-    ),
+    header: ({ route }) => <StackHeader name={`${route.params._name} hotels`} />,
   },
   {
     path: 'menu-tab-stack-our-hotels-list-detail',
@@ -311,14 +289,7 @@ const stack_array_screens = [
   {
     path: 'menu-tab-stack-point-of-interest',
     component: PointOfInterestScreen,
-    header: ({ navigation }) => (
-      <OptionHeader
-        name={'points of interest'}
-        components={
-          <PointInterestScreenOptions func={() => navigation.navigate('')} />
-        }
-      />
-    ),
+    header: ({ navigation }) => <OptionHeader name={'points of interest'} components={<PointInterestScreenOptions func={() => navigation.navigate('')} />} />,
   },
   {
     path: 'menu-tab-stack-point-of-interest-detail',
@@ -413,16 +384,7 @@ const stack_array_screens = [
   {
     path: 'menu-tab-stack-alarm',
     component: AlarmScreen,
-    header: ({ navigation }) => (
-      <OptionHeader
-        name={'reminders'}
-        components={
-          <AddAlarmScreenOptions
-            func={() => navigation.navigate('menu-tab-stack-alarm-addreminder')}
-          />
-        }
-      />
-    ),
+    header: ({ navigation }) => <OptionHeader name={'reminders'} components={<AddAlarmScreenOptions func={() => navigation.navigate('menu-tab-stack-alarm-addreminder')} />} />,
   },
   {
     path: 'menu-tab-stack-alarm-addreminder',
@@ -452,47 +414,17 @@ const stack_array_screens = [
   {
     path: 'menu-tab-stack-room-service-food-service',
     component: FoodServiceScreen,
-    header: ({ navigation }) => (
-      <OptionHeader
-        name={'food services'}
-        components={
-          <Cart
-            name={'mini_bar'}
-            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
-          />
-        }
-      />
-    ),
+    header: ({ navigation }) => <OptionHeader name={'food services'} components={<Cart name={'mini_bar'} path={() => navigation.navigate('menu-tab-stack-room-service-cart')} />} />,
   },
   {
     path: 'menu-tab-stack-room-service-food-service-detail',
     component: FoodServiceDetailScreen,
-    header: ({ route, navigation }) => (
-      <OptionHeader
-        name={route.params._name}
-        components={
-          <Cart
-            name={'mini_bar'}
-            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
-          />
-        }
-      />
-    ),
+    header: ({ route, navigation }) => <OptionHeader name={route.params._name} components={<Cart name={'mini_bar'} path={() => navigation.navigate('menu-tab-stack-room-service-cart')} />} />,
   },
   {
     path: 'menu-tab-stack-room-service-drinks-service',
     component: DrinksService,
-    header: ({ navigation }) => (
-      <OptionHeader
-        name={'drink services'}
-        components={
-          <Cart
-            name={'mini_bar'}
-            path={() => navigation.navigate('menu-tab-stack-room-service-cart')}
-          />
-        }
-      />
-    ),
+    header: ({ navigation }) => <OptionHeader name={'drink services'} components={<Cart name={'mini_bar'} path={() => navigation.navigate('menu-tab-stack-room-service-cart')} />} />,
   },
   {
     path: 'menu-tab-stack-room-service-cart',

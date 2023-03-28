@@ -9,18 +9,10 @@ export default function SettingScreen({ navigation }) {
   return (
     <AreaView>
       {action_buttons.map((el, key) => (
-        <LogoutButton
-          key={key}
-          title={el.title}
-          icon={el.icon}
-          func={() => navigation.navigate(el.path)}
-        />
+        <LogoutButton key={key} title={el.title} icon={el.icon} func={() => navigation.navigate(el.path)} />
       ))}
-      {isLoggedIn ? (
-        <LogoutButton title={'leave feedback'} icon={'rss'} />
-      ) : (
-        <LogoutButton title={'leave anonym feedback'} icon={'rss'} />
-      )}
+      {isLoggedIn ? <LogoutButton title={'leave feedback'} icon={'rss'} /> : <LogoutButton title={'leave anonym feedback'} icon={'rss'} />}
+      {!isLoggedIn && <LogoutButton title={'connect your account'} icon={'login-box'} func={() => navigation.push('login-initial-stack')} />}
     </AreaView>
   )
 }

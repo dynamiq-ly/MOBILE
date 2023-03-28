@@ -14,13 +14,7 @@ import { widthPixel } from 'utils/normalization'
 import { View } from 'styles/detail.module'
 import { VerticalListLine } from 'styles/list.module'
 
-import {
-  View as Gap,
-  FlatList,
-  LogBox,
-  RefreshControl,
-  ScrollView,
-} from 'react-native'
+import { View as Gap, FlatList, LogBox, RefreshControl, ScrollView } from 'react-native'
 
 export default function NightEntertainScreen({ navigation }) {
   const [isActive, setActive] = useState({
@@ -30,13 +24,9 @@ export default function NightEntertainScreen({ navigation }) {
 
   const [category, setCategory] = useState('all')
 
-  const { data, refetch, status } = useQuery(
-    '@entertainement-night-shows',
-    entertainementNightShows,
-    {
-      refetchOnMount: true,
-    }
-  )
+  const { data, refetch, status } = useQuery('@entertainement-night-shows', entertainementNightShows, {
+    refetchOnMount: true,
+  })
 
   const [refresh, setRefresh] = useState(false)
 
@@ -51,24 +41,10 @@ export default function NightEntertainScreen({ navigation }) {
       {status === 'error' && <NotFound killProcess />}
       {status === 'success' && (
         <FlatList
-          refreshControl={
-            <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
-          }
+          refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}
           data={data
-            .filter(
-              (el) =>
-                el.timings.filter(
-                  (el) =>
-                    moment
-                      .unix(el.entertainement_timings_date)
-                      .format('DD / MM / YYYY') === isActive.time
-                ).length > 0
-            )
-            .filter((el) =>
-              category === 'all'
-                ? el.entertainements_location !== 'all'
-                : el.entertainements_location === category
-            )}
+            .filter((el) => el.entertainement.timings.filter((el) => moment.unix(el.entertainement.timings.entertainement_timings_date).format('DD / MM / YYYY') === isActive.time).length > 0)
+            .filter((el) => (category === 'all' ? el.entertainement.entertainements_location !== 'all' : el.entertainement.timings.entertainements_location === category))}
           stickyHeaderIndices={[0]}
           keyExtractor={(item) => item.id}
           ListHeaderComponent={
@@ -77,34 +53,20 @@ export default function NightEntertainScreen({ navigation }) {
                 // paddingBottom: 16,
                 backgroundColor: palette.primary.accent_100,
               }}>
-              <Text
-                size={18}
-                weight={600}
-                color={'gray'}
-                style={{ marginBottom: 10 }}
-                content={moment().add(isActive.index, 'days').calendar()}
-              />
+              <Text size={18} weight={600} color={'gray'} style={{ marginBottom: 10 }} content={moment().add(isActive.index, 'days').calendar()} />
 
               <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 {[...Array(7)].map((_, key) => (
                   <CalendarItem
                     key={key}
-                    active={
-                      isActive.time ===
-                      moment().add(key, 'd').format('DD / MM / YYYY')
-                        ? true
-                        : false
-                    }
+                    active={isActive.time === moment().add(key, 'd').format('DD / MM / YYYY') ? true : false}
                     onClick={() =>
                       setActive({
                         index: key,
                         time: moment().add(key, 'd').format('DD / MM / YYYY'),
                       })
                     }
-                    date={moment()
-                      .add(key, 'd')
-                      .format('DD / MM / YYYY')
-                      .slice(0, 2)}
+                    date={moment().add(key, 'd').format('DD / MM / YYYY').slice(0, 2)}
                     name={moment().add(key, 'd').format('ddd')}
                   />
                 ))}
@@ -119,11 +81,7 @@ export default function NightEntertainScreen({ navigation }) {
                       flexDirection: 'row',
                       paddingVertical: 16,
                     }}>
-                    <FixedWidthButton
-                      title={el}
-                      func={() => setCategory(el)}
-                      active={category !== el ? true : false}
-                    />
+                    <FixedWidthButton title={el} func={() => setCategory(el)} active={category !== el ? true : false} />
                     {location.length !== key + 1 && <VerticalListLine />}
                   </Gap>
                 ))}
@@ -133,25 +91,18 @@ export default function NightEntertainScreen({ navigation }) {
           renderItem={({ item }) => (
             <Widecard
               state={'hidden'}
-              name={item.entertainements_title}
+              name={item.entertainement.entertainements_title}
               image={`${baseUrl}storage/entertainement/${item.images[0].image}`}
               onPress={() =>
-                navigation.navigate(
-                  'menu-tab-stack-entertaining-night-shows-detail',
-                  {
-                    _id: item.id,
-                    _data: data.filter((el) => el.id === item.id)[0],
-                  }
-                )
+                navigation.navigate('menu-tab-stack-entertaining-night-shows-detail', {
+                  _id: item.id,
+                  _data: data.filter((el) => el.id === item.id)[0],
+                })
               }
               specialiy={moment
                 .unix(
-                  item.timings.filter(
-                    (el) =>
-                      moment
-                        .unix(el.entertainement_timings_date)
-                        .format('DD / MM / YYYY') === isActive.time
-                  )[0].entertainement_timings_date
+                  item.entertainement.timings.filter((el) => moment.unix(el.entertainement.entertainement_timings_date).format('DD / MM / YYYY') === isActive.time)[0].entertainement.timings
+                    .entertainement_timings_date
                 )
                 .format('LT')}
             />
@@ -167,7 +118,7 @@ export default function NightEntertainScreen({ navigation }) {
 
 let entertainementNightShows = () => {
   return __query
-    .get('api/entertainement&status=1/nightShows')
+    .get('api/entertainement=night-shows')
     .then((res) => res.data)
     .catch((err) => {
       throw new Error(err.message)
@@ -191,17 +142,9 @@ const CalendarItem = function ({ name, date, active = false, onClick }) {
           justifyContent: 'center',
           backgroundColor: palette.primary.accent_0,
           borderWidth: 2,
-          borderColor: active
-            ? palette.secondary.accent_500
-            : palette.primary.accent_0,
+          borderColor: active ? palette.secondary.accent_500 : palette.primary.accent_0,
         }}>
-        <Text
-          content={date}
-          up={'up'}
-          size={20}
-          weight={700}
-          color={'dominant'}
-        />
+        <Text content={date} up={'up'} size={20} weight={700} color={'dominant'} />
         <Text content={name} up={'up'} color={'gray'} weight={500} />
       </Gap>
     </Radio>
