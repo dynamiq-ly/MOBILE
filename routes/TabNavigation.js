@@ -106,12 +106,7 @@ const TabNavigation = () => {
             key={el.path}
             component={el.component}
             options={{
-              header: () =>
-                el.path === 'main-tab' ? (
-                  <DrawerHeaderMain name={'smarhotel'} />
-                ) : (
-                  <TextHeader name={t(el.header)} size={16} />
-                ),
+              header: () => (el.path === 'main-tab' ? <DrawerHeaderMain name={'utells'} /> : <TextHeader name={t(el.header)} size={16} />),
               tabBarStyle: { ...barStyle },
               tabBarLabel: t(el.name),
               tabBarLabelStyle: {
