@@ -1,13 +1,13 @@
 import Text from 'components/text/Text'
 import AreaView from 'utils/TabAreaView'
-import ButtonGroup from 'components/button/ButtonGroup'
+import Icon from 'react-native-remix-icon'
 import ButtonGroupSide from 'components/button/ButtonGroupSide'
 
-import { View } from 'react-native'
-import { Image } from 'styles/image.module'
+import { Dimensions, TouchableOpacity, View } from 'react-native'
 
 import { lang } from 'lang/services.i18n'
 import { __t } from 'store/LocalizationProvider'
+import { StyledTagCards } from '~/styles/cards.module'
 
 export default function Services({ navigation }) {
   const { local } = __t()
@@ -22,29 +22,34 @@ export default function Services({ navigation }) {
 
   return (
     <AreaView>
-      <Image
-        source={{
-          uri: 'https://media.istockphoto.com/videos/ordering-room-service-video-id1083647268?s=640x640',
-        }}
-      />
+      <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginBottom: 24 }}>
+        {menus.map((el, index) => (
+          <StyledTagCards
+            key={index}
+            style={{
+              width: (Dimensions.get('screen').width - 42) / menus.length,
+              height: 100,
+              shadowColor: '#000',
+              shadowOffset: {
+                width: 0,
+                height: 1,
+              },
+              shadowOpacity: 0.22,
+              shadowRadius: 2.22,
+              elevation: 1,
+            }}>
+            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => navigation.navigate(el.path)}>
+              <Icon name={el.icon} size={30} color={el.color} />
+              <Text size={16} up={'cap'} weight={400} content={t(el.name)} />
+            </TouchableOpacity>
+          </StyledTagCards>
+        ))}
+      </View>
+
+      <Text size={18} content={'you have access to a complete digital room services where you can find what you were missing in your room.'} />
       <View style={{ marginBottom: 10 }} />
-      <Text
-        size={18}
-        content={
-          'you have access to a complete digital room services where you can find what you were missing in your room.'
-        }
-      />
       <View style={{ marginBottom: 15 }} />
-      <ButtonGroup
-        array={menus.map((el) => ({ ...el, name: t(el.name) }))}
-        index={1}
-        callback={navigation}
-      />
-      <ButtonGroupSide
-        array={array.map((el) => ({ ...el, name: t(el.name) }))}
-        index={2}
-        callback={navigation}
-      />
+      <ButtonGroupSide array={array.map((el) => ({ ...el, name: t(el.name) }))} index={2} callback={navigation} />
     </AreaView>
   )
 }

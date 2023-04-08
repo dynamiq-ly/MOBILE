@@ -1,8 +1,8 @@
 export const lang = {
   en: {
-    food_rooms_services: 'food rooms services',
-    drinks_rooms_services: 'drinks rooms services',
-    minibar_service: 'minibar service',
+    food_rooms_services: 'food',
+    drinks_rooms_services: 'drinks',
+    minibar_service: 'minibar',
     phone_directory: 'phone directory',
     incidence_report: 'incidence report',
     room_requests: 'room requests',
@@ -18,9 +18,9 @@ export const lang = {
   },
 
   fr: {
-    food_rooms_services: 'services de nourriture pour chambres',
-    drinks_rooms_services: 'services de boissons pour chambres',
-    minibar_service: 'service de minibar',
+    food_rooms_services: 'nourriture',
+    drinks_rooms_services: 'boissons',
+    minibar_service: 'minibar',
     phone_directory: 'annuaire téléphonique',
     incidence_report: "rapport d'incidence",
     room_requests: 'demandes de chambres',
@@ -36,9 +36,9 @@ export const lang = {
   },
 
   es: {
-    food_rooms_services: 'servicios de comida para habitaciones',
-    drinks_rooms_services: 'servicios de bebidas para habitaciones',
-    minibar_service: 'servicio de minibar',
+    food_rooms_services: 'comida',
+    drinks_rooms_services: 'bebidas',
+    minibar_service: 'minibar',
     phone_directory: 'directorio telefónico',
     incidence_report: 'informe de incidencia',
     room_requests: 'solicitudes de habitaciones',

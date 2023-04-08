@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 import { animated } from '@react-spring/native'
-import {
-  heightPixel,
-  pixelSizeHorizontal,
-  pixelSizeVertical,
-  widthPixel,
-} from 'utils/normalization'
+import { heightPixel, pixelSizeHorizontal, pixelSizeVertical, widthPixel } from 'utils/normalization'
 
 /**
  * for restaurent and bars mostly
@@ -86,8 +81,7 @@ export const MiniCard = styled.TouchableOpacity`
   height: ${heightPixel(64)}px;
   margin-bottom: ${pixelSizeVertical(24)}px;
   background: ${({ theme }) => theme.primary.accent_0};
-  border-color: ${({ pressed, theme }) =>
-    pressed ? theme.secondary.accent_500 : theme.primary.accent_0};
+  border-color: ${({ pressed, theme }) => (pressed ? theme.secondary.accent_500 : theme.primary.accent_0)};
 `
 
 export const ContentViewMinCard = styled.View`
@@ -363,8 +357,7 @@ export const RadioButtonCardStyle = styled.View`
   padding: 0px ${pixelSizeHorizontal(5)}px;
   background: ${({ theme }) => theme.primary.accent_0};
   border-width: 2px;
-  border-color: ${({ pressed, theme }) =>
-    pressed ? theme.secondary.accent_500 : theme.primary.accent_0}; ;
+  border-color: ${({ pressed, theme }) => (pressed ? theme.secondary.accent_500 : theme.primary.accent_0)}; ;
 `
 
 /**
@@ -388,8 +381,7 @@ export const StyledReminderCard = styled(animated.View)`
   border-radius: 10px;
   min-height: ${heightPixel(82)}px;
   margin-bottom: ${pixelSizeVertical(14)}px;
-  background: ${({ color, theme }) =>
-    color ? `${color}20` : theme.primary.accent_0};
+  background: ${({ color, theme }) => (color ? `${color}20` : theme.primary.accent_0)};
   padding: ${pixelSizeVertical(10)}px ${pixelSizeHorizontal(18)}px;
 `
 
@@ -398,9 +390,9 @@ export const StyledReminderCard = styled(animated.View)`
  */
 
 export const StyledTagCards = styled.View`
+  width: 23%;
   border-radius: 10px;
   align-items: center;
-  width: 23%;
   height: ${heightPixel(82)}px;
   justify-content: space-around;
   background: ${({ theme }) => theme.primary.accent_0};
