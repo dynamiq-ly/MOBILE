@@ -6,19 +6,9 @@ import { HScrollView } from 'styles/app.module'
 import { __auth } from 'store/AuthSusbcribeProvider'
 import Carousel, { Pagination } from 'react-native-x-carousel'
 
-import {
-  ImageSquareCard,
-  StyledSquareCard,
-  StyledTagCards,
-} from 'styles/cards.module'
+import { ImageSquareCard, StyledSquareCard, StyledTagCards } from 'styles/cards.module'
 
-import {
-  View as Gap,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-  ScrollView,
-} from 'react-native'
+import { View as Gap, TouchableOpacity, ImageBackground, Dimensions, ScrollView } from 'react-native'
 
 import { lang } from 'lang/main.i18n'
 import { __t } from 'store/LocalizationProvider'
@@ -61,28 +51,20 @@ export default function MainScreen({ navigation }) {
           )}
           data={[
             {
-              image:
-                'https://www.amarinsamuiresort.com/images/promotion/banner-promotion-amarin-1.jpg',
+              image: 'https://www.amarinsamuiresort.com/images/promotion/banner-promotion-amarin-1.jpg',
             },
             {
-              image:
-                'https://www.altnana.com/images/banner-altnana-longstay.jpg',
+              image: 'https://www.altnana.com/images/banner-altnana-longstay.jpg',
             },
             {
-              image:
-                'https://www.centrepoint.com/bookingbackend/images/promotion/cp4/chidlom-hot%20deal-2020_l.jpg',
+              image: 'https://www.centrepoint.com/bookingbackend/images/promotion/cp4/chidlom-hot%20deal-2020_l.jpg',
             },
           ]}
         />
       </Gap>
 
       <Gap style={{ marginHorizontal: 16, marginBottom: 24 }}>
-        <Text
-          size={24}
-          up={'cap'}
-          weight={700}
-          content={`${t('greeting')}, nadine breaty`}
-        />
+        <Text size={24} up={'cap'} weight={700} content={`${t('greeting')}, nadine breaty`} />
       </Gap>
 
       <Gap style={{ marginHorizontal: 16 }}>
@@ -96,21 +78,12 @@ export default function MainScreen({ navigation }) {
             <StyledTagCards
               key={key}
               style={{
-                width:
-                  (Dimensions.get('screen').width - 42) / quck_access.length,
+                width: (Dimensions.get('screen').width - 42) / quck_access.length,
                 height: 72,
               }}>
-              <TouchableOpacity
-                style={{ alignItems: 'center' }}
-                onPress={() => navigation.navigate(el.path)}>
+              <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => navigation.navigate(el.path)}>
                 <Icon size={21} name={el.icon} color={el.color} />
-                <Text
-                  size={12}
-                  up={'up'}
-                  align={'center'}
-                  weight={500}
-                  content={t(el.name)}
-                />
+                <Text size={12} up={'up'} align={'center'} weight={500} content={t(el.name)} />
               </TouchableOpacity>
             </StyledTagCards>
           ))}
@@ -118,55 +91,25 @@ export default function MainScreen({ navigation }) {
 
         {/* good plans */}
         <Text content={t('gp')} weight={700} up={'cap'} size={26} />
-        <HScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={{ paddingLeft: 0, marginTop: 14 }}>
+        <HScrollView horizontal showsHorizontalScrollIndicator={false} style={{ paddingLeft: 0, marginTop: 14 }}>
           {good_plans_array.map((item, key) => (
-            <SquareCardSmall
-              key={key}
-              title={t(item.name)}
-              image={item.image}
-              onPress={() => navigation.navigate(item.path)}
-            />
+            <SquareCardSmall key={key} title={t(item.name)} image={item.image} onPress={() => navigation.navigate(item.path)} />
           ))}
         </HScrollView>
 
         {/* servicess and facilties */}
-        <Text
-          content={t('s_f')}
-          weight={700}
-          up={'cap'}
-          size={26}
-          style={{ marginBottom: 10 }}
-        />
+        <Text content={t('s_f')} weight={700} up={'cap'} size={26} style={{ marginBottom: 10 }} />
         {services_and_facilties_array.map((item, key) => (
           <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
-            <Widecard
-              name={t(item.name)}
-              image={item.image}
-              state={'hidden'}
-              onPress={() => navigation.navigate(item.path)}
-            />
+            <Widecard name={t(item.name)} image={item.image} state={'hidden'} onPress={() => navigation.navigate(item.path)} />
           </Gap>
         ))}
 
         {/* luxury and relax services */}
-        <Text
-          content={t('l_r')}
-          style={{ marginTop: 18, marginBottom: 10 }}
-          weight={700}
-          up={'cap'}
-          size={26}
-        />
+        <Text content={t('l_r')} style={{ marginTop: 18, marginBottom: 10 }} weight={700} up={'cap'} size={26} />
         {luxury_and_relax_array.map((item, key) => (
           <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
-            <Widecard
-              name={t(item.name)}
-              image={item.image}
-              state={'hidden'}
-              onPress={() => navigation.navigate(item.path)}
-            />
+            <Widecard name={t(item.name)} image={item.image} state={'hidden'} onPress={() => navigation.navigate(item.path)} />
           </Gap>
         ))}
       </Gap>
@@ -180,43 +123,31 @@ const services_and_facilties_array = [
   {
     name: 'how_can_we_help',
     path: 'menu-tab-stack-how-can-we-help',
-    image:
-      'https://img.freepik.com/free-photo/one-two-young-hotel-receptionists-standing-by-counter-looking-touchpad-display-consulting-client-phone-against-colleague_274679-18500.jpg',
+    image: 'https://img.freepik.com/free-photo/one-two-young-hotel-receptionists-standing-by-counter-looking-touchpad-display-consulting-client-phone-against-colleague_274679-18500.jpg',
   },
   {
     name: 'bars',
     path: 'menu-tab-stack-bar-list',
-    image:
-      'https://www.atlantaeats.com/wp-content/uploads/2021/01/bling-pig-interior-600x400.jpg',
+    image: 'https://www.atlantaeats.com/wp-content/uploads/2021/01/bling-pig-interior-600x400.jpg',
   },
   {
     name: 'restaurants',
     path: 'menu-tab-stack-restaurant-list',
-    image:
-      'https://dynl.mktgcdn.com/p/NqJkgnvZfhiYwatZzeKB3RyE0QygIMnjY3gptqyeVsE/600x400.jpg',
+    image: 'https://dynl.mktgcdn.com/p/NqJkgnvZfhiYwatZzeKB3RyE0QygIMnjY3gptqyeVsE/600x400.jpg',
   },
   {
     name: 'entertainement',
     path: 'menu-tab-stack-entertaining',
-    image:
-      'https://wistatefair.com/fair/wp-content/uploads/2022/06/entertainment-stage-600x400-1.png',
+    image: 'https://wistatefair.com/fair/wp-content/uploads/2022/06/entertainment-stage-600x400-1.png',
   },
 ]
 
 export function SquareCardSmall({ title, image, ...rest }) {
   return (
-    <StyledSquareCard
-      style={{ marginRight: 14, minHeight: 150, width: 142 }}
-      activeOpacity={0.8}
-      {...rest}>
+    <StyledSquareCard style={{ marginRight: 14, minHeight: 150, width: 142 }} activeOpacity={0.8} {...rest}>
       <ImageSquareCard source={{ uri: image }} style={{ height: 110 }} />
 
-      <Text
-        size={18}
-        up={'cap'}
-        weight={400}
-        content={title.length > 36 ? `${title.slice(0, 36)}...` : title}
-      />
+      <Text size={18} up={'cap'} weight={400} content={title.length > 36 ? `${title.slice(0, 36)}...` : title} />
     </StyledSquareCard>
   )
 }
@@ -225,8 +156,7 @@ const good_plans_array = [
   {
     name: 'rent_vehicules',
     path: 'menu-tab-stack-renting',
-    image:
-      'https://www.northamericanar.com/wp-content/uploads/2020/04/car-rental.jpg',
+    image: 'https://www.northamericanar.com/wp-content/uploads/2020/04/car-rental.jpg',
   },
   {
     name: 'excursions',
@@ -237,14 +167,17 @@ const good_plans_array = [
   {
     name: 'interesting_point',
     path: 'menu-tab-stack-point-of-interest',
-    image:
-      'https://gladiatortours.com/wp-content/uploads/amalfi-and-positano-coast-excursion-400x400.jpg',
+    image: 'https://gladiatortours.com/wp-content/uploads/amalfi-and-positano-coast-excursion-400x400.jpg',
   },
   {
     name: 'shops',
     path: 'menu-tab-stack-shops',
-    image:
-      'https://www.terratintagroup.com/wp-content/uploads/2017/07/Zwart-60x60-30x60_Stonedesign-Chalk-60x60_b-400x400.jpeg',
+    image: 'https://www.terratintagroup.com/wp-content/uploads/2017/07/Zwart-60x60-30x60_Stonedesign-Chalk-60x60_b-400x400.jpeg',
+  },
+  {
+    name: 'transport',
+    path: 'menu-tab-stack-transportation',
+    image: 'https://th.bing.com/th/id/R.6712cf65502d731e5487adf83c1d1521?rik=h42Bi3LrBaunDw&pid=ImgRaw&r=0',
   },
 ]
 
@@ -252,26 +185,22 @@ const luxury_and_relax_array = [
   {
     name: 'rooms_services',
     path: 'menu-tab-stack-room-service',
-    image:
-      'https://media.istockphoto.com/videos/ordering-room-service-video-id1083647268?s=640x640',
+    image: 'https://media.istockphoto.com/videos/ordering-room-service-video-id1083647268?s=640x640',
   },
   {
     name: 'rooms',
     path: 'menu-tab-stack-rooms',
-    image:
-      'https://www.casabianca-santorini.com/wp-content/uploads/2015/10/room-2-500x500.jpg',
+    image: 'https://www.casabianca-santorini.com/wp-content/uploads/2015/10/room-2-500x500.jpg',
   },
   {
     name: 'swimming_pool',
     path: 'menu-tab-stack-swimming-pool',
-    image:
-      'https://sirbenainsliesportscentre.com/wp-content/uploads/2015/10/JR20140624_TSchool_Swimming-10-400x400.jpg',
+    image: 'https://sirbenainsliesportscentre.com/wp-content/uploads/2015/10/JR20140624_TSchool_Swimming-10-400x400.jpg',
   },
   {
     name: 'gym_training',
     path: 'menu-tab-stack-gym',
-    image:
-      'https://www.lifefitnessemea.com/resource/image/643794/portrait_ratio1x1/400/400/5cbd7a48ed5dd9647aad3d2bd2562c90/Ge/lfa-trainers-fitfair2019-20191122-wf2-8495-2-.jpg',
+    image: 'https://www.lifefitnessemea.com/resource/image/643794/portrait_ratio1x1/400/400/5cbd7a48ed5dd9647aad3d2bd2562c90/Ge/lfa-trainers-fitfair2019-20191122-wf2-8495-2-.jpg',
   },
 ]
 
