@@ -1,14 +1,17 @@
 import Icon from 'react-native-remix-icon'
 
 import { palette } from 'themes/palette'
-import { TextHeader } from 'components/export'
+import { ProfileScreen, TextHeader } from 'components/export'
+import { DrawerHeaderMain } from 'components/header/DrawerHeader'
 import { fontPixel, pixelSizeHorizontal } from 'utils/normalization'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { MainTab, SearchTab, BookmarkTab, WeatherTab } from 'screens/export'
-import { DrawerHeaderMain } from 'components/header/DrawerHeader'
+
+import { MainTab, SearchTab, BookmarkTab, WeatherTab, LoginScreen } from 'screens/export'
 
 import { lang } from 'lang/tabs.i18n'
 import { __t } from 'store/LocalizationProvider'
+import { __auth } from '~/store/AuthSusbcribeProvider'
+import { useEffect, useState } from 'react'
 
 const Tab = createBottomTabNavigator()
 
@@ -24,24 +27,21 @@ const iconTab = (route, color, focused) => {
     case 'search-tab':
       iconName = `ri-search-2${focused ? '-fill' : '-line'}`
       break
-    case 'notification-tab':
-      iconName = `ri-notification${focused ? '-fill' : '-line'}`
-      break
-    case 'menu-tab':
-      iconName = `ri-menu${focused ? '-fill' : '-line'}`
-      break
-    case 'map-tab':
-      iconName = `ri-compass-discover${focused ? '-fill' : '-line'}`
-      break
     case 'weather-tab':
       iconName = `ri-sun-cloudy${focused ? '-fill' : '-line'}`
+      break
+    case 'account-tab':
+      iconName = `ri-user${focused ? '-fill' : '-line'}`
+      break
+    case 'profile-tab':
+      iconName = `ri-user${focused ? '-fill' : '-line'}`
       break
   }
 
   return <Icon name={iconName} color={color} size={fontPixel(24)} />
 }
 
-const tabComponents = [
+const tabNavComponents = [
   {
     path: 'main-tab',
     name: 'main',
@@ -65,6 +65,11 @@ const tabComponents = [
     component: WeatherTab,
     header: 'weather',
   },
+  {
+    path: 'account-tab',
+    name: 'account',
+    component: LoginScreen,
+  },
 ]
 
 const barStyle = {
@@ -76,6 +81,14 @@ const barStyle = {
 
 const TabNavigation = () => {
   const { local } = __t()
+  const { isLoggedIn } = __auth()
+  const [tabComponents, setTabComponents] = useState([...tabNavComponents])
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      setTabComponents((prev) => prev.map((el) => (el.path === 'account-tab' ? { ...el, path: 'profile-tab', component: ProfileScreen, header: 'profile' } : el)))
+    } else setTabComponents([...tabNavComponents])
+  }, [isLoggedIn])
 
   const t = (key) => {
     const translation = lang[local][key]
@@ -106,7 +119,7 @@ const TabNavigation = () => {
             key={el.path}
             component={el.component}
             options={{
-              header: () => (el.path === 'main-tab' ? <DrawerHeaderMain name={'utells'} /> : <TextHeader name={t(el.header)} size={16} />),
+              header: () => (el.path === 'main-tab' ? <DrawerHeaderMain name={'utells'} /> : el.path === 'account-tab' ? false : <TextHeader name={t(el.header)} size={16} />),
               tabBarStyle: { ...barStyle },
               tabBarLabel: t(el.name),
               tabBarLabelStyle: {

@@ -7,13 +7,7 @@ import * as ImagePicker from 'expo-image-picker'
 import { useState } from 'react'
 import { palette } from 'themes/palette'
 import { fontPixel, widthPixel } from 'utils/normalization'
-import {
-  View,
-  Platform,
-  ImageBackground,
-  TouchableOpacity,
-  ActionSheetIOS,
-} from 'react-native'
+import { View, Platform, ImageBackground, TouchableOpacity, ActionSheetIOS } from 'react-native'
 
 import { __auth } from 'store/AuthSusbcribeProvider'
 import { ButtonSafety, IconBox, TextBox } from 'styles/safety.module'
@@ -69,32 +63,13 @@ export default function ProfileScreen({ navigation }) {
     <AreaView>
       {/* image profil */}
       <View style={{ ...styling.profileView }}>
-        <ImageBackground
-          imageStyle={{ borderRadius: 500 }}
-          source={{ uri: profileImage }}
-          style={{ ...styling.image }}>
-          <TouchableOpacity
-            onPress={() =>
-              Platform.OS === 'ios'
-                ? handleActionSheetIosAndroid()
-                : handleImagePicker('library')
-            }
-            style={{ ...styling.imageIcon }}>
-            <Icon
-              size={21}
-              name={'ri-camera-line'}
-              color={palette.primary.accent_100}
-            />
+        <ImageBackground imageStyle={{ borderRadius: 500 }} source={{ uri: profileImage }} style={{ ...styling.image }}>
+          <TouchableOpacity onPress={() => (Platform.OS === 'ios' ? handleActionSheetIosAndroid() : handleImagePicker('library'))} style={{ ...styling.imageIcon }}>
+            <Icon size={21} name={'ri-camera-line'} color={palette.primary.accent_100} />
           </TouchableOpacity>
         </ImageBackground>
         <View style={{ flex: 1 }}>
-          <Text
-            size={26}
-            up={'cap'}
-            weight={700}
-            align={'center'}
-            content={`${subscribedUser.first_name} ${subscribedUser.last_name}`}
-          />
+          <Text size={26} up={'cap'} weight={700} align={'center'} content={`${subscribedUser.first_name} ${subscribedUser.last_name}`} />
         </View>
       </View>
 
@@ -109,13 +84,7 @@ export default function ProfileScreen({ navigation }) {
         }}>
         <View>
           <Text content={'check in'} up={'cap'} weight={600} />
-          <Text
-            size={18}
-            color={'gray'}
-            content={moment(new Date(subscribedUser.hotel_stay.checkin)).format(
-              'MMMM DD, YYYY'
-            )}
-          />
+          <Text size={18} color={'gray'} content={moment(new Date(subscribedUser.hotel_stay.checkin)).format('MMMM DD, YYYY')} />
         </View>
         <View
           style={{
@@ -126,13 +95,7 @@ export default function ProfileScreen({ navigation }) {
         />
         <View>
           <Text content={'check out'} up={'cap'} weight={600} />
-          <Text
-            size={18}
-            color={'gray'}
-            content={moment(new Date(subscribedUser.hotel_stay.checkin)).format(
-              'MMMM DD, YYYY'
-            )}
-          />
+          <Text size={18} color={'gray'} content={moment(new Date(subscribedUser.hotel_stay.checkin)).format('MMMM DD, YYYY')} />
         </View>
       </View>
 
@@ -164,8 +127,9 @@ export default function ProfileScreen({ navigation }) {
         title={'log out'}
         icon={'logout-circle'}
         func={() => {
-          logout()
-          navigation.navigate('Home-initial-drawer')
+          logout().then(() => {
+            navigation.navigate('main-tab')
+          })
         }}
       />
       <View style={{ marginBottom: 24 }} />
@@ -205,11 +169,7 @@ export const LogoutButton = function ({ title, icon, func }) {
       <TextBox>
         <Text content={title} weight={500} size={18} up={'cap'} />
       </TextBox>
-      <Icon
-        name={'ri-arrow-right-s-line'}
-        size={fontPixel(24)}
-        color={'#9ca3af'}
-      />
+      <Icon name={'ri-arrow-right-s-line'} size={fontPixel(24)} color={'#9ca3af'} />
     </ButtonSafety>
   )
 }

@@ -22,7 +22,11 @@ export default function AuthProvider({ children }) {
     }
   }
 
-  const logout = () => setLoggedIn(false)
+  const logout = () =>
+    new Promise((resolve, reject) => {
+      setLoggedIn(false)
+      resolve()
+    })
 
   const functions = {
     login,
@@ -34,8 +38,8 @@ export default function AuthProvider({ children }) {
 
 const user = {
   id: 1,
-  first_name: 'nadine',
-  last_name: 'breaty',
+  first_name: 'test',
+  last_name: 'account',
   gender: 'female',
   profile_image: 'https://nft.tinyfac.es/static/media/character5.e0c707233c0341907800.jpg',
   hotel_stay: {
@@ -45,6 +49,6 @@ const user = {
     checkin: '05/07/2022',
     checkout: '12/08/2022',
   },
-  email: 'nadine@aol.du',
-  password: 'nadineaol',
+  email: 'test@test.ts',
+  password: 'test',
 }

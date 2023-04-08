@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SafeAreaView from 'utils/SafeAreaView'
 import { __auth } from 'store/AuthSusbcribeProvider'
 import { Button, Input, Text } from 'components/export'
@@ -6,6 +6,7 @@ import { LoginScreenContainer } from 'styles/login.module'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { InitialScreenWrapper } from '~/styles/initial.module'
 import { Alert } from 'react-native'
+import { log } from 'react-native-reanimated'
 
 export default function LoginScreen({ navigation }) {
   const [form, setForm] = useState({ email: '', password: '' })

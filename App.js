@@ -53,12 +53,11 @@ export default function App() {
     }
   }, []) // eslint-disable-line
 
-  const [isAppReady, setAppReady] = useState(false)
+  const [isAppReady, setIsAppReady] = useState(false)
 
-  // setTimer for 3 seconds
   useEffect(() => {
     setTimeout(() => {
-      setAppReady(true)
+      setIsAppReady(true)
     }, 10000)
   }, [isAppReady])
 
@@ -71,10 +70,10 @@ export default function App() {
           <QueryClientProvider client={queryClient}>
             {/* localization provider */}
             <LocalizationProvider>
-              {/* navigation provider */}
-              <NavigationContainer>
-                {/* auth provider */}
-                <AuthProvider>
+              {/* auth provider */}
+              <AuthProvider>
+                {/* navigation provider */}
+                <NavigationContainer>
                   {/* cart manager */}
                   <CartManagerProvider>
                     {/* screen manager */}
@@ -82,8 +81,8 @@ export default function App() {
                       {isAppReady ? <StackNavigation /> : <InitialScreen />}
                     </View>
                   </CartManagerProvider>
-                </AuthProvider>
-              </NavigationContainer>
+                </NavigationContainer>
+              </AuthProvider>
             </LocalizationProvider>
           </QueryClientProvider>
         </SafeAreaProvider>
