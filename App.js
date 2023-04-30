@@ -58,7 +58,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsAppReady(true)
-    }, 10000)
+    }, 2000)
   }, [isAppReady])
 
   if (!fontsLoaded) return null
