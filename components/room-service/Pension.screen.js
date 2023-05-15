@@ -52,7 +52,9 @@ export default function PensionScreen() {
                   uri: 'https://th.bing.com/th/id/OIP.yh7rfQdb66OiuIt7CnWkxQHaFj?pid=ImgDet&rs=1',
                 }}
               />
-              <Text style={{ marginBottom: 24 }} content={'If you wish to upgrade your pension our hotel gives you multiple choices and options to choose from.'} size={18} />
+              <Text style={{ marginBottom: 10 }} content={'If you wish to upgrade your pension our hotel gives you multiple choices and options to choose from.'} size={18} />
+              <Text style={{ marginBottom: 5 }} content={'#Dial 9 to content with the reception desk for more options.'} size={16} color={'gray'} />
+              <Text style={{ marginBottom: 24 }} content={'#Prices may vary throughout the season.'} size={16} color={'gray'} />
             </>
           }
         />
@@ -82,10 +84,12 @@ const Card = ({ image, title, price, kids, description }) => {
             <Icon name='ri-currency-line' size={18} />
             <Text content={`Price: ${price}`} />
           </Gap>
-          <Gap style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-            <Icon name='ri-emotion-happy-line' size={18} />
-            <Text content={`Kids Price: ${kids}`} />
-          </Gap>
+          {kids && (
+            <Gap style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+              <Icon name='ri-emotion-happy-line' size={18} />
+              <Text content={`Kids Price: ${kids}`} />
+            </Gap>
+          )}
         </Gap>
         <Text content={description} color={'gray'} />
       </Gap>
