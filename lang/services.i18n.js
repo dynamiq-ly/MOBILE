@@ -15,6 +15,7 @@ export const lang = {
     electricity_and_cables: 'electricity and cables',
     air_conditioner: 'air conditioner',
     hair_dryer: 'hair dryer',
+    pension_upgrade: 'pension upgrade',
   },
 
   fr: {
@@ -33,6 +34,7 @@ export const lang = {
     electricity_and_cables: 'électricité et câbles',
     air_conditioner: 'climatiseur',
     hair_dryer: 'sèche-cheveux',
+    pension_upgrade: 'mise à niveau de la pension',
   },
 
   es: {
@@ -51,5 +53,6 @@ export const lang = {
     electricity_and_cables: 'electricidad y cables',
     air_conditioner: 'aire acondicionado',
     hair_dryer: 'secador de pelo',
+    pension_upgrade: 'mejora de la pensión',
   },
 }

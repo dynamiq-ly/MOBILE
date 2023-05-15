@@ -60,10 +60,7 @@ export { default as TransportationsScreen } from './transportations/Transportati
 export { default as MoneyConverter } from './reception/MoneyExchange.screen'
 export { default as BankAndAtmScreen } from './reception/Bank.screen'
 export { default as LaguageVaultScreen } from './reception/LaguageVault'
-export {
-  default as AlarmScreen,
-  AddAlarmScreenOptions,
-} from './reception/alarm/Alarm.screen'
+export { default as AlarmScreen, AddAlarmScreenOptions } from './reception/alarm/Alarm.screen'
 export { default as AddAlarmScreen } from './reception/alarm/AddReminder.screen'
 export { default as ExtandStayScreen } from './room-service/ExtendStay.screen'
 // renting screen
@@ -88,11 +85,9 @@ export { default as TourOperator } from './tour-operator/TourOperator.screen'
 export { default as AgencyDetails } from './tour-operator/AgencyDetails.screen'
 export { default as AgencyTourGuide } from './tour-operator/AgencyTourGuide.screen'
 export { default as DrinksService } from './room-service/DrinksService.screen'
+export { default as PensionUpgradeScreen } from './room-service/Pension.screen'
 
-export {
-  default as PointOfInterestScreen,
-  PointInterestScreenOptions,
-} from './point-interest/PointOfInterest.screen'
+export { default as PointOfInterestScreen, PointInterestScreenOptions } from './point-interest/PointOfInterest.screen'
 export { default as PointOfInterestDetailScreen } from './point-interest/PointOfInterestDetail.screen'
 // gym screen
 export { default as GymScreen } from './gym/Gym.screen'

@@ -14,7 +14,7 @@ import { widthPixel } from 'utils/normalization'
 import { View } from 'styles/detail.module'
 import { VerticalListLine } from 'styles/list.module'
 
-import { View as Gap, FlatList, LogBox, RefreshControl, ScrollView } from 'react-native'
+import { View as Gap, FlatList, LogBox, RefreshControl, ScrollView, Dimensions } from 'react-native'
 
 export default function NightEntertainScreen({ navigation }) {
   const [isActive, setActive] = useState({
@@ -134,11 +134,11 @@ const CalendarItem = function ({ name, date, active = false, onClick }) {
     <Radio onPress={onClick}>
       <Gap
         style={{
-          height: 62,
-          marginRight: 8,
+          height: 58,
+          marginRight: 5,
           borderRadius: 10,
+          width: (Dimensions.get('window').width - 64) / 7,
           alignItems: 'center',
-          width: widthPixel(52),
           justifyContent: 'center',
           backgroundColor: palette.primary.accent_0,
           borderWidth: 2,

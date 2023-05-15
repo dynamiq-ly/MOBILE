@@ -99,6 +99,7 @@ import {
   QuickAccess,
   LaguageVaultScreen,
   LanguageScreen,
+  PensionUpgradeScreen,
 } from 'components/export'
 
 const Stack = createNativeStackNavigator()
@@ -460,6 +461,11 @@ const stack_array_screens = [
     path: 'menu-tab-stack-room-service-room-upgrade',
     component: RoomUpgradeScreen,
     header: () => <StackHeader name={'room upgrade'} />,
+  },
+  {
+    path: 'menu-tab-stack-room-service-pension-upgrade',
+    component: PensionUpgradeScreen,
+    header: () => <StackHeader name={'pension upgrade'} />,
   },
   {
     path: 'menu-tab-stack-room-service-extand-stay',

@@ -86,6 +86,7 @@ const array = [
   },
   { name: 'room_requests', path: 'menu-tab-stack-room-service-room-request' },
   { name: 'room_upgrade', path: 'menu-tab-stack-room-service-room-upgrade' },
+  { name: 'pension_upgrade', path: 'menu-tab-stack-room-service-pension-upgrade' },
   { name: 'housekeeping', path: 'menu-tab-stack-housekeeping' },
   { name: 'laundry', path: 'menu-tab-stack-laundry' },
   { name: 'towels', path: 'menu-tab-stack-towels' },
