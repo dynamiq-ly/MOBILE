@@ -201,7 +201,7 @@ export default function DetailScreen({ navigation, route }) {
               {data.regulations.map((el) => {
                 return (
                   <Gap key={el.id} style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Image source={{ uri: `${baseUrl}storage/restaurants/regulations/${el.regulation_images}` }} style={{ height: 36, width: 36, borderRadius: '50%', marginRight: 10 }} />
+                    <Image source={{ uri: `${baseUrl}storage/restaurants/regulations/${el.regulation_images}` }} style={{ height: 36, width: 36, borderRadius: 100, marginRight: 10 }} />
                     <TextWrapper>
                       <Text content={el.regulation_name} weight={500} size={18} up={'cap'} />
                       <Text content={el.regulation_description} color={'gray'} weight={400} size={16} />

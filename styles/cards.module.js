@@ -10,7 +10,7 @@ import { heightPixel, pixelSizeHorizontal, pixelSizeVertical, widthPixel } from 
 export const WideListCard = styled.ImageBackground`
   overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   height: ${heightPixel(125)}px;
   background: ${({ theme }) => theme.primary.accent_0};
 `

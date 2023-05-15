@@ -100,7 +100,7 @@ export default function MainScreen({ navigation }) {
         {/* servicess and facilties */}
         <Text content={t('s_f')} weight={700} up={'cap'} size={26} style={{ marginBottom: 10 }} />
         {services_and_facilties_array.map((item, key) => (
-          <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
+          <Gap key={key}>
             <Widecard name={t(item.name)} image={item.image} state={'hidden'} onPress={() => navigation.navigate(item.path)} />
           </Gap>
         ))}
@@ -108,7 +108,7 @@ export default function MainScreen({ navigation }) {
         {/* luxury and relax services */}
         <Text content={t('l_r')} style={{ marginTop: 18, marginBottom: 10 }} weight={700} up={'cap'} size={26} />
         {luxury_and_relax_array.map((item, key) => (
-          <Gap key={key} style={{ marginBottom: -24, marginTop: 10 }}>
+          <Gap key={key}>
             <Widecard name={t(item.name)} image={item.image} state={'hidden'} onPress={() => navigation.navigate(item.path)} />
           </Gap>
         ))}

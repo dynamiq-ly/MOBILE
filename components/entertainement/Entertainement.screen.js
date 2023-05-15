@@ -9,13 +9,9 @@ import { palette } from 'themes/palette'
 import { View as Gap, ImageBackground } from 'react-native'
 import { GridLayout } from 'styles/grid.module'
 import { heightPixel, widthPixel } from 'utils/normalization'
-import {
-  HFLine,
-  RadiusView,
-  SafeAreaRowWrapperDetail,
-  View,
-} from 'styles/detail.module'
+import { HFLine, RadiusView, SafeAreaRowWrapperDetail, View } from 'styles/detail.module'
 import { ButtonSafety, IconBox, TextBox } from 'styles/safety.module'
+import Widecard from '../cards/Widecard'
 
 export default function EntertainementScreen({ navigation }) {
   return (
@@ -24,19 +20,24 @@ export default function EntertainementScreen({ navigation }) {
       <Carsouel
         imageArray={[
           {
-            image:
-              'https://total-event.com/wp-content/uploads/2018/01/event-planning-microsoft-ignite.jpg',
+            image: 'https://total-event.com/wp-content/uploads/2018/01/event-planning-microsoft-ignite.jpg',
           },
           {
-            image:
-              'https://thumbs.dreamstime.com/b/belek-turkey-september-pool-party-shaped-air-mattresses-belek-turkey-september-crowded-outdoor-pool-party-unicorns-139910876.jpg',
+            image: 'https://thumbs.dreamstime.com/b/belek-turkey-september-pool-party-shaped-air-mattresses-belek-turkey-september-crowded-outdoor-pool-party-unicorns-139910876.jpg',
           },
         ]}
       />
       <RadiusView>
         <AreaView mode={'dark'}>
-          <Text content={'Entertainement'} size={24} weight={600} up={'cap'} />
-          <Gap style={{ marginTop: 14 }} />
+          <Text content={'Entertainement'} size={24} weight={600} up={'cap'} style={{ marginBottom: 12 }} />
+          <Text
+            size={14}
+            color={'gray'}
+            content={
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed euismod nisi porta lorem mollis aliquam. Pellentesque habitant morbi tristique senectus et.'
+            }
+          />
+          <Gap style={{ marginTop: 16 }} />
           <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
             <ImageBackground
               style={{
@@ -48,99 +49,52 @@ export default function EntertainementScreen({ navigation }) {
               }}
             />
             <Gap style={{ flex: 1, marginLeft: 24 }}>
-              <Text
-                color={'gray'}
-                content={
-                  'This is Liam the head of the animation and inhote activities departement.'
-                }
-              />
+              <Text color={'gray'} content={'This is Liam the head of the animation and inhote activities departement.'} />
             </Gap>
           </SafeAreaRowWrapperDetail>
-          <Gap style={{ marginBottom: 10 }} />
-          <HFLine />
-          <Text content={'activities'} size={18} weight={600} up={'cap'} />
-          <GridLayout>
-            {entertainement_activity_array.map((el, key) => (
-              <TextOverImage
-                key={key}
-                name={el.name}
-                image={el.image}
-                onPress={() =>
-                  navigation.navigate('menu-tab-stack-entertaining-events', {
-                    _name: el.name,
-                  })
-                }
-              />
-            ))}
-          </GridLayout>
+          <Gap style={{ marginBottom: 24 }} />
+          {entertainement_activity_array.map((el, key) => (
+            <Widecard
+              key={key}
+              name={el.name}
+              state={'hidden'}
+              image={el.image}
+              onPress={() =>
+                navigation.navigate('menu-tab-stack-entertaining-events', {
+                  _name: el.name,
+                })
+              }
+            />
+          ))}
+
           <>
-            <Gap style={{ marginBottom: 24 }} />
-            <HFLine />
-            <Text content={'Regulations'} size={18} weight={600} up={'cap'} />
             <Gap style={{ marginBottom: 10 }} />
-            <ButtonSafety
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('')}
-              style={{ borderRadius: 10 }}>
-              <IconBox
-                style={{ borderRadius: 5 }}
-                bg={palette.primary.accent_200}>
+            <ButtonSafety activeOpacity={0.7} onPress={() => navigation.navigate('')} style={{ borderRadius: 10 }}>
+              <IconBox style={{ borderRadius: 5 }} bg={palette.primary.accent_200}>
                 <Icon name={'ri-book-line'} size={24} />
               </IconBox>
               <TextBox>
-                <Text
-                  content={'mini club regulations'}
-                  weight={500}
-                  size={18}
-                  up={'cap'}
-                />
+                <Text content={'mini club regulations'} weight={500} size={18} up={'cap'} />
               </TextBox>
-              <Icon
-                size={24}
-                name={'ri-arrow-right-s-line'}
-                color={'#9ca3af'}
-              />
+              <Icon size={24} name={'ri-arrow-right-s-line'} color={'#9ca3af'} />
             </ButtonSafety>
-            <ButtonSafety
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('')}
-              style={{ borderRadius: 10 }}>
-              <IconBox
-                style={{ borderRadius: 5 }}
-                bg={palette.primary.accent_200}>
+            <ButtonSafety activeOpacity={0.7} onPress={() => navigation.navigate('')} style={{ borderRadius: 10 }}>
+              <IconBox style={{ borderRadius: 5 }} bg={palette.primary.accent_200}>
                 <Icon name={'ri-file-line'} size={24} />
               </IconBox>
               <TextBox>
-                <Text
-                  content={'regulations'}
-                  weight={500}
-                  size={18}
-                  up={'cap'}
-                />
+                <Text content={'regulations'} weight={500} size={18} up={'cap'} />
               </TextBox>
-              <Icon
-                size={24}
-                name={'ri-arrow-right-s-line'}
-                color={'#9ca3af'}
-              />
+              <Icon size={24} name={'ri-arrow-right-s-line'} color={'#9ca3af'} />
             </ButtonSafety>
-            <ButtonSafety
-              activeOpacity={0.7}
-              onPress={() => navigation.navigate('')}
-              style={{ borderRadius: 10 }}>
-              <IconBox
-                style={{ borderRadius: 5 }}
-                bg={palette.primary.accent_200}>
+            <ButtonSafety activeOpacity={0.7} onPress={() => navigation.navigate('')} style={{ borderRadius: 10 }}>
+              <IconBox style={{ borderRadius: 5 }} bg={palette.primary.accent_200}>
                 <Icon name={'ri-questionnaire-line'} size={24} />
               </IconBox>
               <TextBox>
                 <Text content={'help'} weight={500} size={18} up={'cap'} />
               </TextBox>
-              <Icon
-                size={24}
-                name={'ri-arrow-right-s-line'}
-                color={'#9ca3af'}
-              />
+              <Icon size={24} name={'ri-arrow-right-s-line'} color={'#9ca3af'} />
             </ButtonSafety>
           </>
           <Gap style={{ marginBottom: 24 }} />
@@ -157,17 +111,14 @@ const entertainement_activity_array = [
   },
   {
     name: 'night shows',
-    image:
-      'https://www.nso.co.uk/wp-content/uploads/top-image-about2-750x385.jpg',
+    image: 'https://www.nso.co.uk/wp-content/uploads/top-image-about2-750x385.jpg',
   },
   {
     name: 'tv sport programs',
-    image:
-      'https://i0.wp.com/www.broadbandtvnews.com/wp-content/uploads/2016/02/beIn-Sport.jpg?fit=940%2C520&ssl=1',
+    image: 'https://i0.wp.com/www.broadbandtvnews.com/wp-content/uploads/2016/02/beIn-Sport.jpg?fit=940%2C520&ssl=1',
   },
   {
     name: 'events programs',
-    image:
-      'https://total-event.com/wp-content/uploads/2018/01/event-planning-microsoft-ignite.jpg',
+    image: 'https://total-event.com/wp-content/uploads/2018/01/event-planning-microsoft-ignite.jpg',
   },
 ]
