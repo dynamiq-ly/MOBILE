@@ -10,36 +10,19 @@ import { View as Gap, Image as Img, TouchableOpacity } from 'react-native'
 export default function EntertainementDetailScreen() {
   return (
     <AreaView mode={'dark'}>
-      {/* <SafeAreaRowWrapperDetail
-        style={{ alignItems: 'center', marginBottom: 16 }}>
-        <Img
-          style={{ width: 42, height: 42, borderRadius: 100 }}
-          source={{
-            uri: 'https://images.ctfassets.net/psi7gc0m4mjv/6vL20yPWnuuJNvPtnG5KkO/788d1e4e39fccdb3abfed21fd465f2e4/master_personal_trainer_mobile_hero_image_2x.jpg',
-          }}
-        />
-        <Gap style={{ flex: 1, marginLeft: 14 }}>
-          <Text
-            content={
-              'This is Liam the head of the animation and will be your entertainer in this pool party.'
-            }
-          />
-        </Gap>
-      </SafeAreaRowWrapperDetail> */}
-
       <Image
         source={{
           uri: 'https://thumbs.dreamstime.com/b/belek-turkey-september-pool-party-shaped-air-mattresses-belek-turkey-september-crowded-outdoor-pool-party-unicorns-139910876.jpg',
         }}
       />
       <Gap style={{ marginBottom: 10 }} />
-      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-        <Text content={'interested'} size={18} up={'cap'} weight={600} />
-        <Text content={'21'} size={21} color={'dominant'} weight={600} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center', justifyContent: 'flex-start' }}>
+        <Icon name='ri-map-pin-line' size={18} />
+        <Text content={'15:00 PM'} size={18} color={'dominant'} weight={600} style={{ marginLeft: 5 }} />
       </SafeAreaRowWrapperDetail>
-      <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-        <Text content={'confirmed'} size={18} up={'cap'} weight={600} />
-        <Text content={'11'} size={21} color={'dominant'} weight={600} />
+      <SafeAreaRowWrapperDetail style={{ alignItems: 'center', justifyContent: 'flex-start' }}>
+        <Icon name='ri-time-line' size={18} />
+        <Text content={'roof top pool'} up={'cap'} size={18} color={'dominant'} weight={600} style={{ marginLeft: 5 }} />
       </SafeAreaRowWrapperDetail>
       <Gap style={{ marginBottom: 16 }} />
       <Text
@@ -55,29 +38,17 @@ export default function EntertainementDetailScreen() {
         <Text content={'next schedule'} weight={500} size={18} up={'cap'} />
         <Gap style={{ marginBottom: 10 }} />
         <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-          <Text
-            content={'wednesday 13/07/2022 - 1pm'}
-            color={'dominant'}
-            weight={600}
-          />
+          <Text content={'wednesday 13/07/2022 - 1pm'} color={'dominant'} weight={600} />
           <JoinButton />
         </SafeAreaRowWrapperDetail>
         <Gap style={{ marginBottom: 10 }} />
         <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-          <Text
-            content={'friday 14/07/2022 - 11am'}
-            color={'dominant'}
-            weight={600}
-          />
+          <Text content={'friday 14/07/2022 - 11am'} color={'dominant'} weight={600} />
           <JoinButton />
         </SafeAreaRowWrapperDetail>
         <Gap style={{ marginBottom: 10 }} />
         <SafeAreaRowWrapperDetail style={{ alignItems: 'center' }}>
-          <Text
-            content={'sunday 15/07/2022 - 1pm'}
-            color={'dominant'}
-            weight={600}
-          />
+          <Text content={'sunday 15/07/2022 - 1pm'} color={'dominant'} weight={600} />
           <JoinButton />
         </SafeAreaRowWrapperDetail>
       </>
