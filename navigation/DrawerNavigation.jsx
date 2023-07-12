@@ -63,10 +63,9 @@ const DrawerContent = ({ navigation }) => {
                 color={feature.color}
                 onPress={() => {
                   setActive(feature.id)
-                  // navigation.navigate(feature.id, feature.param)
+                  navigation.navigate(feature.id, feature.param)
                 }}
               />
-              {index >= features.length && feature.type !== features[index + 1].type && <View style={{ height: 1, backgroundColor: 'red' }} />}
             </View>
           )
         })}
