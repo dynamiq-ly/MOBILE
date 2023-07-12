@@ -1,5 +1,6 @@
 import { FlatList } from '@/shared'
 import SimpleCard from '@/components/cards/SimpleCard'
+import { BottomSheet } from '@/components'
 
 export default ({ navigation }) => {
   return (

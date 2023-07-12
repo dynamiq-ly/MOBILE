@@ -12,6 +12,7 @@ import DrawerNavigation from '@/navigation/DrawerNavigation'
 import { Bar } from '@/page/bar'
 import { Restaurant } from '@/page/restaurant'
 import { Entertainment } from '@/page/entertainment'
+import Logs from '@/page/(changelogs)/Logs'
 
 /* (STACK) Home screen */
 const home = {

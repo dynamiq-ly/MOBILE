@@ -17,6 +17,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import StackNavigation from '@/navigation/StackNavigation'
 import { NavigationContainer } from '@react-navigation/native'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -41,13 +43,17 @@ export default function App() {
   return (
     <ThemeProvider theme={{ ...theme }}>
       <StatusBar style={'auto'} />
-      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-        <SafeAreaProvider>
-          <NavigationContainer>
-            <StackNavigation />
-          </NavigationContainer>
-        </SafeAreaProvider>
-      </View>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+          <BottomSheetModalProvider>
+            <SafeAreaProvider>
+              <NavigationContainer>
+                <StackNavigation />
+              </NavigationContainer>
+            </SafeAreaProvider>
+          </BottomSheetModalProvider>
+        </View>
+      </GestureHandlerRootView>
     </ThemeProvider>
   )
 }
