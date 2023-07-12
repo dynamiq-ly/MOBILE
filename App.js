@@ -1,44 +1,31 @@
-import { palette } from 'themes/palette'
+import 'react-native-gesture-handler'
+
+/* hooks */
+import { View } from 'react-native'
+import { useCallback } from 'react'
+
+/* custom font loading */
+import { useFonts } from 'expo-font'
+import * as SplashScreen from 'expo-splash-screen'
+
+/* theming using styled component */
+import { theme } from '@/constant/theme'
 import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-// store
-import AuthProvider from 'store/AuthSusbcribeProvider'
-import CartManagerProvider from './store/CartManagerProvider'
-
-// routing
-import 'react-native-gesture-handler'
-import StackNavigation from 'routes/StackNavigation'
+/* default components imports */
+import { StatusBar } from 'expo-status-bar'
+import StackNavigation from '@/navigation/StackNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 
-// state and fetched data manager
-import { Platform, View } from 'react-native'
-import { useCallback, useEffect, useState } from 'react'
-import { enableScreens } from 'react-native-screens'
-import { QueryClient, QueryClientProvider } from 'react-query'
-
-// custom font
-import { useFonts } from 'expo-font'
-import * as SplashScreen from 'expo-splash-screen'
-import LocalizationProvider from './store/LocalizationProvider'
-
-// custom splash screen
-import { InitialScreen } from 'screens/export'
-
-const queryClient = new QueryClient()
 SplashScreen.preventAutoHideAsync()
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    SF_100: require('./assets/fonts/SF_100.ttf'),
-    SF_200: require('./assets/fonts/SF_200.ttf'),
-    SF_300: require('./assets/fonts/SF_300.ttf'),
-    SF_400: require('./assets/fonts/SF_400.ttf'),
-    SF_500: require('./assets/fonts/SF_500.ttf'),
-    SF_600: require('./assets/fonts/SF_600.ttf'),
-    SF_700: require('./assets/fonts/SF_700.ttf'),
-    SF_800: require('./assets/fonts/SF_800.ttf'),
-    SF_900: require('./assets/fonts/SF_900.ttf'),
+    'Helvetica-Light': require('@/assets/fonts/HelveticaNeueLight.otf'),
+    'Helvetica-Regular': require('@/assets/fonts/HelveticaNeueRoman.otf'),
+    'Helvetica-Medium': require('@/assets/fonts/HelveticaNeueMedium.otf'),
+    'Helvetica-Bold': require('@/assets/fonts/HelveticaNeueBold.otf'),
   })
 
   const onLayoutRootView = useCallback(async () => {
@@ -47,46 +34,20 @@ export default function App() {
     }
   }, [fontsLoaded])
 
-  useEffect(() => {
-    if (Platform.OS === 'ios') {
-      enableScreens(false)
-    }
-  }, []) // eslint-disable-line
-
-  const [isAppReady, setIsAppReady] = useState(false)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsAppReady(true)
-    }, 2000)
-  }, [isAppReady])
-
-  if (!fontsLoaded) return null
-  else {
-    return (
-      <ThemeProvider theme={palette}>
-        <SafeAreaProvider>
-          {/* query provider */}
-          <QueryClientProvider client={queryClient}>
-            {/* localization provider */}
-            <LocalizationProvider>
-              {/* auth provider */}
-              <AuthProvider>
-                {/* navigation provider */}
-                <NavigationContainer>
-                  {/* cart manager */}
-                  <CartManagerProvider>
-                    {/* screen manager */}
-                    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-                      {isAppReady ? <StackNavigation /> : <InitialScreen />}
-                    </View>
-                  </CartManagerProvider>
-                </NavigationContainer>
-              </AuthProvider>
-            </LocalizationProvider>
-          </QueryClientProvider>
-        </SafeAreaProvider>
-      </ThemeProvider>
-    )
+  if (!fontsLoaded) {
+    return null
   }
+
+  return (
+    <ThemeProvider theme={{ ...theme }}>
+      <StatusBar style={'auto'} />
+      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+        <SafeAreaProvider>
+          <NavigationContainer>
+            <StackNavigation />
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </View>
+    </ThemeProvider>
+  )
 }

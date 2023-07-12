@@ -1,18 +1,22 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "commonjs",
     "paths": {
-      "~/*": ["./*"],
-      "@utils/*": ["./utils/*"],
-      "@style/*": ["./styles/*"],
-      "@comps/*": ["./components/*"],
-      "@store/*": ["./store/*"],
-      "@theme/*": ["./themes/*"],
-      "@route/*": ["./routes/*"],
-      "@screen/*": ["./screens/*"],
-      "@markdown/*": ["./markdown/*"],
-      "@mock/*": ["./mock/*"]
+      "@/*": ["./*"],
+      "common/*": ["./common/*"],
+      "component/*": ["./component/*"],
+      "config/*": ["./config/*"],
+      "constant/*": ["./constant/*"],
+      "context/*": ["context/*"],
+      "hook/*": ["./hook/*"],
+      "layout/*": ["./layout/*"],
+      "page/*": ["./page/*"],
+      "style/*": ["./style/*"],
+      "asset/*": ["./assets/*"],
+      "navigation/*": ["./navigation/*"],
+      "shared/*": ["./shared/*"],
+      "routes/*": ["./routes/*"],
+      "util/*": ["./util/*"]
     }
   }
 }

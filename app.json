@@ -1,43 +1,41 @@
 {
   "expo": {
-    "name": "smarhotel",
-    "slug": "smarhotel",
-    "version": "1.0.0",
+    "name": "utells",
+    "slug": "utells-management-app",
+    "version": "0.0.1",
     "orientation": "portrait",
-    "jsEngine": "hermes",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/background/welcome.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "updates": {
-      "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/5f375b30-5a26-4481-835b-8580eac3dd80"
-    },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "description": "smarhotel mobile application works on both android and ios that for hotel management",
-    "githubUrl": "https://github.com/Smarhotel/SMARHOTEL",
-    "runtimeVersion": {
-      "policy": "sdkVersion"
+      "favicon": "./assets/icon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "5f375b30-5a26-4481-835b-8580eac3dd80"
+        "projectId": "68b4df1b-5ba9-4e6a-9958-4799d9a83a2f"
       }
     },
-    "plugins": ["expo-localization"]
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/68b4df1b-5ba9-4e6a-9958-4799d9a83a2f"
+    }
   }
 }
