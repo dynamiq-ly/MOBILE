@@ -1,6 +1,6 @@
 /* packages */
 import { Ionicons } from '@expo/vector-icons'
-import Animated from 'react-native-reanimated'
+import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 /* routes */
@@ -16,24 +16,15 @@ export default () => {
   const theme = useTheme()
   const progress = useDrawerProgress()
 
-  const scale = Animated.interpolateNode(progress, {
-    inputRange: [0, 1],
-    outputRange: [1, 0.88],
-  })
+  /* find me a solution to fix this warning {Sending 'onAnimatedValueUpdate'} with no listenere registred */
 
-  const radii = Animated.interpolateNode(progress, {
-    inputRange: [0, 1],
-    outputRange: [0, 16],
-  })
+  const animatedStyle = useAnimatedStyle(() => ({
+    borderRadius: interpolate(progress.value, [0, 1], [1, 18], 'clamp'),
+    transform: [{ scale: interpolate(progress.value, [0, 1], [1, 0.85], 'clamp') }],
+  }))
 
   return (
-    <Animated.View
-      style={{
-        flex: 1,
-        borderRadius: radii,
-        transform: [{ scale }],
-        overflow: 'hidden',
-      }}>
+    <Animated.View style={[{ flex: 1, overflow: 'hidden' }, animatedStyle]}>
       <Tab.Navigator
         initialRouteName={'(stack) stack-home'}
         screenOptions={{

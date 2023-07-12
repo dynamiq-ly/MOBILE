@@ -5,9 +5,9 @@
  * @exports {Object} the routes object with each navigation type as array and its respective routes as element of the array
  */
 
+import { Image } from '@/common'
 import { View } from 'react-native'
 import { StackHeader } from '@/shared'
-import { Image, Text } from '@/common'
 
 import { Feather } from '@expo/vector-icons'
 
