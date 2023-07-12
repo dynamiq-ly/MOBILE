@@ -27,6 +27,8 @@ export default ({}) => {
         drawerType: 'slide',
         headerShown: false,
         overlayColor: 'transparent',
+        drawerHideStatusBarOnOpen: true,
+        drawerStatusBarAnimation: 'slide',
         drawerStyle: { width: '80%', padding: theme.units.md, backgroundColor: theme.core.neutral['900'] },
         sceneContainerStyle: { backgroundColor: theme.core.neutral['900'] },
       }}

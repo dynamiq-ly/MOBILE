@@ -13,7 +13,7 @@ const Item = ({ label, icon = require('@/assets/icons/default/cube-light.png'), 
   const theme = useTheme()
 
   return active ? (
-    <LinearGradient style={{ borderRadius: theme.radius.md }} colors={[color, 'rgba(255, 255, 255, 0.00)']} start={{ x: 0, y: 0.5 }} end={{ x: 1, y: 0.5 }}>
+    <LinearGradient style={{ borderRadius: theme.units.md }} colors={[color, 'rgba(255, 255, 255, 0.00)']} start={{ x: 0, y: 0.5 }} end={{ x: 1, y: 0.5 }}>
       <StyledDrawerItem onPress={onPress}>
         <Image source={icon} contentFit='contain' width='18px' height='18px' alt='utells logo' radii='none' />
         <Text t={'capitalize'} size={8.5} color='neutral'>
