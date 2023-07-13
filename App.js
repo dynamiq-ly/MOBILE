@@ -20,6 +20,10 @@ import { NavigationContainer } from '@react-navigation/native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 
+/* ignore warning */
+import { LogBox } from 'react-native'
+import { ignore } from '@/config/warning-ignore'
+
 SplashScreen.preventAutoHideAsync()
 
 export default function App() {
@@ -57,3 +61,5 @@ export default function App() {
     </ThemeProvider>
   )
 }
+
+LogBox.ignoreLogs([...ignore])
