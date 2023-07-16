@@ -48,24 +48,24 @@ const DrawerContent = ({ navigation }) => {
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={{ backgroundColor: theme.core.neutral['900'], gap: theme.units.sm, paddingBottom: bottom }}>
-      {features
-        .filter((el) => !el.locked)
-        .map((feature, index) => {
-          return (
-            <View key={index} style={{ gap: theme.units.sm }}>
-              <DrawerItem
-                label={feature.name}
-                icon={feature.icon}
-                active={active === feature.id}
-                color={feature.color}
-                onPress={() => {
-                  setActive(feature.id)
-                  navigation.navigate(feature.id, feature.param)
-                }}
-              />
-            </View>
-          )
-        })}
+      {features.map((f, index) => (
+        <View key={index} style={{ gap: theme.units.sm }}>
+          {f.map((feature, key) => (
+            <DrawerItem
+              key={key}
+              label={feature.name}
+              icon={feature.icon}
+              active={active === feature.id}
+              color={feature.color}
+              onPress={() => {
+                setActive(feature.id)
+                navigation.navigate(feature.id, feature.param)
+              }}
+            />
+          ))}
+          {index < features.length - 1 && <View style={{ height: 1, backgroundColor: '#323232', borderRadius: theme.units.md }} />}
+        </View>
+      ))}
     </DrawerContentScrollView>
   )
 }
