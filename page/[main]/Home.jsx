@@ -1,13 +1,14 @@
-import { FlatList } from '@/shared'
+import { FlatList, OptionHeader } from '@/shared'
 import SimpleCard from '@/components/cards/SimpleCard'
+import { Text } from '@/common'
 
 export default ({ navigation }) => {
   return (
     <FlatList
       data={data}
       column={3}
-      renderedItem={({ item }) => <SimpleCard key={item.id} title={item.title} image={item.image} onPress={() => navigation.navigate(item.path)} />}
       keyExtractor={(item) => item.id}
+      renderedItem={({ item }) => <SimpleCard key={item.id} title={item.title} image={item.image} onPress={() => navigation.navigate(item.path)} />}
     />
   )
 }

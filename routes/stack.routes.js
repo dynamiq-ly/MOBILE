@@ -6,7 +6,7 @@
 
 import { MaterialIcons } from '@expo/vector-icons'
 
-import { StackHeader } from '@/shared' // header import
+import { StackHeader, OptionHeader } from '@/shared' // header import
 import DrawerNavigation from '@/navigation/DrawerNavigation'
 
 import { Bar } from '@/page/bar'
@@ -44,7 +44,8 @@ const aboutHotel = {
   option: {
     headerShown: true,
     headerTitle: 'About Hotel',
-    header: () => <StackHeader title='About Hotel' iconLeft={<MaterialIcons name='arrow-back' size={18} />} />,
+    // header: () => <StackHeader title='About Hotel' iconLeft={<MaterialIcons name='arrow-back' size={18} />} />,
+    header: () => <OptionHeader menu />,
   },
 }
 

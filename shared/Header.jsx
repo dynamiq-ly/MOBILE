@@ -4,11 +4,12 @@ import { DrawerActions, useNavigation } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 /* components */
-import { Text } from '@/common'
+import { Iconly, Text } from '@/common'
 
 /* styles */
 import { shadow } from '@/util/shadow'
 import { StyledSafeHeader, StyledHeader, StyledBox, StyledTitle } from '@/style/header.style'
+import { View } from 'react-native'
 
 const StackHeader = ({ title = '(stack) header', background = 'container', iconLeft, iconLeftParams, iconRight, iconRightParams }) => {
   const { top } = useSafeAreaInsets()
@@ -45,6 +46,22 @@ const StackHeader = ({ title = '(stack) header', background = 'container', iconL
   )
 }
 
+const OptionHeader = ({ menu = false, heart = { active: false, func: () => {} } }, share = { active: false, func: () => {} }) => {
+  const { top } = useSafeAreaInsets()
+  const { navigate, goBack } = useNavigation()
+  return (
+    <View style={{ paddingTop: top, position: 'absolute', width: '100%', background: 'red' }}>
+      <StyledHeader>
+        <Iconly name={menu ? 'menu' : 'arrow-left'} background='neutral' onPress={() => goBack()} />
+        <View style={{ flexDirection: 'row', gap: 10 }}>
+          {heart.active && <Iconly name='heart' background='neutral' onPress={heart.func} />}
+          {share.active && <Iconly name='share-2' background='neutral' onPress={heart.func} />}
+        </View>
+      </StyledHeader>
+    </View>
+  )
+}
+
 StackHeader.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   iconLeft: PropTypes.node,
@@ -62,4 +79,10 @@ StackHeader.propTypes = {
   background: PropTypes.oneOf(['view', 'container', 'error', 'success', 'warning', 'info', 'tag']),
 }
 
-export { StackHeader }
+OptionHeader.propTypes = {
+  menu: PropTypes.bool,
+  heart: PropTypes.object,
+  share: PropTypes.object,
+}
+
+export { StackHeader, OptionHeader }
