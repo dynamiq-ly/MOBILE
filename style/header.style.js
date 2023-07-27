@@ -10,19 +10,20 @@ export const StyledHeader = styled.View`
   justify-content: space-between;
   gap: ${({ theme }) => theme.gap.sm};
   padding: 0px ${({ theme }) => theme.gap.md};
-  height: ${({ theme }) => theme.fontSize(22)};
+  height: ${({ theme }) => theme.fontSize(21)};
 `
 
 export const StyledTitle = styled.TouchableOpacity`
   flex: 1;
   align-items: center;
   justify-content: center;
-  height: ${({ theme }) => theme.fontSize(22)};
+  height: ${({ theme }) => theme.fontSize(21)};
 `
 
 export const StyledBox = styled.TouchableOpacity`
   height: 100%;
   justify-content: center;
-  width: ${({ theme }) => theme.fontSize(22)};
-  align-items: ${({ align = true }) => (align ? 'flex-start' : 'flex-end')};
+  width: ${({ theme }) => theme.fontSize(21)};
+  align-items: center;
+  /* align-items: ${({ align = true }) => (align ? 'flex-start' : 'flex-end')}; */
 `

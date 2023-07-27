@@ -1,6 +1,5 @@
-import { FlatList, OptionHeader } from '@/shared'
+import { FlatList } from '@/shared'
 import SimpleCard from '@/components/cards/SimpleCard'
-import { Text } from '@/common'
 
 export default ({ navigation }) => {
   return (

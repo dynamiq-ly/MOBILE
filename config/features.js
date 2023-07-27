@@ -66,7 +66,7 @@ export const features = [
     (safety = {
       id: '[stack] stack-safety',
       type: 'hotel',
-      name: 'safety protocols',
+      name: 'Hotel Policies',
       color: 'rgba(102, 227, 227, 0.1)',
       icon: require('@/assets/icons/drawer/safety-menu.png'),
       param: {},

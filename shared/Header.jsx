@@ -1,15 +1,17 @@
 /* packages */
 import PropTypes from 'prop-types'
+import { View } from 'react-native'
 import { DrawerActions, useNavigation } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 /* components */
+import { Icon } from '@/components'
 import { Iconly, Text } from '@/common'
 
 /* styles */
 import { shadow } from '@/util/shadow'
 import { StyledSafeHeader, StyledHeader, StyledBox, StyledTitle } from '@/style/header.style'
-import { View } from 'react-native'
+import { Pressable } from 'react-native'
 
 const StackHeader = ({ title = '(stack) header', background = 'container', iconLeft, iconLeftParams, iconRight, iconRightParams }) => {
   const { top } = useSafeAreaInsets()
@@ -48,14 +50,27 @@ const StackHeader = ({ title = '(stack) header', background = 'container', iconL
 
 const OptionHeader = ({ menu = false, heart = { active: false, func: () => {} } }, share = { active: false, func: () => {} }) => {
   const { top } = useSafeAreaInsets()
-  const { navigate, goBack } = useNavigation()
+  const { goBack } = useNavigation()
+
+  const styling = { height: 42, width: 42, alignItems: 'center', justifyContent: 'center', backgroundColor: '#121212', borderRadius: 99999 }
+
   return (
-    <View style={{ paddingTop: top, position: 'absolute', width: '100%', background: 'red' }}>
+    <View style={{ paddingTop: top, position: 'absolute', width: '100%' }}>
       <StyledHeader>
-        <Iconly name={menu ? 'menu' : 'arrow-left'} background='neutral' onPress={() => goBack()} />
+        <Pressable onPress={() => goBack()} style={{ ...styling }}>
+          {menu ? <Icon icon={require('@/assets/icons/product/monocrome/menu-light.png')} size={18} /> : <Icon icon={require('@/assets/icons/product/monocrome/arrow-back-light.png')} size={18} />}
+        </Pressable>
         <View style={{ flexDirection: 'row', gap: 10 }}>
-          {heart.active && <Iconly name='heart' background='neutral' onPress={heart.func} />}
-          {share.active && <Iconly name='share-2' background='neutral' onPress={heart.func} />}
+          {heart.active && (
+            <Pressable style={{ ...styling }}>
+              <Icon icon={require('@/assets/icons/product/monocrome/heart-light.png')} size={18} onPress={heart.func} />
+            </Pressable>
+          )}
+          {share.active && (
+            <Pressable style={{ ...styling }}>
+              <Icon icon={require('@/assets/icons/product/monocrome/share-light.png')} size={18} onPress={share.func} />
+            </Pressable>
+          )}
         </View>
       </StyledHeader>
     </View>
