@@ -1,0 +1,45 @@
+export const data = {
+  id: '[stack] stack-reception',
+  image: 'https://th.bing.com/th/id/R.286b38433cf93b361df25fe672b51432?rik=bSVHY5Tn%2fZ%2bspQ&pid=ImgRaw&r=0',
+  title: 'How Can We Help',
+  timing: { open: '00:00', close: '23:59' },
+  phone: 'Tap #1 to call',
+  location: 'Receptionist Desk - near the entrance',
+  description: 'from all inclusive to half boarding we try to deliver all the possible services. testing very nod bad at all to see wher it belongs.',
+  staff: [
+    {
+      name: 'John Doe',
+      position: 'Reception Desk Manager',
+      image: 'https://th.bing.com/th/id/R.813851e64070bedf1c3c210b39de19b6?rik=N97j06dl%2bUvOpw&pid=ImgRaw&r=0',
+    },
+    {
+      name: 'John Doe',
+      position: 'Reception Desk Under Management',
+      image: 'https://th.bing.com/th/id/R.813851e64070bedf1c3c210b39de19b6?rik=N97j06dl%2bUvOpw&pid=ImgRaw&r=0',
+    },
+    {
+      name: 'John Doe',
+      position: 'Reception Desk Receptionist',
+      image: 'https://th.bing.com/th/id/R.813851e64070bedf1c3c210b39de19b6?rik=N97j06dl%2bUvOpw&pid=ImgRaw&r=0',
+    },
+  ],
+
+  services: [
+    { name: 'Check in & out', image: require('@/assets/icons/product/reception/check-on-out.png') },
+    { name: 'Connectivity', image: require('@/assets/icons/product/reception/connectivity.png') },
+    { name: 'Room Upgrade', image: require('@/assets/icons/product/reception/room-upgrade.png') },
+    { name: 'Extend Stay', image: require('@/assets/icons/product/reception/extend-your-stay.png') },
+    { name: 'Transportation', image: require('@/assets/icons/product/reception/transportation.png') },
+    { name: 'Reminder', image: require('@/assets/icons/product/reception/reminder.png') },
+    { name: 'Lagugage Vault', image: require('@/assets/icons/product/reception/vault.png') },
+    { name: 'Pool Towels', image: require('@/assets/icons/product/reception/pool-towels.png') },
+    { name: 'Parking Lot', image: require('@/assets/icons/product/reception/parking.png') },
+    { name: 'Medical Assistance', image: require('@/assets/icons/product/reception/medical.png') },
+    { name: 'Money Exchange', image: require('@/assets/icons/product/reception/money-exchange.png') },
+    { name: 'Banks & Atms', image: require('@/assets/icons/product/reception/banks.png') },
+    { name: 'Tour Operator', image: require('@/assets/icons/product/reception/tour-operator.png') },
+    { name: 'Room Request', image: require('@/assets/icons/product/reception/room-request.png') },
+    { name: 'Incidence Report', image: require('@/assets/icons/product/reception/incidence-report.png') },
+    { name: 'Other Request', image: require('@/assets/icons/product/reception/other-request.png') },
+  ],
+}
