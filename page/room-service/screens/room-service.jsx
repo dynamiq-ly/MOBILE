@@ -43,7 +43,7 @@ export default () => {
 
       <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
         {/* title */}
-        <Text weight='md' size={14} t={'capitalize'}>
+        <Text weight='bd' size={14} t={'capitalize'}>
           {roomService.title}
         </Text>
 
@@ -51,20 +51,24 @@ export default () => {
         <View style={{ gap: theme.units.sm }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
             <Image source={require('@/assets/icons/product/monocrome/clock-dark.png')} height='14px' width='14px' />
-            <Text size={6.5}>{`From ${roomService.timing.open} to ${roomService.timing.close}`}</Text>
+            <Text size={6} weight='md'>{`From ${roomService.timing.open} to ${roomService.timing.close}`}</Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
             <Image source={require('@/assets/icons/product/monocrome/location-dark.png')} height='14px' width='14px' />
-            <Text size={6.5}>{roomService.location}</Text>
+            <Text size={6} weight='md'>
+              {roomService.location}
+            </Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
             <Image source={require('@/assets/icons/product/monocrome/phone-dark.png')} height='14px' width='14px' />
-            <Text size={6.5}>{roomService.phone}</Text>
+            <Text size={6} weight='md'>
+              {roomService.phone}
+            </Text>
           </View>
         </View>
 
         {/* description */}
-        <Text size={8} color='small' turncate={3} line={1.25}>
+        <Text size={8} color='sub' turncate={3} line={1.25}>
           {roomService.description}
         </Text>
       </View>

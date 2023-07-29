@@ -11,7 +11,7 @@ export const RoomsServiceRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Room Service',
-      header: () => <OptionHeader menu />,
+      header: () => <OptionHeader />,
     },
   }),
 ]
