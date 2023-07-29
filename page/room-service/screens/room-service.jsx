@@ -15,7 +15,7 @@ import { SimpleCard } from '@/components'
 import { Container, FlatList } from '@/shared'
 import { BottomSheet } from '@/components'
 import { Div, Image, Text } from '@/common'
-import { roomService } from '@/mocks/room-service.data'
+import { data } from '@/mocks/room-service.data'
 import { StyledSimpleCard } from '@/style/card.style'
 import { shadow } from '@/util/shadow'
 
@@ -39,37 +39,37 @@ export default () => {
 
   return (
     <Container stickyHeaderIndices={[0]} padding={false}>
-      <Image source={roomService.image} height='254px' />
+      <Image source={data.image} height='254px' />
 
       <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
         {/* title */}
         <Text weight='bd' size={14} t={'capitalize'}>
-          {roomService.title}
+          {data.title}
         </Text>
 
         {/* icons */}
         <View style={{ gap: theme.units.sm }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
             <Image source={require('@/assets/icons/product/monocrome/clock-dark.png')} height='14px' width='14px' />
-            <Text size={6} weight='md'>{`From ${roomService.timing.open} to ${roomService.timing.close}`}</Text>
+            <Text size={6} weight='md'>{`From ${data.timing.open} to ${data.timing.close}`}</Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
             <Image source={require('@/assets/icons/product/monocrome/location-dark.png')} height='14px' width='14px' />
             <Text size={6} weight='md'>
-              {roomService.location}
+              {data.location}
             </Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
             <Image source={require('@/assets/icons/product/monocrome/phone-dark.png')} height='14px' width='14px' />
             <Text size={6} weight='md'>
-              {roomService.phone}
+              {data.phone}
             </Text>
           </View>
         </View>
 
         {/* description */}
         <Text size={8} color='sub' turncate={3} line={1.25}>
-          {roomService.description}
+          {data.description}
         </Text>
       </View>
 
@@ -82,13 +82,13 @@ export default () => {
               <View style={{ position: 'relative' }}>
                 <Div>
                   <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
-                    <Image source={roomService.staff[0].image} height='32px' width='32px' radii='rounded' />
+                    <Image source={data.staff[0].image} height='32px' width='32px' radii='rounded' />
                     <View>
                       <Text turncate={1} size={8}>
-                        {roomService.staff[0].name}
+                        {data.staff[0].name}
                       </Text>
                       <Text turncate={1} size={7} color='info'>
-                        {roomService.staff[0].position}
+                        {data.staff[0].position}
                       </Text>
                     </View>
                   </View>
@@ -99,8 +99,8 @@ export default () => {
               </View>
             }>
             <Animated.View style={{ ...animatedStyle }}>
-              <Text t={'capitalize'} size={10} weight='md'>{`List of ${roomService.title} staff`}</Text>
-              {roomService.staff.map((staff, index) => (
+              <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
+              {data.staff.map((staff, index) => (
                 <Div filled key={index}>
                   <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
                     <Image source={staff.image} height='28px' width='28px' radii='rounded' />
@@ -124,7 +124,7 @@ export default () => {
       <FlatList
         header={
           <FlatList
-            data={roomService.kitchen}
+            data={data.kitchen}
             column={3}
             gap='md'
             keyExtractor={(_, index) => index}
@@ -133,7 +133,7 @@ export default () => {
             scrollEnabled={false}
           />
         }
-        data={roomService.services}
+        data={data.services}
         column={3}
         gap='md'
         keyExtractor={(_, index) => index}

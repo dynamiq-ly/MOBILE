@@ -1,4 +1,4 @@
-export const roomService = {
+export const data = {
   id: '[stack] stack-room-service',
   image: 'https://th.bing.com/th/id/R.813851e64070bedf1c3c210b39de19b6?rik=N97j06dl%2bUvOpw&pid=ImgRaw&r=0',
   title: "Room's Services",
