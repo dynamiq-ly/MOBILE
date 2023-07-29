@@ -11,7 +11,7 @@ export const ReceptionRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Reception',
-      header: () => <OptionHeader menu />,
+      header: () => <OptionHeader />,
     },
   }),
 ]
