@@ -26,10 +26,12 @@ const Flat = ({ data, renderedItem, keyExtractor, gap = 'sm', column = 1, header
         renderItem={renderedItem}
         numColumns={column}
         keyExtractor={keyExtractor}
-        columnWrapperStyle={{
-          flex: 1,
-          gap: theme.units[gap],
-        }}
+        columnWrapperStyle={
+          column > 1 && {
+            flex: 1,
+            gap: theme.units[gap],
+          }
+        }
         contentContainerStyle={{
           gap: theme.units[gap],
           padding: theme.units.md,

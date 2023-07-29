@@ -12,7 +12,7 @@ const SimpleCard = ({ title, image, onPress }) => {
   return (
     <StyledSimpleCard style={{ ...shadow() }} activeOpacity={0.8} onPress={onPress}>
       <Image source={image} height={'82px'} radii='sm' />
-      <Text size={7} weight='md' t={'capitalize'}>
+      <Text size={7} weight='md' t={'capitalize'} turncate={1}>
         {title}
       </Text>
     </StyledSimpleCard>
