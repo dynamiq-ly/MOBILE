@@ -24,7 +24,9 @@ const Container = ({ children, gap = 'sb', padding = true, ...rest }) => {
         {...rest}
         padding={padding}
         keyboardDismissMode={'on-drag'}
-        contentContainerStyle={{ gap: theme.units[gap], paddingBottom: padding ? theme.units['sm'] : 0, paddingTop: padding ? theme.units['md'] : 0 }}>
+        contentContainerStyle={{ gap: theme.units[gap], paddingBottom: padding ? theme.units['sm'] : 0, paddingTop: padding ? theme.units['md'] : 0 }}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}>
         {children}
       </StyledScrollView>
     </SafeView>
