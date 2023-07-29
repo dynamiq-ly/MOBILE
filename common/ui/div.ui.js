@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyleDiv = styled.View`
   gap: ${({ theme }) => theme.gap.md};
-  padding: ${({ theme }) => theme.gap.sb};
+  padding: ${({ theme }) => theme.padding.sb};
   border-radius: ${({ theme, radii = 'sm' }) => theme.radius[radii]};
   background: ${({ theme, background = 'container' }) => theme.core.background[`variant_${background}`]};
 `

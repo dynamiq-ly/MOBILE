@@ -23,6 +23,7 @@ module.exports = function (api) {
             shared: './shared',
             routes: './routes',
             util: './util',
+            mocks: './mocks',
           },
         },
       ],

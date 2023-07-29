@@ -7,7 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from 'styled-components'
 import { SafeView, StyledScrollView } from '@/style/view.style'
 
-const Container = ({ children, gap = 'sb', ...rest }) => {
+const Container = ({ children, gap = 'sb', padding = true, ...rest }) => {
   const theme = useTheme()
   /**
    * in this case we are using the useSafeAreaInsets to create padding accross the element of ui
@@ -20,7 +20,11 @@ const Container = ({ children, gap = 'sb', ...rest }) => {
 
   return (
     <SafeView style={!name.includes('[tab]') && { paddingBottom: bottom }}>
-      <StyledScrollView {...rest} keyboardDismissMode={'on-drag'} contentContainerStyle={{ gap: theme.units[gap], paddingBottom: theme.units['sm'], paddingTop: theme.units['sm'] }}>
+      <StyledScrollView
+        {...rest}
+        padding={padding}
+        keyboardDismissMode={'on-drag'}
+        contentContainerStyle={{ gap: theme.units[gap], paddingBottom: padding ? theme.units['sm'] : 0, paddingTop: padding ? theme.units['md'] : 0 }}>
         {children}
       </StyledScrollView>
     </SafeView>
@@ -30,6 +34,7 @@ const Container = ({ children, gap = 'sb', ...rest }) => {
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   gap: PropTypes.oneOf(['sm', 'md', 'sb', 'lg']),
+  padding: PropTypes.bool,
 }
 
 export default Container

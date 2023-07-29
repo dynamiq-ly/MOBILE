@@ -7,7 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from 'styled-components'
 import { SafeView, StyledFlatList } from '@/style/view.style'
 
-const Flat = ({ data, renderedItem, keyExtractor, gap = 'sm', column = 1, header, headerStyle, ...rest }) => {
+const Flat = ({ data, renderedItem, keyExtractor, gap = 'sm', column = 1, header, headerStyle, nested = true, ...rest }) => {
   const theme = useTheme()
 
   /**
@@ -20,9 +20,8 @@ const Flat = ({ data, renderedItem, keyExtractor, gap = 'sm', column = 1, header
   const { bottom } = useSafeAreaInsets()
 
   return (
-    <SafeView style={!name.includes('[tab]') && { paddingBottom: bottom }}>
+    <SafeView style={!name.includes('[tab]') && !nested && { paddingBottom: bottom }}>
       <StyledFlatList
-        {...rest}
         data={data}
         renderItem={renderedItem}
         numColumns={column}
@@ -37,6 +36,7 @@ const Flat = ({ data, renderedItem, keyExtractor, gap = 'sm', column = 1, header
         }}
         ListHeaderComponent={header}
         ListHeaderComponentStyle={{ ...headerStyle }}
+        {...rest}
       />
     </SafeView>
   )
@@ -50,6 +50,7 @@ Flat.propTypes = {
   column: PropTypes.number,
   header: PropTypes.oneOfType([PropTypes.func, PropTypes.element, PropTypes.node]),
   headerStyle: PropTypes.object,
+  nested: PropTypes.bool,
 }
 
 export default Flat

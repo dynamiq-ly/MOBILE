@@ -16,7 +16,8 @@
       "navigation/*": ["./navigation/*"],
       "shared/*": ["./shared/*"],
       "routes/*": ["./routes/*"],
-      "util/*": ["./util/*"]
+      "util/*": ["./util/*"],
+      "mocks/*": ["./mocks/*"]
     }
   }
 }

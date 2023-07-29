@@ -10,7 +10,7 @@ export const SafeView = styled.View`
  * @file scroll view used in View.jsx
  */
 export const StyledScrollView = styled.ScrollView`
-  padding: 0px ${({ theme }) => theme.gap.md};
+  padding: 0px ${({ theme, padding }) => padding && theme.gap.md};
   background: ${({ theme }) => theme.core.background.variant_view};
 `
 
