@@ -140,7 +140,7 @@ export default () => {
         renderedItem={({ item }) => (
           <StyledSimpleCard key={item.name} style={{ height: 78, ...shadow(), gap: theme.units.md }}>
             <Image source={item.image} height='24px' width='24px' />
-            <Text size={7} t={'capitalize'}>
+            <Text size={6.5} t={'capitalize'}>
               {item.name}
             </Text>
           </StyledSimpleCard>
