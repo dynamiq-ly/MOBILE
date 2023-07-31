@@ -16,7 +16,7 @@ const FullCard = ({ title, image, h = 100, item, onPress }) => {
         <Image source={image} height={`${h}px`} width='100%' radii='sm' />
       </View>
       <StyledCardOverlay item={item}>
-        <Text size={8} weight='md' t={'capitalize'} turncate={1} color='neutral'>
+        <Text size={9} weight='md' t={'capitalize'} turncate={1} color='neutral'>
           {title}
         </Text>
       </StyledCardOverlay>

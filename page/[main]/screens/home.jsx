@@ -155,7 +155,7 @@ export default ({ navigation }) => {
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
             <View style={{ minWidth: 125 }}>
-              <FullCard key={item.id} title={item.name} h={82} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+              <FullCard key={item.id} title={item.name} h={92} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
             </View>
           )}
           nestedScrollEnabled={true}
@@ -184,7 +184,7 @@ export default ({ navigation }) => {
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
             <View style={{ minWidth: 125 }}>
-              <FullCard key={item.name} title={item.name} h={82} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+              <FullCard key={item.name} title={item.name} h={92} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
             </View>
           )}
           nestedScrollEnabled={true}

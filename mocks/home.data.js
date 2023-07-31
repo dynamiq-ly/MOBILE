@@ -70,6 +70,11 @@ export const data = {
         image:
           'https://img.freepik.com/free-photo/group-diverse-friends-holding-movie-emoticons_53876-71067.jpg?w=1380&t=st=1690630063~exp=1690630663~hmac=ef44c9c754998cb2de36cab99a9a1b576e7344121e88d8500a0721d8f5494e13',
       },
+      {
+        id: '[stack] stack-reception',
+        name: 'How Can we Help?',
+        image: 'https://th.bing.com/th/id/R.286b38433cf93b361df25fe672b51432?rik=bSVHY5Tn%2fZ%2bspQ&pid=ImgRaw&r=0',
+      },
     ],
   },
 
@@ -77,6 +82,11 @@ export const data = {
     title: 'Luxury',
     subtitle: 'Luxury services that we offer.',
     data: [
+      {
+        id: '[stack] stack-room-service',
+        name: 'Room\'s Services',
+        image: 'https://th.bing.com/th/id/R.813851e64070bedf1c3c210b39de19b6?rik=N97j06dl%2bUvOpw&pid=ImgRaw&r=0',
+      },
       {
         id: '[stack] stack-swimming-pool',
         name: 'swimming pools',
