@@ -1,4 +1,5 @@
 /* packages */
+import { View } from 'react-native'
 import PropTypes from 'prop-types'
 
 /* components */
@@ -7,7 +8,6 @@ import { Image, Text } from '@/common'
 /* styles */
 import { shadow } from '@/util/shadow'
 import { StyledFullCard, StyledCardOverlay } from '@/style/card.style'
-import { View } from 'react-native'
 
 const FullCard = ({ title, image, h = 100, item, onPress }) => {
   return (
