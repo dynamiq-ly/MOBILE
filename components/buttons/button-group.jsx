@@ -23,6 +23,7 @@ const ButtonGroup = ({ items = undefined, scrollabe = false, offsetX = 10, selec
           items.map((item, index) => {
             return (
               <View
+                key={item.id}
                 style={[
                   {
                     flex: scrollabe ? 0 : 1,
@@ -30,7 +31,7 @@ const ButtonGroup = ({ items = undefined, scrollabe = false, offsetX = 10, selec
                   },
                   index !== 0 && { borderLeftWidth: 1, borderLeftStyle: 'solid', borderLeftColor: `${theme.core.text['variant_sub']}50` },
                 ]}>
-                <StyledButtonItem key={item.id} scrollable={!scrollabe} onPress={() => setSelectedIndex(item.id)} selected={item.id === selectedIndex}>
+                <StyledButtonItem scrollable={!scrollabe} onPress={() => setSelectedIndex(item.id)} selected={item.id === selectedIndex}>
                   <Text color={item.id === selectedIndex ? 'neutral' : 'sub'} weight='md' size={7} t={'capitalize'} turncate={1}>
                     {item.label}
                   </Text>

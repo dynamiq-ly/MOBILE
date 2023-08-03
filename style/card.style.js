@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 
+/* normal card */
+export const StyledCardContainer = styled.TouchableOpacity`
+  flex: 1;
+
+  overflow: hidden;
+  justify-content: space-between;
+  
+  border-radius: ${({ theme }) => theme.radius.md};
+  background: ${({ theme }) => theme.core.background.variant_container};
+
+  border: 1px solid ${({ theme }) => `${theme.core.text['variant_sub']}50`};
+  ${({theme, padding = true }) => padding && `padding: ${theme.padding.md};` }
+  flex-direction: ${({ direction = 'row' }) => direction || 'row'};
+`
+
 export const StyledSimpleCard = styled.TouchableOpacity`
   flex: 1;
   align-items: center;
@@ -10,7 +25,7 @@ export const StyledSimpleCard = styled.TouchableOpacity`
   padding-top: ${({ theme }) => theme.padding.md};
   padding-left: ${({ theme }) => theme.padding.md};
   padding-right: ${({ theme }) => theme.padding.md};
-  padding-bottom: ${({ theme }) => theme.padding.sm};
+  padding-bottom: ${({ theme }) => theme.padding.md};
 `
 
 export const StyledFullCard = styled.TouchableOpacity`

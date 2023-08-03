@@ -84,7 +84,7 @@ export const data = {
     data: [
       {
         id: '[stack] stack-room-service',
-        name: 'Room\'s Services',
+        name: "Room's Services",
         image: 'https://th.bing.com/th/id/R.813851e64070bedf1c3c210b39de19b6?rik=N97j06dl%2bUvOpw&pid=ImgRaw&r=0',
       },
       {
@@ -92,6 +92,11 @@ export const data = {
         name: 'swimming pools',
         image:
           'https://img.freepik.com/free-photo/abstract-pool-water-surface-background-with-sun-light-reflection_74190-8510.jpg?w=1380&t=st=1690630286~exp=1690630886~hmac=a04f27282d80cd8e501e31b25caa054852fbad619b0689d97024e16838cb09ff',
+      },
+      {
+        id: '[stack] stack-rooms',
+        name: 'Rooms & Suites',
+        image: 'https://th.bing.com/th/id/R.af62833a48fbcba13847cc2f077cbe96?rik=wlneFOirEAESPw&pid=ImgRaw&r=0',
       },
       {
         id: '[stack] stack-spa',

@@ -1,8 +1,8 @@
-import { createStackNavigator } from '@react-navigation/stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { stack } from '@/routes/stack.routes'
 
-const Stack = createStackNavigator()
+const Stack = createNativeStackNavigator()
 
 export default () => {
   return (

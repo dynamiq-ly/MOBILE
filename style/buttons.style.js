@@ -2,21 +2,22 @@ import styled from 'styled-components'
 
 export const StyledButtonGroupView = styled.View`
   overflow: hidden;
+  height: ${({ theme }) => theme.fontSize(19)};
   border-radius: ${({ theme }) => theme.radius.md};
   border: 1px solid ${({ theme }) => `${theme.core.text['variant_sub']}50`};
 `
 
 export const StyledButtonGroupScrolledContainer = styled.ScrollView`
+  height: 100%;
   overflow: hidden;
   flex-direction: row;
-  height: ${({ theme }) => theme.fontSize(19)};
   background: ${({ theme }) => theme.core.background['variant_container']};
 `
 
 export const StyledButtonGroupContainer = styled.View`
+  height: 100%;
   overflow: hidden;
   flex-direction: row;
-  height: ${({ theme }) => theme.fontSize(19)};
   background: ${({ theme }) => theme.core.background['variant_container']};
 `
 

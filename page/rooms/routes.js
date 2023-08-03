@@ -1,9 +1,8 @@
 /* components */
-import { Icon } from '@/components'
-import { StackHeader } from '@/shared'
+import { OptionHeader } from '@/shared'
 
 /* screens */
-import { Rooms } from '@/page/rooms/screens'
+import { Rooms, RoomDetails } from '@/page/rooms/screens'
 
 export const RoomsRoutesConfig = [
   (initial = {
@@ -12,7 +11,17 @@ export const RoomsRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Rooms List',
-      header: () => <StackHeader title='Rooms List' iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+      header: () => <OptionHeader />,
+    },
+  }),
+  (details = {
+    id: '[stack] stack-rooms-details',
+    component: RoomDetails,
+    option: {
+      headerShown: true,
+      headerTitle: 'Rooms Details',
+      header: () => <OptionHeader />,
+      presentation: 'transparentModal',
     },
   }),
 ]

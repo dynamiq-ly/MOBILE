@@ -3,18 +3,21 @@ import { useState } from 'react'
 import { View } from 'react-native'
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
 
-/* styles */
-import { useTheme } from 'styled-components'
+/* modules */
+import { Div, Image, Text } from '@/common'
+import { Container, FlatList } from '@/shared'
 
 /* components */
 import { SimpleCard, FullCard } from '@/components'
 
-/* utilities */
+/* styles */
 import { shadow } from '@/util/shadow'
-import { data } from '@/mocks/home.data'
-import { Div, Image, Text } from '@/common'
-import { Container, FlatList } from '@/shared'
+import { useTheme } from 'styled-components'
 import { StyledSimpleCard } from '@/style/card.style'
+
+/* mocks */
+import { data } from '@/mocks/home.data'
+
 
 export default ({ navigation }) => {
   const theme = useTheme()
