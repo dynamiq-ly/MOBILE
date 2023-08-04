@@ -3,29 +3,37 @@ import { View } from 'react-native'
 import PropTypes from 'prop-types'
 
 /*components*/
-import { Icon } from '@/common'
+import Icon from '../product-icon/Icon'
 
 /*styles*/
 import { useTheme } from 'styled-components'
 import { StyledCardContainer } from '@/style/card.style'
 
-const Dialog = ({ children, padding = true, icon = require('@/assets/icons/default/cube-dark.png'), onPress }) => {
+const Dialog = ({ children, icon = require('@/assets/icons/default/cube-light.png'), background = 'error', onPress }) => {
   const theme = useTheme()
 
   return (
-    <StyledCardContainer direction={'row'} padding={padding} activeOpacity={0.7} onPress={onPress}>
-      <View style={{ minHeight: 74 }}>
-        <Icon source={icon} width='24px' />
+    <StyledCardContainer padding direction={'row'} activeOpacity={1} onPress={onPress} style={{ gap: theme.units.sm }}>
+      <View style={{ ...styling, borderRadius: 4, backgroundColor: theme.core.button[`variant_${background}`] }}>
+        <Icon icon={icon} size={18} />
       </View>
-      <View style={{ height: '100%', gap: theme.units.sm, padding: theme.units.md }}>{children}</View>
+      <View style={{ flex: 1, gap: theme.units.sm }}>{children}</View>
     </StyledCardContainer>
   )
 }
 
 Dialog.propTypes = {
-  padding: PropTypes.bool,
   icon: PropTypes.number,
+  padding: PropTypes.bool,
+  background: PropTypes.oneOf(['neutral', 'primary', 'secondary', 'error', 'success', 'warning', 'info', 'tag']),
   children: PropTypes.node.isRequired,
+}
+
+const styling = {
+  width: 36,
+  height: 36,
+  alignItems: 'center',
+  justifyContent: 'center',
 }
 
 export default Dialog
