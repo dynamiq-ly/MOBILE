@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import { Dimensions, View } from 'react-native'
 import Carousel from 'react-native-reanimated-carousel'
-import Animated from 'react-native-reanimated'
+
 
 /* components */
 import { Image } from '@/common'
@@ -11,7 +11,7 @@ import { Image } from '@/common'
 
 const { width: WIDTH_SCALE } = Dimensions.get('window')
 
-const Pager = ({ slider = undefined, interval = 2500, sharedElementId = 'shared' }) => {
+const Pager = ({ slider = undefined, interval = 2500 }) => {
   return (
     <View style={{ flex: 1 }}>
       {slider && (
@@ -24,9 +24,9 @@ const Pager = ({ slider = undefined, interval = 2500, sharedElementId = 'shared'
           autoPlayInterval={interval}
           scrollAnimationDuration={1000}
           renderItem={({ item }) => (
-            <Animated.View style={{ flex: 1, height: 254 }} sharedTransitionTag={sharedElementId}>
+            <View style={{ flex: 1, height: 254 }}>
               <Image source={item.image} height='254px' />
-            </Animated.View>
+            </View>
           )}
         />
       )}
@@ -37,7 +37,6 @@ const Pager = ({ slider = undefined, interval = 2500, sharedElementId = 'shared'
 Pager.propTypes = {
   slider: PropTypes.arrayOf(PropTypes.object).isRequired,
   interval: PropTypes.number,
-  sharedElementId: PropTypes.string,
 }
 
 export default Pager
