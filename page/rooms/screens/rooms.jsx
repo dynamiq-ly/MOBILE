@@ -41,7 +41,7 @@ export default ({ navigation }) => {
         </Div>
 
         {/* dialog*/}
-        <Dialog icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
+        <Dialog icon={require('@/assets/icons/product/monocrome/warning-light.png')} small={true}>
           <Text size={8} line={1.25} color='sub'>
             Prices may vary through the season.
           </Text>
@@ -49,7 +49,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* rooms */}
-      <View>
+      <View style={{ flex: 1, backgroundColor: 'red', padding: 1 }}>
         <FlatList
           header={
             <View style={{ gap: 2, marginBottom: theme.units.sb }}>
@@ -74,8 +74,7 @@ export default ({ navigation }) => {
                   id: item.id,
                   data: item,
                 })
-              }
-            >
+              }>
               <Text size={7} weight='md'>
                 {item.slug}
               </Text>
