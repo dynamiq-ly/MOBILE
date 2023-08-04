@@ -15,9 +15,9 @@ const Dialog = ({ children, icon = require('@/assets/icons/default/cube-light.pn
   return (
     <StyledCardContainer padding direction={'row'} activeOpacity={1} onPress={onPress} style={{ gap: theme.units.sm }}>
       <View style={{ ...styling, borderRadius: 4, backgroundColor: theme.core.button[`variant_${background}`] }}>
-        <Icon icon={icon} size={18} />
+        <Icon icon={icon} size={22} />
       </View>
-      <View style={{ flex: 1, gap: theme.units.sm }}>{children}</View>
+      <View style={{ justifyContent: 'center', flex: 1, gap: theme.units.sm }}>{children}</View>
     </StyledCardContainer>
   )
 }

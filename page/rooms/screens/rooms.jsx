@@ -8,7 +8,7 @@ import { Container, FlatList } from '@/shared'
 
 /* components */
 import { Div, Image, Text } from '@/common'
-import { ButtonGroup, Card } from '@/components'
+import { ButtonGroup, Card, Dialog } from '@/components'
 
 /* styles */
 import { useTheme } from 'styled-components'
@@ -39,6 +39,13 @@ export default ({ navigation }) => {
             Dial 9 to contact with the reception desk for more options and availability.
           </Text>
         </Div>
+
+        {/* dialog*/}
+        <Dialog icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
+          <Text size={8} line={1.25} color='sub'>
+            Prices may vary through the season.
+          </Text>
+        </Dialog>
       </View>
 
       {/* rooms */}
@@ -67,7 +74,8 @@ export default ({ navigation }) => {
                   id: item.id,
                   data: item,
                 })
-              }>
+              }
+            >
               <Text size={7} weight='md'>
                 {item.slug}
               </Text>
