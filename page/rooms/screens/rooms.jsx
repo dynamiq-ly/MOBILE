@@ -30,7 +30,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* description */}
-      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sb }}>
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sb, flex: 1 }}>
         <Text size={8} line={1.25} color='sub'>
           {data.description}
         </Text>
@@ -49,7 +49,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* rooms */}
-      <View style={{ flex: 1, backgroundColor: 'red', padding: 1 }}>
+      <View style={{ flex: 1 }}>
         <FlatList
           header={
             <View style={{ gap: 2, marginBottom: theme.units.sb }}>
