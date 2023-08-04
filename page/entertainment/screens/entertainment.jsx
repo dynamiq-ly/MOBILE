@@ -1,10 +1,149 @@
-import { Text } from '@/common'
-import { Container } from '@/shared'
+/*package*/
+import { View, TouchableOpacity } from 'react-native'
+import { useCallback, useState } from 'react'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
 
-export default () => {
+/* styles */
+import { useTheme } from 'styled-components'
+import { Feather } from '@expo/vector-icons'
+
+/* components */
+import { FullCard, Dialog } from '@/components'
+
+/* utilities */
+import { Container, FlatList } from '@/shared'
+import { BottomSheet } from '@/components'
+import { Div, Image, Text } from '@/common'
+
+/*mocks*/
+import { data } from '@/mocks/entertainment.data'
+
+export default ({ navigation }) => {
+  const theme = useTheme()
+  const { top } = useSafeAreaInsets()
+
+  const [turncation, setTurncation] = useState(false)
+
+  const paddingTop = useSharedValue(theme.units['md'])
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    flex: 1,
+    gap: theme.units['md'],
+    paddingHorizontal: theme.units['md'],
+    paddingTop: withTiming(paddingTop.value),
+  }))
+
+  /* sheet animation */
+  const handleSheetChanges = useCallback((index) => {
+    index === 3 ? (paddingTop.value = top) : (paddingTop.value = theme.units['md'])
+  }, [])
+
   return (
-    <Container>
-      <Text>Entertainment</Text>
+    <Container stickyHeaderIndices={[0]} padding={false}>
+      <Image source={data.image} height='254px' />
+
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
+        {/* title */}
+        <Text weight='bd' size={14} t={'capitalize'}>
+          {data.title}
+        </Text>
+
+        {/*description*/}
+
+        <TouchableOpacity style={{ paddingHorizontal: theme.units.md, gap: 4 }} onPress={() => setTurncation(!turncation)}>
+          <Text size={7} color='sub' t={'capitalize'} turncate={turncation ? null : 3} line={1.25} align='justify'>
+            {data.description}
+          </Text>
+          <Text size={6} color='info' weight='md' t={'capitalize'}>
+            {turncation ? 'see less' : 'see more'}
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{ paddingHorizontal: theme.units.md }}>
+        {/*staff*/}
+        <Div filled title='staff' radii='md'>
+          <BottomSheet
+            handleSheetChange={handleSheetChanges}
+            triggerElement={
+              <View style={{ position: 'relative' }}>
+                <Div>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
+                    <Image source={data.staff[0].image} height='32px' width='32px' radii='rounded' />
+                    <View>
+                      <Text turncate={1} size={8}>
+                        {data.staff[0].name}
+                      </Text>
+                      <Text turncate={1} size={7} color='info'>
+                        {data.staff[0].position}
+                      </Text>
+                    </View>
+                  </View>
+                </Div>
+                <View style={{ width: '100%', position: 'absolute', top: '100%', alignItems: 'center' }}>
+                  <Feather name='chevron-down' size={14} color='black' />
+                </View>
+              </View>
+            }
+          >
+            <Animated.View style={{ ...animatedStyle }}>
+              <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
+              {data.staff.map((staff, index) => (
+                <Div filled key={index}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
+                    <Image source={staff.image} height='28px' width='28px' radii='rounded' />
+                    <View>
+                      <Text turncate={1} size={8}>
+                        {staff.name}
+                      </Text>
+                      <Text turncate={1} size={7} color='info'>
+                        {staff.position}
+                      </Text>
+                    </View>
+                  </View>
+                </Div>
+              ))}
+            </Animated.View>
+          </BottomSheet>
+        </Div>
+      </View>
+
+      {/* activities */}
+
+      <FlatList
+        data={data.activities}
+        gap='md'
+        keyExtractor={(_, index) => index}
+        renderedItem={({ item }) => (
+          <View style={{ minWidth: 125 }}>
+            <FullCard key={item.id} title={item.name} h={92} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+          </View>
+        )}
+        nestedScrollEnabled={true}
+        scrollEnabled={false}
+      />
+      {/* dialog*/}
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
+        <Dialog background='success' icon={require('@/assets/icons/product/monocrome/regulation-light.png')}>
+          <Text size={8} line={1.25} color='sub'>
+            Mini club regulations
+          </Text>
+        </Dialog>
+      </View>
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
+        <Dialog background='success' icon={require('@/assets/icons/product/monocrome/regulation-light.png')}>
+          <Text size={8} line={1.25} color='sub'>
+            Regulations
+          </Text>
+        </Dialog>
+      </View>
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
+        <Dialog background='success' icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
+          <Text size={8} line={1.25} color='sub'>
+            Help
+          </Text>
+        </Dialog>
+      </View>
     </Container>
   )
 }

@@ -11,7 +11,7 @@ export const EntertainmentRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Entertainment List',
-      header: () => <OptionHeader menu />,
+      header: () => <OptionHeader />,
     },
   }),
 ]
