@@ -7,12 +7,11 @@ import Text from '@/common/Text'
 import Button from '@/common/Button'
 
 /* styles */
-import { shadow } from '@/util/shadow'
 import { StyleDiv, StyledDivHeader } from '@/common/ui/div.ui'
 
-const Div = ({ children, radii = 'sm', shadowColor = 'main', title, button, onClick, buttonBackground = 'tag', buttonShadowColor = 'main', filled = false, style = {} }) => {
+const Div = ({ children, radii = 'sm', shadowColor = 'sub', title, button, onClick, buttonBackground = 'tag', buttonShadowColor = 'main', filled = false, style = {} }) => {
   return (
-    <StyleDiv radii={radii} background={filled ? 'container' : 'view'} style={filled && { ...shadow(shadowColor), ...style }}>
+    <StyleDiv radii={radii} background={filled ? 'container' : 'view'} shadowColor={shadowColor} style={{ ...style }}>
       {title && (
         <StyledDivHeader>
           <Text size={9} weight={'md'} t={'capitalize'}>
