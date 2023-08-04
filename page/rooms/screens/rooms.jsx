@@ -59,6 +59,7 @@ export default ({ navigation }) => {
           keyExtractor={(item) => item.id}
           renderedItem={({ item }) => (
             <Card
+              sharedElementId={'room-details'}
               image={item.images[0].image}
               padding={false}
               onPress={() =>
@@ -71,7 +72,10 @@ export default ({ navigation }) => {
                 {item.slug}
               </Text>
               <Text size={6} line={1.25} color='sub' turncate={2}>
-                {item.roomFaetures.map((el) => el.label).join(' | ')}
+                {item.roomFaetures
+                  .filter((el) => el.featured)
+                  .map((el) => el.label)
+                  .join(' | ')}
               </Text>
               <View style={{ flex: 1, flexDirection: 'row' }}>
                 <Text size={6} color='small' weight='md' t={'capitalize'} turncate={2}>

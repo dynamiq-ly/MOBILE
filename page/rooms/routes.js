@@ -21,7 +21,6 @@ export const RoomsRoutesConfig = [
       headerShown: true,
       headerTitle: 'Rooms Details',
       header: () => <OptionHeader />,
-      presentation: 'transparentModal',
     },
   }),
 ]
