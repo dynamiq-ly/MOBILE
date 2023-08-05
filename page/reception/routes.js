@@ -1,9 +1,9 @@
 /* components */
+import { Icon } from '@/components'
 import { OptionHeader, StackHeader } from '@/shared'
 
 /* screens */
 import { Reception, RoomUpgrade } from '@/page/reception/screens'
-import { Icon } from '@/components'
 
 export const ReceptionRoutesConfig = [
   (initial = {

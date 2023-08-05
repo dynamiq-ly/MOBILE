@@ -66,7 +66,6 @@ export default ({ navigation }) => {
           keyExtractor={(item) => item.id}
           renderedItem={({ item }) => (
             <Card
-              sharedElementId={'room-details'}
               image={item.images[0].image}
               padding={false}
               onPress={() =>
@@ -75,7 +74,7 @@ export default ({ navigation }) => {
                   data: item,
                 })
               }>
-              <Text size={7} weight='md'>
+              <Text size={7} weight='md' t={'capitalize'}>
                 {item.slug}
               </Text>
               <Text size={6} line={1.25} color='sub' turncate={2}>
