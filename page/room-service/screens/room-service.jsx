@@ -93,11 +93,12 @@ export default () => {
                     </View>
                   </View>
                 </Div>
-                <View style={{ width: '100%', position: 'absolute', top: '100%', alignItems: 'center' }}>
+                <View style={{ width: '100%', alignItems: 'center' }}>
                   <Feather name='chevron-down' size={14} color='black' />
                 </View>
               </View>
-            }>
+            }
+          >
             <Animated.View style={{ ...animatedStyle }}>
               <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
               {data.staff.map((staff, index) => (
@@ -122,17 +123,7 @@ export default () => {
 
       {/* room services */}
       <FlatList
-        header={
-          <FlatList
-            data={data.kitchen}
-            column={3}
-            gap='md'
-            keyExtractor={(_, index) => index}
-            renderedItem={({ item }) => <SimpleCard key={item.name} title={item.name} image={item.image} />}
-            nestedScrollEnabled={true}
-            scrollEnabled={false}
-          />
-        }
+        header={<FlatList data={data.kitchen} column={3} gap='md' keyExtractor={(_, index) => index} renderedItem={({ item }) => <SimpleCard key={item.name} title={item.name} image={item.image} />} nestedScrollEnabled={true} scrollEnabled={false} />}
         data={data.services}
         column={3}
         gap='md'

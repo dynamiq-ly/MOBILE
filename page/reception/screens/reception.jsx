@@ -93,11 +93,12 @@ export default () => {
                     </View>
                   </View>
                 </Div>
-                <View style={{ width: '100%', position: 'absolute', top: '100%', alignItems: 'center' }}>
+                <View style={{ width: '100%', alignItems: 'center' }}>
                   <Feather name='chevron-down' size={14} color='black' />
                 </View>
               </View>
-            }>
+            }
+          >
             <Animated.View style={{ ...animatedStyle }}>
               <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
               {data.staff.map((staff, index) => (

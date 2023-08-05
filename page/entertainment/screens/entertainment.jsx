@@ -43,23 +43,23 @@ export default ({ navigation }) => {
     <Container stickyHeaderIndices={[0]} padding={false}>
       <Image source={data.image} height='254px' />
 
-      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
-        {/* title */}
+      {/* title */}
+      <View style={{ paddingHorizontal: theme.units.md }}>
         <Text weight='bd' size={14} t={'capitalize'}>
           {data.title}
         </Text>
-
-        {/*description*/}
-
-        <TouchableOpacity style={{ paddingHorizontal: theme.units.md, gap: 4 }} onPress={() => setTurncation(!turncation)}>
-          <Text size={7} color='sub' t={'capitalize'} turncate={turncation ? null : 3} line={1.25} align='justify'>
-            {data.description}
-          </Text>
-          <Text size={6} color='info' weight='md' t={'capitalize'}>
-            {turncation ? 'see less' : 'see more'}
-          </Text>
-        </TouchableOpacity>
       </View>
+      {/*description*/}
+
+      <TouchableOpacity style={{ paddingHorizontal: theme.units.md, gap: 4 }} onPress={() => setTurncation(!turncation)}>
+        <Text size={7} color='sub' t={'capitalize'} turncate={turncation ? null : 3} line={1.25} align='justify'>
+          {data.description}
+        </Text>
+        <Text size={6} color='info' weight='md' t={'capitalize'}>
+          {turncation ? 'see less' : 'see more'}
+        </Text>
+      </TouchableOpacity>
+
       <View style={{ paddingHorizontal: theme.units.md }}>
         {/*staff*/}
         <Div filled title='staff' radii='md'>
@@ -80,7 +80,7 @@ export default ({ navigation }) => {
                     </View>
                   </View>
                 </Div>
-                <View style={{ width: '100%', position: 'absolute', top: '100%', alignItems: 'center' }}>
+                <View style={{ width: '100%', alignItems: 'center' }}>
                   <Feather name='chevron-down' size={14} color='black' />
                 </View>
               </View>
