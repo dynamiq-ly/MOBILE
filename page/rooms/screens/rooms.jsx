@@ -21,7 +21,7 @@ export default ({ navigation }) => {
 
   const [state, setState] = useState(1)
   return (
-    <Container stickyHeaderIndices={[0]} padding={false}>
+    <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
       <Image source={data.banner[0].image} height='254px' />
 
       {/* rooms categories */}

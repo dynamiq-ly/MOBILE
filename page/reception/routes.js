@@ -1,8 +1,9 @@
 /* components */
-import { OptionHeader } from '@/shared'
+import { OptionHeader, StackHeader } from '@/shared'
 
 /* screens */
-import { Reception } from '@/page/reception/screens'
+import { Reception, RoomUpgrade } from '@/page/reception/screens'
+import { Icon } from '@/components'
 
 export const ReceptionRoutesConfig = [
   (initial = {
@@ -12,6 +13,15 @@ export const ReceptionRoutesConfig = [
       headerShown: true,
       headerTitle: 'Reception',
       header: () => <OptionHeader />,
+    },
+  }),
+  (roomUpgrade = {
+    id: '[stack] stack-reception-room-upgrade',
+    component: RoomUpgrade,
+    option: {
+      headerShown: true,
+      headerTitle: 'Room Upgrade',
+      header: () => <StackHeader title='Room Upgrade' iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
     },
   }),
 ]

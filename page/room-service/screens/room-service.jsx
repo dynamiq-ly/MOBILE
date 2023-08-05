@@ -19,7 +19,7 @@ import { data } from '@/mocks/room-service.data'
 import { StyledSimpleCard } from '@/style/card.style'
 import { shadow } from '@/util/shadow'
 
-export default () => {
+export default ({ navigation }) => {
   const theme = useTheme()
   const { top } = useSafeAreaInsets()
 
@@ -38,7 +38,7 @@ export default () => {
   }, [])
 
   return (
-    <Container stickyHeaderIndices={[0]} padding={false}>
+    <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
       <Image source={data.image} height='254px' />
 
       <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
@@ -97,8 +97,7 @@ export default () => {
                   <Feather name='chevron-down' size={14} color='black' />
                 </View>
               </View>
-            }
-          >
+            }>
             <Animated.View style={{ ...animatedStyle }}>
               <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
               {data.staff.map((staff, index) => (
@@ -123,13 +122,23 @@ export default () => {
 
       {/* room services */}
       <FlatList
-        header={<FlatList data={data.kitchen} column={3} gap='md' keyExtractor={(_, index) => index} renderedItem={({ item }) => <SimpleCard key={item.name} title={item.name} image={item.image} />} nestedScrollEnabled={true} scrollEnabled={false} />}
+        header={
+          <FlatList
+            data={data.kitchen}
+            column={3}
+            gap='md'
+            keyExtractor={(_, index) => index}
+            renderedItem={({ item }) => <SimpleCard key={item.name} title={item.name} image={item.image} />}
+            nestedScrollEnabled={true}
+            scrollEnabled={false}
+          />
+        }
         data={data.services}
         column={3}
         gap='md'
         keyExtractor={(_, index) => index}
         renderedItem={({ item }) => (
-          <StyledSimpleCard key={item.name} style={{ height: 78, ...shadow(), gap: theme.units.md }}>
+          <StyledSimpleCard key={item.id} style={{ height: 78, ...shadow(), gap: theme.units.md }} onPress={() => navigation.navigate(item.id)}>
             <Image source={item.image} height='24px' width='24px' />
             <Text size={6.5} t={'capitalize'}>
               {item.name}

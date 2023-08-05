@@ -9,9 +9,9 @@ import Text from '@/common/Text'
 import { shadow } from '@/util/shadow'
 import { StyledButton } from '@/common/ui/button.ui'
 
-const Button = ({ children, background = 'neutral', h = 36, shadowColor = 'main', iconLeft, iconRight, onPress }) => {
+const Button = ({ children, background = 'neutral', h = 36, shadowColor = 'main', iconLeft, iconRight, onPress, style }) => {
   return (
-    <StyledButton activeOpacity={0.8} color={background} h={`${h}px`} onPress={onPress} style={{ ...shadow(shadowColor) }}>
+    <StyledButton activeOpacity={0.8} color={background} h={`${h}px`} onPress={onPress} style={{ ...shadow(shadowColor), ...style }}>
       {iconLeft && <Feather name={iconLeft} size={16} color={['neutral', 'error', 'primary', 'success'].includes(background) ? '#fff' : '#111'} />}
       <Text weight={'md'} size={h === 36 ? 7 : 6} color={['neutral', 'error', 'primary', 'success'].includes(background) ? 'neutral' : 'main'} t='capitalize'>
         {children}
@@ -29,6 +29,7 @@ Button.propTypes = {
   iconLeft: PropTypes.string,
   iconRight: PropTypes.string,
   onPress: PropTypes.func,
+  style: PropTypes.object,
 }
 
 export default Button

@@ -24,7 +24,7 @@ export default ({ route }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Container stickyHeaderIndices={[0, 7]} padding={false}>
+      <Container stickyHeaderIndices={[0, 7]} padding={false} safeArea={false}>
         <Pager slider={data.images} interval={5000} />
 
         <View style={{ gap: 6 }}>
@@ -140,11 +140,7 @@ export default ({ route }) => {
         </View>
       </Container>
       {/* room is upgradable */}
-      {data.room_config && data.room_config.room_booking && (
-        <View style={{ position: 'absolute', top: HEIGHT_SCALE - bottom - 18, width: '100%', paddingHorizontal: theme.units.md }}>
-          <Button>Book Now</Button>
-        </View>
-      )}
+      {data.room_config && data.room_config.room_booking && <Button style={{ marginBottom: theme.units.lg, marginTop: theme.units.sm, marginHorizontal: theme.units.md }}>see your options</Button>}
     </View>
   )
 }
