@@ -19,24 +19,8 @@ export default ({ navigation }) => {
 
   return (
     <Container padding={false} safeArea={false}>
-      {/* dialog price */}
-      <View style={{ paddingTop: theme.units.md, paddingHorizontal: theme.units.md }}>
-        <Dialog icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
-          <Text size={7}>Prices may vary throught the season.</Text>
-        </Dialog>
-      </View>
-
       <View style={{ paddingHorizontal: theme.units.md }}>
         <Image source={pensions.image} height='254px' radii='md' />
-      </View>
-
-      {/*  dial */}
-      <View style={{ paddingHorizontal: theme.units.md }}>
-        <Div filled>
-          <Text size={8} line={1.25} color='sub'>
-            Dial 9 to contact with the reception desk for more options and availability.
-          </Text>
-        </Div>
       </View>
 
       {/* description */}
@@ -45,6 +29,18 @@ export default ({ navigation }) => {
           Elevate Your Stay: Upgrade Your Room for Unforgettable Luxury. Indulge in opulence with exclusive amenities and breathtaking views. Treat yourself to a higher level of sophistication today.
           Book your upgraded experience now.
         </Text>
+      </View>
+
+      {/*  dial */}
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sm }}>
+        <Div filled>
+          <Text size={8} line={1.25} color='sub'>
+            Dial 9 to contact with the reception desk for more options and availability.
+          </Text>
+        </Div>
+        <Dialog icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
+          <Text size={7}>Prices may vary throught the season.</Text>
+        </Dialog>
       </View>
 
       {/* pension list */}

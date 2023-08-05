@@ -24,16 +24,19 @@ export default ({ navigation }) => {
     <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
       <Image source={data.banner[0].image} height='254px' />
 
-      {/* rooms categories */}
-      <View style={{ paddingHorizontal: theme.units.md }}>
-        <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={data.categories.length > 3} items={data.categories} />
-      </View>
-
       {/* description */}
-      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sb, flex: 1 }}>
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sm, flex: 1 }}>
+        <Text weight='bd' size={14} t={'capitalize'}>
+          Rooms & suites
+        </Text>
+
         <Text size={8} line={1.25} color='sub'>
           {data.description}
         </Text>
+      </View>
+
+      {/* warning */}
+      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md, flex: 1 }}>
         <Div filled>
           <Text size={8} line={1.25} color='sub'>
             Dial 9 to contact with the reception desk for more options and availability.
@@ -46,6 +49,11 @@ export default ({ navigation }) => {
             Prices may vary through the season.
           </Text>
         </Dialog>
+      </View>
+
+      {/* rooms categories */}
+      <View style={{ paddingHorizontal: theme.units.md }}>
+        <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={data.categories.length > 3} items={data.categories} />
       </View>
 
       {/* rooms */}
