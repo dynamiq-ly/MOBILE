@@ -13,13 +13,10 @@ import { Accordion, Icon, Pager } from '@/components'
 /* styles */
 import { useTheme } from 'styled-components'
 
-const { height: HEIGHT_SCALE } = Dimensions.get('window')
-
 export default ({ route }) => {
-  const { data } = route.params
+  const { data, previousScreen } = route.params
 
   const theme = useTheme()
-  const { bottom } = useSafeAreaInsets()
   const [turncation, setTurncation] = useState(false)
 
   return (
@@ -39,14 +36,16 @@ export default ({ route }) => {
               {/* price */}
               <View style={{ flex: 1, flexDirection: 'row' }}>
                 <Text size={7} color='small' weight='md' t={'capitalize'} turncate={2}>
-                  starting from
+                  {previousScreen === 'room-upgrade' ? 'Upgrade will cost' : 'starting from'}
                 </Text>
                 <Text size={7} color='info' weight='md' turncate={2}>
-                  {' ' + data.price.toString()}
+                  {previousScreen === 'room-upgrade' ? ' ' + data.room_config.room_upgrade_price : ' ' + data.price.toString()}
                 </Text>
-                <Text size={7} color='small' weight='md' turncate={2}>
-                  {' / night'}
-                </Text>
+                {previousScreen !== 'room-upgrade' && (
+                  <Text size={7} color='small' weight='md' turncate={2}>
+                    {' / night'}
+                  </Text>
+                )}
               </View>
             </View>
             {/* 360 */}
@@ -83,7 +82,7 @@ export default ({ route }) => {
                   .map((el, index) => (
                     <Div key={index}>
                       <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
-                        <Image source={el.image ? el.image : require('@/assets/icons/default/cube-dark.png')} width='12px' height='12px' contentFit='contain' />
+                        <Image source={el.image ? el.image : require('@/assets/icons/default/cube-dark.png')} width='14px' height='14px' contentFit='contain' />
                         <Text size={6.5}>{el.label}</Text>
                       </View>
                     </Div>
@@ -140,7 +139,9 @@ export default ({ route }) => {
         </View>
       </Container>
       {/* room is upgradable */}
-      {data.room_config && data.room_config.room_booking && <Button style={{ marginBottom: theme.units.lg, marginTop: theme.units.sm, marginHorizontal: theme.units.md }}>see your options</Button>}
+      {data.room_config && data.room_config.room_booking && (
+        <Button style={{ marginBottom: theme.units.lg, marginTop: theme.units.sm, marginHorizontal: theme.units.md }}>{previousScreen === 'room-upgrade' ? 'Upgrade Room' : 'Book Now'}</Button>
+      )}
     </View>
   )
 }
