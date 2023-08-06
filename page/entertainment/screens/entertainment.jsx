@@ -114,11 +114,7 @@ export default ({ navigation }) => {
         data={data.activities}
         gap='md'
         keyExtractor={(_, index) => index}
-        renderedItem={({ item }) => (
-          <View style={{ minWidth: 125 }}>
-            <FullCard key={item.id} title={item.name} h={92} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
-          </View>
-        )}
+        renderedItem={({ item }) => <FullCard key={item.id} title={item.name} h={92} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />}
         nestedScrollEnabled={true}
         scrollEnabled={false}
       />
