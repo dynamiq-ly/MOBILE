@@ -25,10 +25,10 @@ export const data = {
       room_number: 2,
 
       roomFaetures: [
-        { id: 1, label: '2 Adults', featured: true, image: 'https://cdn-icons.flaticon.com/svg/7857/7857147.svg?token=exp=1691188603~hmac=a0ae219b907450f735f24b34eb0a2a9f' },
-        { id: 2, label: 'Free Wifi', featured: true, image: 'https://cdn-icons.flaticon.com/svg/9254/9254655.svg?token=exp=1691188903~hmac=82a2a1ca7896d9efb32232caac5e5638' },
-        { id: 3, label: 'Non-smoking', featured: true, image: 'https://cdn-icons.flaticon.com/svg/9856/9856400.svg?token=exp=1691188932~hmac=4f09fd2ff2b5ebd86a44e67d3ed15126' },
-        { id: 4, label: '33 m2', featured: true, image: 'https://cdn-icons.flaticon.com/svg/7653/7653172.svg?token=exp=1691189052~hmac=c104a06e6b13ed725f780f10daf38b74' },
+        { id: 1, label: '2 Adults', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/8890/8890970.png' },
+        { id: 2, label: 'Free Wifi', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/159/159599.png' },
+        { id: 3, label: 'Non-smoking', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/75/75343.png' },
+        { id: 4, label: '33 m2', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/1295/1295109.png' },
         { id: 5, label: 'Balcony', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/10629/10629373.png' },
         { id: 6, label: 'One King Size Bed', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/1775/1775188.png' },
       ],
@@ -74,10 +74,10 @@ export const data = {
       room_number: 2,
 
       roomFaetures: [
-        { id: 1, label: '2 Adults', featured: true, image: 'https://cdn-icons.flaticon.com/svg/7857/7857147.svg?token=exp=1691188603~hmac=a0ae219b907450f735f24b34eb0a2a9f' },
-        { id: 2, label: 'Free Wifi', featured: true, image: 'https://cdn-icons.flaticon.com/svg/9254/9254655.svg?token=exp=1691188903~hmac=82a2a1ca7896d9efb32232caac5e5638' },
-        { id: 3, label: 'Non-smoking', featured: true, image: 'https://cdn-icons.flaticon.com/svg/9856/9856400.svg?token=exp=1691188932~hmac=4f09fd2ff2b5ebd86a44e67d3ed15126' },
-        { id: 4, label: '33 m2', featured: true, image: 'https://cdn-icons.flaticon.com/svg/7653/7653172.svg?token=exp=1691189052~hmac=c104a06e6b13ed725f780f10daf38b74' },
+        { id: 1, label: '2 Adults', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/8890/8890970.png' },
+        { id: 2, label: 'Free Wifi', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/159/159599.png' },
+        { id: 3, label: 'Non-smoking', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/75/75343.png' },
+        { id: 4, label: '33 m2', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/1295/1295109.png' },
         { id: 5, label: 'Balcony', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/10629/10629373.png' },
         { id: 6, label: 'One King Size Bed', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/1775/1775188.png' },
         { id: 7, label: 'Robes and Slippers', featured: false, image: '' },

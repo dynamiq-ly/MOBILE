@@ -16,7 +16,7 @@ export default ({ navigation }) => {
 
   const navigate = function () {
     navigation.navigate('[stack] stack-rooms', {
-      screens: { previous: 'room-upgrade' },
+      previousScreen: 'room-upgrade',
     })
   }
 

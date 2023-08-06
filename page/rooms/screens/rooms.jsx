@@ -1,7 +1,6 @@
 /* packages */
 import { useState } from 'react'
 import { View } from 'react-native'
-import Animated from 'react-native-reanimated'
 
 /* modules */
 import { Container, FlatList } from '@/shared'
@@ -16,7 +15,7 @@ import { useTheme } from 'styled-components'
 /* mocks */
 import { data } from '@/mocks/rooms.data'
 
-export default ({ navigation }) => {
+export default ({ navigation, route }) => {
   const theme = useTheme()
 
   const [state, setState] = useState(1)
@@ -80,6 +79,7 @@ export default ({ navigation }) => {
                 navigation.navigate('[stack] stack-rooms-details', {
                   id: item.id,
                   data: item,
+                  previousScreen: route.params ? route.params.previousScreen : null,
                 })
               }>
               <Text size={7} weight='md' t={'capitalize'}>
