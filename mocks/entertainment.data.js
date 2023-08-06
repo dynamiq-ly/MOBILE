@@ -17,22 +17,22 @@ export const data = {
   ],
   activities: [
     {
-      id: '[stack] stack-entertainment',
+      id: '[stack] stack-entertainement-day-activities',
       name: 'DAY ACTIVITIES',
       image: 'https://www.rivierahoteltunisie.com/application/files/2014/4761/0093/AnimationsJour-Riviera.jpg',
     },
     {
-      id: '[stack] stack-entertainment',
+      id: '[stack] stack-entertainement-night-activities',
       name: 'NIGHT SHOWS',
       image: 'https://www.alvadonna.com/images/alva-donna-exclusive/entertainment/nightly-activities_02.jpg',
     },
     {
-      id: '[stack] stack-entertainment',
+      id: '[stack] stack-entertainement-sport-program',
       name: 'SPORT PROGRAMS',
       image: 'https://media.istockphoto.com/id/637332546/photo/multi-sports-players-in-action-collage-on-grand-arena.jpg?s=612x612&w=0&k=20&c=CcmS244gEmzzqCYq2LmTDrbaduz5JXX-aAT8K8qPCzw=',
     },
     {
-      id: '[stack] stack-entertainment',
+      id: '[stack] stack-entertainement-event-program',
       name: 'EVENT PROGRAMS',
       image: 'https://www.sait.ca/assets/images/sait/programs/pr-htm-event-management-600x400.jpg',
     },
