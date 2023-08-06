@@ -24,14 +24,13 @@ const Dialog = ({ children, icon = require('@/assets/icons/default/cube-light.pn
       <View style={{ ...styling, borderRadius: 4, backgroundColor: theme.core.button[`variant_${background}`] }}>
         <Icon icon={icon} size={small ? 14 : 18} />
       </View>
-      <View style={{ justifyContent: small ? 'center' : 'flex-start', flex: 1, gap: theme.units.sm }}>{children}</View>
+      <View style={{ justifyContent: 'center', flex: 1, gap: theme.units.sm }}>{children}</View>
     </StyledCardContainer>
   )
 }
 
 Dialog.propTypes = {
   icon: PropTypes.number,
-  padding: PropTypes.bool,
   background: PropTypes.oneOf(['neutral', 'primary', 'secondary', 'error', 'success', 'warning', 'info', 'tag']),
   small: PropTypes.bool,
   children: PropTypes.node.isRequired,
