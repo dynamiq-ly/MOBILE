@@ -40,7 +40,7 @@ export default ({ navigation }) => {
   }, [])
 
   return (
-    <Container stickyHeaderIndices={[0]} padding={false}>
+    <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
       <Image source={data.image} height='254px' />
 
       {/* title */}
@@ -84,8 +84,7 @@ export default ({ navigation }) => {
                   <Feather name='chevron-down' size={14} color='black' />
                 </View>
               </View>
-            }
-          >
+            }>
             <Animated.View style={{ ...animatedStyle }}>
               <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
               {data.staff.map((staff, index) => (
@@ -118,28 +117,26 @@ export default ({ navigation }) => {
         nestedScrollEnabled={true}
         scrollEnabled={false}
       />
-      {/* dialog*/}
-      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
-        <Dialog background='success' icon={require('@/assets/icons/product/monocrome/regulation-light.png')}>
-          <Text size={8} line={1.25} color='sub'>
-            Mini club regulations
-          </Text>
-        </Dialog>
-      </View>
-      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
-        <Dialog background='success' icon={require('@/assets/icons/product/monocrome/regulation-light.png')}>
-          <Text size={8} line={1.25} color='sub'>
-            Regulations
-          </Text>
-        </Dialog>
-      </View>
-      <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.md }}>
-        <Dialog background='success' icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
-          <Text size={8} line={1.25} color='sub'>
-            Help
-          </Text>
-        </Dialog>
-      </View>
+
+      {/* config*/}
+      <FlatList
+        data={data.config}
+        gap='md'
+        keyExtractor={(_, index) => index}
+        renderedItem={({ item }) => (
+          <Dialog key={item.id} title={item.name} onPress={() => navigation.navigate(item.id)} background='success' small={false}>
+            <Text t={'capitalize'} weight='md' size={8.5}>
+              {item.label}
+            </Text>
+            <Text turncate={1} color='sub'>
+              {item.description}
+            </Text>
+          </Dialog>
+        )}
+        nestedScrollEnabled={true}
+        scrollEnabled={false}
+        nested={false}
+      />
     </Container>
   )
 }

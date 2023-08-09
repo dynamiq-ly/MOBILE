@@ -20,5 +20,8 @@ export { default as ButtonGroup } from './buttons/button-group'
 /* icon */
 export { default as Icon } from './product-icon/Icon'
 
+/* calendar */
+export { default as CalendarSwipe } from './calendar/calendar-swipe'
+
 /* customs */
 export { CustomHomeHeader } from './customs/custom-header'

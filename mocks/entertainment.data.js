@@ -2,7 +2,8 @@ export const data = {
   id: '[stack] stack-entertainment',
   image: 'https://kammakshi.com/images/work-3.jpg',
   title: 'Entertainements',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, ullamco laboris commodo consequat...Read More',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, ullamco laboris commodo consequat...Read More',
   staff: [
     {
       name: 'John Doe',
@@ -35,6 +36,21 @@ export const data = {
       id: '[stack] stack-entertainement-event-program',
       name: 'EVENT PROGRAMS',
       image: 'https://www.sait.ca/assets/images/sait/programs/pr-htm-event-management-600x400.jpg',
+    },
+  ],
+
+  config: [
+    {
+      id: 1,
+      label: 'mini club regulations',
+      description: 'Mini club regulations description',
+      icon: require('@/assets/icons/product/monocrome/regulation-light.png'),
+    },
+    {
+      id: 2,
+      label: 'help',
+      description: 'Help description',
+      icon: require('@/assets/icons/product/monocrome/warning-light.png'),
     },
   ],
 }
