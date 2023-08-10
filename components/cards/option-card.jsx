@@ -9,7 +9,7 @@ import { Image, Text } from '@/common'
 import { StyledCardContainer, StyledCardOptionLayer, StyledCardOverlay } from '@/style/card.style'
 import { useTheme } from 'styled-components'
 
-const OptionCard = ({ onPress, title = 'first title', subTitle = 'second title', timing = 'third title', subTiming = 'fourth title', closed = false, reservation = false, adults = false, image }) => {
+const OptionCard = ({ onPress, image, children, closed = false, reservation = false, adults = false }) => {
   const theme = useTheme()
 
   return (
@@ -64,25 +64,7 @@ const OptionCard = ({ onPress, title = 'first title', subTitle = 'second title',
       </View>
 
       {/* text, info */}
-      <View style={{ flex: 1, gap: theme.units.sm, padding: theme.units.md }}>
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Text size={8} weight='md' t='capitalize' turncate={1}>
-            {title}
-          </Text>
-          <Text size={7} t='capitalize' turncate={1}>
-            {subTitle}
-          </Text>
-        </View>
-
-        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Text t='capitalize' color='sub' weight='md'>
-            {timing}
-          </Text>
-          <Text t='capitalize' color='sub' weight='md'>
-            {subTiming}
-          </Text>
-        </View>
-      </View>
+      <View style={{ flex: 1, gap: theme.units.sm, padding: theme.units.md }}>{children}</View>
     </StyledCardContainer>
   )
 }
@@ -90,11 +72,8 @@ const OptionCard = ({ onPress, title = 'first title', subTitle = 'second title',
 OptionCard.propTypes = {
   onPress: PropTypes.func,
 
-  title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string,
-  timing: PropTypes.string,
-  subTiming: PropTypes.string,
   image: PropTypes.string,
+  children: PropTypes.node,
 
   closed: PropTypes.bool,
   reservation: PropTypes.bool,
