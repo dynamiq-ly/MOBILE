@@ -9,14 +9,14 @@ import { Image, Text } from '@/common'
 import { StyledCardContainer, StyledCardOptionLayer, StyledCardOverlay } from '@/style/card.style'
 import { useTheme } from 'styled-components'
 
-const OptionCard = ({ onPress, title = 'first title', subTitle = 'second title', timing = 'third title', subTiming = 'fourth title', closed = false, reservation = false, adults = false }) => {
+const OptionCard = ({ onPress, title = 'first title', subTitle = 'second title', timing = 'third title', subTiming = 'fourth title', closed = false, reservation = false, adults = false, image }) => {
   const theme = useTheme()
 
   return (
     <StyledCardContainer direction={'column'} padding={false} activeOpacity={0.7} onPress={onPress}>
       {/* options, image */}
       <View style={{ position: 'relative' }}>
-        <Image source={'https://th.bing.com/th/id/R.e8c1ab783c84ab8b9dd95a53670389bc?rik=q0RY3tBvawJDUA&pid=ImgRaw&r=0'} height='100px' />
+        <Image source={image} height='100px' />
 
         <StyledCardOptionLayer item='start' style={{ gap: theme.units.sm }}>
           {/* reservation */}
@@ -94,6 +94,7 @@ OptionCard.propTypes = {
   subTitle: PropTypes.string,
   timing: PropTypes.string,
   subTiming: PropTypes.string,
+  image: PropTypes.string,
 
   closed: PropTypes.bool,
   reservation: PropTypes.bool,
