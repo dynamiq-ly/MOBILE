@@ -2,8 +2,7 @@ export const data = {
   id: '[stack] stack-entertainment',
   image: 'https://kammakshi.com/images/work-3.jpg',
   title: 'Entertainements',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, ullamco laboris commodo consequat...Read More',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, ullamco laboris commodo consequat...Read More',
   staff: [
     {
       name: 'John Doe',
@@ -51,6 +50,27 @@ export const data = {
       label: 'help',
       description: 'Help description',
       icon: require('@/assets/icons/product/monocrome/warning-light.png'),
+    },
+  ],
+  day_activities_categories: [
+    { id: 1, label: 'Adult' },
+    { id: 2, label: 'Teen' },
+    { id: 3, label: 'Family' },
+    { id: 4, label: 'Kids' },
+  ],
+
+  day_activities: [
+    {
+      id: 1,
+      image: 'https://www.dickssportinggoods.com/protips/sports-and-activities/family-fun/top-10-pool-party-must-haves/_jcr_content/root/container/container_2/image.coreimg.jpeg/1667591152305/poolpartyessentials.jpeg',
+      title: 'Pool Party',
+      description: 'enjoying your time at the pool with our animation programmer',
+      duration: '1h',
+      time: '10:00 - 11:00',
+      location: 'Pool',
+      type: 'Family',
+      join: true,
+      time_table: ['Tuesday, 14 june - 15:00', 'Wednesday, 15 june - 15:00', 'Thursday, 16 june - 15:00'],
     },
   ],
 }
