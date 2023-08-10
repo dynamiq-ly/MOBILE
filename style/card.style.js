@@ -55,3 +55,20 @@ export const StyledCardOverlay = styled.View`
     }
   }}
 `
+
+export const StyledCardOptionLayer = styled.View`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: ${({ theme }) => theme.padding.md} 0px;
+  ${({ item }) => {
+    switch (item) {
+      case 'start':
+        return 'align-items: flex-start; justify-content: flex-start;'
+      case 'center':
+        return 'align-items: center; justify-content: center;'
+      case 'end':
+        return 'align-items: flex-start; justify-content: flex-end;'
+    }
+  }}
+`

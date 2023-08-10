@@ -5,6 +5,7 @@ export { default as DrawerItem } from './drawer/Item'
 export { default as Card } from './cards/card'
 export { default as SimpleCard } from './cards/SimpleCard'
 export { default as FullCard } from './cards/full-card'
+export { default as OptionCard } from './cards/option-card'
 export { default as Pager } from './cards/pager'
 export { default as Dialog } from './cards/dialog'
 
