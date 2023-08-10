@@ -1,9 +1,9 @@
 /* componetns */
 import { Icon } from '@/components'
-import { StackHeader } from '@/shared'
+import { StackHeader, OptionHeader } from '@/shared'
 
 /* screens */
-import { Bar } from '@/page/bar/screens'
+import { Bar, BarDetail } from '@/page/bar/screens'
 
 export const BarRoutesConfig = [
   (initial = {
@@ -13,6 +13,15 @@ export const BarRoutesConfig = [
       headerShown: true,
       headerTitle: 'Bar List',
       header: () => <StackHeader title='Bars List' iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+    },
+  }),
+  (detail = {
+    id: '[stack] stack-bar-detail',
+    component: BarDetail,
+    option: {
+      headerShown: true,
+      headerTitle: 'Bar Detail',
+      header: () => <OptionHeader />,
     },
   }),
 ]
