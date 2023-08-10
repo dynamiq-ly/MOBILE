@@ -3,7 +3,7 @@ import { Icon } from '@/components'
 import { OptionHeader, StackHeader } from '@/shared'
 
 /* screens */
-import { Entertainment, DayActivities, NightActivities, SportProgram, EventProgram } from '@/page/entertainment/screens'
+import { Entertainment, DayActivities, NightActivities, SportProgram, EventProgram, DayActivitiesDetails } from '@/page/entertainment/screens'
 
 export const EntertainmentRoutesConfig = [
   (initial = {
@@ -22,6 +22,15 @@ export const EntertainmentRoutesConfig = [
       headerShown: true,
       headerTitle: 'Day Activities',
       header: () => <StackHeader title='Day Activities' iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+    },
+  }),
+  (dayActivityDetails = {
+    id: '[stack] stack-entertainement-day-activities-details',
+    component: DayActivitiesDetails,
+    option: {
+      headerShown: true,
+      headerTitle: 'Day Activities Details',
+      header: ({ route }) => <StackHeader title={route.params.name || 'Day Activities Details'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
     },
   }),
   (nightActivity = {

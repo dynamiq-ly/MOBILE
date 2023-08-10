@@ -40,9 +40,10 @@ export default ({ navigation }) => {
           <Card
             image={item.image}
             onPress={() =>
-              navigation.navigate('', {
+              navigation.navigate('[stack] stack-entertainement-day-activities-details', {
                 id: item.id,
                 data: item,
+                name: item.title,
               })
             }>
             <Text size={7} weight='md' t={'capitalize'}>
