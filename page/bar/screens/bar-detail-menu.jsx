@@ -37,7 +37,19 @@ export default ({ navigation, route }) => {
         keyExtractor={(item) => item.id}
         renderedItem={({ item }) => (
           <View style={{ flex: 1 / 3 }}>
-            <SimpleCard title={item.name} image={item.image} />
+            <SimpleCard
+              title={item.name}
+              image={item.image}
+              onPress={() =>
+                navigation.navigate('[stack] stack-bar-detail-menu-list', {
+                  id: item.id,
+                  name: item.name,
+                  categories: item.categories,
+                  type: item.type,
+                  data: item,
+                })
+              }
+            />
           </View>
         )}
       />
