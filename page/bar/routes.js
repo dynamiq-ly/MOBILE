@@ -30,7 +30,7 @@ export const BarRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Drinks Menu',
-      header: () => <StackHeader title='Drinks Menu' iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+      header: ({ route }) => <StackHeader title={`${route.params.name} Menu` || 'Drinks Menu'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
     },
   }),
 ]

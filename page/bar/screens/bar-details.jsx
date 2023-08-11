@@ -42,7 +42,7 @@ export default ({ navigation, route }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Container stickyHeaderIndices={[0, 7]} padding={false} safeArea={false}>
+      <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
         <Pager slider={data.images} interval={5000} />
 
         {/* title */}
@@ -147,7 +147,16 @@ export default ({ navigation, route }) => {
                 })
               }>
               <Div shadowColor='info'>
-                <TouchableOpacity activeOpacity={0.7} style={{ flex: 1, alignItems: 'center', gap: theme.units.md }} onPress={() => navigation.navigate('[stack] stack-bar-detail-menu')}>
+                <TouchableOpacity
+                  activeOpacity={0.7}
+                  style={{ flex: 1, alignItems: 'center', gap: theme.units.md }}
+                  onPress={() =>
+                    navigation.navigate('[stack] stack-bar-detail-menu', {
+                      id: data.id,
+                      name: data.title,
+                      data: data.menu_a_la_carte ? data.menu_a_la_carte : data.drinksMeun,
+                    })
+                  }>
                   <Icon icon={require('@/assets/icons/product/bar/drinks.png')} size={42} />
                   <Text size={9} weight='md'>
                     Menu

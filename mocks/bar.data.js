@@ -21,6 +21,9 @@ export const data = {
       },
       reservation_required: true,
       adults_only: false,
+
+      menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
+
       staff: [
         {
           name: 'Alex Johnson',
@@ -51,6 +54,9 @@ export const data = {
       },
       reservation_required: false,
       adults_only: false,
+
+      menu_a_la_carte: null,
+
       staff: [
         {
           name: 'Michael Clark',
@@ -81,6 +87,9 @@ export const data = {
       },
       reservation_required: false,
       adults_only: false,
+
+      menu_a_la_carte: null,
+
       staff: [
         {
           name: 'David Smith',
@@ -111,6 +120,9 @@ export const data = {
       },
       reservation_required: true,
       adults_only: true,
+
+      menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
+
       staff: [
         {
           name: 'Robert Davis',
@@ -138,6 +150,9 @@ export const data = {
       },
       reservation_required: false,
       adults_only: false,
+
+      menu_a_la_carte: null,
+
       staff: [
         {
           name: 'James Miller',
@@ -168,6 +183,9 @@ export const data = {
       },
       reservation_required: false,
       adults_only: true,
+
+      menu_a_la_carte: null,
+
       staff: [
         {
           name: 'William Taylor',
@@ -198,6 +216,9 @@ export const data = {
       },
       reservation_required: true,
       adults_only: false,
+
+      menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
+
       staff: [
         {
           name: 'Daniel Williams',
@@ -211,6 +232,74 @@ export const data = {
         },
       ],
     },
-    // Add more bars here...
+  ],
+
+  menuDrinks: [
+    {
+      id: 1,
+      name: 'Liqueurs',
+      type: 'alcoholic',
+      image: 'https://st2.depositphotos.com/1063437/11838/i/600/depositphotos_118389750-stock-photo-bottles-of-assorted-hard-liquor.jpg',
+    },
+    {
+      id: 2,
+      name: 'Beers',
+      type: 'alcoholic',
+      image: 'https://th.bing.com/th/id/OIP.a1qXOmxRAUEnk4TIh-8uqwHaE9?pid=ImgDet&rs=1',
+    },
+    {
+      id: 3,
+      name: 'Wines',
+      type: 'alcoholic',
+      image: 'https://static.onecms.io/wp-content/uploads/sites/9/2020/08/11/best-affordable-foreign-wines-FT-BLOG0820.jpg',
+    },
+    {
+      id: 4,
+      name: 'Champagnes',
+      type: 'alcoholic',
+      image: 'https://imageio.forbes.com/specials-images/imageserve/61b3f114a4cc8e84dbe849a6/2016-LRR-Xmas-Tree/960x0.jpg?format=jpg&width=960',
+    },
+    {
+      id: 5,
+      name: 'Sangrias',
+      type: 'alcoholic',
+      image: 'https://st.depositphotos.com/1692343/4873/i/600/depositphotos_48733519-stock-photo-homemade-delicious-red-sangria.jpg',
+    },
+    {
+      id: 6,
+      name: 'Cocktails',
+      type: 'alcoholic',
+      image: 'https://img.delicious.com.au/F_C2-w6_/w759-h506-cfill/del/2015/11/summer-cocktails-24374-3.jpg',
+    },
+    {
+      id: 7,
+      name: 'Cavas',
+      type: 'alcoholic',
+      image: 'https://vedcdn.imgix.net/images/product/large/cocktail-masterclass-and-threecourse-27163122.jpg?auto=compress,format',
+    },
+    {
+      id: 8,
+      name: 'Tapas',
+      type: 'alcoholic',
+      image: 'https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/im_landscape_50_fallback/public/2021-07/iStock-1130657473.jpg?itok=mFj3e05G',
+    },
+    {
+      id: 9,
+      type: 'soft',
+      name: 'Tea',
+      image: 'https://th.bing.com/th/id/R.59a6b04d4e7f301473c4b96aa32feabd?rik=WT76szfCOmO5FQ&pid=ImgRaw&r=0',
+    },
+    {
+      id: 10,
+      type: 'soft',
+      name: 'sodas',
+      image: 'https://th.bing.com/th/id/OIP.HuiZ0wKn4fJzdUo9nFpqOQHaFj?pid=ImgDet&rs=1',
+    },
+    {
+      id: 11,
+      type: 'soft',
+      name: 'juices',
+      image: 'https://th.bing.com/th/id/OIP.HsMn8DLA8reVlatfDlB22QHaE7?pid=ImgDet&rs=1',
+    },
   ],
 }
