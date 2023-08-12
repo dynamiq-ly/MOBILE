@@ -15,16 +15,18 @@ import { gymEquipment } from '@/mocks/gym.data'
 
 export default ({ route }) => {
   return (
-    <FlatList
-      data={gymEquipment}
-      gap='md'
-      keyExtractor={(item) => item.id}
-      column={2}
-      renderedItem={({ item }) => (
-        <View key={item.id} style={{ flex: 1 / 2 }}>
-          <SimpleCard title={item.name} image={item.image} />
-        </View>
-      )}
-    />
+    <View style={{ flex: 1 }}>
+      <FlatList
+        data={gymEquipment}
+        gap='md'
+        keyExtractor={(item) => item.id}
+        column={2}
+        renderedItem={({ item }) => (
+          <View key={item.id} style={{ flex: 1 / 2 }}>
+            <SimpleCard title={item.name} image={item.image} />
+          </View>
+        )}
+      />
+    </View>
   )
 }
