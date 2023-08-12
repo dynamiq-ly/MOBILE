@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { Dimensions, TouchableOpacity, View } from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 
 /* modules */
 import { Container } from '@/shared'
 
 /* components */
-import { Button, Div, Image, Text } from '@/common'
-import { Accordion, Icon, Pager } from '@/components'
+import { Div, Image, Text } from '@/common'
+import { Icon } from '@/components'
 
 /* styles */
 import { useTheme } from 'styled-components'
