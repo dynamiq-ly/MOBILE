@@ -157,4 +157,35 @@ export const data = {
       time_table: ['Tuesday, 14 june - 22:00', 'Wednesday, 15 june - 22:00', 'Thursday, 16 june - 22:00'],
     },
   ],
+  sport_program_categories: [
+    { id: 1, label: 'Football' },
+    { id: 2, label: 'Tennis' },
+    { id: 3, label: 'Basketball' },
+  ],
+  sport_program: [
+    {
+      id: 1,
+      image: 'https://www.arsenal.com/sites/default/files/styles/desktop_16x9/public/gun__1381310671_uefa_champions_league.jpg?auto=webp&itok=Tbb7Q7-u',
+      title: 'Champions Leagues ',
+      time: '18:00 - 20:30',
+      location: 'Main hall',
+      type: 'Football',
+    },
+    {
+      id: 2,
+      image: 'https://frontofficesports.com/wp-content/uploads/2023/06/USATSI_20804744-scaled.jpg',
+      title: 'Basketball Championship',
+      time: '14:00 - 22:00',
+      location: 'Arena A',
+      type: 'Basketball',
+    },
+    {
+      id: 3,
+      image: 'https://www.atptour.com/-/media/images/news/2023/08/11/20/09/demon-toronto-2023-friday.jpg',
+      title: 'Tennis Masters',
+      time: '10:00 - 18:00',
+      location: 'Center Court',
+      type: 'Tennis',
+    },
+  ],
 }
