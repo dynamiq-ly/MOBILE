@@ -9,15 +9,13 @@ import { useTheme } from 'styled-components'
 import { Feather } from '@expo/vector-icons'
 
 /* components */
-import { Icon, Pager, SimpleCard } from '@/components'
+import { Icon, Pager } from '@/components'
 
 /* utilities */
-import { Container, FlatList } from '@/shared'
+import { Container } from '@/shared'
 import { BottomSheet } from '@/components'
 import { Button, Div, Image, Text } from '@/common'
-import { data } from '@/mocks/reception.data'
-import { StyledSimpleCard } from '@/style/card.style'
-import { shadow } from '@/util/shadow'
+4
 
 export default ({ navigation, route }) => {
   const { data } = route.params

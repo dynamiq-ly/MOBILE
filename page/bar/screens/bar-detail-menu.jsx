@@ -4,8 +4,7 @@ import { View } from 'react-native'
 import { WebView } from 'react-native-webview'
 
 /* modules */
-import { Container, FlatList } from '@/shared'
-import { Text } from '@/common'
+import { FlatList } from '@/shared'
 
 /* components */
 import { ButtonGroup, SimpleCard } from '@/components'
