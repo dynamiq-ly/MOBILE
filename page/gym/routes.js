@@ -3,7 +3,7 @@ import { Icon } from '@/components'
 import { StackHeader } from '@/shared'
 
 /* screens */
-import { Gym, GymDetails, GymTerms } from '@/page/gym/screens'
+import { Gym, GymDetails, GymTerms, GymEquipement } from '@/page/gym/screens'
 
 export const GymRoutesConfig = [
   (initial = {
@@ -31,6 +31,17 @@ export const GymRoutesConfig = [
       headerShown: true,
       headerTitle: 'Gym Terms',
       header: ({ route }) => <StackHeader title={`${route.params.name} Terms` || 'Gym Terms'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+    },
+  }),
+  (equipements = {
+    id: '[stack] stack-gym-equipements',
+    component: GymEquipement,
+    option: {
+      headerShown: true,
+      headerTitle: 'Gym Equipements',
+      header: ({ route }) => (
+        <StackHeader title={`${route.params.name} Equipements` || 'Gym Equipements'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />
+      ),
     },
   }),
 ]

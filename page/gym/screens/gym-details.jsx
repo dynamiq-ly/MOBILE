@@ -149,8 +149,10 @@ export default ({ navigation, route }) => {
         <Dialog
           title={'Gym'}
           onPress={() =>
-            navigation.navigate('', {
+            navigation.navigate('[stack] stack-gym-equipements', {
+              id: data.id,
               data: gymEquipment,
+              name: data.name,
             })
           }
           background='info'

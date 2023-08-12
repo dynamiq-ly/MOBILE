@@ -113,52 +113,47 @@ export const gymEquipment = [
   {
     id: 1,
     name: 'Treadmill',
-    image: 'https://example.com/treadmill.jpg',
-  },
-  {
-    id: 2,
-    name: 'Barbell Set',
-    image: 'https://example.com/barbell.jpg',
+    image: 'https://th.bing.com/th/id/OIP.6mNd49nfouWmsu7v65zbpgHaG5?w=206&h=192&c=7&r=0&o=5&pid=1.7',
   },
   {
     id: 3,
     name: 'Elliptical Trainer',
-    image: 'https://example.com/elliptical.jpg',
+    image: 'https://th.bing.com/th/id/R.ea12c4a20725d8b584d03559d7cd5b6c?rik=ch2QPFN42TuI%2fA&pid=ImgRaw&r=0',
   },
   {
     id: 4,
     name: 'Dumbbell Set',
-    image: 'https://example.com/dumbbell.jpg',
+    image: 'https://samsfitness.com.au/image/catalog/CGDBSET/round-rubber-10-40-set-image.jpg',
   },
   {
     id: 5,
     name: 'Bench Press',
-    image: 'https://example.com/benchpress.jpg',
+    image: 'https://th.bing.com/th/id/OIP.BNllHVrk5lpII6xopZiGdgHaG9?w=207&h=196&c=7&r=0&o=5&pid=1.7',
   },
   {
     id: 6,
     name: 'Rowing Machine',
-    image: 'https://example.com/rowingmachine.jpg',
+    image: 'https://th.bing.com/th/id/OIP.gZxmCtTltLy_NcDZHqJqlAHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7',
   },
   {
     id: 7,
     name: 'Stationary Bike',
-    image: 'https://example.com/stationarybike.jpg',
+    image: 'https://th.bing.com/th/id/OIP.JRGLjUHs9A1-owq39OmfSgHaF-?w=258&h=208&c=7&r=0&o=5&pid=1.7',
   },
   {
     id: 8,
     name: 'Leg Press Machine',
-    image: 'https://example.com/legpress.jpg',
+    image: 'https://th.bing.com/th/id/OIP.YTqho5XWy-vnpPmBKEiqjQHaIJ?w=171&h=188&c=7&r=0&o=5&pid=1.7',
   },
   {
     id: 9,
     name: 'Cable Crossover Machine',
-    image: 'https://example.com/cablecrossover.jpg',
+    image: 'https://th.bing.com/th/id/OIP.Ply3nWIwZWrF2FuOTsu-8gHaEK?w=309&h=180&c=7&r=0&o=5&pid=1.7',
   },
   {
     id: 10,
     name: 'Pull-Up Bar',
-    image: 'https://example.com/pullupbar.jpg',
+    image: 'https://th.bing.com/th/id/R.64bf2503688acc788b9298aacd516bf5?rik=3u68daxVomfIkQ&pid=ImgRaw&r=0',
   },
   // Add more equipment items as needed
 ]
