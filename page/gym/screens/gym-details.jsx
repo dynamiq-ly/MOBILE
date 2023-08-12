@@ -166,8 +166,10 @@ export default ({ navigation, route }) => {
         <Dialog
           title={'Gym'}
           onPress={() =>
-            navigation.navigate('', {
+            navigation.navigate('[stack] stack-gym-terms', {
+              id: data.id,
               data: data.terms,
+              name: data.name,
             })
           }
           background='info'
