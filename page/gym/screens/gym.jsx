@@ -30,6 +30,7 @@ export default ({ navigation }) => {
             navigation.navigate('[stack] stack-gym-detail', {
               id: item.id,
               data: item,
+              name: item.name,
             })
           }>
           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>

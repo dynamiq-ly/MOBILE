@@ -24,6 +24,7 @@ export const data = {
       ],
       location: 'Prime location on the first floor, City Center',
       reservation: false,
+      terms: 'https://myteacherdave.com/wp-content/uploads/2020/12/MTD-Vocabulary-for-Training-in-the-Gym.pdf',
       description:
         'Discover the ultimate fitness experience at California Gym. Our modern facilities and expert trainers are dedicated to helping you achieve your fitness goals. Start your day with an invigorating workout!',
     },
@@ -50,6 +51,7 @@ export const data = {
       ],
       location: 'Conveniently located on the first floor, Downtown Plaza',
       reservation: false,
+      terms: 'https://myteacherdave.com/wp-content/uploads/2020/12/MTD-Vocabulary-for-Training-in-the-Gym.pdf',
       description:
         'Elevate your fitness journey with Gold Gym. Our commitment to excellence ensures that you receive top-notch training and access to cutting-edge equipment. Join us and experience a new level of fitness!',
     },
@@ -75,6 +77,7 @@ export const data = {
       ],
       location: 'First floor overlooking the vibrant city lights, Midnight Arcade',
       reservation: false,
+      terms: 'https://myteacherdave.com/wp-content/uploads/2020/12/MTD-Vocabulary-for-Training-in-the-Gym.pdf',
       description: 'Embrace the night at Owl Gym, where we cater to night owls and early birds alike. With our 24/7 access, you can work out at your own pace. Unleash your potential with us!',
     },
     {
@@ -100,7 +103,62 @@ export const data = {
       ],
       location: 'First floor overlooking the vibrant city lights, Midnight Arcade',
       reservation: true,
+      terms: 'https://myteacherdave.com/wp-content/uploads/2020/12/MTD-Vocabulary-for-Training-in-the-Gym.pdf',
       description: 'Embrace the night at Owl Gym, where we cater to night owls and early birds alike. With our 24/7 access, you can work out at your own pace. Unleash your potential with us!',
     },
   ],
 }
+
+export const gymEquipment = [
+  {
+    id: 1,
+    name: 'Treadmill',
+    image: 'https://example.com/treadmill.jpg',
+  },
+  {
+    id: 2,
+    name: 'Barbell Set',
+    image: 'https://example.com/barbell.jpg',
+  },
+  {
+    id: 3,
+    name: 'Elliptical Trainer',
+    image: 'https://example.com/elliptical.jpg',
+  },
+  {
+    id: 4,
+    name: 'Dumbbell Set',
+    image: 'https://example.com/dumbbell.jpg',
+  },
+  {
+    id: 5,
+    name: 'Bench Press',
+    image: 'https://example.com/benchpress.jpg',
+  },
+  {
+    id: 6,
+    name: 'Rowing Machine',
+    image: 'https://example.com/rowingmachine.jpg',
+  },
+  {
+    id: 7,
+    name: 'Stationary Bike',
+    image: 'https://example.com/stationarybike.jpg',
+  },
+  {
+    id: 8,
+    name: 'Leg Press Machine',
+    image: 'https://example.com/legpress.jpg',
+  },
+  {
+    id: 9,
+    name: 'Cable Crossover Machine',
+    image: 'https://example.com/cablecrossover.jpg',
+  },
+  {
+    id: 10,
+    name: 'Pull-Up Bar',
+    image: 'https://example.com/pullupbar.jpg',
+  },
+  // Add more equipment items as needed
+]
