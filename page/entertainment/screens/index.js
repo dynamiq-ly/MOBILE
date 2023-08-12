@@ -5,3 +5,4 @@ export { default as SportProgram } from '@/page/entertainment/screens/sport-prog
 export { default as EventProgram } from '@/page/entertainment/screens/event-program'
 
 export { default as DayActivitiesDetails } from '@/page/entertainment/screens/day-activity-details'
+export { default as NightActivitiesDetails } from '@/page/entertainment/screens/night-activities-details'
