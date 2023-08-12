@@ -20,10 +20,14 @@ import { NavigationContainer } from '@react-navigation/native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 
+/* data providers */
+import {QueryClient,  QueryClientProvider} from 'react-query'
+
 /* ignore warning */
 import { LogBox } from 'react-native'
 import { ignore } from '@/config/warning-ignore'
 
+const queryClient = new QueryClient()
 SplashScreen.preventAutoHideAsync()
 
 export default function App() {
@@ -47,17 +51,19 @@ export default function App() {
   return (
     <ThemeProvider theme={{ ...theme }}>
       <StatusBar style={'auto'} />
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-          <BottomSheetModalProvider>
-            <SafeAreaProvider>
-              <NavigationContainer>
-                <StackNavigation />
-              </NavigationContainer>
-            </SafeAreaProvider>
-          </BottomSheetModalProvider>
-        </View>
-      </GestureHandlerRootView>
+      <QueryClientProvider client={queryClient}>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+            <BottomSheetModalProvider>
+              <SafeAreaProvider>
+                <NavigationContainer>
+                  <StackNavigation />
+                </NavigationContainer>
+              </SafeAreaProvider>
+            </BottomSheetModalProvider>
+          </View>
+        </GestureHandlerRootView>
+      </QueryClientProvider>
     </ThemeProvider>
   )
 }
