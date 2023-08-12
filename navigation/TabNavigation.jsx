@@ -1,5 +1,4 @@
 /* packages */
-import { Ionicons } from '@expo/vector-icons'
 import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
@@ -30,6 +29,10 @@ export default () => {
         screenOptions={{
           tabBarActiveTintColor: theme.core.neutral[500],
           tabBarInactiveTintColor: theme.core.text['variant_small'],
+          tabBarStyle: {
+            backgroundColor: theme.core.neutral[100],
+            paddingHorizontal: theme.units.lg,
+          },
         }}>
         {tab.map((el) => (
           <Tab.Screen
@@ -38,9 +41,9 @@ export default () => {
             component={el.component}
             options={{
               ...el.option,
+              tabBarShowLabel: false,
               tabBarLabel: el.name,
               headerTitle: el.name,
-              tabBarIcon: ({ focused, color }) => <Ionicons name={focused ? el.icon : `${el.icon}-outline`} size={20} color={color} />,
             }}
           />
         ))}

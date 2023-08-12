@@ -30,6 +30,7 @@ export const HomeLandingRoutesConfig = [
           iconRightParams={{ path: '', param: '', func: () => {} }}
         />
       ),
+      tabBarIcon: ({ focused }) => <Icon icon={focused ? require('@/assets/icons/tab/house-focused.png') : require('@/assets/icons/tab/house.png')} size={20} />,
     },
   }),
 ]

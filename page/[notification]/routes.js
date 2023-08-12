@@ -1,5 +1,6 @@
 /* components */
 import { StackHeader } from '@/shared'
+import { Icon } from '@/components'
 
 /* screens */
 import { Weather } from '@/page/[weather]/screens'
@@ -14,6 +15,7 @@ export const NotificationsRoutesConfig = [
       headerShown: true,
       headerTitle: 'Notifications',
       header: () => <StackHeader title='Notifications' background='container' />,
+      tabBarIcon: ({ focused }) => <Icon icon={focused ? require('@/assets/icons/tab/bell-focused.png') : require('@/assets/icons/tab/bell.png')} size={20} />,
     },
   }),
 ]
