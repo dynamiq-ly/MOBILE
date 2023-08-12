@@ -2,7 +2,8 @@ export const data = {
   id: '[stack] stack-entertainment',
   image: 'https://kammakshi.com/images/work-3.jpg',
   title: 'Entertainements',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, ullamco laboris commodo consequat...Read More',
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, ullamco laboris commodo consequat...Read More',
   staff: [
     {
       name: 'John Doe',
@@ -64,11 +65,12 @@ export const data = {
   day_activities: [
     {
       id: 1,
-      image: 'https://www.dickssportinggoods.com/protips/sports-and-activities/family-fun/top-10-pool-party-must-haves/_jcr_content/root/container/container_2/image.coreimg.jpeg/1667591152305/poolpartyessentials.jpeg',
+      image:
+        'https://www.dickssportinggoods.com/protips/sports-and-activities/family-fun/top-10-pool-party-must-haves/_jcr_content/root/container/container_2/image.coreimg.jpeg/1667591152305/poolpartyessentials.jpeg',
       title: 'Pool Party',
       description: 'enjoying your time at the pool with our animation programmer',
       duration: '1h',
-      time: '10:00 - 11:00',
+      time: 'Starting from 10:00 to 11:00',
       location: 'Pool',
       type: 'Family',
       join: true,
@@ -80,7 +82,7 @@ export const data = {
       title: 'Hiking Adventure',
       description: 'Embark on an exciting hiking adventure with our experienced guides. Explore breathtaking trails and enjoy the beauty of nature.',
       duration: '3h',
-      time: '09:00 - 12:00',
+      time: 'Starting from 09:00 to 12:00',
       location: 'Trailhead',
       type: 'Adult',
       join: true,
@@ -92,7 +94,7 @@ export const data = {
       title: 'Art Workshop',
       description: 'Unleash your creativity in our interactive art workshop. Learn new techniques and create your own masterpiece with the guidance of professional artists.',
       duration: '2h',
-      time: '14:00 - 16:00',
+      time: 'Starting from 14:00 to 16:00',
       location: 'Art Studio',
       type: 'Teen',
       join: true,
@@ -104,7 +106,7 @@ export const data = {
       title: 'Yoga Retreat',
       description: 'Relax and rejuvenate your body and mind in our serene yoga retreat. Experience calming yoga sessions and meditation amidst a tranquil setting.',
       duration: '1.5h',
-      time: '16:30 - 18:00',
+      time: 'Starting from 16:30 to 18:00',
       location: 'Yoga Pavilion',
       type: 'Adult',
       join: true,
