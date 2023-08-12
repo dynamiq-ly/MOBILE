@@ -3,6 +3,7 @@ import { View, TouchableOpacity } from 'react-native'
 import { useLayoutEffect, useState } from 'react'
 
 /* components */
+import { Icon } from '@/components'
 
 /* modules */
 import { Div, Image, Text } from '@/common'
@@ -13,7 +14,6 @@ import { useTheme } from 'styled-components'
 
 /* mocks */
 import { drinkDetail as data } from '@/mocks/bar.data'
-import { Icon } from '@/components'
 
 export default ({ navigation, route }) => {
   const { type } = route.params
