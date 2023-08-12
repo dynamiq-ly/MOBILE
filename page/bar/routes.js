@@ -3,7 +3,7 @@ import { Icon } from '@/components'
 import { StackHeader, OptionHeader } from '@/shared'
 
 /* screens */
-import { Bar, BarDetail, BarDetailMenu, BarDetailMenuList } from '@/page/bar/screens'
+import { Bar, BarDetail, BarDetailMenu, BarDetailMenuList, BarDetailMenuListDetail } from '@/page/bar/screens'
 
 export const BarRoutesConfig = [
   (initial = {
@@ -40,6 +40,15 @@ export const BarRoutesConfig = [
       headerShown: true,
       headerTitle: 'Drinks',
       header: ({ route }) => <StackHeader title={route.params.name || 'Drinks'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+    },
+  }),
+  (detailMenuListDetail = {
+    id: '[stack] stack-bar-detail-menu-list-detail',
+    component: BarDetailMenuListDetail,
+    option: {
+      headerShown: true,
+      headerTitle: 'Drink Detail',
+      header: () => <OptionHeader />,
     },
   }),
 ]

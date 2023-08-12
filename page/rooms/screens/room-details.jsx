@@ -21,7 +21,7 @@ export default ({ route }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Container stickyHeaderIndices={[0, 7]} padding={false} safeArea={false}>
+      <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
         <Pager slider={data.images} interval={5000} />
 
         <View style={{ gap: 6 }}>

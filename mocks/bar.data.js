@@ -456,3 +456,95 @@ export const data = {
     },
   ],
 }
+
+export const drinkDetail = {
+  bottle: {
+    id: 1,
+    name: 'VIEUX MAGNIFIQUE',
+    image: 'https://d1h1synnevvfsx.cloudfront.net/pub/media/catalog/product/cache/6b78ac9ed927a3c2db42a3c84dab4ce5/2/0/2018_03_07_0256.jpg',
+    slug: 'Tunisia, 2020',
+    size: '750ml',
+    price: 75.99,
+    smallPrice: 15.99,
+    category: 'red wine',
+    type: 'bottle',
+    technical_file: 'http://neferis.com/fiche_technique/Magnifique_vieux.pdf',
+    served: { slug: 'Since this is a read wine, it is best served with Cheese or grilled meat the enjoy it’s sweetness.', with: 'chesse,grilled meat,pasta' },
+    preperation: null,
+    description:
+      'Pinot noir is a red-wine grape variety of the species Vitis vinifera. The name may also refer to wines created predominantly from pinot noir grapes. The name is derived from the French words for pine and black. The word pine alludes to the grape variety having tightly clustered, pinecone–shaped bunches of fruit.',
+    features: [
+      {
+        id: 1,
+        label: 'Region',
+        value: 'Tunisia',
+        image: 'https://cdn-icons-png.flaticon.com/512/24/24081.png',
+      },
+      {
+        id: 2,
+        label: 'House',
+        value: 'House of SBAT',
+        image: 'https://cdn-icons-png.flaticon.com/512/1676/1676106.png',
+      },
+      {
+        id: 3,
+        label: 'Temperature',
+        value: '16-18°C',
+        image: 'https://cdn-icons-png.flaticon.com/512/808/808602.png',
+      },
+      {
+        id: 4,
+        label: 'Grape',
+        value: 'Pinot Noir',
+        image: 'https://cdn-icons-png.flaticon.com/512/9720/9720153.png',
+      },
+      {
+        id: 5,
+        label: 'Aging',
+        value: '5 years',
+        image: 'https://cdn-icons-png.flaticon.com/512/5670/5670747.png',
+      },
+      {
+        id: 5,
+        label: 'Alcohol',
+        value: '17.5%',
+        image: 'https://cdn-icons-png.flaticon.com/512/7951/7951402.png',
+      },
+    ],
+  },
+  glass: {
+    id: 2,
+    name: 'Negroni',
+    image: 'https://th.bing.com/th/id/R.0199eda94bc85d719654a4852fdfad34?rik=i%2bAgsO9VyFuUMQ&pid=ImgRaw&r=0',
+    slug: 'this drink is Italian and is generally sipped while eating marinated olives. ',
+    size: '225ml',
+    price: 15.99,
+    smallPrice: null,
+    category: 'alcoholic',
+    type: 'glass',
+    technical_file: null,
+    served: { slug: 'A twist of zesty lemon and a dash of sparkling tonic water for a refreshing and invigorating drink.', with: 'rocks,sparkling water,ice' },
+    preperation: 'Pour vodka and blue curacao in a shaker with ice, shake well & strain into ice filled highball glass, top with lemonade, garnish and serve.',
+    description: '',
+    features: [
+      {
+        id: 1,
+        label: 'vodka',
+        value: '',
+        image: '',
+      },
+      {
+        id: 2,
+        label: 'lemonade',
+        value: '',
+        image: '',
+      },
+      {
+        id: 3,
+        label: 'blue curacao',
+        value: '',
+        image: '',
+      },
+    ],
+  },
+}

@@ -48,7 +48,7 @@ const StackHeader = ({ title = '(stack) header', background = 'container', iconL
   )
 }
 
-const OptionHeader = ({ menu = false, heart = { active: false, func: () => {} } }, share = { active: false, func: () => {} }) => {
+const OptionHeader = ({ menu = false, heart = { active: false, func: () => {} }, share = { active: false, func: () => {} } }) => {
   const { top } = useSafeAreaInsets()
   const { goBack } = useNavigation()
 
@@ -62,13 +62,13 @@ const OptionHeader = ({ menu = false, heart = { active: false, func: () => {} } 
         </Pressable>
         <View style={{ flexDirection: 'row', gap: 10 }}>
           {heart.active && (
-            <Pressable style={{ ...styling }}>
-              <Icon icon={require('@/assets/icons/product/monocrome/heart-light.png')} size={18} onPress={heart.func} />
+            <Pressable style={{ ...styling }} onPress={heart.func}>
+              <Icon icon={require('@/assets/icons/product/monocrome/heart-light.png')} size={18} />
             </Pressable>
           )}
           {share.active && (
-            <Pressable style={{ ...styling }}>
-              <Icon icon={require('@/assets/icons/product/monocrome/share-light.png')} size={18} onPress={share.func} />
+            <Pressable style={{ ...styling }} onPress={share.func}>
+              <Icon icon={require('@/assets/icons/product/monocrome/share-light.png')} size={18} />
             </Pressable>
           )}
         </View>

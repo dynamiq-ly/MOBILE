@@ -65,7 +65,14 @@ export default ({ navigation, route }) => {
           data={data.data.filter((el) => el.category === categories.find((el) => el === categories[state - 1]))}
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
-            <Card image={item.image} padding={false}>
+            <Card
+              image={item.image}
+              padding={false}
+              onPress={() =>
+                navigation.navigate('[stack] stack-bar-detail-menu-list-detail', {
+                  type: item.type,
+                })
+              }>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text size={8.5} weight='md'>
                   {item.name}
