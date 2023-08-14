@@ -4,7 +4,7 @@ import { Container } from '@/shared'
 export default () => {
   return (
     <Container>
-      <Text>Restaurant</Text>
+      <Text>This is Restaurant</Text>
     </Container>
   )
 }
