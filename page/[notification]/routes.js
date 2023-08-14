@@ -3,14 +3,14 @@ import { StackHeader } from '@/shared'
 import { Icon } from '@/components'
 
 /* screens */
-import { Weather } from '@/page/[weather]/screens'
+import { Notification } from '@/page/[notification]/screens'
 
 export const NotificationsRoutesConfig = [
   (initial = {
     id: '[tab] stack-notifications',
     name: 'notifications',
     icon: 'notifications',
-    component: Weather,
+    component: Notification,
     option: {
       headerShown: true,
       headerTitle: 'Notifications',
