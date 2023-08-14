@@ -1,8 +1,7 @@
 /*package*/
 import moment from 'moment'
-import { ScrollView, View } from 'react-native'
-import * as Network from 'expo-network'
-import { useLayoutEffect, useState } from 'react'
+import { RefreshControl, ScrollView, View } from 'react-native'
+import { useCallback, useLayoutEffect, useState } from 'react'
 
 /* styles */
 import { useTheme } from 'styled-components'
@@ -23,28 +22,37 @@ export default () => {
   const theme = useTheme()
 
   const [ipNetwork, setIpNetwork] = useState(null)
+  const [refresh, setRefresh] = useState(false)
 
   useLayoutEffect(() => {
     axios.get('https://api.ipify.org?format=json').then((res) => setIpNetwork(res.data.ip))
   })
 
-  const { data, isLoading, error } = useQuery(['forcasts', ipNetwork], () => getClientSideQueries.forcasts(ipNetwork))
+  const { data, isLoading, error, refetch } = useQuery(['forcasts', ipNetwork], () => getClientSideQueries.forcasts(ipNetwork))
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
 
   if (isLoading) return <Text>Loading...</Text>
 
   if (error) return <Text>Error: {error.message}</Text>
 
   return (
-    <Container safeArea={false}>
+    <Container safeArea={false} refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}>
       {/* special cart */}
       <Div filled>
         {/*  location */}
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
           <Icon icon={require('@/assets/icons/product/colorful/bullseye.png')} size={18} />
-          <Text size={14} weight='md' color='info'>
-            {data.location.name}
+          <Text size={10} weight='md' color='info'>
+            {`${data.location.name} / ${data.location.country}`}
           </Text>
         </View>
+        <Text size={8} weight='md' color='sub'>
+          {moment(data.location.localtime, 'YYYY-MM-DD H:mm').format('MMMM Do YYYY, h:mm:ss a')}
+        </Text>
 
         {/* current temps */}
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginVertical: theme.units.sb }}>
