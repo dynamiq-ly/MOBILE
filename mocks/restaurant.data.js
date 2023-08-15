@@ -19,12 +19,15 @@ export const data = {
         open: '09:00',
         close: '22:00',
       },
+      time_table: ['Breakfast,08:00 - 11:00', 'Lunch,12:00 - 15:30', 'Dinner,18:00 - 23:00'],
+      weekly_theme: ['Monday,Tunisian', 'Tuesday,Italian', 'Wednesdays,All round', 'Thursday,Fish', 'Friday,Sea food', 'Saturday,Tropicals', 'Sunday,Italian'],
+      dress_code: 'Dress Properly, a dress for the women and a suit for a man.',
       reservation_required: true,
       adults_only: false,
 
       menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
 
-      staff: [
+      chefs: [
         {
           name: 'Alex Johnson',
           position: 'Executive Chef',
@@ -52,12 +55,15 @@ export const data = {
         open: '17:00',
         close: '23:00',
       },
+      time_table: ['Breakfast, 08:00 - 11:00', 'Lunch,  12:00 - 15:30', 'Dinner,  18:00 - 23:00'],
+      weekly_theme: ['Monday,Tunisian', 'Tuesday,Italian', 'Wednesdays,All round', 'Thursday,Fish', 'Friday,Sea food', 'Saturday,Tropicals', 'Sunday,Italian'],
+      dress_code: 'Dress Properly, a dress for the women and a suit for a man.',
       reservation_required: false,
       adults_only: true,
 
       menu_a_la_carte: null,
 
-      staff: [
+      chefs: [
         {
           name: 'Michael Clark',
           position: 'Executive Chef',
@@ -82,12 +88,15 @@ export const data = {
         open: '12:00',
         close: '22:00',
       },
+      time_table: ['Breakfast, 08:00 - 11:00', 'Lunch,  12:00 - 15:30', 'Dinner,  18:00 - 23:00'],
+      weekly_theme: ['Monday,Tunisian', 'Tuesday,Italian', 'Wednesdays,All round', 'Thursday,Fish', 'Friday,Sea food', 'Saturday,Tropicals', 'Sunday,Italian'],
+      dress_code: 'Dress Properly, a dress for the women and a suit for a man.',
       reservation_required: false,
       adults_only: false,
 
       menu_a_la_carte: null,
 
-      staff: [
+      chefs: [
         {
           name: 'David Smith',
           position: 'Executive Chef',
@@ -115,12 +124,15 @@ export const data = {
         open: '10:00',
         close: '18:00',
       },
+      time_table: ['Breakfast, 08:00 - 11:00', 'Lunch,  12:00 - 15:30', 'Dinner,  18:00 - 23:00'],
+      weekly_theme: ['Monday,Tunisian', 'Tuesday,Italian', 'Wednesdays,All round', 'Thursday,Fish', 'Friday,Sea food', 'Saturday,Tropicals', 'Sunday,Italian'],
+      dress_code: 'Dress Properly, a dress for the women and a suit for a man.',
       reservation_required: true,
       adults_only: true,
 
       menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
 
-      staff: [
+      chefs: [
         {
           name: 'Robert Davis',
           position: 'Executive Chef',
@@ -133,5 +145,11 @@ export const data = {
         },
       ],
     },
+  ],
+
+  restaurantFeatures: [
+    { id: 1, label: 'Tunisian' },
+    { id: 2, label: 'Italian' },
+    { id: 3, label: 'Sea food' },
   ],
 }

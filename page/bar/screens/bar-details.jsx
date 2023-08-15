@@ -15,7 +15,6 @@ import { Icon, Pager } from '@/components'
 import { Container } from '@/shared'
 import { BottomSheet } from '@/components'
 import { Button, Div, Image, Text } from '@/common'
-4
 
 export default ({ navigation, route }) => {
   const { data } = route.params
