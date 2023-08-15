@@ -152,10 +152,10 @@ export default ({ navigation, route }) => {
                 activeOpacity={0.7}
                 style={{ flex: 1, alignItems: 'center', gap: theme.units.md }}
                 onPress={() =>
-                  navigation.navigate('[stack] stack-bar-detail-menu', {
+                  navigation.navigate('[stack] stack-restaurant-detail-menu', {
                     id: data.id,
                     name: data.title,
-                    data: data.menu_a_la_carte ? data.menu_a_la_carte : data.drinksMeun,
+                    data: data.menu_a_la_carte ? data.menu_a_la_carte : [],
                   })
                 }>
                 <Icon icon={require('@/assets/icons/product/bar/drinks.png')} size={42} />
