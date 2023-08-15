@@ -1,9 +1,9 @@
 /* components */
 import { Icon } from '@/components'
-import { StackHeader } from '@/shared'
+import { StackHeader, OptionHeader } from '@/shared'
 
 /* screens */
-import { Restaurant } from '@/page/restaurant/screens'
+import { Restaurant, RestaurantDetail } from '@/page/restaurant/screens'
 
 export const RestaurantRoutesConfig = [
   (initial = {
@@ -13,6 +13,15 @@ export const RestaurantRoutesConfig = [
       headerShown: true,
       headerTitle: 'Restaurant List',
       header: () => <StackHeader title='Restaurants List' iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/menu-dark.png')} size={18} />} />,
+    },
+  }),
+  (detail = {
+    id: '[stack] stack-restaurant-detail',
+    component: RestaurantDetail,
+    option: {
+      headerShown: true,
+      headerTitle: 'Restaurant Detail',
+      header: () => <OptionHeader />,
     },
   }),
 ]
