@@ -12,4 +12,5 @@ export const StyledButton = styled.TouchableOpacity`
   padding: 0 ${({ theme }) => theme.gap.md};
   border-radius: ${({ theme }) => theme.radius.sm};
   background: ${({ theme, color = 'neutral' }) => theme.core.button[`variant_${color}`]};
+  border: 1px solid ${({ theme, shadowColor = 'sub' }) => `${theme.core.text[`variant_${shadowColor}`]}`};
 `
