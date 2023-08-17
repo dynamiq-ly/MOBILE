@@ -11,8 +11,6 @@ import { FullCard } from '@/components'
 /* styles */
 import { useTheme } from 'styled-components'
 
-/* mocks */
-
 export default ({ navigation, route }) => {
   const { data } = route.params
 
@@ -35,7 +33,7 @@ export default ({ navigation, route }) => {
             h={100}
             image={item.image}
             onPress={() =>
-              navigation.navigate('', {
+              navigation.navigate('[stack] stack-restaurant-detail-menu-list', {
                 type: item.label,
               })
             }
