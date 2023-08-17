@@ -1,8 +1,8 @@
 import { useCallback, useLayoutEffect, useState } from 'react'
-import { RefreshControl, View } from 'react-native'
+import { RefreshControl, TouchableOpacity, View } from 'react-native'
 
 /* modules */
-import { Container, FlatList } from '@/shared'
+import { FlatList } from '@/shared'
 
 /* components */
 import { Div, Image, Text } from '@/common'
@@ -18,7 +18,7 @@ import { useTheme } from 'styled-components'
 import { useFetch } from '@/hook/useFetch'
 import { useQuery } from 'react-query'
 
-export default () => {
+export default ({ navigation }) => {
   const theme = useTheme()
   const [state, setState] = useState(1)
   const [refresh, setRefresh] = useState(false)
@@ -53,7 +53,7 @@ export default () => {
         column={2}
         keyExtractor={(item) => item.id}
         renderedItem={({ item }) => (
-          <View key={item.id} style={{ flex: 1 / 2 }}>
+          <TouchableOpacity key={item.id} style={{ flex: 1 / 2 }} onPress={() => navigation.navigate('[stack] stack-point-interest-details', { id: item.id, name: item.name, data: item })}>
             <Div filled radii='md'>
               <Image source={`${variables.STORAGE_LINK}/point-of-interest/${item.images[0].image}`} width='100%' height={'100px'} radii='sm' />
               <View style={{ gap: theme.units.sm }}>
@@ -68,7 +68,7 @@ export default () => {
                 </View>
               </View>
             </Div>
-          </View>
+          </TouchableOpacity>
         )}
         refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}
       />
