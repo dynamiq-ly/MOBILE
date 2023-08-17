@@ -14,7 +14,10 @@ import { OptionCard } from '@/components'
 /* mocks */
 import { data } from '@/mocks/restaurant.data'
 
+
 export default ({ navigation }) => {
+
+
   return (
     <View style={{ flex: 1 }}>
       <FlatList
@@ -45,7 +48,7 @@ export default ({ navigation }) => {
 
             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
               <Text t='capitalize' color='sub' weight='md'>
-                {item.type}
+                {item.speciality.filter((el) => el.main === true)[0].label}
               </Text>
             </View>
           </OptionCard>

@@ -39,7 +39,7 @@ export const RestaurantRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Restaurant Menu List',
-      header: ({ route }) => <StackHeader title={'Food Menu'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+      header: ({ route }) => <StackHeader title={`${route.params.type} Menu`} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
     },
   }),
   (detailMenuListDetail = {
