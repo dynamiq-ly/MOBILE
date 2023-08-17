@@ -34,7 +34,7 @@ export default ({ navigation, route }) => {
           title={item.name}
           image={item.image}
           onPress={() =>
-            navigation.navigate('[stack] stack-restaurant-detail-menu-list', {
+            navigation.navigate('[stack] stack-restaurant-detail-menu-list-detail', {
               id: item.id,
               name: item.name,
               categories: item.categories,
