@@ -158,7 +158,7 @@ export const data = {
       {
         id: 1,
         name: 'Pizza',
-        type: 'Lunch',
+        type: 'Breakfast',
         image: 'https://dxpulwm6xta2f.cloudfront.net/eyJidWNrZXQiOiJhZGMtZGV2LWltYWdlcy1yZWNpcGVzIiwia2V5IjoicGl6emFfcGVwcGVyb25pLmpwZyIsImVkaXRzIjp7ImpwZWciOnsicXVhbGl0eSI6ODB9LCJwbmciOnsicXVhbGl0eSI6ODB9LCJ3ZWJwIjp7InF1YWxpdHkiOjgwfX19',
         data: [
           {
@@ -204,7 +204,7 @@ export const data = {
         id: 2,
         name: 'Burger',
         type: 'Lunch',
-        image: 'https://example.com/burger.jpg',
+        image: 'https://static.wixstatic.com/media/e79818_9de4daf6a6d14c31a2f8ba3af331c85b~mv2.jpg/v1/crop/x_0,y_795,w_5548,h_3957/fill/w_602,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/V%C3%A9g%C3%A9tarien.jpg',
         data: [
           {
             id: 1,
@@ -230,7 +230,7 @@ export const data = {
         id: 3,
         name: 'Pasta',
         type: 'Dinner',
-        image: 'https://example.com/pasta.jpg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1P0bqGfYWIkiYXCJKBS-mODO4VwAHVz18gw&usqp=CAU',
         data: [
           {
             id: 1,
