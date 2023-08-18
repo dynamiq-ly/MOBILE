@@ -1,5 +1,5 @@
 /* packages */
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { View } from 'react-native'
 
 /* modules */
@@ -9,16 +9,36 @@ import { Container, FlatList } from '@/shared'
 import { Div, Image, Text } from '@/common'
 import { ButtonGroup, Card, Dialog } from '@/components'
 
+/* utilities */
+import { variables } from '@/constant/variables'
+
 /* styles */
 import { useTheme } from 'styled-components'
 
 /* mocks */
 import { data } from '@/mocks/rooms.data'
+import { useFetch } from '@/hook/useFetch'
+import { useQuery } from 'react-query'
 
 export default ({ navigation, route }) => {
   const theme = useTheme()
-
   const [state, setState] = useState(1)
+  const [refresh, setRefresh] = useState(false)
+
+  const { data: categories, isLoading, error, isFetched, refetch } = useQuery('@Rooms', getClientSideQueries.getCategories)
+
+  // useLayoutEffect(() => {
+  //   if (isFetched) {
+  //     setState(categories[0].id)
+  //   }
+  // })
+
+  console.log(categories)
+
+  if (isLoading) return <Text>Loading...</Text>
+
+  if (error) return <Text>Error: {error.message}</Text>
+
   return (
     <Container stickyHeaderIndices={[0]} padding={false} safeArea={false}>
       <Image source={data.banner[0].image} height='254px' />
@@ -51,6 +71,7 @@ export default ({ navigation, route }) => {
       </View>
 
       {/* rooms categories */}
+
       <View style={{ paddingHorizontal: theme.units.md }}>
         <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={data.categories.length > 3} items={data.categories} />
       </View>
@@ -110,4 +131,13 @@ export default ({ navigation, route }) => {
       </View>
     </Container>
   )
+}
+
+const getClientSideQueries = {
+  getCategories: () =>
+    useFetch('/api/rooms/categories?query=1')
+      .then((res) => res.data)
+      .catch((err) => {
+        throw new Error(err)
+      }),
 }
