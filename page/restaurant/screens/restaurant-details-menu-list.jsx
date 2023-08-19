@@ -34,11 +34,7 @@ export default ({ navigation, route }) => {
         }
         column={3}
         keyExtractor={(item) => item.id}
-        data={
-          data.restaurants[0].menu[type] && data.restaurants[0].menu[type].length > 0
-            ? data[type].filter((el) => el.type === data.restaurants[0].menu[type].find((el) => el.id === state).label)
-            : data[type]
-        }
+        data={data.restaurants[0].menu[type] && data.restaurants[0].menu[type].length > 0 ? data[type].filter((el) => el.type === data.restaurants[0].menu[type].find((el) => el.id === state).label) : data[type]}
         renderedItem={({ item }) => (
           <View key={item.id} style={{ flex: 1 / 3 }}>
             <SimpleCard
@@ -58,4 +54,3 @@ export default ({ navigation, route }) => {
     </View>
   )
 }
-
