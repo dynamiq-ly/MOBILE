@@ -42,33 +42,39 @@ export default ({ route }) => {
       </TouchableOpacity>
 
       {/* plate features */}
-      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Div filled>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
-            <Image source={'https://cdn-icons-png.flaticon.com/512/1584/1584942.png'} width='26px' height='26px' />
-            <Text size={7} weight='md' line={1.125}>
-              {data.time}
-            </Text>
-          </View>
-        </Div>
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: theme.units.md }}>
+        <View style={{ flex: 1 }}>
+          <Div filled>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
+              <Image source={'https://cdn-icons-png.flaticon.com/512/1584/1584942.png'} width='26px' height='26px' />
+              <Text size={7} weight='md' line={1.125}>
+                {data.time}
+              </Text>
+            </View>
+          </Div>
+        </View>
 
-        <Div filled>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
-            <Image source={'https://cdn-icons-png.flaticon.com/512/5536/5536449.png'} width='26px' height='26px' />
-            <Text size={7} weight='md' line={1.125}>
-              {data.grams}
-            </Text>
-          </View>
-        </Div>
+        <View style={{ flex: 1 }}>
+          <Div filled>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
+              <Image source={'https://cdn-icons-png.flaticon.com/512/5536/5536449.png'} width='26px' height='26px' />
+              <Text size={7} weight='md' line={1.125}>
+                {data.grams}
+              </Text>
+            </View>
+          </Div>
+        </View>
 
-        <Div filled>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
-            <Image source={'https://cdn-icons-png.flaticon.com/512/9816/9816515.png'} width='26px' height='26px' />
-            <Text size={7} weight='md' line={1.125}>
-              {data.calories}
-            </Text>
-          </View>
-        </Div>
+        <View style={{ flex: 1 }}>
+          <Div filled>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
+              <Image source={'https://cdn-icons-png.flaticon.com/512/9816/9816515.png'} width='26px' height='26px' />
+              <Text size={7} weight='md' line={1.125}>
+                {data.calories}
+              </Text>
+            </View>
+          </Div>
+        </View>
       </View>
 
       {/*this food varience*/}

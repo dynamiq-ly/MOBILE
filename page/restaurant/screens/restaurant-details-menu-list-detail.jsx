@@ -31,9 +31,8 @@ export default ({ navigation, route }) => {
             onPress={() =>
               navigation.navigate('[stack] stack-restaurant-detail-menu-list-detail-menu', {
                 id: item.id,
-
+                name: item.label,
                 data: item,
-                previousScreen: route.params ? route.params.previousScreen : null,
               })
             }>
             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
