@@ -31,6 +31,7 @@ export default ({ navigation, route }) => {
             onPress={() =>
               navigation.navigate('[stack] stack-restaurant-detail-menu-list-detail-menu', {
                 id: item.id,
+
                 data: item,
                 previousScreen: route.params ? route.params.previousScreen : null,
               })

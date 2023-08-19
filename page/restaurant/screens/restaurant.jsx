@@ -14,10 +14,7 @@ import { OptionCard } from '@/components'
 /* mocks */
 import { data } from '@/mocks/restaurant.data'
 
-
 export default ({ navigation }) => {
-
-
   return (
     <View style={{ flex: 1 }}>
       <FlatList
