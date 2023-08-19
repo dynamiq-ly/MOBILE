@@ -1,8 +1,8 @@
 export const variables = {
   APP_NAME: 'utells',
   // API_URL: 'https://api.utells.com',
-  API_URL: 'http://localhost:8000',
+  API_URL: 'https://6e53-165-51-91-14.ngrok-free.app/',
   // STORAGE_LINK: 'https://api.utells.com/storage',
-  STORAGE_LINK: 'http://localhost:8000/storage',
+  STORAGE_LINK: 'https://6e53-165-51-91-14.ngrok-free.app/storage',
   WEATHER_API_KEY: '06c0104d180141e2a99121002231208',
 }
