@@ -92,6 +92,12 @@ export const data = {
           calories: '350cal',
           grams: '100g',
           category: 'vegan',
+          ingredients: [
+            { id: 1, label: 'Pepperoni', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/4162/4162111.png' },
+            { id: 2, label: 'Mozzarella', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/5725/5725060.png' },
+            { id: 3, label: 'Basil', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/4713/4713978.png' },
+            { id: 3, label: 'Olive oil', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/604/604823.png' },
+          ],
         },
         {
           id: 2,
