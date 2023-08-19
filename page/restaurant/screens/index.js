@@ -3,3 +3,4 @@ export { default as RestaurantDetail } from '@/page/restaurant/screens/restauran
 export { default as RestaurantDetailMenu } from '@/page/restaurant/screens/restaurant-details-menu'
 export { default as RestaurantDetailMenuList } from '@/page/restaurant/screens/restaurant-details-menu-list'
 export { default as RestaurantDetailMenuListDetail } from '@/page/restaurant/screens/restaurant-details-menu-list-detail'
+export { default as RestaurantDetailMenuListDetailMenu } from '@/page/restaurant/screens/restaurant-details-menu-list-detail-menu'
