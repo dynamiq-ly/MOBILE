@@ -1,6 +1,6 @@
 /* packages */
-import { View, TouchableOpacity } from 'react-native'
-import { useLayoutEffect, useState } from 'react'
+import { View, TouchableOpacity, RefreshControl } from 'react-native'
+import { useCallback, useLayoutEffect, useState } from 'react'
 
 /* components */
 import { Icon } from '@/components'
@@ -13,63 +13,62 @@ import { Container, FlatList, OptionHeader } from '@/shared'
 import { useTheme } from 'styled-components'
 
 /* mocks */
-import { drinkDetail as data } from '@/mocks/bar.data'
+import { variables } from '@/constant/variables'
+import { useQuery } from 'react-query'
+import { useFetch } from '@/hook/useFetch'
 
 export default ({ navigation, route }) => {
-  const { type } = route.params
+  const { type, data: drink, id } = route.params
 
   const theme = useTheme()
 
-  // setting the header to have a button for sharing only when there is a file attached
-  // can go for both glass and bottle
-  useLayoutEffect(() => {
-    data[type].technical_file &&
-      navigation.setOptions({
-        header: () => (
-          <OptionHeader
-            share={{
-              active: true,
-              func: () => {
-                navigation.push('[stack] stack-bar-detail-menu', { name: 'Bottle Technical File', data: data.bottle.technical_file })
-              },
-            }}
-          />
-        ),
-      })
-  })
-
   const [turncation, setTurncation] = useState(false)
 
+  /* data fetching */
+  const [refresh, setRefresh] = useState(false)
+
+  const { data, isLoading, error, refetch } = useQuery(['@Bars-Detail-Menu-Drinks-Detail', id], () => getClientSideQueries.getAlcoholDrink(id), {
+    initialData: drink,
+  })
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
+  if (isLoading) return <Text>Loading...</Text>
+
+  if (error) return <Text>Error: {error.message}</Text>
+
   return (
-    <Container stickyHeaderIndices={[0]} safeArea={false} padding={false}>
+    <Container stickyHeaderIndices={[0]} safeArea={false} padding={false} refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}>
       <View style={{ backgroundColor: theme.core.background['variant_container'] }}>
-        <Image source={data[type].image} height='254px' contentFit='contain' />
+        <Image source={`${variables.STORAGE_LINK}/bars/menu/alcohol/${data.image}`} height='254px' />
       </View>
 
       <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sm }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* title */}
           <Text weight='bd' size={14} t={'capitalize'}>
-            {data[type].name}
+            {data.name}
           </Text>
           {/* glass price */}
           {type === 'glass' && (
             <Text weight='md' color='info' size={12}>
-              {data.glass.price.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}
+              {data.price.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}
             </Text>
           )}
         </View>
-
         {/* slug */}
-        {data[type].slug && (
+        {data.slug && (
           <Text size={8} color='small'>
-            {data[type].slug}
+            {data.slug}
           </Text>
         )}
         {/* size */}
-        {data[type].size && (
+        {data.size && (
           <Text size={8} weight='md' color='sub'>
-            {data[type].size}
+            {data.size}
           </Text>
         )}
       </View>
@@ -86,7 +85,7 @@ export default ({ navigation, route }) => {
                     Bottle
                   </Text>
                   <Text size={7} weight='md' color='info' line={1.125}>
-                    {data.bottle.price.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}
+                    {data.price.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}
                   </Text>
                 </View>
               </View>
@@ -101,7 +100,7 @@ export default ({ navigation, route }) => {
                     Glass
                   </Text>
                   <Text size={7} weight='md' color='info' line={1.125}>
-                    {data.bottle.smallPrice.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}
+                    {data.small_price.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}
                   </Text>
                 </View>
               </View>
@@ -125,26 +124,28 @@ export default ({ navigation, route }) => {
               </View>
             </Div>
           </View>
-          <View style={{ flex: 1 }}>
-            <Div filled>
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 5 }}>
-                <Text size={7} weight='md' line={1.125}>
-                  Main Alcohol
-                </Text>
-                <Text size={7} weight='md' color='info' line={1.125} t='uppercase'>
-                  vodka
-                </Text>
-              </View>
-            </Div>
-          </View>
+          {data.features && data.features.length > 0 && (
+            <View style={{ flex: 1 }}>
+              <Div filled>
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 5 }}>
+                  <Text size={7} weight='md' line={1.125}>
+                    Main Alcohol
+                  </Text>
+                  <Text size={7} weight='md' color='info' line={1.125} t='uppercase'>
+                    {data.features[0].label}
+                  </Text>
+                </View>
+              </Div>
+            </View>
+          )}
         </View>
       )}
 
       {/* description */}
-      {data[type].description && (
+      {data.description && (
         <TouchableOpacity style={{ paddingHorizontal: theme.units.md, gap: 4 }} onPress={() => setTurncation(!turncation)}>
           <Text size={7} color='sub' t={'capitalize'} turncate={turncation ? null : 3} line={1.5} align='justify'>
-            {data[type].description}
+            {data.description}
           </Text>
           <Text size={6} color='info' weight='md' t={'capitalize'}>
             {turncation ? 'see less' : 'see more'}
@@ -153,23 +154,23 @@ export default ({ navigation, route }) => {
       )}
 
       {/* preperation section only when type is glass */}
-      {type === 'glass' && data.glass.preperation && (
+      {type === 'glass' && data.preperation && (
         <View style={{ paddingHorizontal: theme.units.md }}>
           <Div filled title='preperation'>
             <Text size={7} color='sub' line={1.125}>
-              {data.glass.preperation}
+              {data.preperation}
             </Text>
           </Div>
         </View>
       )}
 
       {/* feature horizontal list, this type of list is only for bottles */}
-      {type === 'bottle' && data[type].features && data[type].features.length > 0 && (
+      {type === 'bottle' && data.features && data.features.length > 0 && (
         <Container padding={false} safeArea={false} horizontal>
           <FlatList
-            data={data[type].features}
+            data={data.features}
             gap='sm'
-            column={data[type].features.length}
+            column={data.features.length}
             keyExtractor={(item) => item.id}
             renderedItem={({ item }) => (
               <View
@@ -180,7 +181,7 @@ export default ({ navigation, route }) => {
                     {item.label}
                   </Text>
                 </View>
-                <Image source={item.image} height='36px' width='36px' />
+                <Image source={`${variables.STORAGE_LINK}/bars/menu/alcohol/features/${item.image}`} height='36px' width='36px' />
                 <View style={{ width: '100%', padding: theme.units.sm, paddingBottom: theme.units.md }}>
                   <Text align='center' t='uppercase' weight='md'>
                     {item.value}
@@ -198,10 +199,10 @@ export default ({ navigation, route }) => {
       <View style={{ paddingHorizontal: theme.units.md }}>
         <Div filled title='best served with'>
           <Text size={7} color='sub' line={1.125}>
-            {data[type].served.slug}
+            {data.served_slug}
           </Text>
           <View style={{ flexDirection: 'row', gap: theme.units.sm, flexWrap: 'wrap' }}>
-            {data[type].served.with.split(',').map((item, index) => (
+            {JSON.parse(data.served_with).map((item, index) => (
               <Div key={index}>
                 <Text size={7} line={1.125} t={'capitalize'}>
                   {item}
@@ -213,11 +214,11 @@ export default ({ navigation, route }) => {
       </View>
 
       {/* ingredients and only when type is glass */}
-      {type === 'glass' && data[type].features && data[type].features.length > 0 && (
+      {type === 'glass' && data.features && data.features.length > 0 && (
         <View style={{ paddingHorizontal: theme.units.md, gap: theme.units.sm }}>
           <Div filled title='ingrediants'>
             <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', columnGap: theme.units.md, rowGap: theme.units.sm }}>
-              {data[type].features.map((item, index) => (
+              {data.features.map((item, index) => (
                 <View key={item.id} style={{ flexDirection: 'row', gap: 3, alignItems: 'center' }}>
                   <Icon icon={require('@/assets/icons/product/colorful/badge-check.png')} size={16} />
                   <Text t={'capitalize'} size={7} color='sub'>
@@ -231,4 +232,13 @@ export default ({ navigation, route }) => {
       )}
     </Container>
   )
+}
+
+const getClientSideQueries = {
+  getAlcoholDrink: (id) =>
+    useFetch(`/api/bars/menu/alcohol-drinks/${id}`)
+      .then((res) => res.data)
+      .catch((err) => {
+        throw new Error(err)
+      }),
 }
