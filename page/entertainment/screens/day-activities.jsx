@@ -1,5 +1,7 @@
-import { useState } from 'react'
-import { View } from 'react-native'
+/* package */
+import moment from 'moment'
+import { useCallback, useState } from 'react'
+import { RefreshControl, View } from 'react-native'
 
 /* modules */
 import { Container, FlatList } from '@/shared'
@@ -12,49 +14,95 @@ import { CalendarSwipe, ButtonGroup, Card } from '@/components'
 import { useTheme } from 'styled-components'
 
 /* mocks */
-import { data } from '@/mocks/entertainment.data'
+import { variables } from '@/constant/variables'
+import { useQuery } from 'react-query'
+import { useFetch } from '@/hook/useFetch'
 
 export default ({ navigation }) => {
   const theme = useTheme()
   // this is where we going to store our date that we got from the calendar
   const [date, setDate] = useState('')
-
   const [state, setState] = useState(1)
+
+  /* data fetching */
+  const [refresh, setRefresh] = useState(false)
+
+  const { data, isLoading, error, refetch } = useQuery('@Days-Activities', getClientSideQueries.getDayActivitiesGrouped)
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
+  if (isLoading) return <Text>Loading...</Text>
+
+  if (error) return <Text>Error: {error.message}</Text>
+
   return (
-    <View style={{ flex: 1 }}>
-      <FlatList
-        header={
-          <View style={{ gap: theme.units.md, marginBottom: theme.units.md }}>
-            {/**
-             * @description this will represent the calendar swipe item which is a "day" in the calendar
-             * @param {func} getDate - this will get the date from the calendar
-             */}
-            <CalendarSwipe getDate={setDate} />
-            <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={data.day_activities_categories.length > 3} items={data.day_activities_categories} />
+    <Container stickyHeaderIndices={[0]} safeArea={false}>
+      <View style={{ backgroundColor: theme.core.background['variant_view'] }}>
+        <View style={{ marginBottom: theme.units.sm }}>
+          <CalendarSwipe getDate={setDate} />
+        </View>
+        <View style={{ marginBottom: theme.units.sm }}>
+          <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={category.length > 3} items={category} />
+        </View>
+      </View>
+
+      {data &&
+        data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')] &&
+        Object.keys(data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')]).map((key, i) => (
+          <View key={i} style={{ gap: theme.units.md, alignItems: 'center', justifyContent: 'center' }}>
+            <View style={{ flexDirection: 'row', gap: 5 }}>
+              <Text size={8} color='sub'>
+                {key}
+              </Text>
+              <View style={{ flex: 1, justifyContent: 'center' }}>
+                <View style={{ width: '100%', borderBottomWidth: 1, borderColor: '#dfdfdf' }} />
+              </View>
+            </View>
+            {data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key]
+              .filter((el) => el.age === category.find((elem) => elem.id === state).label)
+              .map((item, index) => (
+                <Card
+                  key={index}
+                  image={`${variables.STORAGE_LINK}/entertainement/days/${item.activity.image}`}
+                  onPress={() =>
+                    navigation.navigate('[stack] stack-entertainement-day-activities-details', {
+                      id: item.id,
+                      data: item,
+                      name: item.title,
+                    })
+                  }>
+                  <Text size={7} weight='md' t={'capitalize'}>
+                    {item.activity.name}
+                  </Text>
+                  <Text size={6} line={1.25} color='sub' turncate={2}>
+                    {item.activity.description}
+                  </Text>
+                </Card>
+              ))}
           </View>
-        }
-        data={data.day_activities.filter((el) => el.type === data.day_activities_categories.find((item) => item.id === state).label)}
-        gap='sm'
-        keyExtractor={(item) => item.id}
-        renderedItem={({ item }) => (
-          <Card
-            image={item.image}
-            onPress={() =>
-              navigation.navigate('[stack] stack-entertainement-day-activities-details', {
-                id: item.id,
-                data: item,
-                name: item.title,
-              })
-            }>
-            <Text size={7} weight='md' t={'capitalize'}>
-              {item.title}
-            </Text>
-            <Text size={6} line={1.25} color='sub' turncate={2}>
-              {item.description}
-            </Text>
-          </Card>
-        )}
-      />
-    </View>
+        ))}
+    </Container>
   )
+}
+
+const category = [
+  { id: 1, label: 'adult' },
+  { id: 2, label: 'child' },
+  { id: 3, label: 'family' },
+  { id: 4, label: 'couple' },
+  { id: 5, label: 'group' },
+  { id: 6, label: 'elderly' },
+  { id: 7, label: 'teenager' },
+]
+
+const getClientSideQueries = {
+  getDayActivitiesGrouped: () =>
+    useFetch('api/entertainement/grouping/days')
+      .then((res) => res.data)
+      .catch((err) => {
+        throw new Error(err)
+      }),
 }
