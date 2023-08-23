@@ -44,6 +44,7 @@ export default ({ navigation, route }) => {
                   id: item.id,
                   name: item.name,
                   type: item.type,
+                  categories: item.categories,
                   data: item,
                 })
               }
