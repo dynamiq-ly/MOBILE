@@ -48,7 +48,7 @@ export const EntertainmentRoutesConfig = [
     option: {
       headerShown: true,
       headerTitle: 'Night Activities Details',
-      header: ({ route }) => <StackHeader title={route.params.name || 'Night Activities Details'} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+      header: ({ route }) => <OptionHeader />,
     },
   }),
   (sportProgram = {

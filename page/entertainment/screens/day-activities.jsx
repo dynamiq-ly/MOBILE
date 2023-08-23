@@ -69,7 +69,7 @@ export default ({ navigation }) => {
                   image={`${variables.STORAGE_LINK}/entertainment/days/${item.activity.image}`}
                   onPress={() =>
                     navigation.navigate('[stack] stack-entertainement-day-activities-details', {
-                      id: item.id,
+                      id: item.activity.id,
                       data: item.activity,
                       name: item.activity.name,
                     })
