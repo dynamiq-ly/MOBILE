@@ -6,10 +6,7 @@ export const data = {
   bars: [
     {
       id: 1,
-      images: [
-        { image: 'https://images.pexels.com/photos/34650/pexels-photo.jpg?cs=srgb&dl=restaurant-dark-bar-34650.jpg&fm=jpg' },
-        { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' },
-      ],
+      images: [{ image: 'https://images.pexels.com/photos/34650/pexels-photo.jpg?cs=srgb&dl=restaurant-dark-bar-34650.jpg&fm=jpg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
       title: 'Paradise Beach Bar',
       type: 'beach bar',
       location: '123 Oceanfront Avenue, Paradise Beach',
@@ -39,10 +36,7 @@ export const data = {
     },
     {
       id: 2,
-      images: [
-        { image: 'https://images.pexels.com/photos/106853/pexels-photo-106853.jpeg' },
-        { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' },
-      ],
+      images: [{ image: 'https://images.pexels.com/photos/106853/pexels-photo-106853.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
       title: 'Sunset Lounge',
       type: 'rooftop bar',
       location: '456 Skyline Avenue, Urban Heights',
@@ -72,10 +66,7 @@ export const data = {
     },
     {
       id: 3,
-      images: [
-        { image: 'https://images.pexels.com/photos/265074/pexels-photo-265074.jpeg' },
-        { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' },
-      ],
+      images: [{ image: 'https://images.pexels.com/photos/265074/pexels-photo-265074.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
       title: 'Cozy Corner',
       type: 'neighborhood pub',
       location: '789 Main Street, Downtown',
@@ -105,10 +96,7 @@ export const data = {
     },
     {
       id: 4,
-      images: [
-        { image: 'https://images.pexels.com/photos/2252286/pexels-photo-2252286.jpeg' },
-        { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' },
-      ],
+      images: [{ image: 'https://images.pexels.com/photos/2252286/pexels-photo-2252286.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
       title: 'Jazz & Blues Club',
       type: 'live music venue',
       location: '234 Melody Lane, Jazzville',
@@ -168,10 +156,7 @@ export const data = {
     },
     {
       id: 6,
-      images: [
-        { image: 'https://images.pexels.com/photos/3561067/pexels-photo-3561067.jpeg' },
-        { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' },
-      ],
+      images: [{ image: 'https://images.pexels.com/photos/3561067/pexels-photo-3561067.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
       title: 'Rustic Barrel',
       type: 'whiskey bar',
       location: '789 Oak Street, Rusticville',
@@ -201,10 +186,7 @@ export const data = {
     },
     {
       id: 7,
-      images: [
-        { image: 'https://images.pexels.com/photos/269412/pexels-photo-269412.jpeg' },
-        { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' },
-      ],
+      images: [{ image: 'https://images.pexels.com/photos/269412/pexels-photo-269412.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
       title: 'Skyview Lounge',
       type: 'high-rise bar',
       location: '101 High Street, Skyline Towers',
@@ -363,8 +345,7 @@ export const data = {
       id: 9,
       type: 'soft',
       name: 'Coffee',
-      image:
-        'https://th.bing.com/th/id/R.d8a017ab37cd3ac6487ddbb19eca5c19?rik=PPO7i5LSO4tGQA&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1693731%2fthumbs%2fo-COFFEE-facebook.jpg&ehk=nvkpwuOAx8SLKUsqbH6vzMH6bFK698GeuIWpyKb%2fUzk%3d&risl=&pid=ImgRaw&r=0',
+      image: 'https://th.bing.com/th/id/R.d8a017ab37cd3ac6487ddbb19eca5c19?rik=PPO7i5LSO4tGQA&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1693731%2fthumbs%2fo-COFFEE-facebook.jpg&ehk=nvkpwuOAx8SLKUsqbH6vzMH6bFK698GeuIWpyKb%2fUzk%3d&risl=&pid=ImgRaw&r=0',
       categories: [],
       data: [
         {

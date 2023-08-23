@@ -56,11 +56,7 @@ export default ({ navigation, route }) => {
     <View style={{ flex: 1 }}>
       {data && (
         <FlatList
-          header={
-            categories && categories.length > 0 ? (
-              <ButtonGroup scrollabe={categories.length > 3} selectedIndex={state} setSelectedIndex={setState} items={categories.map((el, index) => ({ id: index + 1, label: el }))} />
-            ) : null
-          }
+          header={categories && categories.length > 0 ? <ButtonGroup scrollabe={categories.length > 3} selectedIndex={state} setSelectedIndex={setState} items={categories.map((el, index) => ({ id: index + 1, label: el }))} /> : null}
           headerStyle={{ marginBottom: theme.units.md }}
           data={data.data.filter((el) => el.category === categories.find((el) => el === categories[state - 1]))}
           keyExtractor={(_, index) => index}

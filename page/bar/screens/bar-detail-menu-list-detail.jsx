@@ -172,9 +172,7 @@ export default ({ navigation, route }) => {
             column={data[type].features.length}
             keyExtractor={(item) => item.id}
             renderedItem={({ item }) => (
-              <View
-                key={item.id}
-                style={{ backgroundColor: theme.core.background['variant_container'], borderRadius: theme.units.sm, alignItems: 'center', overflow: 'hidden', minWidth: 100, gap: theme.units.md }}>
+              <View key={item.id} style={{ backgroundColor: theme.core.background['variant_container'], borderRadius: theme.units.sm, alignItems: 'center', overflow: 'hidden', minWidth: 100, gap: theme.units.md }}>
                 <View style={{ width: '100%', padding: theme.units.md, backgroundColor: theme.core.text['variant_info'] }}>
                   <Text align='center' t='uppercase' weight='md' color='neutral'>
                     {item.label}
