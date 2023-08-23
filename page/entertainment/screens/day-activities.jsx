@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react'
 import { RefreshControl, View } from 'react-native'
 
 /* modules */
-import { Container, FlatList } from '@/shared'
+import { Container } from '@/shared'
 
 /* components */
 import { Text } from '@/common'
@@ -39,7 +39,7 @@ export default ({ navigation }) => {
   if (error) return <Text>Error: {error.message}</Text>
 
   return (
-    <Container stickyHeaderIndices={[0]} safeArea={false}>
+    <Container stickyHeaderIndices={[0]} safeArea={false} refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}>
       <View style={{ backgroundColor: theme.core.background['variant_view'] }}>
         <View style={{ marginBottom: theme.units.sm }}>
           <CalendarSwipe getDate={setDate} />
@@ -66,12 +66,12 @@ export default ({ navigation }) => {
               .map((item, index) => (
                 <Card
                   key={index}
-                  image={`${variables.STORAGE_LINK}/entertainement/days/${item.activity.image}`}
+                  image={`${variables.STORAGE_LINK}/entertainment/days/${item.activity.image}`}
                   onPress={() =>
                     navigation.navigate('[stack] stack-entertainement-day-activities-details', {
                       id: item.id,
-                      data: item,
-                      name: item.title,
+                      data: item.activity,
+                      name: item.activity.name,
                     })
                   }>
                   <Text size={7} weight='md' t={'capitalize'}>
