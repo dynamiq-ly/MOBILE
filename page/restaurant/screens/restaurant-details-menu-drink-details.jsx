@@ -65,7 +65,7 @@ export default ({ navigation, route }) => {
               image={item.image}
               padding={false}
               onPress={() =>
-                navigation.navigate('', {
+                navigation.navigate('[stack] stack-restaurant-detail-drink-list-menu-alcohol', {
                   type: item.type,
                 })
               }>
