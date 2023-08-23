@@ -3,7 +3,7 @@ import { Icon } from '@/components'
 import { StackHeader, OptionHeader } from '@/shared'
 
 /* screens */
-import { Restaurant, RestaurantDetail, RestaurantDetailMenu, RestaurantDetailMenuList, RestaurantDetailMenuListDetail, RestaurantDetailMenuListDetailMenu } from '@/page/restaurant/screens'
+import { Restaurant, RestaurantDetail, RestaurantDetailMenu, RestaurantDetailMenuList, RestaurantDetailMenuListDetail, RestaurantDetailMenuListDetailMenu, RestaurantDrinkDetail, RestaurantDrinkDetailMenu } from '@/page/restaurant/screens'
 
 export const RestaurantRoutesConfig = [
   (initial = {
@@ -58,6 +58,24 @@ export const RestaurantRoutesConfig = [
       headerShown: true,
       headerTitle: 'Restaurant Menu Food List Detail',
       header: ({ route }) => <StackHeader title={`${route.params.name}`} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+    },
+  }),
+  (detailDrink = {
+    id: '[stack] stack-restaurant-detail-drink-list',
+    component: RestaurantDrinkDetail,
+    option: {
+      headerShown: true,
+      headerTitle: 'Restaurant Drink List',
+      header: ({ route }) => <StackHeader title={`${route.params.name} `} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
+    },
+  }),
+  (detailDrinkMenu = {
+    id: '[stack] stack-restaurant-detail-drink-list-menu',
+    component: RestaurantDrinkDetailMenu,
+    option: {
+      headerShown: true,
+      headerTitle: 'Restaurant Drink Details',
+      header: ({ route }) => <StackHeader title={`${route.params.name} `} iconLeft={<Icon icon={require('@/assets/icons/product/monocrome/arrow-back-dark.png')} size={18} />} />,
     },
   }),
 ]
