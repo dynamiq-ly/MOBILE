@@ -52,18 +52,20 @@ export default ({ route }) => {
           {data.name}
         </Text>
         {/* icons */}
-        <View style={{ gap: theme.units.sm }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
-            <Icon icon={require('@/assets/icons/product/monocrome/phone-dark.png')} size={14} />
-            <Text size={6} weight='md'>
-              {data.phone}
-            </Text>
+        {data.phone && (
+          <View style={{ gap: theme.units.sm }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
+              <Icon icon={require('@/assets/icons/product/monocrome/phone-dark.png')} size={14} />
+              <Text size={6} weight='md'>
+                {data.phone}
+              </Text>
+            </View>
           </View>
-        </View>
+        )}
       </View>
 
       {/* description */}
-      <TouchableOpacity style={{ gap: 4, paddingHorizontal: theme.units.md }} onPress={() => setTurncation(!turncation)}>
+      <TouchableOpacity style={{ flex: 1, gap: 4, paddingHorizontal: theme.units.md }} onPress={() => setTurncation(!turncation)}>
         <Text size={7} color='sub' t={'capitalize'} turncate={turncation ? null : 3} line={1.25} align='justify'>
           {data.description}
         </Text>
@@ -73,7 +75,7 @@ export default ({ route }) => {
       </TouchableOpacity>
 
       {data.website && (
-        <View style={{ paddingHorizontal: theme.units.md }}>
+        <View style={{ paddingHorizontal: theme.units.md, flex: 1 }}>
           <Button background='secondary' shadowColor='info' iconLeft='globe' onPress={() => Linking.openURL(data.website)}>
             Visit Website
           </Button>
@@ -108,7 +110,7 @@ export default ({ route }) => {
       </View>
 
       {/* opening hours */}
-      <View style={{ gap: theme.units.sm, paddingHorizontal: theme.units.md, marginBottom: 32 }}>
+      <View style={{ gap: theme.units.sm, paddingHorizontal: theme.units.md, marginBottom: 32, flex: 1 }}>
         <Div filled title='opening hours'>
           <Dialog background='warning' icon={require('@/assets/icons/product/monocrome/warning-light.png')}>
             <Text size={7} color='sub'>
