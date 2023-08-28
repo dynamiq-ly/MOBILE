@@ -18,7 +18,6 @@ import { StyledSimpleCard } from '@/style/card.style'
 /* mocks */
 import { data } from '@/mocks/home.data'
 
-
 export default ({ navigation }) => {
   const theme = useTheme()
 
@@ -127,8 +126,8 @@ export default ({ navigation }) => {
             column={data.plans.data.length}
             keyExtractor={(_, index) => index}
             renderedItem={({ item }) => (
-              <View style={{ minWidth: 125 }}>
-                <SimpleCard key={item.name} title={item.name} image={item.image} onPress={() => navigation.navigate(item.id)} />
+              <View style={{ minWidth: 180 }}>
+                <SimpleCard key={item.name} title={item.name} image={item.image} onPress={() => navigation.navigate(item.id)} h='125px' />
               </View>
             )}
             nestedScrollEnabled={true}
@@ -158,7 +157,7 @@ export default ({ navigation }) => {
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
             <View style={{ minWidth: 125 }}>
-              <FullCard key={item.id} title={item.name} h={100} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+              <FullCard key={item.id} title={item.name} h={125} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
             </View>
           )}
           nestedScrollEnabled={true}
@@ -187,7 +186,7 @@ export default ({ navigation }) => {
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
             <View style={{ minWidth: 125 }}>
-              <FullCard key={item.name} title={item.name} h={100} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+              <FullCard key={item.name} title={item.name} h={125} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
             </View>
           )}
           nestedScrollEnabled={true}
