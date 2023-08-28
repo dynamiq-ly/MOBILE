@@ -26,13 +26,14 @@ const CalendarSwipe = ({ getDate = () => {} }) => {
       <Text size={8} color='sub' weight='md'>
         {moment(selectedDay, 'MM/DD/YYYY')
           .calendar()
-          .replace(' at 12:00 AM', ', ' + moment().format('MM YYYY'))}
+          .replace(' at 12:00 AM', ', ' + moment(selectedDay, 'MM/DD/YYYY').format('ll'))}
       </Text>
       <CalendarWrapper>
         {days.map((item, index) => (
           <CalendarSwipteItem
             key={index}
-            day={moment(item, 'MM/DD/YYYY').format('DD')}
+            date={moment(item, 'MM/DD/YYYY').format('DD')}
+            day={moment(item, 'MM/DD/YYYY').format('ddd')}
             isSelected={item === selectedDay}
             onSelect={() => {
               setSelectedDay(item)
@@ -47,10 +48,13 @@ const CalendarSwipe = ({ getDate = () => {} }) => {
 /**
  * @description this will represent the calendar swipe item which is a "day" in the calendar
  */
-const CalendarSwipteItem = ({ isSelected = false, onSelect = () => {}, day = '0' }) => {
+const CalendarSwipteItem = ({ isSelected = false, onSelect = () => {}, date = '0', day = 'mon' }) => {
   return (
     <ClanedarSwipteButtonItem isSelected={isSelected} onPress={onSelect}>
-      <Text size={7} weight='md'>
+      <Text size={7.5} weight='md'>
+        {date}
+      </Text>
+      <Text size={6.5} weight='md' color='sub' t='uppercase'>
         {day}
       </Text>
     </ClanedarSwipteButtonItem>
@@ -64,6 +68,7 @@ CalendarSwipe.propTypes = {
 CalendarSwipteItem.propTypes = {
   isSelected: PropTypes.bool,
   onSelect: PropTypes.func,
+  date: PropTypes.string,
   day: PropTypes.string,
 }
 
