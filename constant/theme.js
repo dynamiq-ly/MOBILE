@@ -9,7 +9,7 @@ export const theme = {
       variant_error: '#F53535',
       variant_success: '#14AD4D',
       variant_warning: '#FFAB1F',
-      variant_info: '#0A8FEF',
+      variant_info: '#2353D9',
       variant_neutral: '#FFFFFE',
     },
 
@@ -25,7 +25,7 @@ export const theme = {
 
     button: {
       variant_neutral: '#121212',
-      variant_primary: '#0A8FEF',
+      variant_primary: '#2353D9',
       variant_secondary: '#FFFFFE',
       variant_error: '#F75656',
       variant_success: '#3BBA6A',

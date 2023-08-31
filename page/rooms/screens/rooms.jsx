@@ -113,8 +113,8 @@ export default ({ navigation, route }) => {
                     previousScreen: route.params ? route.params.previousScreen : null,
                   })
                 }>
-                <Text size={7} weight='md' t={'capitalize'}>
-                  {item.slug}
+                <Text size={7} weight='md' t={'capitalize'} turncate={2}>
+                  {item.name}
                 </Text>
                 <Text size={6} line={1.25} color='sub' turncate={2}>
                   {item.addons
