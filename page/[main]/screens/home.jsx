@@ -32,7 +32,7 @@ export default ({ navigation }) => {
       <Image source={data.banner[0].image} height='254px' />
 
       {/* upcomings */}
-      <View>
+      <View style={{ flex: 1 }}>
         {data.upcoming.title && (
           <View style={{ paddingHorizontal: theme.units.md, gap: 2 }}>
             <Text weight='md' t={'capitalize'} size={11}>
@@ -74,7 +74,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* quick access */}
-      <View>
+      <View style={{ flex: 1 }}>
         {data.quickAccess.title && (
           <View style={{ paddingHorizontal: theme.units.md, gap: 2 }}>
             <Text weight='md' t={'capitalize'} size={11}>
@@ -106,7 +106,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* good plans */}
-      <View>
+      <View style={{ flex: 1 }}>
         {data.plans.title && (
           <View style={{ paddingHorizontal: theme.units.md, gap: 2 }}>
             <Text weight='md' t={'capitalize'} size={11}>
@@ -126,8 +126,8 @@ export default ({ navigation }) => {
             column={data.plans.data.length}
             keyExtractor={(_, index) => index}
             renderedItem={({ item }) => (
-              <View style={{ minWidth: 180 }}>
-                <SimpleCard key={item.name} title={item.name} image={item.image} onPress={() => navigation.navigate(item.id)} h='125px' />
+              <View style={{ minWidth: 150 }}>
+                <SimpleCard key={item.name} title={item.name} image={item.image} onPress={() => navigation.navigate(item.id)} h='110px' />
               </View>
             )}
             nestedScrollEnabled={true}
@@ -137,7 +137,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* services */}
-      <View>
+      <View style={{ flex: 1 }}>
         {data.services.title && (
           <View style={{ paddingHorizontal: theme.units.md, gap: 2 }}>
             <Text weight='md' t={'capitalize'} size={11}>
@@ -157,7 +157,7 @@ export default ({ navigation }) => {
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
             <View style={{ minWidth: 125 }}>
-              <FullCard key={item.id} title={item.name} h={125} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+              <FullCard key={item.id} title={item.name} h={110} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
             </View>
           )}
           nestedScrollEnabled={true}
@@ -166,7 +166,7 @@ export default ({ navigation }) => {
       </View>
 
       {/* luxury */}
-      <View>
+      <View style={{ flex: 1 }}>
         {data.luxury.title && (
           <View style={{ paddingHorizontal: theme.units.md, gap: 2 }}>
             <Text weight='md' t={'capitalize'} size={11}>
@@ -186,7 +186,7 @@ export default ({ navigation }) => {
           keyExtractor={(_, index) => index}
           renderedItem={({ item }) => (
             <View style={{ minWidth: 125 }}>
-              <FullCard key={item.name} title={item.name} h={125} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
+              <FullCard key={item.name} title={item.name} h={110} image={item.image} onPress={() => navigation.navigate(item.id)} item='end' />
             </View>
           )}
           nestedScrollEnabled={true}
