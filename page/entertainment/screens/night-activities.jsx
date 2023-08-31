@@ -48,58 +48,62 @@ export default ({ navigation }) => {
         </View>
         {categories && categories.length > 0 && (
           <View style={{ marginBottom: theme.units.sm }}>
-            <ButtonGroup
-              selectedIndex={state}
-              setSelectedIndex={setState}
-              scrollabe={_.uniqBy(categories, 'location').length > 3}
-              items={_.uniqBy(categories, 'location').map((el, index) => ({ id: index + 1, label: el.location }))}
-            />
+            <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={_.uniqBy(categories, 'location').length > 3} items={_.uniqBy(categories, 'location').map((el, index) => ({ id: index + 1, label: el.location }))} />
           </View>
         )}
       </View>
 
       {data &&
         data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')] &&
-        Object.keys(data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')]).map((key, i) => (
-          <View key={i} style={{ gap: theme.units.md, alignItems: 'center', justifyContent: 'center' }}>
-            <View style={{ flexDirection: 'row', gap: 5 }}>
-              <Text size={8} color='sub'>
-                {key}
-              </Text>
-              <View style={{ flex: 1, justifyContent: 'center' }}>
-                <View style={{ width: '100%', borderBottomWidth: 1, borderColor: '#dfdfdf' }} />
+        Object.keys(data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')]).map(
+          (key, i) =>
+            data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key].filter(
+              (el) =>
+                el.location ===
+                _.uniqBy(categories, 'location')
+                  .map((el, index) => ({ id: index + 1, label: el.location }))
+                  .find((elem) => elem.id === state).label
+            ).length > 0 && (
+              <View key={i} style={{ gap: theme.units.md, alignItems: 'center', justifyContent: 'center' }}>
+                <View style={{ flexDirection: 'row', gap: 5 }}>
+                  <Text size={8} color='sub'>
+                    {key}
+                  </Text>
+                  <View style={{ flex: 1, justifyContent: 'center' }}>
+                    <View style={{ width: '100%', borderBottomWidth: 1, borderColor: '#dfdfdf' }} />
+                  </View>
+                </View>
+                {categories &&
+                  data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key]
+                    .filter(
+                      (el) =>
+                        el.location ===
+                        _.uniqBy(categories, 'location')
+                          .map((el, index) => ({ id: index + 1, label: el.location }))
+                          .find((elem) => elem.id === state).label
+                    )
+                    .map((item, index) => (
+                      <Card
+                        key={index}
+                        image={`${variables.STORAGE_LINK}/entertainment/nights/${item.night.image}`}
+                        onPress={() =>
+                          navigation.navigate('[stack] stack-entertainement-night-activities-details', {
+                            id: item.night.id,
+                            data: item.night,
+                            name: item.night.name,
+                          })
+                        }>
+                        <Text size={7} weight='md' t={'capitalize'}>
+                          {item.night.name}
+                        </Text>
+                        <Text size={6} line={1.25} color='sub' turncate={2}>
+                          {item.night.description}
+                        </Text>
+                      </Card>
+                    ))}
               </View>
-            </View>
-            {categories &&
-              data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key]
-                .filter(
-                  (el) =>
-                    el.location ===
-                    _.uniqBy(categories, 'location')
-                      .map((el, index) => ({ id: index + 1, label: el.location }))
-                      .find((elem) => elem.id === state).label
-                )
-                .map((item, index) => (
-                  <Card
-                    key={index}
-                    image={`${variables.STORAGE_LINK}/entertainment/nights/${item.night.image}`}
-                    onPress={() =>
-                      navigation.navigate('[stack] stack-entertainement-night-activities-details', {
-                        id: item.night.id,
-                        data: item.night,
-                        name: item.night.name,
-                      })
-                    }>
-                    <Text size={7} weight='md' t={'capitalize'}>
-                      {item.night.name}
-                    </Text>
-                    <Text size={6} line={1.25} color='sub' turncate={2}>
-                      {item.night.description}
-                    </Text>
-                  </Card>
-                ))}
-          </View>
-        ))}
+            )
+        )}
     </Container>
   )
 }
