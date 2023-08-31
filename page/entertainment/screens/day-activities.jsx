@@ -27,7 +27,10 @@ export default ({ navigation }) => {
   /* data fetching */
   const [refresh, setRefresh] = useState(false)
 
-  const { data, isLoading, error, refetch } = useQuery('@Days-Activities', getClientSideQueries.getDayActivitiesGrouped)
+  const { data: category } = useQuery('@Age-Categories', getClientSideQueries.getCategories)
+  const { data, isLoading, error, refetch } = useQuery('@Days-Activities', getClientSideQueries.getDayActivitiesGrouped, {
+    enabled: !!category,
+  })
 
   let onRefresh = useCallback(() => {
     setRefresh(true)
@@ -45,7 +48,7 @@ export default ({ navigation }) => {
           <CalendarSwipe getDate={setDate} />
         </View>
         <View style={{ marginBottom: theme.units.sm }}>
-          <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={category.length > 3} items={category} />
+          {category && <ButtonGroup selectedIndex={state} setSelectedIndex={setState} scrollabe={category.length > 3} items={category.map((el) => ({ id: el.id, label: el.age }))} />}
         </View>
       </View>
 
@@ -53,7 +56,7 @@ export default ({ navigation }) => {
         data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')] &&
         Object.keys(data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')]).map(
           (key, i) =>
-            data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key].filter((el) => el.age === category.find((elem) => elem.id === state).label).length > 0 && (
+            data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key].filter((el) => JSON.parse(el.age).some((e) => e.id === state)).length > 0 && (
               <View key={i} style={{ gap: theme.units.md, alignItems: 'center', justifyContent: 'center' }}>
                 <View style={{ flexDirection: 'row', gap: 5 }}>
                   <Text size={8} color='sub'>
@@ -64,7 +67,7 @@ export default ({ navigation }) => {
                   </View>
                 </View>
                 {data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key]
-                  .filter((el) => el.age === category.find((elem) => elem.id === state).label)
+                  .filter((el) => JSON.parse(el.age).some((e) => e.id === state))
                   .map((item, index) => (
                     <Card
                       key={index}
@@ -91,17 +94,14 @@ export default ({ navigation }) => {
   )
 }
 
-const category = [
-  { id: 1, label: 'adult' },
-  { id: 2, label: 'child' },
-  { id: 3, label: 'family' },
-  { id: 4, label: 'couple' },
-  { id: 5, label: 'group' },
-  { id: 6, label: 'elderly' },
-  { id: 7, label: 'teenager' },
-]
-
 const getClientSideQueries = {
+  getCategories: () =>
+    useFetch('api/helpers/age-manager')
+      .then((res) => res.data)
+      .catch((err) => {
+        throw new Error(err)
+      }),
+
   getDayActivitiesGrouped: () =>
     useFetch('api/entertainement/grouping/days')
       .then((res) => res.data)

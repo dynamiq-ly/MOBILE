@@ -82,11 +82,11 @@ export default ({ route }) => {
                 <Text size={7} color='sub'>
                   {item.start_time} - {item.end_time}
                 </Text>
-                <View style={{ flex: 1, alignItems: 'flex-end' }}>
+                {/* <View style={{ flex: 1, alignItems: 'flex-end' }}>
                   <Text size={7} color='sub'>
                     {item.age}
                   </Text>
-                </View>
+                </View> */}
                 <TouchableOpacity>
                   <Icon icon={require('@/assets/icons/product/monocrome/bell-dark.png')} size={16} />
                 </TouchableOpacity>
