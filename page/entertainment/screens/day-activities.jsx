@@ -51,39 +51,42 @@ export default ({ navigation }) => {
 
       {data &&
         data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')] &&
-        Object.keys(data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')]).map((key, i) => (
-          <View key={i} style={{ gap: theme.units.md, alignItems: 'center', justifyContent: 'center' }}>
-            <View style={{ flexDirection: 'row', gap: 5 }}>
-              <Text size={8} color='sub'>
-                {key}
-              </Text>
-              <View style={{ flex: 1, justifyContent: 'center' }}>
-                <View style={{ width: '100%', borderBottomWidth: 1, borderColor: '#dfdfdf' }} />
+        Object.keys(data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')]).map(
+          (key, i) =>
+            data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key].filter((el) => el.age === category.find((elem) => elem.id === state).label).length > 0 && (
+              <View key={i} style={{ gap: theme.units.md, alignItems: 'center', justifyContent: 'center' }}>
+                <View style={{ flexDirection: 'row', gap: 5 }}>
+                  <Text size={8} color='sub'>
+                    {key}
+                  </Text>
+                  <View style={{ flex: 1, justifyContent: 'center' }}>
+                    <View style={{ width: '100%', borderBottomWidth: 1, borderColor: '#dfdfdf' }} />
+                  </View>
+                </View>
+                {data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key]
+                  .filter((el) => el.age === category.find((elem) => elem.id === state).label)
+                  .map((item, index) => (
+                    <Card
+                      key={index}
+                      image={`${variables.STORAGE_LINK}/entertainment/days/${item.activity.image}`}
+                      onPress={() =>
+                        navigation.navigate('[stack] stack-entertainement-day-activities-details', {
+                          id: item.activity.id,
+                          data: item.activity,
+                          name: item.activity.name,
+                        })
+                      }>
+                      <Text size={7} weight='md' t={'capitalize'}>
+                        {item.activity.name}
+                      </Text>
+                      <Text size={6} line={1.25} color='sub' turncate={2}>
+                        {item.activity.description}
+                      </Text>
+                    </Card>
+                  ))}
               </View>
-            </View>
-            {data[moment(date, 'MM/DD/YYYY').format('YYYY-MM-DD')][key]
-              .filter((el) => el.age === category.find((elem) => elem.id === state).label)
-              .map((item, index) => (
-                <Card
-                  key={index}
-                  image={`${variables.STORAGE_LINK}/entertainment/days/${item.activity.image}`}
-                  onPress={() =>
-                    navigation.navigate('[stack] stack-entertainement-day-activities-details', {
-                      id: item.activity.id,
-                      data: item.activity,
-                      name: item.activity.name,
-                    })
-                  }>
-                  <Text size={7} weight='md' t={'capitalize'}>
-                    {item.activity.name}
-                  </Text>
-                  <Text size={6} line={1.25} color='sub' turncate={2}>
-                    {item.activity.description}
-                  </Text>
-                </Card>
-              ))}
-          </View>
-        ))}
+            )
+        )}
     </Container>
   )
 }
