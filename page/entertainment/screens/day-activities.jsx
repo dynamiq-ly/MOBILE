@@ -22,12 +22,14 @@ export default ({ navigation }) => {
   const theme = useTheme()
   // this is where we going to store our date that we got from the calendar
   const [date, setDate] = useState('')
-  const [state, setState] = useState(1)
 
   /* data fetching */
   const [refresh, setRefresh] = useState(false)
 
   const { data: category } = useQuery('@Age-Categories', getClientSideQueries.getCategories)
+
+  const [state, setState] = useState(category ? category[0].id : 1)
+
   const { data, isLoading, error, refetch } = useQuery('@Days-Activities', getClientSideQueries.getDayActivitiesGrouped, {
     enabled: !!category,
   })
