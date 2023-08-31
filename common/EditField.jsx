@@ -8,12 +8,12 @@ import Text from '@/common/Text'
 import { shadow } from '@/util/shadow'
 import { StyledEditField, StyledWrapper, StyledInput } from '@/common/ui/editField.ui'
 
-const EditField = ({ label, value, onChange, placeholder = 'placeholder', hint, filled = false, rows = 1, multiline = false, maxLength, error = true }) => {
+const EditField = ({ label, value, onChange, placeholder = 'placeholder', hint, filled = false, rows = 1, multiline = false, maxLength, error = false }) => {
   return (
     <StyledEditField filled={filled} style={filled && { ...shadow() }}>
       <StyledWrapper>
         {label && (
-          <Text size={8} weight='md' color='main' t={'capitalize'}>
+          <Text size={8} weight='md' color='sub' t={'capitalize'}>
             {label}
           </Text>
         )}
@@ -23,16 +23,7 @@ const EditField = ({ label, value, onChange, placeholder = 'placeholder', hint, 
           </Text>
         )}
       </StyledWrapper>
-      <StyledInput
-        multiline={multiline}
-        rows={rows}
-        maxLength={maxLength}
-        placeholder={placeholder}
-        value={value}
-        onChangeText={onChange}
-        background={filled ? 'tag' : 'container'}
-        style={{ ...shadow(error && 'error') }}
-      />
+      <StyledInput multiline={multiline} rows={rows} maxLength={maxLength} placeholder={placeholder} value={value} onChangeText={onChange} background={filled ? 'tag' : 'container'} error={error} />
       {hint && (
         <StyledWrapper>
           <Text weight='md' size={6} color={error ? 'error' : 'small'}>

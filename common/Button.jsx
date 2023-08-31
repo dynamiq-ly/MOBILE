@@ -13,7 +13,7 @@ const Button = ({ children, background = 'neutral', h = 36, shadowColor = 'main'
   return (
     <StyledButton activeOpacity={0.8} color={background} h={`${h}px`} onPress={onPress} shadowColor={shadowColor} style={{ ...style }}>
       {iconLeft && <Feather name={iconLeft} size={16} color={['neutral', 'error', 'primary', 'success'].includes(background) ? '#fff' : '#111'} />}
-      <Text weight={'md'} size={h === 36 ? 7 : 6} color={['neutral', 'error', 'primary', 'success'].includes(background) ? 'neutral' : 'main'} t='capitalize'>
+      <Text weight={'md'} size={h === 42 ? 8 : h === 36 ? 7 : 6} color={['neutral', 'error', 'primary', 'success'].includes(background) ? 'neutral' : 'main'} t='capitalize'>
         {children}
       </Text>
       {iconRight && <Feather name={iconRight} size={16} color={['neutral', 'error', 'primary', 'success'].includes(background) ? '#fff' : '#111'} />}
@@ -22,7 +22,7 @@ const Button = ({ children, background = 'neutral', h = 36, shadowColor = 'main'
 }
 
 Button.propTypes = {
-  h: PropTypes.oneOf([36, 24]),
+  h: PropTypes.oneOf([42, 36, 24]),
   children: PropTypes.string.isRequired,
   background: PropTypes.oneOf(['neutral', 'primary', 'secondary', 'error', 'success', 'warning', 'info', 'tag']),
   shadowColor: PropTypes.oneOf(['main', 'sub', 'small', 'error', 'success', 'warning', 'info', 'neutral']),
