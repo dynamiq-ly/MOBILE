@@ -26,8 +26,7 @@ export default ({ navigation }) => {
       {/* description */}
       <View style={{ paddingHorizontal: theme.units.md }}>
         <Text size={8} align='justify' color='sub' line={1.25}>
-          Elevate Your Stay: Upgrade Your Room for Unforgettable Luxury. Indulge in opulence with exclusive amenities and breathtaking views. Treat yourself to a higher level of sophistication today.
-          Book your upgraded experience now.
+          Elevate Your Stay: Upgrade Your Room for Unforgettable Luxury. Indulge in opulence with exclusive amenities and breathtaking views. Treat yourself to a higher level of sophistication today. Book your upgraded experience now.
         </Text>
       </View>
 

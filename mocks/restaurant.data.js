@@ -1,216 +1,153 @@
 export const data = {
-  id: '[stack] stack-bar',
+  id: '[stack] stack-restaurant',
   banner: [],
   description: '',
 
-  bars: [
+  restaurants: [
     {
       id: 1,
-      images: [{ image: 'https://images.pexels.com/photos/34650/pexels-photo.jpg?cs=srgb&dl=restaurant-dark-bar-34650.jpg&fm=jpg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Paradise Beach Bar',
-      type: 'beach bar',
+      images: [
+        { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxuLtCRZg6jPT3eDKyYB2UF6eVaQ7zQSj869-6jXxlkZ51Tvri8EiEmq-BtEhM6NtiZ9M&usqp=CAU' },
+        { image: 'https://cdn.sortiraparis.com/images/80/100789/834023-too-restaurant-too-hotel-paris-photos-menu.jpg' },
+      ],
+      type: 'Tunisian',
+      title: 'Chakira Restaurant',
       location: '123 Oceanfront Avenue, Paradise Beach',
       phone_number: '+1 (555) 123-4567',
-      description: 'Enjoy the breathtaking views of the ocean at Paradise Beach Bar, your perfect getaway for relaxation and refreshment.',
+      description: 'Elevate your senses at SavoryArt, where culinary expertise is a canvas and flavors are masterpieces. Discover a fusion of tastes that redefine dining, all within an ambiance of modern charm. Unveil the art of indulgence.',
       timing: {
-        open: '18:00',
-        close: '02:00',
+        open: '09:00',
+        close: '22:00',
       },
+      time_table: ['Breakfast,08:00 - 11:00', 'Lunch,12:00 - 15:30', 'Dinner,18:00 - 23:00'],
+      weekly_theme: ['Monday,Tunisian', 'Tuesday,Italian', 'Wednesdays,All round', 'Thursday,Fish', 'Friday,Sea food', 'Saturday,Tropicals', 'Sunday,Italian'],
+      dress_code: 'Dress Properly, a dress for the women and a suit for a man.',
       reservation_required: true,
-      adults_only: false,
+      adults_only: true,
 
-      menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
+      menu_a_la_carte: '',
 
-      staff: [
+      chefs: [
         {
           name: 'Alex Johnson',
-          position: 'Bartender',
-          image: 'https://randomuser.me/api/portraits/men/1.jpg',
+          position: 'Executive Chef',
+          image: 'https://nationaltoday.com/wp-content/uploads/2021/07/shutterstock_1518533924-min.jpg',
         },
         {
           name: 'Emily Williams',
-          position: 'Server',
-          image: 'https://randomuser.me/api/portraits/women/2.jpg',
+          position: 'Sous Chef',
+          image: 'https://www.escoffier.edu/wp-content/uploads/2016/02/Smiling-female-chef-with-white-hat-and-uniform-in-a-kitchen-e1611773135718.jpg',
         },
       ],
+
+      speciality: [
+        { id: 1, label: 'Tunisian', main: true },
+        { id: 2, label: 'Sea Food', main: false },
+        { id: 3, label: 'turkish', main: false },
+      ],
+
+      menu: {
+        food: [
+          { id: 1, label: 'breakfast' },
+          { id: 2, label: 'lunch' },
+          { id: 3, label: 'dinner' },
+        ],
+        dessert: [],
+        drinks: [
+          { id: 1, label: 'soft' },
+          { id: 2, label: 'alcohol' },
+        ],
+      },
+    },
+  ],
+  dessert: [
+    {
+      id: 1,
+      name: 'Salad',
+      image: 'https://th.bing.com/th/id/OIP.2LT7l2oEDjsqW_SCNg4UEQHaFE?pid=ImgDet&rs=1',
+      type: null,
     },
     {
       id: 2,
-      images: [{ image: 'https://images.pexels.com/photos/106853/pexels-photo-106853.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Sunset Lounge',
-      type: 'rooftop bar',
-      location: '456 Skyline Avenue, Urban Heights',
-      phone_number: '+1 (555) 789-1234',
-      description: 'Experience the magic of sunset at Sunset Lounge. Perfect for a romantic evening or a night out with friends.',
-      timing: {
-        open: '17:00',
-        close: '23:00',
-      },
-      reservation_required: false,
-      adults_only: false,
-
-      menu_a_la_carte: null,
-
-      staff: [
-        {
-          name: 'Michael Clark',
-          position: 'Mixologist',
-          image: 'https://randomuser.me/api/portraits/men/3.jpg',
-        },
-        {
-          name: 'Sophia Martin',
-          position: 'Waitress',
-          image: 'https://randomuser.me/api/portraits/women/4.jpg',
-        },
-      ],
+      name: 'Cheese Cake',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu_8IBP4yjHSVkQwR_VHGm_Sgf9XE-NseHmw&usqp=CAU',
+      type: null,
     },
     {
       id: 3,
-      images: [{ image: 'https://images.pexels.com/photos/265074/pexels-photo-265074.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Cozy Corner',
-      type: 'neighborhood pub',
-      location: '789 Main Street, Downtown',
-      phone_number: '+1 (555) 456-7890',
-      description: 'Visit Cozy Corner for a relaxed neighborhood pub atmosphere. Great drinks, friendly staff, and live music every Friday.',
-      timing: {
-        open: '16:00',
-        close: '01:00',
-      },
-      reservation_required: false,
-      adults_only: false,
-
-      menu_a_la_carte: null,
-
-      staff: [
-        {
-          name: 'David Smith',
-          position: 'Pub Manager',
-          image: 'https://randomuser.me/api/portraits/men/5.jpg',
-        },
-        {
-          name: 'Linda Johnson',
-          position: 'Bartender',
-          image: 'https://randomuser.me/api/portraits/women/6.jpg',
-        },
-      ],
+      name: 'Chocolate Cake',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmOWYxjln19rhbPsDcnjlfPSsHv08Q70qMVg&usqp=CAU',
+      type: null,
     },
     {
       id: 4,
-      images: [{ image: 'https://images.pexels.com/photos/2252286/pexels-photo-2252286.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Jazz & Blues Club',
-      type: 'live music venue',
-      location: '234 Melody Lane, Jazzville',
-      phone_number: '+1 (555) 987-6543',
-      description: 'Immerse yourself in the world of jazz and blues at the Jazz & Blues Club. Live performances every weekend.',
-      timing: {
-        open: '20:00',
-        close: '02:00',
-      },
-      reservation_required: true,
-      adults_only: true,
-
-      menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
-
-      staff: [
-        {
-          name: 'Robert Davis',
-          position: 'Musician Liaison',
-          image: 'https://randomuser.me/api/portraits/men/7.jpg',
-        },
-        {
-          name: 'Emma Brown',
-          position: 'Stage Manager',
-          image: 'https://randomuser.me/api/portraits/women/8.jpg',
-        },
-      ],
+      name: 'Ice Cream',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnNeaHD7ahRyDTKUPZ34rUh2vvjqOCbq4PQQ&usqp=CAU',
+      type: null,
+    },
+  ],
+  food: [
+    {
+      id: 1,
+      name: 'bacon',
+      image: 'https://th.bing.com/th/id/OIP.VJI0TnJcf09wFdjp4V6sdAHaFj?pid=ImgDet&rs=1',
+      type: 'breakfast',
     },
     {
-      id: 5,
-      images: [{ image: 'https://images.pexels.com/photos/34102/pexels-photo.jpg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Lighthouse Lounge',
-      type: 'seaside lounge',
-      location: '567 Coastal Road, Lighthouse Bay',
-      phone_number: '+1 (555) 567-8901',
-      description: 'Relax by the seaside at Lighthouse Lounge. Cool breeze, soothing ambiance, and refreshing cocktails.',
-      timing: {
-        open: '15:00',
-        close: '23:00',
-      },
-      reservation_required: false,
-      adults_only: false,
-
-      menu_a_la_carte: null,
-
-      staff: [
+      id: 2,
+      name: 'pizza',
+      image: 'https://th.bing.com/th/id/OIP.UGHF0Am9aenF1uI3H1Y1swHaE8?pid=ImgDet&rs=1',
+      type: 'lunch',
+      data: [
         {
-          name: 'James Miller',
-          position: 'Lounge Manager',
-          image: 'https://randomuser.me/api/portraits/men/9.jpg',
+          id: 1,
+          label: 'Pepperoni pizza',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98U5YiGT4SF00HVYqRhvH9FwiTxtwVN794Q&usqp=CAU',
+          slug: 'Indulge in pizza perfection with our Classic Pepperoni. Melted mozzarella, zesty tomato sauce, and a hearty serving of pepperoni combine for a satisfying slice of comfort and flavor. Bite into tradition today.',
+          price: '25.99$',
+          time: '20min',
+          calories: '350cal',
+          grams: '100g',
+          category: 'vegan',
+          ingredients: [
+            { id: 1, label: 'Pepperoni', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/4162/4162111.png' },
+            { id: 2, label: 'Mozzarella', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/5725/5725060.png' },
+            { id: 3, label: 'Basil', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/4713/4713978.png' },
+            { id: 3, label: 'Olive oil', featured: true, image: 'https://cdn-icons-png.flaticon.com/512/604/604823.png' },
+          ],
         },
         {
-          name: 'Olivia Moore',
-          position: 'Server',
-          image: 'https://randomuser.me/api/portraits/women/10.jpg',
-        },
-      ],
-    },
-    {
-      id: 6,
-      images: [{ image: 'https://images.pexels.com/photos/3561067/pexels-photo-3561067.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Rustic Barrel',
-      type: 'whiskey bar',
-      location: '789 Oak Street, Rusticville',
-      phone_number: '+1 (555) 678-9012',
-      description: 'Discover a wide selection of fine whiskies at Rustic Barrel. Cozy atmosphere, perfect for whiskey enthusiasts.',
-      timing: {
-        open: '16:00',
-        close: '01:00',
-      },
-      reservation_required: false,
-      adults_only: true,
-
-      menu_a_la_carte: null,
-
-      staff: [
-        {
-          name: 'William Taylor',
-          position: 'Whiskey Expert',
-          image: 'https://randomuser.me/api/portraits/men/11.jpg',
+          id: 2,
+          label: 'Margherita Pizza',
+          image: 'https://bellyfull.net/wp-content/uploads/2016/03/Classic-Margherita-Pizza-blog-2.jpg',
+          slug: 'Indulge in the simplicity of our Margherita Pizza. Fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of olive oil come together for an authentic Italian experience.',
+          price: '14.99$',
+          time: '18min',
+          calories: '400cal',
+          grams: '220g',
+          category: 'vegan',
         },
         {
-          name: 'Ava Johnson',
-          position: 'Bartender',
-          image: 'https://randomuser.me/api/portraits/women/12.jpg',
-        },
-      ],
-    },
-    {
-      id: 7,
-      images: [{ image: 'https://images.pexels.com/photos/269412/pexels-photo-269412.jpeg' }, { image: 'https://th.bing.com/th/id/R.48aa87f175370496ba02889b23a55c72?rik=dsps17PViEY8Pw&pid=ImgRaw&r=0' }],
-      title: 'Skyview Lounge',
-      type: 'high-rise bar',
-      location: '101 High Street, Skyline Towers',
-      phone_number: '+1 (555) 345-6789',
-      description: 'Enjoy breathtaking views of the city at Skyview Lounge. A sophisticated high-rise bar experience.',
-      timing: {
-        open: '18:00',
-        close: '02:00',
-      },
-      reservation_required: true,
-      adults_only: false,
-
-      menu_a_la_carte: 'https://www.thefrontyardla.com/pdf/bar-menu.pdf',
-
-      staff: [
-        {
-          name: 'Daniel Williams',
-          position: 'Head Bartender',
-          image: 'https://randomuser.me/api/portraits/men/13.jpg',
+          id: 3,
+          label: 'Vegetarian Pizza',
+          image: 'https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza.jpg',
+          slug: 'Embrace the goodness of nature with our Vegetarian Pizza. Colorful bell peppers, onions, tomatoes, mushrooms, and black olives dance atop a cheese-covered canvas.',
+          price: '16.99$',
+          time: '20min',
+          calories: '380cal',
+          grams: '230g',
+          category: 'vegan',
         },
         {
-          name: 'Isabella Brown',
-          position: 'Server',
-          image: 'https://randomuser.me/api/portraits/women/14.jpg',
+          id: 4,
+          label: 'Supreme Pizza',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1JINOEsnAFkLOw6so5_RinHmNvEa2ToQKRg&usqp=CAU',
+          slug: 'Delight in the abundance of flavors with our Supreme Pizza. A hearty combination of pepperoni, sausage, bell peppers, onions, and olives atop a bed of gooey cheese.',
+          price: '17.99$',
+          time: '22min',
+          calories: '520cal',
+          grams: '240g',
+          category: 'vegan',
         },
       ],
     },
