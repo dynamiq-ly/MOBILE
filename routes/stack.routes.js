@@ -6,6 +6,8 @@
 
 import DrawerNavigation from '@/navigation/DrawerNavigation'
 
+import { AuthRoutesConfig } from '@/page/(AUTH)/routes'
+
 import { OurHotelsRoutesConfig } from '@/page/our-hotel/routes'
 import { PoliciesRoutesConfig } from '@/page/policies/routes'
 import { ReceptionRoutesConfig } from '@/page/reception/routes'
@@ -27,6 +29,7 @@ import { SettingsRoutesConfig } from '@/page/setting/routes'
 
 /* (STACK) */
 export const stack = [
+  ...AuthRoutesConfig,
   {
     id: '[stack] stack-home',
     component: DrawerNavigation,

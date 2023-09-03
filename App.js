@@ -32,10 +32,10 @@ SplashScreen.preventAutoHideAsync()
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    'Helvetica-Light': require('@/assets/fonts/HelveticaNeueLight.otf'),
-    'Helvetica-Regular': require('@/assets/fonts/HelveticaNeueRoman.otf'),
-    'Helvetica-Medium': require('@/assets/fonts/HelveticaNeueMedium.otf'),
-    'Helvetica-Bold': require('@/assets/fonts/HelveticaNeueBold.otf'),
+    'Helvetica-Light': require('@/assets/fonts/Manrope-Light.ttf'),
+    'Helvetica-Regular': require('@/assets/fonts/Manrope-Regular.ttf'),
+    'Helvetica-Medium': require('@/assets/fonts/Manrope-SemiBold.ttf'),
+    'Helvetica-Bold': require('@/assets/fonts/Manrope-Bold.ttf'),
   })
 
   const onLayoutRootView = useCallback(async () => {

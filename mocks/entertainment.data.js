@@ -33,11 +33,11 @@ export const data = {
       name: 'SPORT PROGRAMS',
       image: 'https://media.istockphoto.com/id/637332546/photo/multi-sports-players-in-action-collage-on-grand-arena.jpg?s=612x612&w=0&k=20&c=CcmS244gEmzzqCYq2LmTDrbaduz5JXX-aAT8K8qPCzw=',
     },
-    {
-      id: '[stack] stack-entertainement-event-program',
-      name: 'EVENT PROGRAMS',
-      image: 'https://www.sait.ca/assets/images/sait/programs/pr-htm-event-management-600x400.jpg',
-    },
+    // {
+    //   id: '[stack] stack-entertainement-event-program',
+    //   name: 'EVENT PROGRAMS',
+    //   image: 'https://www.sait.ca/assets/images/sait/programs/pr-htm-event-management-600x400.jpg',
+    // },
   ],
 
   config: [

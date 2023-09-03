@@ -1,5 +1,5 @@
 /* packages */
-import { View } from 'react-native'
+import { RefreshControl, View } from 'react-native'
 import { useCallback, useState } from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
@@ -16,12 +16,14 @@ import { Container } from '@/shared'
 import { BottomSheet } from '@/components'
 import { Div, Image, Text } from '@/common'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { variables } from '@/constant/variables'
 
 /* mocks */
-import { gymEquipment } from '@/mocks/gym.data'
+import { useQuery } from 'react-query'
+import { useFetch } from '@/hook/useFetch'
 
 export default ({ navigation, route }) => {
-  const { data } = route.params
+  const { id, data: gymData } = route.params
 
   const theme = useTheme()
   const { top } = useSafeAreaInsets()
@@ -41,9 +43,25 @@ export default ({ navigation, route }) => {
     index === 3 ? (paddingTop.value = top) : (paddingTop.value = theme.units['md'])
   }, [])
 
+  /* data fetching */
+  const [refresh, setRefresh] = useState(false)
+
+  const { data, isLoading, error, refetch } = useQuery(['@gym-detail', id], () => getClientSideQueries.showGym(id), {
+    initialData: gymData,
+  })
+
+  let onRefresh = useCallback(() => {
+    setRefresh(true)
+    refetch().then(() => setRefresh(false))
+  }, [])
+
+  if (isLoading) return <Text>Loading...</Text>
+
+  if (error) return <Text>Error: {error.message}</Text>
+
   return (
-    <Container safeArea={false}>
-      <Image source={data.image} height='200px' radii='md' />
+    <Container safeArea={false} refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}>
+      <Image source={`${variables.STORAGE_LINK}/gym/thumbnails/${data.image}`} height='200px' radii='md' />
 
       {/* title */}
       <View>
@@ -56,7 +74,7 @@ export default ({ navigation, route }) => {
       <View style={{ gap: theme.units.sm }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
           <Image source={require('@/assets/icons/product/monocrome/clock-dark.png')} height='14px' width='14px' />
-          <Text size={6} weight='md'>{`From ${data.timing.open} to ${data.timing.close}`}</Text>
+          <Text size={6} weight='md'>{`From ${data['timing-open']} to ${data['timing-close']}`}</Text>
         </View>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sm }}>
@@ -78,61 +96,63 @@ export default ({ navigation, route }) => {
       </TouchableOpacity>
 
       {/* staff */}
-      <View>
-        <Div filled title='staff' radii='md'>
-          <BottomSheet
-            handleSheetChange={handleSheetChanges}
-            triggerElement={
-              <View style={{ position: 'relative' }}>
-                <Div>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
-                    <Image source={data.staff[0].image} height='32px' width='32px' radii='rounded' />
-                    <View>
-                      <Text turncate={1} size={8}>
-                        {data.staff[0].name}
-                      </Text>
-                      <Text turncate={1} size={7} color='info'>
-                        {data.staff[0].position}
-                      </Text>
+      {data.staff && data.staff.length > 0 && (
+        <View>
+          <Div filled title='staff' radii='md'>
+            <BottomSheet
+              handleSheetChange={handleSheetChanges}
+              triggerElement={
+                <View style={{ position: 'relative' }}>
+                  <Div>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
+                      <Image source={`${variables.STORAGE_LINK}/gym/staffs/${data.staff[0].image}`} height='32px' width='32px' radii='rounded' />
+                      <View>
+                        <Text turncate={1} size={8}>
+                          {data.staff[0].name}
+                        </Text>
+                        <Text turncate={1} size={7} color='info'>
+                          {data.staff[0].job_title}
+                        </Text>
+                      </View>
                     </View>
+                  </Div>
+                  <View style={{ width: '100%', alignItems: 'center' }}>
+                    <Feather name='chevron-down' size={14} color='black' />
                   </View>
-                </Div>
-                <View style={{ width: '100%', alignItems: 'center' }}>
-                  <Feather name='chevron-down' size={14} color='black' />
                 </View>
-              </View>
-            }>
-            <Animated.View style={{ ...animatedStyle }}>
-              <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.title} staff`}</Text>
-              {data.staff.map((staff, index) => (
-                <Div filled key={index}>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
-                    <Image source={staff.image} height='28px' width='28px' radii='rounded' />
-                    <View>
-                      <Text turncate={1} size={8}>
-                        {staff.name}
-                      </Text>
-                      <Text turncate={1} size={7} color='info'>
-                        {staff.position}
-                      </Text>
+              }>
+              <Animated.View style={{ ...animatedStyle }}>
+                <Text t={'capitalize'} size={10} weight='md'>{`List of ${data.name} staff`}</Text>
+                {data.staff.map((staff, index) => (
+                  <Div filled key={index}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: theme.units.sb }}>
+                      <Image source={`${variables.STORAGE_LINK}/gym/staffs/${staff.image}`} height='28px' width='28px' radii='rounded' />
+                      <View>
+                        <Text turncate={1} size={8}>
+                          {staff.name}
+                        </Text>
+                        <Text turncate={1} size={7} color='info'>
+                          {staff.job_title}
+                        </Text>
+                      </View>
                     </View>
-                  </View>
-                </Div>
-              ))}
-            </Animated.View>
-          </BottomSheet>
-        </Div>
-      </View>
+                  </Div>
+                ))}
+              </Animated.View>
+            </BottomSheet>
+          </Div>
+        </View>
+      )}
 
       {/* config */}
       <View style={{ gap: theme.units.sm }}>
         {/* booking */}
-        {data.reservation && (
+        {data.reservation === 1 && (
           <Dialog
             title={'Gym'}
             onPress={() =>
               navigation.navigate('', {
-                data: gymEquipment,
+                data: data.booking,
               })
             }
             background='info'
@@ -151,8 +171,8 @@ export default ({ navigation, route }) => {
           onPress={() =>
             navigation.navigate('[stack] stack-gym-equipements', {
               id: data.id,
-              data: gymEquipment,
               name: data.name,
+              data: data.equipements,
             })
           }
           background='info'
@@ -165,25 +185,36 @@ export default ({ navigation, route }) => {
           </Text>
         </Dialog>
         {/* terms */}
-        <Dialog
-          title={'Gym'}
-          onPress={() =>
-            navigation.navigate('[stack] stack-gym-terms', {
-              id: data.id,
-              data: data.terms,
-              name: data.name,
-            })
-          }
-          background='info'
-          small={false}>
-          <Text t={'capitalize'} weight='md' size={8.5}>
-            Gym Use terms
-          </Text>
-          <Text turncate={1} color='sub'>
-            terms and regulations withing the gym.
-          </Text>
-        </Dialog>
+        {data.terms && (
+          <Dialog
+            title={'Gym'}
+            onPress={() =>
+              navigation.navigate('[stack] stack-gym-terms', {
+                id: data.id,
+                data: `${variables.STORAGE_LINK}/pdf/gym/${data.terms}`,
+                name: data.name,
+              })
+            }
+            background='info'
+            small={false}>
+            <Text t={'capitalize'} weight='md' size={8.5}>
+              Gym Use terms
+            </Text>
+            <Text turncate={1} color='sub'>
+              terms and regulations withing the gym.
+            </Text>
+          </Dialog>
+        )}
       </View>
     </Container>
   )
+}
+
+const getClientSideQueries = {
+  showGym: (id) =>
+    useFetch(`/api/gym/${id}`)
+      .then((res) => res.data)
+      .catch((err) => {
+        throw new Error(err)
+      }),
 }

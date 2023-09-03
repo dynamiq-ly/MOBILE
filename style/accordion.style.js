@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const AccordionContainer = styled.View`
-  flex: 1;
   overflow: hidden;
   padding: 0px ${({ theme }) => theme.padding.md};
   border-radius: ${({ theme, radii = 'sm' }) => theme.radius[radii]};
