@@ -61,7 +61,7 @@ export default ({ navigation, route }) => {
   return (
     <View style={{ flex: 1 }}>
       <Container stickyHeaderIndices={[0]} padding={false} safeArea={false} refreshControl={<RefreshControl refreshing={refresh} onRefresh={onRefresh} />}>
-        <Pager slider={data.images.map((el) => ({ ...el, image: `${variables.STORAGE_LINK}/bars/${el.image}` }))} interval={5000} />
+        <Pager slider={data.images.map((el) => ({ ...el, image: `${variables.STORAGE_LINK}/${el.image.replace('storage', '')}` }))} interval={5000} />
 
         {/* title */}
         <View style={{ paddingHorizontal: theme.units.md }}>

@@ -41,7 +41,7 @@ export default ({ navigation }) => {
         renderedItem={({ item }) => (
           <OptionCard
             key={item.id}
-            image={`${variables.STORAGE_LINK}/bars/${item.images[0].image}`}
+            image={`${variables.STORAGE_LINK}/${item.images[0].image.replace('storage', '')}`}
             closed={!isBetweenOpenAndClose(item.timing_open, item.timing_close)}
             adults={item.adults_only ? true : false}
             reservation={item.reservation_required ? true : false}
